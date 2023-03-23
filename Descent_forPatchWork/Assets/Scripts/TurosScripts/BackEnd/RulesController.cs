@@ -16,7 +16,8 @@ public class RulesController : MonoBehaviour
 
     public void DatabaseCall()
     {
-        StartCoroutine(GetRequest("http://localhost/PatchDatabase/?unityget="));
+        //StartCoroutine(GetRequest("http://localhost/PatchDatabase/?unityget="));
+        StartCoroutine(GetRequest("http://www.turovaarti.fi/databaseManager.php?unityget="));
     }
 
     IEnumerator GetRequest(string uri)
