@@ -14,6 +14,15 @@ public class MapsController : MonoBehaviour
     bool worldBlocksAreChecked = false;
     GameObject currentObject;
 
+    [SerializeField] Transform[] heroSpawnPoints;
+    [SerializeField] GameObject heroBase;
+    GameManager gameManager;
+
+    private void Awake()
+    {
+        gameManager = FindObjectOfType<GameManager>();
+    }
+
     private void Start()
     {
         if (missionIndex == 0 && worldBlocksAreChecked == false)
@@ -55,5 +64,10 @@ public class MapsController : MonoBehaviour
         {
             battleMapChild.transform.GetChild(i).GetComponent<Image>().sprite = mapPiecesBattle[i];
         }
+
+        var heroInstance = Instantiate(heroBase, heroSpawnPoints[0].position, Quaternion.identity);
+        heroInstance.transform.SetParent(battleMap.transform);
+        heroInstance.transform.position = heroSpawnPoints[0].position;
+        gameManager.heroesInGame.Add(heroInstance);
     }
 }
