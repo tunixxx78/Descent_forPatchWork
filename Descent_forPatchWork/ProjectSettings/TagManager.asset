@@ -9,6 +9,7 @@ TagManager:
   - ExitMapButton
   - BackMapButton
   - Map
+  - Hero
   layers:
   - Default
   - TransparentFX
