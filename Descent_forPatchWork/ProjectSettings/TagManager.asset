@@ -9,6 +9,8 @@ TagManager:
   - ExitMapButton
   - BackMapButton
   - Map
+  - DiceMenuButton
+  - DiceMenu
   layers:
   - Default
   - TransparentFX
