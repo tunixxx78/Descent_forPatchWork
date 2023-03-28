@@ -1228,6 +1228,42 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 606585285}
   m_CullTransparentMesh: 1
+--- !u!1 &607844171
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 607844172}
+  m_Layer: 5
+  m_Name: HeroSpawnPointTwo
+  m_TagString: Untagged
+  m_Icon: {fileID: 3306451490063965843, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &607844172
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 607844171}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 453954494}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 106.27231, y: 109.80382}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &739044494
 GameObject:
   m_ObjectHideFlags: 0
@@ -1442,8 +1478,14 @@ MonoBehaviour:
   missionIndex: 0
   heroSpawnPoints:
   - {fileID: 1714348052}
-  heroBase: {fileID: 3252441914114803613, guid: fc7113fee8c0b4389b65fb47de472af5,
-    type: 3}
+  - {fileID: 607844172}
+  heroBase:
+  - {fileID: 3252441914114803613, guid: fc7113fee8c0b4389b65fb47de472af5, type: 3}
+  - {fileID: 3252441914114803613, guid: 3e75ead0864484ca696235abc6dd9941, type: 3}
+  enemySpawnPoints:
+  - {fileID: 1982109988}
+  enemyBase:
+  - {fileID: 3252441914114803613, guid: b08c290ecdfe14344a7c8944d8b994f1, type: 3}
 --- !u!1 &1104298935
 GameObject:
   m_ObjectHideFlags: 0
@@ -1921,6 +1963,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   heroesInGame: []
+  enemysInGame: []
 --- !u!4 &1466215018
 Transform:
   m_ObjectHideFlags: 0
@@ -2055,7 +2098,7 @@ GameObject:
   m_Layer: 5
   m_Name: HeroSpawnPointOne
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 3306451490063965843, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -2593,6 +2636,42 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1906093561}
   m_CullTransparentMesh: 1
+--- !u!1 &1982109987
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1982109988}
+  m_Layer: 5
+  m_Name: EnemySpawnPointOne
+  m_TagString: Untagged
+  m_Icon: {fileID: 3306451490063965843, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1982109988
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1982109987}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 453954494}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -381.65652, y: 378.16467}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &2021623237
 GameObject:
   m_ObjectHideFlags: 0

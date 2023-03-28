@@ -10,6 +10,7 @@ TagManager:
   - BackMapButton
   - Map
   - Hero
+  - Enemy
   layers:
   - Default
   - TransparentFX
