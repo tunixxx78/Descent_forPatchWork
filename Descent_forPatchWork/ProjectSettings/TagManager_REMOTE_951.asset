@@ -9,13 +9,8 @@ TagManager:
   - ExitMapButton
   - BackMapButton
   - Map
-<<<<<<< HEAD
-  - DiceMenuButton
-  - DiceMenu
-=======
   - Hero
   - Enemy
->>>>>>> b2c073fac1e6ee5be214abe7841c906d9f1727b4
   layers:
   - Default
   - TransparentFX

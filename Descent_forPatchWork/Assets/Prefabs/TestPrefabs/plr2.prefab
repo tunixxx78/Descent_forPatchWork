@@ -634,7 +634,7 @@ GameObject:
   - component: {fileID: 5469608273261799511}
   - component: {fileID: 1079459949566438552}
   m_Layer: 5
-  m_Name: plr
+  m_Name: plr2
   m_TagString: Hero
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -713,12 +713,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hb:
-    plrName: Turo
-    plrHealth: 10
-    plrStrength: 1
+    plrName: Tero
+    plrHealth: 20
+    plrStrength: 3
     plrLevel: 1
     heroImages:
-    - {fileID: 21300000, guid: f8c9467a892580344bb697526dac0d13, type: 3}
+    - {fileID: 21300000, guid: f008857e434b98b4eaabda1fd6af3059, type: 3}
   currentObj: {fileID: 0}
 --- !u!61 &5469608273261799511
 BoxCollider2D:

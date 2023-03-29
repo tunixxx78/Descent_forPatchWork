@@ -15,7 +15,11 @@ public class MapsController : MonoBehaviour
     GameObject currentObject;
 
     [SerializeField] Transform[] heroSpawnPoints;
-    [SerializeField] GameObject heroBase;
+    [SerializeField] GameObject[] heroBase;
+
+    [SerializeField] Transform[] enemySpawnPoints;
+    [SerializeField] GameObject[] enemyBase;
+
     GameManager gameManager;
 
     private void Awake()
@@ -65,9 +69,23 @@ public class MapsController : MonoBehaviour
             battleMapChild.transform.GetChild(i).GetComponent<Image>().sprite = mapPiecesBattle[i];
         }
 
-        var heroInstance = Instantiate(heroBase, heroSpawnPoints[0].position, Quaternion.identity);
-        heroInstance.transform.SetParent(battleMap.transform);
-        heroInstance.transform.position = heroSpawnPoints[0].position;
-        gameManager.heroesInGame.Add(heroInstance);
+        // for spawning heroes for fight
+        for (int i = 0; i < heroBase.Length; i++)
+        {
+            var heroInstance = Instantiate(heroBase[i], heroSpawnPoints[i].position, Quaternion.identity);
+            heroInstance.transform.SetParent(battleMap.transform);
+            heroInstance.transform.position = heroSpawnPoints[i].position;
+            gameManager.heroesInGame.Add(heroInstance);
+        }
+
+        //for spawning enemys for fight
+        for(int e = 0; e < enemyBase.Length; e++)
+        {
+            var enemyInstance = Instantiate(enemyBase[e], enemySpawnPoints[e].position, Quaternion.identity);
+            enemyInstance.transform.SetParent(battleMap.transform);
+            enemyInstance.transform.position = enemySpawnPoints[e].position;
+
+            gameManager.enemysInGame.Add(enemyInstance);
+        }
     }
 }
