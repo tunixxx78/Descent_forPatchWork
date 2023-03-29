@@ -16,7 +16,7 @@ public class DiceGenerator : MonoBehaviour
     }
     public void ThrowDice()
     {
-        diceResultText.text = Random.Range(1, diceSize++).ToString();
+        diceResultText.text = Random.Range(1, diceSize + 1).ToString();
     }
         
 }
