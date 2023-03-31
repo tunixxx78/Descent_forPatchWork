@@ -20,11 +20,14 @@ public class MapsController : MonoBehaviour
     [SerializeField] Transform[] enemySpawnPoints;
     [SerializeField] GameObject[] enemyBase;
 
-    GameManager gameManager;
+    public GameObject mapsButton, enemyHordPanel;
+
 
     private void Awake()
     {
-        gameManager = FindObjectOfType<GameManager>();
+        mapsButton = GameObject.Find("MapsButton");
+        enemyHordPanel = GameObject.Find("EnemyHordStats");
+        enemyHordPanel.SetActive(false);
     }
 
     private void Start()
@@ -48,7 +51,7 @@ public class MapsController : MonoBehaviour
     public void SeteRealArea()
     {
         GameObject areaMap = currentObject.transform.Find("AreaMapPanel").gameObject;
-        GameObject areaMapChild = areaMap.transform.GetChild(0).gameObject;
+        GameObject areaMapChild = areaMap.transform.GetChild(1).gameObject;
         int amountOfPieces = areaMapChild.transform.childCount;
 
         for(int i = 0; i < amountOfPieces; i++)
@@ -75,7 +78,8 @@ public class MapsController : MonoBehaviour
             var heroInstance = Instantiate(heroBase[i], heroSpawnPoints[i].position, Quaternion.identity);
             heroInstance.transform.SetParent(battleMap.transform);
             heroInstance.transform.position = heroSpawnPoints[i].position;
-            gameManager.heroesInGame.Add(heroInstance);
+            heroInstance.transform.localScale = new Vector3(1, 1, 1);
+            GameManager.gm.heroesInGame.Add(heroInstance);
         }
 
         //for spawning enemys for fight
@@ -84,8 +88,14 @@ public class MapsController : MonoBehaviour
             var enemyInstance = Instantiate(enemyBase[e], enemySpawnPoints[e].position, Quaternion.identity);
             enemyInstance.transform.SetParent(battleMap.transform);
             enemyInstance.transform.position = enemySpawnPoints[e].position;
+            enemyInstance.transform.localScale = new Vector3(1, 1, 1);
 
-            gameManager.enemysInGame.Add(enemyInstance);
+            GameManager.gm.enemyHordHealth += enemyInstance.GetComponent<EnemyOne>().eB.enemyHealth;
+            GameManager.gm.enemyHordStrenght += enemyInstance.GetComponent<EnemyOne>().eB.enemyStrength;
+            GameManager.gm.enemysInGame.Add(enemyInstance);
+
         }
+
+        enemyHordPanel.SetActive(true);
     }
 }

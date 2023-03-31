@@ -21,6 +21,19 @@ public class EnemyOne : MonoBehaviour
         GameObject enemyStats = currentObject.transform.Find("EnemyStatsPanel").gameObject;
         enemyStats.transform.GetChild(0).GetComponent<TMP_Text>().text = eB.enemyHealth.ToString();
         enemyStats.transform.GetChild(1).GetComponent<TMP_Text>().text = eB.enemyStrength.ToString();
-        enemyStats.transform.GetChild(2).GetComponent<TMP_Text>().text = eB.enemyLevel.ToString();
+        //enemyStats.transform.GetChild(2).GetComponent<TMP_Text>().text = eB.enemyLevel.ToString();
+    }
+    private void Update()
+    {
+        GameObject enemyStats = currentObject.transform.Find("EnemyStatsPanel").gameObject;
+        enemyStats.transform.GetChild(0).GetComponent<TMP_Text>().text = eB.enemyHealth.ToString();
+        enemyStats.transform.GetChild(1).GetComponent<TMP_Text>().text = eB.enemyStrength.ToString();
+        //enemyStats.transform.GetChild(2).GetComponent<TMP_Text>().text = eB.enemyLevel.ToString();
+
+        if (eB.enemyHealth <= 0)
+        {
+            GameManager.gm.enemysInGame.Remove(this.gameObject);
+            Destroy(this.gameObject);
+        }
     }
 }

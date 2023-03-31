@@ -21,6 +21,14 @@ public class EnemyButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
     {
         Debug.Log("BUTTON DOWN!");
 
+        
+ 
+    }
+
+    public void OnPointerUp(PointerEventData eventData)
+    {
+        Debug.Log("BUTTON UP!");
+
         if (this.gameObject.CompareTag("Enemy"))
         {
             GameObject statsPanel = this.gameObject.transform.Find("EnemyStatsPanel").gameObject;
@@ -34,21 +42,15 @@ public class EnemyButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
                 statsPanel.SetActive(false);
             }
         }
- 
-    }
-
-    public void OnPointerUp(PointerEventData eventData)
-    {
-        Debug.Log("BUTTON UP!");
     }
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-        this.gameObject.transform.localScale = new Vector3(1.5f, 1.5f, 1.5f);
+        //this.gameObject.transform.localScale = new Vector3(1.5f, 1.5f, 1.5f);
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
-        this.gameObject.transform.localScale = new Vector3(1f, 1f, 1f);
+        //this.gameObject.transform.localScale = new Vector3(1f, 1f, 1f);
     }
 }

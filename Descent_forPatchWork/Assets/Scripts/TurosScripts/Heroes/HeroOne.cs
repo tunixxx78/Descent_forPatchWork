@@ -23,4 +23,18 @@ public class HeroOne : MonoBehaviour
         heroStats.transform.GetChild(1).GetComponent<TMP_Text>().text = hb.plrStrength.ToString();
         heroStats.transform.GetChild(2).GetComponent<TMP_Text>().text = hb.plrLevel.ToString();
     }
+
+    private void Update()
+    {
+        GameObject heroStats = currentObj.transform.Find("HeroStatsPanel").gameObject;
+        heroStats.transform.GetChild(0).GetComponent<TMP_Text>().text = hb.plrHealth.ToString();
+        heroStats.transform.GetChild(1).GetComponent<TMP_Text>().text = hb.plrStrength.ToString();
+        heroStats.transform.GetChild(2).GetComponent<TMP_Text>().text = hb.plrLevel.ToString();
+
+        if(hb.plrHealth <= 0)
+        {
+            GameManager.gm.heroesInGame.Remove(this.gameObject);
+            Destroy(this.gameObject);
+        }
+    }
 }

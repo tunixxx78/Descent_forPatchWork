@@ -29,6 +29,7 @@ public class MapButtons : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 
         if (this.gameObject.CompareTag("Map"))
         {
+            maps.mapsButton.SetActive(false);
             mapAnimator.SetTrigger(animationTrigger);
         }
 
@@ -54,6 +55,12 @@ public class MapButtons : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
             mapAnimator.SetTrigger(animationTrigger);
             maps.mapPiecesArea.Clear();
             maps.mapPiecesBattle.Clear();
+
+            GameManager.gm.heroesInGame.Clear();
+            GameManager.gm.enemysInGame.Clear();
+
+            maps.mapsButton.SetActive(true);
+            maps.enemyHordPanel.SetActive(false);
         }
 
     }

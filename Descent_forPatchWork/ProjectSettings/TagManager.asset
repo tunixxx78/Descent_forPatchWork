@@ -11,6 +11,9 @@ TagManager:
   - Map
   - Hero
   - Enemy
+  - Health
+  - Strenght
+  - Level
   layers:
   - Default
   - TransparentFX
@@ -21,8 +24,8 @@ TagManager:
   - 
   - 
   - 
-  - 
-  - 
+  - player
+  - enemy
   - 
   - 
   - 
