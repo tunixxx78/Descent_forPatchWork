@@ -794,6 +794,7 @@ GameObject:
   - component: {fileID: 3310864016639711982}
   - component: {fileID: 5873477731377735261}
   - component: {fileID: 4607406108628404960}
+  - component: {fileID: 7561357765829128646}
   m_Layer: 10
   m_Name: Enemy
   m_TagString: Enemy
@@ -885,7 +886,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 100, y: 100}
   m_EdgeRadius: 0
 --- !u!114 &6609762836030440910
 MonoBehaviour:
@@ -963,6 +964,34 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+  - eventID: 2
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 7561357765829128646}
+          m_TargetAssemblyTypeName: BattleSystem, Assembly-CSharp
+          m_MethodName: OnPointerDown
+          m_Mode: 0
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+--- !u!114 &7561357765829128646
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3252441914114803613}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a0769d6d3d0c44338632a9206041557, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6915409654483571285
 GameObject:
   m_ObjectHideFlags: 0

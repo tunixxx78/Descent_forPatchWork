@@ -36,10 +36,12 @@ public class HeroButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandler,
             if (statsPanel.activeSelf == false)
             {
                 statsPanel.SetActive(true);
+                GameManager.gm.canAttack = true;
             }
             else
             {
                 statsPanel.SetActive(false);
+                GameManager.gm.canAttack = false;
             }
         }
     }

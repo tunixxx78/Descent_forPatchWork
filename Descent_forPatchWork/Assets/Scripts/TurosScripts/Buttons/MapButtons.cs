@@ -56,8 +56,21 @@ public class MapButtons : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
             maps.mapPiecesArea.Clear();
             maps.mapPiecesBattle.Clear();
 
+            for(int i = 0; i < GameManager.gm.heroesInGame.Count; i++)
+            {
+                Destroy(GameManager.gm.heroesInGame[i]);
+            }
+
+            for (int j = 0; j < GameManager.gm.enemysInGame.Count; j++)
+            {
+                Destroy(GameManager.gm.enemysInGame[j]);
+            }
+
             GameManager.gm.heroesInGame.Clear();
             GameManager.gm.enemysInGame.Clear();
+
+            GameManager.gm.enemyHordHealth = 0;
+            GameManager.gm.enemyHordStrenght = 0;
 
             maps.mapsButton.SetActive(true);
             maps.enemyHordPanel.SetActive(false);

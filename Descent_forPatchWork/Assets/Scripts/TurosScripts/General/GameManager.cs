@@ -9,6 +9,9 @@ public class GameManager : MonoBehaviour
     public List<GameObject> enemysInGame;
     public float enemyHordHealth, enemyHordStrenght;
 
+    public bool canAttack;
+    public float attackForce = 1;
+
     private void Awake()
     {
         if(GameManager.gm == null)
@@ -25,5 +28,7 @@ public class GameManager : MonoBehaviour
         }
 
         DontDestroyOnLoad(this.gameObject);
+
+        canAttack = false;
     }
 }

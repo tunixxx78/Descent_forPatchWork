@@ -24,24 +24,4 @@ public class MovingObjectTest : MonoBehaviour
 
         transform.position = mainCanvas.transform.TransformPoint(pos);
     }
-
-
-    /*
-    Camera main;
-    float cameraDistance;
-
-    private void Start()
-    {
-        main = Camera.main;
-        cameraDistance = main.WorldToScreenPoint(transform.position).z;
-    }
-
-    private void OnMouseDrag()
-    {
-        Vector3 screenPosition = new Vector3(Input.mousePosition.x, Input.mousePosition.y, cameraDistance);
-        Vector3 newPosition = main.ScreenToWorldPoint(screenPosition);
-
-        transform.position = newPosition;
-    }
-    */
 }

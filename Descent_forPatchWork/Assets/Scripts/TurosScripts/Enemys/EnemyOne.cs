@@ -33,6 +33,8 @@ public class EnemyOne : MonoBehaviour
         if (eB.enemyHealth <= 0)
         {
             GameManager.gm.enemysInGame.Remove(this.gameObject);
+            GameManager.gm.enemyHordHealth -= this.eB.enemyHealth;
+            GameManager.gm.enemyHordStrenght -= this.eB.enemyStrength;
             Destroy(this.gameObject);
         }
     }

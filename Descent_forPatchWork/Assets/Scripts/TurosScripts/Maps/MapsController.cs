@@ -21,13 +21,14 @@ public class MapsController : MonoBehaviour
     [SerializeField] GameObject[] enemyBase;
 
     public GameObject mapsButton, enemyHordPanel;
-
+    int heroNumIndex;
 
     private void Awake()
     {
         mapsButton = GameObject.Find("MapsButton");
-        enemyHordPanel = GameObject.Find("EnemyHordStats");
+        enemyHordPanel = GameObject.Find("EnemyHordeStats");
         enemyHordPanel.SetActive(false);
+        heroNumIndex = 0;
     }
 
     private void Start()
@@ -63,6 +64,8 @@ public class MapsController : MonoBehaviour
 
     public void SetRealBattleMap()
     {
+        heroNumIndex = 0;
+
         GameObject battleMap = currentObject.transform.Find("BattleMapPanel").gameObject;
         GameObject battleMapChild = battleMap.transform.GetChild(0).gameObject;
         int amountOfPieces = battleMapChild.transform.childCount;
@@ -76,10 +79,13 @@ public class MapsController : MonoBehaviour
         for (int i = 0; i < heroBase.Length; i++)
         {
             var heroInstance = Instantiate(heroBase[i], heroSpawnPoints[i].position, Quaternion.identity);
+            heroInstance.GetComponent<HeroOne>().hb.plrIndex = heroNumIndex;
             heroInstance.transform.SetParent(battleMap.transform);
             heroInstance.transform.position = heroSpawnPoints[i].position;
             heroInstance.transform.localScale = new Vector3(1, 1, 1);
             GameManager.gm.heroesInGame.Add(heroInstance);
+
+            heroNumIndex++;
         }
 
         //for spawning enemys for fight

@@ -100,6 +100,9 @@ public class StatsButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 
             if (isKillButton)
             {
+                GameManager.gm.enemyHordHealth -= GetComponentInParent<EnemyOne>().eB.enemyHealth;
+                GameManager.gm.enemyHordStrenght -= GetComponentInParent<EnemyOne>().eB.enemyStrength;
+
                 Destroy(parentObject);
             }
         }
