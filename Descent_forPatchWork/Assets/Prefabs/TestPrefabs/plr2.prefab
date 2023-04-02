@@ -94,6 +94,7 @@ MonoBehaviour:
       m_Calls: []
   isNegative: 0
   isHero: 1
+  isKillButton: 0
   parentObject: {fileID: 0}
 --- !u!1 &1888390226976741015
 GameObject:
@@ -265,6 +266,7 @@ MonoBehaviour:
       m_Calls: []
   isNegative: 0
   isHero: 1
+  isKillButton: 0
   parentObject: {fileID: 0}
 --- !u!1 &3017123944890723732
 GameObject:
@@ -634,6 +636,7 @@ GameObject:
   - component: {fileID: 1079459949566438552}
   - component: {fileID: 3567563523732322435}
   - component: {fileID: 3513557611585544034}
+  - component: {fileID: 5145663225489211077}
   m_Layer: 9
   m_Name: plr2
   m_TagString: Hero
@@ -718,6 +721,7 @@ MonoBehaviour:
     plrHealth: 20
     plrStrength: 3
     plrLevel: 1
+    plrIndex: 0
     heroImages:
     - {fileID: 21300000, guid: f008857e434b98b4eaabda1fd6af3059, type: 3}
   currentObj: {fileID: 0}
@@ -745,7 +749,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 100, y: 100}
   m_EdgeRadius: 0
 --- !u!114 &1079459949566438552
 MonoBehaviour:
@@ -803,6 +807,34 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+  - eventID: 2
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 5145663225489211077}
+          m_TargetAssemblyTypeName: BattleSystem, Assembly-CSharp
+          m_MethodName: OnPointerDown
+          m_Mode: 0
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+--- !u!114 &5145663225489211077
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3252441914114803613}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a0769d6d3d0c44338632a9206041557, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3393598370662304811
 GameObject:
   m_ObjectHideFlags: 0
@@ -897,6 +929,7 @@ MonoBehaviour:
       m_Calls: []
   isNegative: 1
   isHero: 1
+  isKillButton: 0
   parentObject: {fileID: 0}
 --- !u!1 &3651000543365599880
 GameObject:
@@ -1068,6 +1101,7 @@ MonoBehaviour:
       m_Calls: []
   isNegative: 1
   isHero: 1
+  isKillButton: 0
   parentObject: {fileID: 0}
 --- !u!1 &5681719032341489418
 GameObject:
@@ -1515,6 +1549,7 @@ MonoBehaviour:
       m_Calls: []
   isNegative: 1
   isHero: 1
+  isKillButton: 0
   parentObject: {fileID: 0}
 --- !u!1 &8202347260256055599
 GameObject:
@@ -1610,4 +1645,5 @@ MonoBehaviour:
       m_Calls: []
   isNegative: 0
   isHero: 1
+  isKillButton: 0
   parentObject: {fileID: 0}

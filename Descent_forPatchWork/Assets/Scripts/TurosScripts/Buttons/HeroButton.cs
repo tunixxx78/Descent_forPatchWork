@@ -29,19 +29,21 @@ public class HeroButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandler,
     {
         Debug.Log("BUTTON UP!");
 
-        if (this.gameObject.CompareTag("Hero"))
+        if (this.gameObject.CompareTag("Hero") && GameManager.gm.enemyCanAttack == false)
         {
             GameObject statsPanel = this.gameObject.transform.Find("HeroStatsPanel").gameObject;
 
             if (statsPanel.activeSelf == false)
             {
                 statsPanel.SetActive(true);
-                GameManager.gm.canAttack = true;
+                GameManager.gm.plrCanAttack = true;
+                GameManager.gm.attackForce = this.gameObject.GetComponent<HeroOne>().hb.plrStrength;
             }
             else
             {
                 statsPanel.SetActive(false);
-                GameManager.gm.canAttack = false;
+                GameManager.gm.plrCanAttack = false;
+                GameManager.gm.attackForce = 0;
             }
         }
     }

@@ -9,11 +9,13 @@ public class GameManager : MonoBehaviour
     public List<GameObject> enemysInGame;
     public float enemyHordHealth, enemyHordStrenght;
 
-    public bool canAttack;
+    public bool plrCanAttack, enemyCanAttack;
     public float attackForce = 1;
 
     private void Awake()
     {
+        Screen.SetResolution(1920, 1080, false);
+
         if(GameManager.gm == null)
         {
             GameManager.gm = this;
@@ -29,6 +31,15 @@ public class GameManager : MonoBehaviour
 
         DontDestroyOnLoad(this.gameObject);
 
-        canAttack = false;
+        plrCanAttack = false;
+        enemyCanAttack = false;
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Application.Quit();
+        }
     }
 }

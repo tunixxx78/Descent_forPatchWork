@@ -29,17 +29,21 @@ public class EnemyButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
     {
         Debug.Log("BUTTON UP!");
 
-        if (this.gameObject.CompareTag("Enemy"))
+        if (this.gameObject.CompareTag("Enemy") && GameManager.gm.plrCanAttack == false)
         {
             GameObject statsPanel = this.gameObject.transform.Find("EnemyStatsPanel").gameObject;
 
             if (statsPanel.activeSelf == false)
             {
                 statsPanel.SetActive(true);
+                GameManager.gm.enemyCanAttack = true;
+                GameManager.gm.attackForce = this.gameObject.GetComponent<EnemyOne>().eB.enemyStrength;
             }
             else
             {
                 statsPanel.SetActive(false);
+                GameManager.gm.enemyCanAttack = false;
+                GameManager.gm.attackForce = 0;
             }
         }
     }

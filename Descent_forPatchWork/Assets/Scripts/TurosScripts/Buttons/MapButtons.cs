@@ -74,6 +74,15 @@ public class MapButtons : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 
             maps.mapsButton.SetActive(true);
             maps.enemyHordPanel.SetActive(false);
+
+            //for turning off player stat panels
+
+            GameObject PlrStats = GameObject.Find("PlayerPanels");
+
+            for(int i = 0; i < PlrStats.transform.childCount; i++)
+            {
+                PlrStats.transform.GetChild(i).gameObject.SetActive(false);
+            }
         }
 
     }
