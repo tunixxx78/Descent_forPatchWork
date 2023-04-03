@@ -57,6 +57,8 @@ public class RulesController : MonoBehaviour
                     contentText.text = content[0];
                     extraText.text = content[1];
 
+                    FindObjectOfType<VideoController>().SetTutorialClip(idnum);
+
                     rulesAnimator.SetTrigger("RulesReveal");
 
                     break;
