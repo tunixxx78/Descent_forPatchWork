@@ -71,7 +71,13 @@ public class SavingSystem : MonoBehaviour
         string filePath = Application.persistentDataPath + "/savedNames.json";
         File.WriteAllText(filePath, saveableNames);
         }
+
+    private void DeleteSave(int saveSlot)
+    {
+        saveSlots[saveSlot] = "";
     }
+
+}
 
     [Serializable]
     class GameSavedData

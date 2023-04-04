@@ -13,6 +13,7 @@ public class LoadGameButton : MonoBehaviour
     public SavingSystem savingSystem;
 
     public GameObject newGamePanel;
+    public string defaultEmpty = "start new game";
 
     
 
@@ -35,7 +36,7 @@ public class LoadGameButton : MonoBehaviour
         Debug.Log("tallennetussa nimessä "+ buttonDisplayName);
         if (buttonDisplayName == null || buttonDisplayName == "")
         {
-            buttonDisplayName = "Stärt New Gäme";
+            buttonDisplayName = defaultEmpty;
         }
         TM_loadGameName.text = buttonDisplayName;
 
@@ -44,7 +45,7 @@ public class LoadGameButton : MonoBehaviour
     public void StartPlaying()
     {
         //jos on jo joku nimi(ei start new game) eli kohtaan on tallennettu jo peli
-        if (buttonDisplayName != "Stärt New Gäme")
+        if (buttonDisplayName != defaultEmpty)
         {
             //loads save based on buttonId and changes to proper scene
             savingSystem.LoadGame(buttonId);
