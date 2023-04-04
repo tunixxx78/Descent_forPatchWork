@@ -35,10 +35,13 @@ public class NewGameCreator : MonoBehaviour
         partyNameHeroSelectText.text = savingSystem.groupName;
     }
 
-    public void StartNewGame()
+    public void StartNewGame(string firstScene)
     {
         //go to first scene of adventuring - map scene??
-        SceneManager.LoadScene("TuroTestScene");
+        savingSystem.activeScene = firstScene;
+        Debug.Log("aktiivinen skene on "+ savingSystem.activeScene);
+        savingSystem.SaveGame();
+        SceneManager.LoadScene(firstScene);
     }
 
 

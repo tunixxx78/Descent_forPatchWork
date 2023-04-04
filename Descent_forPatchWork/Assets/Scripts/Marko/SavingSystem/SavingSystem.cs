@@ -12,98 +12,60 @@ public class SavingSystem : MonoBehaviour
     public string groupName = "Nameless Group";
     public int activeSaveSlot;
     public string activeScene;
+    
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     public void SaveGame()
     {
-        string savePath = Application.persistentDataPath + "/save" + activeSaveSlot + ".dat";
-        BinaryFormatter bf = new BinaryFormatter();
-        using (FileStream stream = File.Create(savePath))
-        {
-            GameSavedData data = new GameSavedData();
-            data.savedGroupName = groupName;
-            data.currentSceneName = activeScene;
+        GameSavedData gameSessionData = new GameSavedData();
+        //all data that is going to be saved
+        gameSessionData.currentSceneName = activeScene;
+        gameSessionData.savedGroupName= groupName;
 
-            bf.Serialize(stream, data);
-        }
-        Debug.Log("saved to " + savePath);
+        string saveableData = JsonUtility.ToJson(gameSessionData);
+        string filePath = Application.persistentDataPath + "/save" + activeSaveSlot.ToString() + ".json";
+        Debug.Log("saving to: " + filePath);
+
+        File.WriteAllText(filePath, saveableData);
     }
 
-        public void Load(int saveName)
+        public void LoadGame(int saveName)
         {
-            if (File.Exists(Application.persistentDataPath + "/save" + saveName + ".dat"))
-            {
-                BinaryFormatter bf = new BinaryFormatter();
-                using (FileStream stream = File.Open(Application.persistentDataPath + "/"
-                    + saveName + ".dat", FileMode.Open))
-                {
-                    GameSavedData data = (GameSavedData)bf.Deserialize(stream);
-                    //stream.Close(); //inside using-sentence, closes automatically at end
+        string filePath = Application.persistentDataPath + "/save" + saveName.ToString() + ".json";
+        string savedData = File.ReadAllText(filePath);
 
-                    groupName = data.savedGroupName;
-                    activeSaveSlot = saveName;
-                    activeScene = data.currentSceneName;
-
-                }
-
-            }
-        }
-
-        public void QuitGame()
-        {
-            Application.Quit();
-        }
+        GameSavedData loadableData = JsonUtility.FromJson<GameSavedData>(savedData);
+        this.groupName = loadableData.savedGroupName;
+        this.activeScene = loadableData.currentSceneName;
+    }
 
         public void LoadSaveNames()
         {
-            if (File.Exists(Application.persistentDataPath + "/" + "savedNames" + ".dat"))
-            {
-                BinaryFormatter bf = new BinaryFormatter();
-                FileStream file = File.Open(Application.persistentDataPath + "/" + "savedNames" + ".dat", FileMode.Open);
-                SavedNameData data = (SavedNameData)bf.Deserialize(file);
-                file.Close();
+        string filePath = Application.persistentDataPath + "/savedNames.json";
+        string savedNames = File.ReadAllText(filePath);
 
-                saveSlots[0] = data.save0;
-                saveSlots[1] = data.save1;
-                saveSlots[2] = data.save2;
-                saveSlots[3] = data.save3;
-                saveSlots[4] = data.save4;
-            }
+        SavedNamesData names = JsonUtility.FromJson<SavedNamesData>(savedNames);
+        this.saveSlots[0] = names.save0;
+        this.saveSlots[1] = names.save1;
+        this.saveSlots[2] = names.save2;
+        this.saveSlots[3] = names.save3;
+        this.saveSlots[4] = names.save4;
         }
         public void SaveSavedNames()
         {
-            Debug.Log("saving savenames");
-            BinaryFormatter bf = new BinaryFormatter();
-            FileStream file = File.Create(
-                Application.persistentDataPath + "/" + "savedNames" + ".dat");
+        Debug.Log("saving savenames");
+        SavedNamesData data = new SavedNamesData();
 
-            SavedNameData data = new SavedNameData();
             data.save0 = saveSlots[0];
             data.save1 = saveSlots[1];
             data.save2 = saveSlots[2];
             data.save3 = saveSlots[3];
             data.save4 = saveSlots[4];
 
-            bf.Serialize(file, data);
-            file.Close();
+        string saveableNames = JsonUtility.ToJson(data);
+        string filePath = Application.persistentDataPath + "/savedNames.json";
+        File.WriteAllText(filePath, saveableNames);
         }
-
-        //public string GetSaveID(string savedName)
-        //{
-        //    string saveID = manager.name;
-        //    return saveID;
-        //}
     }
 
     [Serializable]
@@ -116,7 +78,7 @@ public class SavingSystem : MonoBehaviour
 
     //Saveable list of names for LoadGame - buttons
     [Serializable]
-    class SavedNameData
+    class SavedNamesData
     {
         public string save1, save2, save3, save4, save0;
     }

@@ -32,9 +32,10 @@ public class LoadGameButton : MonoBehaviour
     private void LoadSavedNames()
     {
         buttonDisplayName = savingSystem.saveSlots[buttonId];
+        Debug.Log("tallennetussa nimess‰ "+ buttonDisplayName);
         if (buttonDisplayName == null || buttonDisplayName == "")
         {
-            buttonDisplayName = "Start New Game";
+            buttonDisplayName = "St‰rt New G‰me";
         }
         TM_loadGameName.text = buttonDisplayName;
 
@@ -43,10 +44,10 @@ public class LoadGameButton : MonoBehaviour
     public void StartPlaying()
     {
         //jos on jo joku nimi(ei start new game) eli kohtaan on tallennettu jo peli
-        if (buttonDisplayName != "Start New Game")
+        if (buttonDisplayName != "St‰rt New G‰me")
         {
             //loads save based on buttonId and changes to proper scene
-            savingSystem.Load(buttonId);
+            savingSystem.LoadGame(buttonId);
             SceneManager.LoadScene(savingSystem.activeScene);
         }
         //tehd‰‰n uusi peli
