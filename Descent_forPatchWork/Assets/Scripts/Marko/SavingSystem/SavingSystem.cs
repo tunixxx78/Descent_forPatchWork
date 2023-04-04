@@ -42,14 +42,19 @@ public class SavingSystem : MonoBehaviour
         public void LoadSaveNames()
         {
         string filePath = Application.persistentDataPath + "/savedNames.json";
-        string savedNames = File.ReadAllText(filePath);
+        if(File.Exists(filePath))
+        {
+            string savedNames = File.ReadAllText(filePath);
 
-        SavedNamesData names = JsonUtility.FromJson<SavedNamesData>(savedNames);
-        this.saveSlots[0] = names.save0;
-        this.saveSlots[1] = names.save1;
-        this.saveSlots[2] = names.save2;
-        this.saveSlots[3] = names.save3;
-        this.saveSlots[4] = names.save4;
+            SavedNamesData names = JsonUtility.FromJson<SavedNamesData>(savedNames);
+            this.saveSlots[0] = names.save0;
+            this.saveSlots[1] = names.save1;
+            this.saveSlots[2] = names.save2;
+            this.saveSlots[3] = names.save3;
+            this.saveSlots[4] = names.save4;
+        }
+        else { Debug.Log("Not yet saved names file, no problem."); }
+        
         }
         public void SaveSavedNames()
         {

@@ -29,8 +29,7 @@ public class NewGameCreator : MonoBehaviour
         Debug.Log("group's name is " + savingSystem.groupName);
         savingSystem.saveSlots[savingSystem.activeSaveSlot]
             = savingSystem.groupName;
-        savingSystem.SaveSavedNames();
-        savingSystem.SaveGame();
+        
         //update name in hero selection panel
         partyNameHeroSelectText.text = savingSystem.groupName;
     }
@@ -38,9 +37,10 @@ public class NewGameCreator : MonoBehaviour
     public void StartNewGame(string firstScene)
     {
         //go to first scene of adventuring - map scene??
+        savingSystem.SaveSavedNames();
+        savingSystem.SaveGame();
         savingSystem.activeScene = firstScene;
         Debug.Log("aktiivinen skene on "+ savingSystem.activeScene);
-        savingSystem.SaveGame();
         SceneManager.LoadScene(firstScene);
     }
 
