@@ -8,6 +8,7 @@ public class RulesController : MonoBehaviour
 {
     public TMP_Text contentText, extraText;
     [SerializeField] int idnum = 2;
+    [SerializeField] Animator rulesAnimator;
 
     public void SearchFieldHasChanged(string idNumber)
     {
@@ -16,7 +17,10 @@ public class RulesController : MonoBehaviour
 
     public void DatabaseCall()
     {
-        StartCoroutine(GetRequest("http://localhost/PatchDatabase/?unityget="));
+        //StartCoroutine(GetRequest("http://localhost/PatchDatabase/?unityget="));
+
+        //Add here ServerAdres!
+        StartCoroutine(GetRequest("http://www.turovaarti.fi/databaseManager.php?unityget="));
     }
 
     IEnumerator GetRequest(string uri)
@@ -53,8 +57,16 @@ public class RulesController : MonoBehaviour
                     contentText.text = content[0];
                     extraText.text = content[1];
 
+                    FindObjectOfType<VideoController>().SetTutorialClip(idnum);
+
+                    rulesAnimator.SetTrigger("RulesReveal");
+
                     break;
             }
         }
+    }
+    public void HideRulesPanel()
+    {
+        rulesAnimator.SetTrigger("RulesHide");
     }
 }

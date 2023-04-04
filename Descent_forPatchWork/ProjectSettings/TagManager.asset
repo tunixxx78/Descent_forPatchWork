@@ -3,7 +3,17 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - WorldMapButton
+  - AreaMapButton
+  - ExitMapButton
+  - BackMapButton
+  - Map
+  - Hero
+  - Enemy
+  - Health
+  - Strenght
+  - Level
   layers:
   - Default
   - TransparentFX
@@ -14,8 +24,8 @@ TagManager:
   - 
   - 
   - 
-  - 
-  - 
+  - player
+  - enemy
   - 
   - 
   - 
