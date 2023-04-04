@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Unity.UI;
 
 public class LoadGameButton : MonoBehaviour
 {
@@ -10,6 +11,10 @@ public class LoadGameButton : MonoBehaviour
     public int buttonId;
     public string buttonDisplayName;
     public SavingSystem savingSystem;
+
+    public GameObject newGamePanel;
+
+    
 
     [SerializeField] private TMP_Text TM_loadGameName;
 
@@ -47,9 +52,9 @@ public class LoadGameButton : MonoBehaviour
         //tehd‰‰n uusi peli
         else
         {
-            //SceneManager.LoadScene("NewGameScene");
-            SceneManager.LoadScene("TuroTestScene");
+            //Pit‰‰ laittaa avaamaan paneeli, NewGamePanel
             savingSystem.activeSaveSlot = this.buttonId;
+            newGamePanel.SetActive(true);
         }
     }
 }
