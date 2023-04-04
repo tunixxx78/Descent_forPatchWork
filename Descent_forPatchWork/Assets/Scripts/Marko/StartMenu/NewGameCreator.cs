@@ -37,9 +37,10 @@ public class NewGameCreator : MonoBehaviour
     public void StartNewGame(string firstScene)
     {
         //go to first scene of adventuring - map scene??
+        
+        savingSystem.activeScene = firstScene;
         savingSystem.SaveSavedNames();
         savingSystem.SaveGame();
-        savingSystem.activeScene = firstScene;
         Debug.Log("aktiivinen skene on "+ savingSystem.activeScene);
         SceneManager.LoadScene(firstScene);
     }
