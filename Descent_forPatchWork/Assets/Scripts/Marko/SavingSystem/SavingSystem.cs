@@ -27,8 +27,9 @@ public class SavingSystem : MonoBehaviour
 
     public void SaveGame()
     {
+        string savePath = Application.persistentDataPath + "/save" + activeSaveSlot + ".dat";
         BinaryFormatter bf = new BinaryFormatter();
-        using (FileStream stream = File.Create(Application.persistentDataPath + "/" + activeSaveSlot + ".dat"))
+        using (FileStream stream = File.Create(savePath))
         {
             GameSavedData data = new GameSavedData();
             data.savedGroupName = groupName;
@@ -36,6 +37,7 @@ public class SavingSystem : MonoBehaviour
 
             bf.Serialize(stream, data);
         }
+        Debug.Log("saved to " + savePath);
     }
 
         public void Load(int saveName)

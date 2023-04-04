@@ -54,7 +54,7 @@ public class LoadGameButton : MonoBehaviour
         {
             //Pit‰‰ laittaa avaamaan paneeli, NewGamePanel
             savingSystem.activeSaveSlot = this.buttonId;
-            newGamePanel.SetActive(true);
+            newGamePanel.SetActive(true); //activate NewGamePanel in Canvas
         }
     }
 }
