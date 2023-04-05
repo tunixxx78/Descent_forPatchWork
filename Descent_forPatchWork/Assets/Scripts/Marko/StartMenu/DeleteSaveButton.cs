@@ -10,6 +10,7 @@ public class DeleteSaveButton : MonoBehaviour
     private string savedNameText = "";
     [SerializeField] TMP_Text TM_buttonText;
     SavingSystem savingSystem;
+    //[SerializeField] Canvas mainUI;
     
 
     private void Awake()
@@ -33,22 +34,27 @@ public class DeleteSaveButton : MonoBehaviour
     public void DeleteSave()
     {
         savingSystem.saveSlots[buttonId] = null;
+        Debug.Log("savingsystemin teksti " + savingSystem.saveSlots[buttonId]);
         savingSystem.groupName= null;
+        Debug.Log("saving system groupname: " + savingSystem.groupName);
+        
         UpdateButtonText();
     }
 
     private void UpdateButtonText()
     {
         savedNameText = savingSystem.saveSlots[buttonId];
-        Debug.Log("tallennetussa nimessä " + savedNameText);
+        Debug.Log("päivitetty nimi " + savedNameText);
         if (savedNameText == null || savedNameText == "") {
             savedNameText = "Empty Save";
+            TM_buttonText.text = savedNameText;
         }
         else
         {
             TM_buttonText.text = "Delete "+ savedNameText;
         }
-        Debug.Log("savedin namen teksti " + savedNameText);
+
+        Debug.Log("saved namen teksti " + savedNameText);
         Debug.Log("tmp teksti " + TM_buttonText.text);
     }
 }
