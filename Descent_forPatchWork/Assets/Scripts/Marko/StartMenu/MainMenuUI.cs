@@ -5,8 +5,10 @@ using UnityEngine;
 
 public class MainMenuUI : MonoBehaviour
 {
-    // Start is called before the first frame update
+    
     SavingSystem savingSystem;
+    [SerializeField] List<SelectableHero> selectableHeroesList;    
+    [SerializeField] List<SelectHeroButton> selectHeroButtons;
     void Start()
     {
         //Get names of saveslots
@@ -18,6 +20,17 @@ public class MainMenuUI : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public void AddSelectedHeroes()
+    {
+        foreach (SelectableHero hero in selectableHeroesList)
+        {
+            if (hero.IsSelected())
+            {
+                savingSystem.partyHeroes.Add(hero);
+            }
+        }
     }
 
     public void QuitGame()

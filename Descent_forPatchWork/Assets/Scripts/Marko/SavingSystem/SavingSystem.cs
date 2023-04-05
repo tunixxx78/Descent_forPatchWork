@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
+using System.Text;
 using TMPro;
 using UnityEngine;
 
@@ -12,6 +13,7 @@ public class SavingSystem : MonoBehaviour
     public string groupName = "Nameless Group";
     public int activeSaveSlot;
     public string activeScene;
+    public List<SelectableHero> partyHeroes;
     
 
 
@@ -22,7 +24,19 @@ public class SavingSystem : MonoBehaviour
         gameSessionData.currentSceneName = activeScene;
         gameSessionData.savedGroupName= groupName;
 
-        string saveableData = JsonUtility.ToJson(gameSessionData);
+        if (partyHeroes.Count >= 1)
+        {
+            gameSessionData.hero0Name = partyHeroes[0].name;
+            gameSessionData.hero0Role = partyHeroes[0].role;
+        }
+        //if (partyHeroes[1])
+        //{
+        //    gameSessionData.hero1Name = partyHeroes[1].name;
+        //    gameSessionData.hero1Role = partyHeroes[1].role;
+        //}
+
+
+        string saveableData = JsonUtility.ToJson(gameSessionData,true);
         string filePath = Application.persistentDataPath + "/save" + activeSaveSlot.ToString() + ".json";
         Debug.Log("saving to: " + filePath);
 
@@ -37,6 +51,7 @@ public class SavingSystem : MonoBehaviour
         GameSavedData loadableData = JsonUtility.FromJson<GameSavedData>(savedData);
         this.groupName = loadableData.savedGroupName;
         this.activeScene = loadableData.currentSceneName;
+        
     }
 
         public void LoadSaveNames()
@@ -67,7 +82,7 @@ public class SavingSystem : MonoBehaviour
             data.save3 = saveSlots[3];
             data.save4 = saveSlots[4];
 
-        string saveableNames = JsonUtility.ToJson(data);
+        string saveableNames = JsonUtility.ToJson(data,true);
         string filePath = Application.persistentDataPath + "/savedNames.json";
         File.WriteAllText(filePath, saveableNames);
         }
@@ -84,6 +99,14 @@ public class SavingSystem : MonoBehaviour
     {
         public string savedGroupName;
         public string currentSceneName;
+
+    public string hero0Name;
+    public string hero0Role;
+
+    public string hero1Name;
+    public string hero1Role;
+
+    
     }
 
 

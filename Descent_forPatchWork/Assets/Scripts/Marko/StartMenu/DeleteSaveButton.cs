@@ -39,6 +39,7 @@ public class DeleteSaveButton : MonoBehaviour
         Debug.Log("savingsystemin teksti " + savingSystem.saveSlots[buttonId]);
         savingSystem.groupName= null;
         Debug.Log("saving system groupname: " + savingSystem.groupName);
+        savingSystem.SaveSavedNames();
         
         UpdateButtonText();
     }
