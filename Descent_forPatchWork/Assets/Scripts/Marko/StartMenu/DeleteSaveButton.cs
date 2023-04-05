@@ -7,7 +7,6 @@ public class DeleteSaveButton : MonoBehaviour
 {
 
     public int buttonId;
-    private string savedNameText = "";
     [SerializeField] TMP_Text TM_buttonText;
     SavingSystem savingSystem;
     //[SerializeField] Canvas mainUI;
@@ -31,6 +30,9 @@ public class DeleteSaveButton : MonoBehaviour
         
     }
 
+    //Deletes only the name from the savedNames-list
+    //(true save ín saveslot.json will just get overwritten
+    //when a new game is created on that slot)
     public void DeleteSave()
     {
         savingSystem.saveSlots[buttonId] = null;
@@ -43,18 +45,15 @@ public class DeleteSaveButton : MonoBehaviour
 
     private void UpdateButtonText()
     {
-        savedNameText = savingSystem.saveSlots[buttonId];
-        Debug.Log("päivitetty nimi " + savedNameText);
-        if (savedNameText == null || savedNameText == "") {
-            savedNameText = "Empty Save";
-            TM_buttonText.text = savedNameText;
+        if (savingSystem.saveSlots[buttonId] == null || savingSystem.saveSlots[buttonId] == "") {
+
+            TM_buttonText.text = "Empty Save";
         }
         else
         {
-            TM_buttonText.text = "Delete "+ savedNameText;
+            TM_buttonText.text = "Delete "+ savingSystem.saveSlots[buttonId];
         }
 
-        Debug.Log("saved namen teksti " + savedNameText);
         Debug.Log("tmp teksti " + TM_buttonText.text);
     }
 }
