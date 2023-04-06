@@ -5,16 +5,33 @@ using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class SavingSystem : MonoBehaviour
 {
+
+    public static SavingSystem savingSystem;
+
+
     public string[] saveSlots = new string[5];
     public string groupName = "Nameless Group";
     public int activeSaveSlot;
     public string activeScene;
     public List<SelectableHero> partyHeroes;
-    
+
+    private void Awake()
+    {
+        if(savingSystem != null && savingSystem != this)
+        {
+            Destroy(this);
+        }
+        else
+        {
+            savingSystem = this;
+            DontDestroyOnLoad(this);
+        }
+    }
 
 
     public void SaveGame()

@@ -16,11 +16,7 @@ public class MainMenuUI : MonoBehaviour
         savingSystem.LoadSaveNames();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+
 
     public void AddSelectedHeroes()
     {
