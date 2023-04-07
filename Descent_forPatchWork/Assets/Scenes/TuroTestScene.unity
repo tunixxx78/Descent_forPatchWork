@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.30692244, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028305, g: 0.22571313, b: 0.3069213, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2147,7 +2147,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &290205535
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2464,7 +2464,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &328989878
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6007,13 +6007,14 @@ GameObject:
   - component: {fileID: 962492338}
   - component: {fileID: 962492337}
   - component: {fileID: 962492340}
+  - component: {fileID: 962492341}
   m_Layer: 5
   m_Name: Block (2)
-  m_TagString: Untagged
+  m_TagString: WorldMapButton
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &962492336
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6116,6 +6117,23 @@ MonoBehaviour:
       m_Calls: []
   mapAnimator: {fileID: 0}
   animationTrigger: AreaMapReveal
+--- !u!114 &962492341
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 962492335}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31f973977bf1146e988d5d81897d6544, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  blockImages:
+  - {fileID: 21300000, guid: 3042b019b052942a1baf7aa49d7ca6bb, type: 3}
+  - {fileID: 21300000, guid: 65f0e363b74cf5845ab8c3fbc14f39ac, type: 3}
+  - {fileID: 21300000, guid: 02800fb9cff14da47a04572790384d8b, type: 3}
+  - {fileID: 21300000, guid: f9161c6c9e06dc445ada3ee16d991f90, type: 3}
 --- !u!1 &963812369
 GameObject:
   m_ObjectHideFlags: 0
@@ -7536,7 +7554,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1206223562
 RectTransform:
   m_ObjectHideFlags: 0
@@ -9051,7 +9069,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1413825365
 RectTransform:
   m_ObjectHideFlags: 0
@@ -10023,6 +10041,7 @@ MonoBehaviour:
   enemyHordStrenght: 0
   plrCanAttack: 0
   enemyCanAttack: 0
+  battleIsOn: 0
   attackForce: 1
 --- !u!4 &1466215018
 Transform:
@@ -10923,7 +10942,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1670495504
 RectTransform:
   m_ObjectHideFlags: 0
@@ -13081,7 +13100,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2002492420
 RectTransform:
   m_ObjectHideFlags: 0

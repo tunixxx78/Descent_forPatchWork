@@ -9,7 +9,7 @@ public class GameManager : MonoBehaviour
     public List<GameObject> enemysInGame;
     public float enemyHordHealth, enemyHordStrenght;
 
-    public bool plrCanAttack, enemyCanAttack;
+    public bool plrCanAttack, enemyCanAttack, battleIsOn;
     public float attackForce = 1;
 
     private void Awake()
@@ -40,6 +40,17 @@ public class GameManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             Application.Quit();
+        }
+
+        if(enemysInGame.Count <= 0 && battleIsOn)
+        {
+            Debug.Log("PELAAJA ON VOITTANUT TAISTELUN!");
+            battleIsOn = false;
+        }
+        if(heroesInGame.Count <= 0 && battleIsOn)
+        {
+            Debug.Log("PELAAJA ON HÄVINNYT TAISTELUN!");
+            battleIsOn = false;
         }
     }
 }
