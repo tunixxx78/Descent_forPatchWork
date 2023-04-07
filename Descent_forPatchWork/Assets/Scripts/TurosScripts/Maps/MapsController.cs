@@ -103,5 +103,6 @@ public class MapsController : MonoBehaviour
         }
 
         enemyHordPanel.SetActive(true);
+        GameManager.gm.battleIsOn = true;
     }
 }
