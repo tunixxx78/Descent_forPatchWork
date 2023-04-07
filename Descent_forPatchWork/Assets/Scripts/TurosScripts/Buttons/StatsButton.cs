@@ -44,6 +44,7 @@ public class StatsButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
                 if (this.gameObject.CompareTag("Strenght"))
                 {
                     parentObject.GetComponent<HeroOne>().hb.plrStrength--;
+                    GameManager.gm.attackForce = parentObject.GetComponent<HeroOne>().hb.plrStrength;
                 }
                 if (this.gameObject.CompareTag("Level"))
                 {
@@ -60,6 +61,7 @@ public class StatsButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
                 if (this.gameObject.CompareTag("Strenght"))
                 {
                     parentObject.GetComponent<HeroOne>().hb.plrStrength++;
+                    GameManager.gm.attackForce = parentObject.GetComponent<HeroOne>().hb.plrStrength;
                 }
                 if (this.gameObject.CompareTag("Level"))
                 {
@@ -80,6 +82,7 @@ public class StatsButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
                 {
                     parentObject.GetComponent<EnemyOne>().eB.enemyStrength--;
                     GameManager.gm.enemyHordStrenght--;
+
                 }
 
             }

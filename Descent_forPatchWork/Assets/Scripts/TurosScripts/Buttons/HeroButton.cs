@@ -29,23 +29,32 @@ public class HeroButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandler,
     {
         Debug.Log("BUTTON UP!");
 
-        if (this.gameObject.CompareTag("Hero") && GameManager.gm.enemyCanAttack == false)
+        if(GetComponent<HeroOne>().hb.thisHeroIsAttacking && GameManager.gm.plrIsAttacking || GetComponent<HeroOne>().hb.thisHeroIsAttacking == false && GameManager.gm.plrIsAttacking == false)
         {
-            GameObject statsPanel = this.gameObject.transform.Find("HeroStatsPanel").gameObject;
+            if (this.gameObject.CompareTag("Hero") && GameManager.gm.enemyCanAttack == false)
+            {
+                GameObject statsPanel = this.gameObject.transform.Find("HeroStatsPanel").gameObject;
 
-            if (statsPanel.activeSelf == false)
-            {
-                statsPanel.SetActive(true);
-                GameManager.gm.plrCanAttack = true;
-                GameManager.gm.attackForce = this.gameObject.GetComponent<HeroOne>().hb.plrStrength;
+                if (statsPanel.activeSelf == false)
+                {
+                    statsPanel.SetActive(true);
+                    GameManager.gm.plrCanAttack = true;
+                    GameManager.gm.attackForce = this.gameObject.GetComponent<HeroOne>().hb.plrStrength;
+
+                    GetComponent<HeroOne>().hb.thisHeroIsAttacking = true;
+                    GameManager.gm.plrIsAttacking = true;
+                }
+                else
+                {
+                    statsPanel.SetActive(false);
+                    GameManager.gm.plrCanAttack = false;
+                    GameManager.gm.attackForce = 0;
+
+                    GetComponent<HeroOne>().hb.thisHeroIsAttacking = false;
+                    GameManager.gm.plrIsAttacking = false;
+                }
             }
-            else
-            {
-                statsPanel.SetActive(false);
-                GameManager.gm.plrCanAttack = false;
-                GameManager.gm.attackForce = 0;
-            }
-        }
+        }      
     }
 
     public void OnPointerEnter(PointerEventData eventData)

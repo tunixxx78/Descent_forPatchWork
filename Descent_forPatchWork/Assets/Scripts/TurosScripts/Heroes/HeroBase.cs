@@ -14,4 +14,6 @@ public class HeroBase
 
     public Sprite[] heroImages;
 
+    public bool thisHeroIsAttacking;
+
 }
