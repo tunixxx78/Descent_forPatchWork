@@ -66,6 +66,8 @@ public class GameManager : MonoBehaviour
                 currentMission.GetComponent<Quest>().missions[currentMissionInQuest].SetActive(true);
 
             }
+
+            GameObject.Find("MapPanel").transform.GetChild(currentMissionIndex).GetChild(2).GetChild(9).gameObject.SetActive(true);
             
         }
         if(heroesInGame.Count <= 0 && battleIsOn)

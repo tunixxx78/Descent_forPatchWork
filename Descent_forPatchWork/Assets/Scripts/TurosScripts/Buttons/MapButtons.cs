@@ -53,7 +53,7 @@ public class MapButtons : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
         if (this.gameObject.CompareTag("WorldMapButton"))
         {
             GameManager.gm.currentAreaMissions = this.gameObject.GetComponent<BlockInformation>().blockImages.Length;
-
+            GameObject.Find("AreaMapPanel").transform.GetChild(0).GetComponent<Image>().sprite = this.gameObject.GetComponent<BlockInformation>().RealAreaMap; //mapPanel.transform.GetChild(GameManager.gm.currentMissionIndex).GetChild(0).GetChild(1).GetChild(GameManager.gm.currentMissionInQuest).GetComponent<BlockInformation>().RealAreaMap;
 
             //mapAnimator.SetTrigger(animationTrigger);
             mapAnimator.SetBool(animationTrigger, true);
@@ -79,7 +79,8 @@ public class MapButtons : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
                 obj.name = subMissionIndex.ToString();
                 obj.tag = "SideQuest";
                 obj.AddComponent<Image>().transform.localScale = new Vector3(1, 1, 1);
-                obj.GetComponent<Image>().sprite = mapPanel.transform.GetChild(GameManager.gm.currentMissionIndex).GetChild(0).GetChild(1).GetChild(GameManager.gm.currentMissionInQuest).GetComponent<BlockInformation>().blockImages[i];
+                obj.GetComponent<Image>().sprite = this.gameObject.GetComponent<BlockInformation>().blockImages[i];
+                //obj.GetComponent<Image>().sprite = mapPanel.transform.GetChild(GameManager.gm.currentMissionIndex).GetChild(0).GetChild(1).GetChild(GameManager.gm.currentMissionInQuest).GetComponent<BlockInformation>().blockImages[i];
                 obj.AddComponent<QuestLorePanelButton>();
 
                 subMissionIndex++;
@@ -132,7 +133,10 @@ public class MapButtons : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
             }
 
             maps.enemyHordPanel.SetActive(false);
+            maps.mapPiecesBattle.Clear();
+            GameManager.gm.QuestLorePanel.SetActive(true);
 
+            GameObject.Find("MapPanel").transform.GetChild(GameManager.gm.currentMissionIndex).GetChild(2).GetChild(9).gameObject.SetActive(false);
 
         }
 
@@ -176,6 +180,9 @@ public class MapButtons : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
             {
                 PlrStats.transform.GetChild(i).gameObject.SetActive(false);
             }
+
+
+            GameObject.Find("MapPanel").transform.GetChild(GameManager.gm.currentMissionIndex).GetChild(2).GetChild(9).gameObject.SetActive(false);
         }
 
     }

@@ -70,11 +70,14 @@ public class MapsController : MonoBehaviour
         GameObject battleMapChild = battleMap.transform.GetChild(0).gameObject;
         int amountOfPieces = battleMapChild.transform.childCount;
 
+        battleMapChild.transform.GetChild(0).GetComponent<Image>().sprite = mapPiecesBattle[0];
+
+        /*
         for (int i = 0; i < amountOfPieces; i++)
         {
             battleMapChild.transform.GetChild(i).GetComponent<Image>().sprite = mapPiecesBattle[i];
         }
-
+        */
         // for spawning heroes for fight
         for (int i = 0; i < heroBase.Length; i++)
         {
@@ -89,6 +92,8 @@ public class MapsController : MonoBehaviour
         }
 
         //for spawning enemys for fight
+
+        
         for(int e = 0; e < enemyBase.Length; e++)
         {
             var enemyInstance = Instantiate(enemyBase[e], enemySpawnPoints[e].position, Quaternion.identity);
@@ -100,6 +105,7 @@ public class MapsController : MonoBehaviour
             GameManager.gm.enemyHordStrenght += enemyInstance.GetComponent<EnemyOne>().eB.enemyStrength;
             GameManager.gm.enemysInGame.Add(enemyInstance);
 
+            
         }
 
         enemyHordPanel.SetActive(true);

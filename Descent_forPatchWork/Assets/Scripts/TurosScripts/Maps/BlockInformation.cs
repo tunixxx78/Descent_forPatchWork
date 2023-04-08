@@ -7,6 +7,8 @@ public class BlockInformation : MonoBehaviour
     public Sprite[] blockImages;
     MapsController mapsController;
 
+    public Sprite RealAreaMap;
+
     private void Awake()
     {
         mapsController = FindObjectOfType<MapsController>();
