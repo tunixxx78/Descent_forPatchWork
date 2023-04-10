@@ -88,24 +88,58 @@ public class SavingSystem : MonoBehaviour
 
         public void LoadGame(int saveName)
         {
-        string filePath = Application.persistentDataPath + "/save" + saveName.ToString() + ".json";
-        string savedData = File.ReadAllText(filePath);
-
-        GameSavedData loadableData = JsonUtility.FromJson<GameSavedData>(savedData);
-        this.groupName = loadableData.savedGroupName;
-        this.activeScene = loadableData.currentSceneName;
-
-            for(int i = 0; i < loadableData.heroRoles.Length; i++)  
+            //TODO NEW VERSION AS IN SAVEGAME..
+            string filePath = Application.persistentDataPath + "/save" + saveName.ToString() + ".json";
+            if (File.Exists(filePath))
             {
-                SelectableHero newHero = new SelectableHero();
-                newHero.heroName = loadableData.heroNames[i];
-           
-                newHero.heroRole = loadableData.heroRoles[i];
-            newHero.name = newHero.heroRole; //showing rolename on Hierachy?
+                    string savedData = File.ReadAllText(filePath);
 
-            this.partyHeroes.Add(newHero);
+                    GameSavedData loadableData = JsonUtility.FromJson<GameSavedData>(savedData);
+                    this.groupName = loadableData.savedGroupName;
+                    this.activeScene = loadableData.currentSceneName;
+
+                    foreach (SavedHero sHero in loadableData.savedHeroes)
+                    {
+                //create another type of Hero-GameObject- for use later in game?
+                //instead of Selectable hero..
+                        GameObject heroGameObject = new GameObject();
+                Debug.Log("luotiin heroGameObject gameobject");
+                        heroGameObject.AddComponent<SelectableHero>();
+                Debug.Log("lisattiin SelecatbleHero componentti");
+
+                        SelectableHero hero = heroGameObject.GetComponent<SelectableHero>();
+                        hero.name = sHero.heroName; //name in hierarchy
+                        hero.heroName = sHero.heroName;
+                        hero.heroRole = sHero.heroRole;
+                        hero.currentHealth = sHero.currentHealth;
+                        hero.maxHealth = sHero.maxHealth;
+                        hero.currentActionPoints = sHero.currentActionPoints;
+                        hero.maxActionPoints = sHero.maxActionPoints;
+
+                        hero.atk = sHero.atk;
+                        hero.def = sHero.def;
+                        hero.fate = sHero.fate;
+                        hero.exp = sHero.exp;
+
+                        hero.maxCombatItems = sHero.maxCombatItems;
+                        hero.maxItems = sHero.maxItems;
+
+                            foreach(string sCombatCID in sHero.savedCombatItems)
+                            {
+                                //TODO search for CombatItem by ID..
+                            }
+                            foreach(string sJourneyCID in sHero.savedJourneyItems)
+                            {
+                                //TODO journeycard by id
+                            }
+                            foreach(string hiddenCID in sHero.savedHiddenItems)
+                            {
+                                //TODO hidden cards by id..
+                            }
+                        partyHeroes.Add(hero);
+                    }
             }
-        
+
         }
 
         public void LoadSaveNames()
@@ -166,7 +200,7 @@ public class SavingSystem : MonoBehaviour
     [Serializable]
     class SavedNamesData
     {
-        public string save1, save2, save3, save4, save0;
+        public string  save0, save1, save2, save3, save4;
     }
 
 [Serializable]
