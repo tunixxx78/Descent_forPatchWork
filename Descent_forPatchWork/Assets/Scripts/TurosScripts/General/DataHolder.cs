@@ -104,23 +104,52 @@ public class DataHolder : MonoBehaviour
         }
     }
 
-    public void SetLoot(int plrIndex, GameObject item)
+    public void SetLoot(int plrIndex, int lootIndex, GameObject item)
     {
         if(plrIndex == 0)
         {
-            plrOneCardItems.Add(item);
+            if(lootIndex == 0)
+            {
+                plrOneWeaponItems.Add(item);
+            }
+            if(lootIndex == 1)
+            {
+                plrOneCardItems.Add(item);
+            }
+            
         }
         if (plrIndex == 1)
         {
-            plrTwoCardItems.Add(item);
+            if (lootIndex == 0)
+            {
+                plrTwoWeaponItems.Add(item);
+            }
+            if (lootIndex == 1)
+            {
+                plrTwoCardItems.Add(item);
+            }
         }
         if (plrIndex == 2)
         {
-            plrThreeCardItems.Add(item);
+            if (lootIndex == 0)
+            {
+                plrThreeWeaponItems.Add(item);
+            }
+            if (lootIndex == 1)
+            {
+                plrThreeCardItems.Add(item);
+            }
         }
         if (plrIndex == 3)
         {
-            plrFourCardItems.Add(item);
+            if (lootIndex == 0)
+            {
+                plrFourWeaponItems.Add(item);
+            }
+            if (lootIndex == 1)
+            {
+                plrFourCardItems.Add(item);
+            }
         }
 
     }

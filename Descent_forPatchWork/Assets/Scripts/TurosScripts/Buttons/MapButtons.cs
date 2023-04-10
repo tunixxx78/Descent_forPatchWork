@@ -113,17 +113,23 @@ public class MapButtons : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
                 GameManager.gm.heroesInGame[i].GetComponent<HeroOne>().hb.plrLevel);
 
                 
-
-                for (int j = 0; j <= GameManager.gm.heroesInGame[i].GetComponent<HeroOne>().hbi.cardItems.Count - 1; j++)
+                /*
+                for (int j = 0; j < GameManager.gm.heroesInGame[i].GetComponent<HeroOne>().hbi.cardItems.Count - 1; j++)
                 {
                     GameObject lootInst = GameObject.Find("CollectedLootPanel").transform.GetChild(0).gameObject;
                     Debug.Log(lootInst);
                     lootInst.transform.SetParent(GameObject.Find("InventoryHolder").transform);
                 }
-
+                */
             }
-
-
+            
+            for (int j = 0; j <= 3; j++)
+            {
+                GameObject lootInst = GameObject.Find("CollectedLootPanel").transform.GetChild(0).gameObject;
+                Debug.Log(lootInst);
+                lootInst.transform.SetParent(GameObject.Find("InventoryHolder").transform);
+            }
+            
 
             //for turning off player stat panels
 

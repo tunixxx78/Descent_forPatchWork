@@ -98,30 +98,46 @@ public class MapsController : MonoBehaviour
 
                 if(i == 0)
                 {
-                    for(int j = 0; j < DataHolder.dataHolder.plrOneCardItems.Count; j++)
+                    if(DataHolder.dataHolder.plrOneCardItems.Count != 0)
                     {
-                        heroInstance.GetComponent<HeroOne>().hbi.cardItems.Add(DataHolder.dataHolder.plrOneCardItems[j]);
-                    }   
+                        for (int j = 0; j < DataHolder.dataHolder.plrOneCardItems.Count; j++)
+                        {
+                            heroInstance.GetComponent<HeroOne>().hbi.cardItems.Add(DataHolder.dataHolder.plrOneCardItems[j]);
+                        }
+                        for (int k = 0; k < DataHolder.dataHolder.plrOneWeaponItems.Count; k++)
+                        {
+                            heroInstance.GetComponent<HeroOne>().hbi.weaponItems.Add(DataHolder.dataHolder.plrOneWeaponItems[k]);
+                        }
+                    }
+                       
                 }
                 if (i == 1)
                 {
-                    for (int j = 0; j < DataHolder.dataHolder.plrTwoCardItems.Count; j++)
+                    if(DataHolder.dataHolder.plrTwoCardItems.Count != 0)
                     {
-                        heroInstance.GetComponent<HeroOne>().hbi.cardItems.Add(DataHolder.dataHolder.plrOneCardItems[j]);
+                        for (int j = 0; j < DataHolder.dataHolder.plrTwoWeaponItems.Count; j++)
+                        {
+                            heroInstance.GetComponent<HeroOne>().hbi.weaponItems.Add(DataHolder.dataHolder.plrTwoWeaponItems[j]);
+                        }
+                        for (int k = 0; k < DataHolder.dataHolder.plrTwoCardItems.Count; k++)
+                        {
+                            heroInstance.GetComponent<HeroOne>().hbi.cardItems.Add(DataHolder.dataHolder.plrTwoCardItems[k]);
+                        }
                     }
+                    
                 }
                 if (i == 2)
                 {
                     for (int j = 0; j < DataHolder.dataHolder.plrThreeCardItems.Count; j++)
                     {
-                        heroInstance.GetComponent<HeroOne>().hbi.cardItems.Add(DataHolder.dataHolder.plrOneCardItems[j]);
+                        heroInstance.GetComponent<HeroOne>().hbi.cardItems.Add(DataHolder.dataHolder.plrThreeCardItems[j]);
                     }
                 }
                 if (i == 3)
                 {
                     for (int j = 0; j < DataHolder.dataHolder.plrFourCardItems.Count; j++)
                     {
-                        heroInstance.GetComponent<HeroOne>().hbi.cardItems.Add(DataHolder.dataHolder.plrOneCardItems[j]);
+                        heroInstance.GetComponent<HeroOne>().hbi.cardItems.Add(DataHolder.dataHolder.plrFourCardItems[j]);
                     }
                 }
             }

@@ -9,6 +9,7 @@ public class LootItemButton : MonoBehaviour, IPointerDownHandler, IPointerUpHand
     public UnityEvent buttonClick;
 
     [SerializeField] GameObject[] lootItems;
+    [SerializeField] int lootIndex;
 
     private void Awake()
     {
@@ -23,16 +24,29 @@ public class LootItemButton : MonoBehaviour, IPointerDownHandler, IPointerUpHand
     {
         Debug.Log("BUTTON DOWN!");
 
+        int randItem = Random.Range(0, lootItems.Length);
+
         if (this.gameObject.CompareTag("LootItem"))
         {
-            GameObject lootInstance = Instantiate(lootItems[0], this.gameObject.transform.position, Quaternion.identity);
+            GameObject lootInstance = Instantiate(lootItems[randItem], this.gameObject.transform.position, Quaternion.identity);
             
             lootInstance.transform.SetParent(GameObject.Find("MapPanel").transform.GetChild(GameManager.gm.currentMissionIndex).GetChild(2).GetChild(9).GetChild(5));
             lootInstance.transform.localScale = new Vector3(1f, 1f, 1f);
 
-            GameManager.gm.heroesInGame[GameManager.gm.activePlayer].GetComponent<HeroOne>().hbi.cardItems.Add(lootInstance);
+            if (GameManager.gm.heroesInGame[GameManager.gm.activePlayer].GetComponent<HeroOne>().hbi.weaponItems.Contains(lootInstance) == false && lootIndex == 0)
+            {
+                GameManager.gm.heroesInGame[GameManager.gm.activePlayer].GetComponent<HeroOne>().hbi.weaponItems.Add(lootInstance);
+                DataHolder.dataHolder.SetLoot(GameManager.gm.activePlayer, lootIndex, lootInstance);
+            }
 
-            DataHolder.dataHolder.SetLoot(GameManager.gm.activePlayer, lootInstance);
+            if (GameManager.gm.heroesInGame[GameManager.gm.activePlayer].GetComponent<HeroOne>().hbi.cardItems.Contains(lootInstance) == false && lootIndex == 1)
+            {
+                GameManager.gm.heroesInGame[GameManager.gm.activePlayer].GetComponent<HeroOne>().hbi.cardItems.Add(lootInstance);
+                DataHolder.dataHolder.SetLoot(GameManager.gm.activePlayer, lootIndex, lootInstance);
+            }
+            
+
+            
 
             Destroy(this.gameObject, 0.25f);
         }

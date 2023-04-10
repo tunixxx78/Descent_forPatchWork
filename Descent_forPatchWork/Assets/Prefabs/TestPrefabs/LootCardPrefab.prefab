@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 800937722610588212}
   - component: {fileID: 800937722610588214}
   m_Layer: 5
-  m_Name: LootPrefab
+  m_Name: LootCardPrefab
   m_TagString: LootItem
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -94,3 +94,5 @@ MonoBehaviour:
       m_Calls: []
   lootItems:
   - {fileID: 800937722610588210}
+  - {fileID: 537869927679791651, guid: ba1046e8f80614e7396b5bcffb3fff57, type: 3}
+  lootIndex: 1
