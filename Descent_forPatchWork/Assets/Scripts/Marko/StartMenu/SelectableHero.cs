@@ -9,28 +9,34 @@ public class SelectableHero : MonoBehaviour
 
     public string heroName;
     public string heroRole;
-    [SerializeField] int maxHealth = 5;
-    [SerializeField] int currentXP = 0;
-    [SerializeField] int level = 1;
+
+    public int currentHealth;
+    public int maxHealth;
+
+    public int currentActionPoints;
+    public int maxActionPoints;
+
+    public int atk;
+    public int def;
+    public int fate;
+    public int exp;
+
+    public int maxCombatItems;
+    public int maxItems;
+
     [SerializeField] bool selected = false;
     //[SerializeField] Material material;
     [SerializeField] Material selectedMaterial;
     [SerializeField] Material unselectedMaterial;
+    public List<CombatItem> combatItems;
+    public List<JourneyItem> journeyItems;
+    public List<HiddenItem> hiddenItems;
 
     // Start is called before the first frame update
     void Start()
     {
         GetComponent<Renderer>().material = unselectedMaterial;
     }
-
-    // Update is called once per frame
-    //void Update()
-    //{
-    //    if(Input.GetMouseButtonDown(0))
-    //    {
-    //        SelectHero();
-    //    }
-    //}
 
     public void SelectHero()
     {
