@@ -19,6 +19,7 @@ public class SavingSystem : MonoBehaviour
     public int activeSaveSlot;
     public string activeScene;
     public List<SelectableHero> partyHeroes;
+    //public SelectableHero[] partyHeroes = new SelectableHero[5];
 
     private void Awake()
     {
@@ -41,17 +42,11 @@ public class SavingSystem : MonoBehaviour
         gameSessionData.currentSceneName = activeScene;
         gameSessionData.savedGroupName= groupName;
 
-        if (partyHeroes.Count >= 1)
+        for(int i = 0; i < partyHeroes.Count; i++)
         {
-            gameSessionData.hero0Name = partyHeroes[0].name;
-            gameSessionData.hero0Role = partyHeroes[0].role;
+            gameSessionData.heroNames[i] = partyHeroes[i].heroName;
+            gameSessionData.heroRoles[i]= partyHeroes[i].heroRole;
         }
-        //if (partyHeroes[1])
-        //{
-        //    gameSessionData.hero1Name = partyHeroes[1].name;
-        //    gameSessionData.hero1Role = partyHeroes[1].role;
-        //}
-
 
         string saveableData = JsonUtility.ToJson(gameSessionData,true);
         string filePath = Application.persistentDataPath + "/save" + activeSaveSlot.ToString() + ".json";
@@ -68,8 +63,14 @@ public class SavingSystem : MonoBehaviour
         GameSavedData loadableData = JsonUtility.FromJson<GameSavedData>(savedData);
         this.groupName = loadableData.savedGroupName;
         this.activeScene = loadableData.currentSceneName;
+
+            for(int i = 0; i < loadableData.heroRoles.Length; i++)  
+            {
+                this.partyHeroes[i].heroName = loadableData.heroNames[i];
+                this.partyHeroes[i].heroRole= loadableData.heroRoles[i];
+            }
         
-    }
+        }
 
         public void LoadSaveNames()
         {
@@ -123,6 +124,8 @@ public class SavingSystem : MonoBehaviour
     public string hero1Name;
     public string hero1Role;
 
+    public string[] heroNames = new string[5];
+    public string[] heroRoles = new string[5];
     
     }
 

@@ -7,8 +7,8 @@ using UnityEngine;
 public class SelectableHero : MonoBehaviour
 {
 
-    public string name;
-    public string role;
+    public string heroName;
+    public string heroRole;
     [SerializeField] int maxHealth = 5;
     [SerializeField] int currentXP = 0;
     [SerializeField] int level = 1;
