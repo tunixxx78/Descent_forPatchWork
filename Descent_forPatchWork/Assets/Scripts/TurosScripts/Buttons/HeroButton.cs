@@ -43,6 +43,7 @@ public class HeroButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandler,
 
                     GetComponent<HeroOne>().hb.thisHeroIsAttacking = true;
                     GameManager.gm.plrIsAttacking = true;
+                    GameManager.gm.activePlayer = GetComponent<HeroOne>().hb.plrIndex;
                 }
                 else
                 {
@@ -52,6 +53,7 @@ public class HeroButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandler,
 
                     GetComponent<HeroOne>().hb.thisHeroIsAttacking = false;
                     GameManager.gm.plrIsAttacking = false;
+                    GameManager.gm.activePlayer = 0;
                 }
             }
         }      

@@ -15,7 +15,10 @@ public class GameManager : MonoBehaviour
     public float attackForce = 1;
 
     public GameObject QuestLorePanel, currentMission;
-    public int currentAreaMissions, currentMissionInQuest = 0, currentMissionIndex = 0;
+    public int currentAreaMissions, currentMissionInQuest = 0, currentMissionIndex = 0, activePlayer, round = 0;
+
+    public Transform[] lootSpawnPoints;
+    public GameObject[] lootObjects;
 
     private void Awake()
     {
@@ -68,6 +71,16 @@ public class GameManager : MonoBehaviour
             }
 
             GameObject.Find("MapPanel").transform.GetChild(currentMissionIndex).GetChild(2).GetChild(9).gameObject.SetActive(true);
+
+            // for instanciating lootObjects to map
+
+            for(int i = 0; i < lootSpawnPoints.Length; i++)
+            {
+                GameObject lootInstance = Instantiate(lootObjects[i], lootSpawnPoints[i].position, Quaternion.identity);
+
+                lootInstance.transform.SetParent(GameObject.Find("Canvas").transform);
+                lootInstance.transform.localScale = new Vector3(1f, 1f, 1f);
+            }
             
         }
         if(heroesInGame.Count <= 0 && battleIsOn)
@@ -75,5 +88,6 @@ public class GameManager : MonoBehaviour
             Debug.Log("PELAAJA ON HÄVINNYT TAISTELUN!");
             battleIsOn = false;
         }
+
     }
 }

@@ -78,11 +78,54 @@ public class MapsController : MonoBehaviour
             battleMapChild.transform.GetChild(i).GetComponent<Image>().sprite = mapPiecesBattle[i];
         }
         */
+
+
         // for spawning heroes for fight
         for (int i = 0; i < heroBase.Length; i++)
         {
             var heroInstance = Instantiate(heroBase[i], heroSpawnPoints[i].position, Quaternion.identity);
             heroInstance.GetComponent<HeroOne>().hb.plrIndex = heroNumIndex;
+
+            if(GameManager.gm.round != 0)
+            {
+
+                heroInstance.GetComponent<HeroOne>().hb.plrName = DataHolder.dataHolder.GetName(i);
+                Debug.Log(heroInstance.GetComponent<HeroOne>().hb.plrName);
+                heroInstance.GetComponent<HeroOne>().hb.plrHealth = DataHolder.dataHolder.GetHealth(i);
+                Debug.Log(heroInstance.GetComponent<HeroOne>().hb.plrHealth);
+                heroInstance.GetComponent<HeroOne>().hb.plrStrength = DataHolder.dataHolder.GetStrenght(i);
+                heroInstance.GetComponent<HeroOne>().hb.plrLevel = DataHolder.dataHolder.GetLevel(i);
+
+                if(i == 0)
+                {
+                    for(int j = 0; j < DataHolder.dataHolder.plrOneCardItems.Count; j++)
+                    {
+                        heroInstance.GetComponent<HeroOne>().hbi.cardItems.Add(DataHolder.dataHolder.plrOneCardItems[j]);
+                    }   
+                }
+                if (i == 1)
+                {
+                    for (int j = 0; j < DataHolder.dataHolder.plrTwoCardItems.Count; j++)
+                    {
+                        heroInstance.GetComponent<HeroOne>().hbi.cardItems.Add(DataHolder.dataHolder.plrOneCardItems[j]);
+                    }
+                }
+                if (i == 2)
+                {
+                    for (int j = 0; j < DataHolder.dataHolder.plrThreeCardItems.Count; j++)
+                    {
+                        heroInstance.GetComponent<HeroOne>().hbi.cardItems.Add(DataHolder.dataHolder.plrOneCardItems[j]);
+                    }
+                }
+                if (i == 3)
+                {
+                    for (int j = 0; j < DataHolder.dataHolder.plrFourCardItems.Count; j++)
+                    {
+                        heroInstance.GetComponent<HeroOne>().hbi.cardItems.Add(DataHolder.dataHolder.plrOneCardItems[j]);
+                    }
+                }
+            }
+            
             heroInstance.transform.SetParent(battleMap.transform);
             heroInstance.transform.position = heroSpawnPoints[i].position;
             heroInstance.transform.localScale = new Vector3(1, 1, 1);

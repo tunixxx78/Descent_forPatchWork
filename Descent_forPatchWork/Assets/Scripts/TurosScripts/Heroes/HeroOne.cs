@@ -7,6 +7,7 @@ using TMPro;
 public class HeroOne : MonoBehaviour
 {
     public HeroBase hb;
+    public HeroInventoryBase hbi;
     TMP_Text heroName, health, strength, level;
     [SerializeField] GameObject currentObj;
 
@@ -28,6 +29,7 @@ public class HeroOne : MonoBehaviour
     private void Update()
     {
         GameObject heroStats = currentObj.transform.Find("HeroStatsPanel").gameObject;
+        this.gameObject.transform.GetChild(0).GetComponent<TMP_Text>().text = hb.plrName;
         heroStats.transform.GetChild(0).GetComponent<TMP_Text>().text = hb.plrHealth.ToString();
         heroStats.transform.GetChild(1).GetComponent<TMP_Text>().text = hb.plrStrength.ToString();
         heroStats.transform.GetChild(2).GetComponent<TMP_Text>().text = hb.plrLevel.ToString();
