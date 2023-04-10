@@ -100,15 +100,15 @@ public class SavingSystem : MonoBehaviour
 
                     foreach (SavedHero sHero in loadableData.savedHeroes)
                     {
-                //create another type of Hero-GameObject- for use later in game?
-                //instead of Selectable hero..
+                        
+                
                         GameObject heroGameObject = new GameObject();
-                Debug.Log("luotiin heroGameObject gameobject");
+                
                         heroGameObject.AddComponent<SelectableHero>();
-                Debug.Log("lisattiin SelecatbleHero componentti");
+                
 
                         SelectableHero hero = heroGameObject.GetComponent<SelectableHero>();
-                        hero.name = sHero.heroName; //name in hierarchy
+                        hero.name = sHero.heroRole; //role shows in hierarchy
                         hero.heroName = sHero.heroName;
                         hero.heroRole = sHero.heroRole;
                         hero.currentHealth = sHero.currentHealth;
@@ -136,7 +136,9 @@ public class SavingSystem : MonoBehaviour
                             {
                                 //TODO hidden cards by id..
                             }
+                Debug.Log("kokeillaan lisätä heroa");
                         partyHeroes.Add(hero);
+                Debug.Log("heroja on: " +partyHeroes.Count);
                     }
             }
 
