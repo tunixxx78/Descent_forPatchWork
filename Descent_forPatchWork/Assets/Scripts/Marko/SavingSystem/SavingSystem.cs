@@ -105,6 +105,8 @@ public class SavingSystem : MonoBehaviour
                         GameObject heroGameObject = new GameObject();
                 
                         heroGameObject.AddComponent<SelectableHero>();
+                heroGameObject.AddComponent<MeshRenderer>();
+                //TODO add all other components(material, meshrenderer ..) too?
                 
 
                         SelectableHero hero = heroGameObject.GetComponent<SelectableHero>();
@@ -190,8 +192,8 @@ public class SavingSystem : MonoBehaviour
         public string savedGroupName;
         public string currentSceneName;
 
-    public string[] heroNames = new string[5];
-    public string[] heroRoles = new string[5];
+    //public string[] heroNames = new string[5];
+    //public string[] heroRoles = new string[5];
 
     public List<SavedHero> savedHeroes = new List<SavedHero>();
     
