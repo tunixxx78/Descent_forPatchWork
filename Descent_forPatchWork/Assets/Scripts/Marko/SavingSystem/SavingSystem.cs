@@ -61,11 +61,12 @@ public class SavingSystem : MonoBehaviour
             sHero.maxCombatItems = hero.maxCombatItems;
             sHero.maxItems = hero.maxItems;
 
-            //save good itams..
-            foreach(CombatItem item in hero.combatItems)
-            {
-                sHero.savedCombatItems.Add(item.id);    //save only IDs
-            }
+
+            sHero.savedCombatItems = hero.combatItems;
+            //foreach(CombatItem item in hero.combatItems)
+            //{
+            //    sHero.savedCombatItems.Add(item.id);    //save only IDs
+            //}
             foreach(JourneyItem item in hero.journeyItems)
             {
                 sHero.savedJourneyItems.Add(item.id);
