@@ -4,6 +4,8 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using Unity.UI;
+using System;
+using Unity.VisualScripting;
 
 public class LoadGameButton : MonoBehaviour
 {
@@ -42,6 +44,7 @@ public class LoadGameButton : MonoBehaviour
 
     }
 
+
     public void StartPlaying()
     {
         //jos on jo joku nimi(ei start new game) eli kohtaan on tallennettu jo peli
@@ -54,7 +57,6 @@ public class LoadGameButton : MonoBehaviour
         //tehd‰‰n uusi peli
         else
         {
-            //Pit‰‰ laittaa avaamaan paneeli, NewGamePanel
             savingSystem.activeSaveSlot = this.buttonId;
             newGamePanel.SetActive(true); //activate NewGamePanel in Canvas
         }
