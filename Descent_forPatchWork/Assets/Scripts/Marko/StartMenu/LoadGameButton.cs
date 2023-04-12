@@ -21,19 +21,19 @@ public class LoadGameButton : MonoBehaviour
 
     private void Awake()
     {
-        savingSystem = FindObjectOfType<SavingSystem>();
+        savingSystem = FindObjectOfType<SavingSystem>();       
     }
 
-    void Start()
+    private void OnEnable()
     {
+        Debug.Log("updated load game button names - _ - _");
         LoadSavedNames();
     }
-
 
     private void LoadSavedNames()
     {
         buttonDisplayName = savingSystem.saveSlots[buttonId];
-        Debug.Log("tallennetussa nimessä "+ buttonDisplayName);
+        //(Debug.Log("tallennetussa nimessä " + buttonId + ": "+ buttonDisplayName);
         if (buttonDisplayName == null || buttonDisplayName == "")
         {
             buttonDisplayName = defaultEmpty;
