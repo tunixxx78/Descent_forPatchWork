@@ -10,12 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cd83c8606ab2a914a9af29a267374b19, type: 3}
-  m_Name: Hero1Card 4
+  m_Name: Hero1Card 1
   m_EditorClassIdentifier: 
-  initiativeValue: 40
-  atk: 0
-  heal: 10
+  initiativeValue: 20
+  atk: 4
+  heal: 0
   info: Does something
-  skillId: 4
+  skillId: 1
   closeRange: 0
   longRange: 0
+  Sprite: {fileID: 21300000, guid: 2bf752285c49d91419b79f095182db18, type: 3}

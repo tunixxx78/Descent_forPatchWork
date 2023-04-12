@@ -1,0 +1,937 @@
+fileFormatVersion: 2
+guid: 24a9fdd225c286f4daef523e4b2094f3
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 1
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: UI-SHEET_BATTLEMAP_ENEMY_PLAYER_0
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 813
+        width: 193
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71f3996e78796a742953573db4e4b0d0
+      internalID: -2130464867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-SHEET_BATTLEMAP_ENEMY_PLAYER_1
+      rect:
+        serializedVersion: 2
+        x: 286
+        y: 810
+        width: 574
+        height: 225
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4013c8f6db77cfd46bc07cafe46981f8
+      internalID: 1586742313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-SHEET_BATTLEMAP_ENEMY_PLAYER_2
+      rect:
+        serializedVersion: 2
+        x: 962
+        y: 783
+        width: 368
+        height: 254
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9cf7d3a63f89c64682cc1098fee8870
+      internalID: -486022855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-SHEET_BATTLEMAP_ENEMY_PLAYER_3
+      rect:
+        serializedVersion: 2
+        x: 1448
+        y: 940
+        width: 105
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24439adb4714a0d46bfff2aae6f203b7
+      internalID: 1648828174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-SHEET_BATTLEMAP_ENEMY_PLAYER_4
+      rect:
+        serializedVersion: 2
+        x: 1589
+        y: 952
+        width: 79
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5046106849a4c347a78acf9c5d7d279
+      internalID: -278488339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-SHEET_BATTLEMAP_ENEMY_PLAYER_5
+      rect:
+        serializedVersion: 2
+        x: 1705
+        y: 954
+        width: 76
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28c42f3cd0d532742b20526271cd432b
+      internalID: 1059369298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-SHEET_BATTLEMAP_ENEMY_PLAYER_6
+      rect:
+        serializedVersion: 2
+        x: 1459
+        y: 810
+        width: 87
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1bffeed277bd0047b49f74b7a0b35a1
+      internalID: -1551952715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-SHEET_BATTLEMAP_ENEMY_PLAYER_7
+      rect:
+        serializedVersion: 2
+        x: 1595
+        y: 823
+        width: 67
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34fb97e6c12380c49b453f2dd3a27bc3
+      internalID: 718929651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-SHEET_BATTLEMAP_ENEMY_PLAYER_8
+      rect:
+        serializedVersion: 2
+        x: 1711
+        y: 824
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27c57c7b24c30254799023985c5cebf7
+      internalID: -1925380554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-SHEET_BATTLEMAP_ENEMY_PLAYER_9
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 551
+        width: 176
+        height: 176
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5985770f77f10040b9986a8a0bc86cc
+      internalID: 368452378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-SHEET_BATTLEMAP_ENEMY_PLAYER_10
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 565
+        width: 575
+        height: 148
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c51275b874174a49aa0bd46131523ac
+      internalID: -1048790159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-SHEET_BATTLEMAP_ENEMY_PLAYER_11
+      rect:
+        serializedVersion: 2
+        x: 1244
+        y: 698
+        width: 56
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d8ec254b13cb7e4082f3df77b1bed75
+      internalID: 1942223931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-SHEET_BATTLEMAP_ENEMY_PLAYER_12
+      rect:
+        serializedVersion: 2
+        x: 1338
+        y: 698
+        width: 56
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78a1130ed95d25a43b72fb143cc2e86f
+      internalID: -416485414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-SHEET_BATTLEMAP_ENEMY_PLAYER_13
+      rect:
+        serializedVersion: 2
+        x: 1433
+        y: 704
+        width: 54
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5196b632e4def484891986fb2fcbe841
+      internalID: -1061500739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-SHEET_BATTLEMAP_ENEMY_PLAYER_14
+      rect:
+        serializedVersion: 2
+        x: 1532
+        y: 701
+        width: 54
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be9fefdf5982bef428416de68a846f8d
+      internalID: 197844696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-SHEET_BATTLEMAP_ENEMY_PLAYER_15
+      rect:
+        serializedVersion: 2
+        x: 1632
+        y: 697
+        width: 54
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21f700c5706dafb45ac7855e18b0118c
+      internalID: -2074597187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-SHEET_BATTLEMAP_ENEMY_PLAYER_16
+      rect:
+        serializedVersion: 2
+        x: 1729
+        y: 703
+        width: 53
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8eda7fb01a9a5a94f8fb213b7bba01f9
+      internalID: -1620498395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-SHEET_BATTLEMAP_ENEMY_PLAYER_17
+      rect:
+        serializedVersion: 2
+        x: 1219
+        y: 485
+        width: 205
+        height: 153
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86519b71e69f3274a855a8cc042714d8
+      internalID: -1997785772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-SHEET_BATTLEMAP_ENEMY_PLAYER_18
+      rect:
+        serializedVersion: 2
+        x: 1484
+        y: 512
+        width: 141
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 896beca503859bc4cae4b53b1da0f62a
+      internalID: -922534747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-SHEET_BATTLEMAP_ENEMY_PLAYER_19
+      rect:
+        serializedVersion: 2
+        x: 1693
+        y: 514
+        width: 101
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f38f7610b4279fb4c9efb22ea462c9de
+      internalID: -994974338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-SHEET_BATTLEMAP_ENEMY_PLAYER_20
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 281
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da724084e4caa584f9d45f60524ea635
+      internalID: -691787439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-SHEET_BATTLEMAP_ENEMY_PLAYER_21
+      rect:
+        serializedVersion: 2
+        x: 301
+        y: 278
+        width: 575
+        height: 225
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2740fd65c91a3b644a9090b61410c300
+      internalID: -1292941325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-SHEET_BATTLEMAP_ENEMY_PLAYER_22
+      rect:
+        serializedVersion: 2
+        x: 998
+        y: 289
+        width: 60
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: adc1227479dbb9d4881533bc3da68afc
+      internalID: -261463706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-SHEET_BATTLEMAP_ENEMY_PLAYER_23
+      rect:
+        serializedVersion: 2
+        x: 1190
+        y: 265
+        width: 83
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53668a860814ad64a9fcf638458610c5
+      internalID: 537583215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-SHEET_BATTLEMAP_ENEMY_PLAYER_24
+      rect:
+        serializedVersion: 2
+        x: 1302
+        y: 265
+        width: 83
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8b1c0634be922444b703fd874cabf57
+      internalID: -752567279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-SHEET_BATTLEMAP_ENEMY_PLAYER_25
+      rect:
+        serializedVersion: 2
+        x: 1413
+        y: 265
+        width: 83
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7b642b4d33595d48a555915f2f5bffc
+      internalID: -1198694336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-SHEET_BATTLEMAP_ENEMY_PLAYER_26
+      rect:
+        serializedVersion: 2
+        x: 1525
+        y: 265
+        width: 83
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2ce9b441a6aac640ac38e283cfe1a8f
+      internalID: 1327373036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-SHEET_BATTLEMAP_ENEMY_PLAYER_27
+      rect:
+        serializedVersion: 2
+        x: 1636
+        y: 265
+        width: 83
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7fd51b87713236c4c91b70fad585d02c
+      internalID: -1689277587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-SHEET_BATTLEMAP_ENEMY_PLAYER_28
+      rect:
+        serializedVersion: 2
+        x: 1748
+        y: 265
+        width: 84
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ee6030a35852444385c267c602e04be
+      internalID: 1171509012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-SHEET_BATTLEMAP_ENEMY_PLAYER_29
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 41
+        width: 176
+        height: 177
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 724bb2ddd9d500544ab427c0841f1817
+      internalID: 1152171210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-SHEET_BATTLEMAP_ENEMY_PLAYER_30
+      rect:
+        serializedVersion: 2
+        x: 998
+        y: 200
+        width: 70
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3159564b51b7f664b848a8419864a502
+      internalID: -2067403340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-SHEET_BATTLEMAP_ENEMY_PLAYER_32
+      rect:
+        serializedVersion: 2
+        x: 301
+        y: 56
+        width: 575
+        height: 147
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3d61f6bcfa74074591c293add6e3bc6
+      internalID: 535546428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-SHEET_BATTLEMAP_ENEMY_PLAYER_33
+      rect:
+        serializedVersion: 2
+        x: 1004
+        y: 86
+        width: 59
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24663d281892642438b93e01d16c35a2
+      internalID: 1027010673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-SHEET_BATTLEMAP_ENEMY_PLAYER_34
+      rect:
+        serializedVersion: 2
+        x: 1248
+        y: 68
+        width: 87
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b181a863d1e40ff49bcb9147940d78dc
+      internalID: 240509134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-SHEET_BATTLEMAP_ENEMY_PLAYER_35
+      rect:
+        serializedVersion: 2
+        x: 1396
+        y: 72
+        width: 79
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aebe22533e8db674e92eba1cf7958501
+      internalID: 1811791880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-SHEET_BATTLEMAP_ENEMY_PLAYER_36
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 72
+        width: 78
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abdab94932dd51a4a9909f3cf925fcd8
+      internalID: -1513439164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-SHEET_BATTLEMAP_ENEMY_PLAYER_37
+      rect:
+        serializedVersion: 2
+        x: 1675
+        y: 72
+        width: 79
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ed6897285b43844cac82e108f505be8
+      internalID: -1820097198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: bcd7878961990ab4ca692358898166c9
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      UI-SHEET_BATTLEMAP_ENEMY_PLAYER_14: 197844696
+      UI-SHEET_BATTLEMAP_ENEMY_PLAYER_20: -691787439
+      UI-SHEET_BATTLEMAP_ENEMY_PLAYER_22: -261463706
+      UI-SHEET_BATTLEMAP_ENEMY_PLAYER_28: 1171509012
+      UI-SHEET_BATTLEMAP_ENEMY_PLAYER_7: 718929651
+      UI-SHEET_BATTLEMAP_ENEMY_PLAYER_15: -2074597187
+      UI-SHEET_BATTLEMAP_ENEMY_PLAYER_10: -1048790159
+      UI-SHEET_BATTLEMAP_ENEMY_PLAYER_19: -994974338
+      UI-SHEET_BATTLEMAP_ENEMY_PLAYER_5: 1059369298
+      UI-SHEET_BATTLEMAP_ENEMY_PLAYER_18: -922534747
+      UI-SHEET_BATTLEMAP_ENEMY_PLAYER_21: -1292941325
+      UI-SHEET_BATTLEMAP_ENEMY_PLAYER_25: -1198694336
+      UI-SHEET_BATTLEMAP_ENEMY_PLAYER_37: -1820097198
+      UI-SHEET_BATTLEMAP_ENEMY_PLAYER_29: 1152171210
+      UI-SHEET_BATTLEMAP_ENEMY_PLAYER_8: -1925380554
+      UI-SHEET_BATTLEMAP_ENEMY_PLAYER_17: -1997785772
+      UI-SHEET_BATTLEMAP_ENEMY_PLAYER_35: 1811791880
+      UI-SHEET_BATTLEMAP_ENEMY_PLAYER_1: 1586742313
+      UI-SHEET_BATTLEMAP_ENEMY_PLAYER_12: -416485414
+      UI-SHEET_BATTLEMAP_ENEMY_PLAYER_33: 1027010673
+      UI-SHEET_BATTLEMAP_ENEMY_PLAYER_27: -1689277587
+      UI-SHEET_BATTLEMAP_ENEMY_PLAYER_23: 537583215
+      UI-SHEET_BATTLEMAP_ENEMY_PLAYER_24: -752567279
+      UI-SHEET_BATTLEMAP_ENEMY_PLAYER_30: -2067403340
+      UI-SHEET_BATTLEMAP_ENEMY_PLAYER_2: -486022855
+      UI-SHEET_BATTLEMAP_ENEMY_PLAYER_11: 1942223931
+      UI-SHEET_BATTLEMAP_ENEMY_PLAYER_0: -2130464867
+      UI-SHEET_BATTLEMAP_ENEMY_PLAYER_3: 1648828174
+      UI-SHEET_BATTLEMAP_ENEMY_PLAYER_31: 900504489
+      UI-SHEET_BATTLEMAP_ENEMY_PLAYER_13: -1061500739
+      UI-SHEET_BATTLEMAP_ENEMY_PLAYER_9: 368452378
+      UI-SHEET_BATTLEMAP_ENEMY_PLAYER_16: -1620498395
+      UI-SHEET_BATTLEMAP_ENEMY_PLAYER_4: -278488339
+      UI-SHEET_BATTLEMAP_ENEMY_PLAYER_36: -1513439164
+      UI-SHEET_BATTLEMAP_ENEMY_PLAYER_6: -1551952715
+      UI-SHEET_BATTLEMAP_ENEMY_PLAYER_26: 1327373036
+      UI-SHEET_BATTLEMAP_ENEMY_PLAYER_32: 535546428
+      UI-SHEET_BATTLEMAP_ENEMY_PLAYER_34: 240509134
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

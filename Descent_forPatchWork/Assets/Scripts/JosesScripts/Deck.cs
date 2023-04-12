@@ -100,7 +100,7 @@ public class Deck : MonoBehaviour
     public void GetHeroSkillCards(string characterName)
     {
         // GUID tarkoittaa Globally Unique Identifier ja SO = Scriptable Object
-        string[] guids = AssetDatabase.FindAssets(characterName, new[] { "Assets/SOCards" });
+        string[] guids = AssetDatabase.FindAssets(characterName, new[] { "Assets/SOCards/"+characterName });
         SkillCards.Clear();
         foreach (string SO in guids)
         {   

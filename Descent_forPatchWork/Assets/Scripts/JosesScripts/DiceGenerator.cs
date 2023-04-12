@@ -9,14 +9,29 @@ public class DiceGenerator : MonoBehaviour
     public Button btn;
     public int diceSize;
     public TMP_Text diceResultText;
+    public Sprite[] diceSprites;
+    private Image image;
     private void Start()
     {
+        image = GetComponent<Image>();
         btn = btn.GetComponent<Button>();
         btn.onClick.AddListener(ThrowDice);
     }
     public void ThrowDice()
     {
-        diceResultText.text = Random.Range(1, diceSize + 1).ToString();
+        int roll = Random.Range(1, diceSize);
+        StartCoroutine(AnimateRoll(10));
+        image.sprite = diceSprites[roll];
     }
-        
+
+    IEnumerator AnimateRoll(int cycles)
+    {
+        for(int i = 0; i <= cycles; i++)
+        {
+            image.sprite = diceSprites[Random.Range(1, diceSize)];
+            yield return new WaitForSeconds(0.2f);
+            i++;
+        }
+        yield return null;
+    }
 }

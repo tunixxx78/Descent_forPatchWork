@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,7 +7,7 @@ public class CombatTesting : MonoBehaviour
 {
     public Deck Player1Deck;
     // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
 
         Player1Deck = gameObject.AddComponent<Deck>();
@@ -19,10 +20,10 @@ public class CombatTesting : MonoBehaviour
 
 
         SkillCard card = Player1Deck.DrawSkillCard();
-        Debug.Log("Card information Skill ID: " + card.skillId + " Card ATK: " + card.atk + " Skill Heal: " + card.heal + " Long Range/Close Range: " + card.longRange + " " + card.closeRange + " Card info: " + card.info);
+        Debug.Log($"Card information Skill ID: {card.skillId} Card ATK: + {card.atk} Skill Heal: {card.heal} Long Range/Close Range: {card.longRange}/{card.closeRange} Card info: {card.info}");
 
         int faithValue = Player1Deck.DrawFaithCard().GetFaithValue();
-        Debug.Log("Faith card drawn was: " + faithValue + " ATK is now: " + (card.atk + faithValue));
+        Debug.Log($"Faith card drawn was: {faithValue} ATK is now: {(card.atk + faithValue)}");
         
     }
 

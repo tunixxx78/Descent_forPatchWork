@@ -1,0 +1,497 @@
+fileFormatVersion: 2
+guid: e9d8303162c5f5f4f9b841abdcc8b36e
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: CARDSHEET_REWARD_ICON_0
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 1027
+        width: 259
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3aba115c9e5c54c4c8e5b01a6b9dd1ec
+      internalID: 582492324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CARDSHEET_REWARD_ICON_1
+      rect:
+        serializedVersion: 2
+        x: 469
+        y: 963
+        width: 146
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c504d58f0eaf9e645a32fc4aa29e8c6c
+      internalID: 1900758159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CARDSHEET_REWARD_ICON_2
+      rect:
+        serializedVersion: 2
+        x: 1239
+        y: 957
+        width: 154
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5ee0032593609a43a445eabdf120260
+      internalID: 1490227950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CARDSHEET_REWARD_ICON_3
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 568
+        width: 248
+        height: 338
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d058ca09c6afcdc44baa6fe1c64b4c66
+      internalID: -1254123299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CARDSHEET_REWARD_ICON_4
+      rect:
+        serializedVersion: 2
+        x: 418
+        y: 570
+        width: 250
+        height: 339
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b516657bec03d847a1e50652165512e
+      internalID: 1927263302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CARDSHEET_REWARD_ICON_5
+      rect:
+        serializedVersion: 2
+        x: 692
+        y: 570
+        width: 248
+        height: 337
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6267edb8c46b4a749818196b5f0495ec
+      internalID: -785365662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CARDSHEET_REWARD_ICON_6
+      rect:
+        serializedVersion: 2
+        x: 1119
+        y: 735
+        width: 159
+        height: 159
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aebbcb1bf0e66f2489fe5404fe07ffda
+      internalID: 230460338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CARDSHEET_REWARD_ICON_7
+      rect:
+        serializedVersion: 2
+        x: 1351
+        y: 734
+        width: 172
+        height: 159
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c45d6c7644952e4386fef6ae1594d6f
+      internalID: 686045420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CARDSHEET_REWARD_ICON_8
+      rect:
+        serializedVersion: 2
+        x: 235
+        y: 453
+        width: 157
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfe3d653a744fc748b533530b8c9475c
+      internalID: 271501560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CARDSHEET_REWARD_ICON_9
+      rect:
+        serializedVersion: 2
+        x: 921
+        y: 444
+        width: 125
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd31d05c6891e5142b062a95ec4a0db5
+      internalID: -1632611298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CARDSHEET_REWARD_ICON_10
+      rect:
+        serializedVersion: 2
+        x: 1579
+        y: 448
+        width: 113
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57562374d75d4cb45835f0c7d3280462
+      internalID: -1558377736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CARDSHEET_REWARD_ICON_12
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 63
+        width: 249
+        height: 338
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8a61be71064c284eb76f9b5711e9744
+      internalID: 1220259538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CARDSHEET_REWARD_ICON_13
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 64
+        width: 250
+        height: 339
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4206716fd4fe323438b03d128c1c9887
+      internalID: 301312198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CARDSHEET_REWARD_ICON_14
+      rect:
+        serializedVersion: 2
+        x: 721
+        y: 59
+        width: 248
+        height: 338
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2277a54d8da819245983b6acc57329af
+      internalID: 30731135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CARDSHEET_REWARD_ICON_15
+      rect:
+        serializedVersion: 2
+        x: 995
+        y: 59
+        width: 249
+        height: 338
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97e55fbc76a4e974bbc56d9fbfcd7808
+      internalID: -151368298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CARDSHEET_REWARD_ICON_16
+      rect:
+        serializedVersion: 2
+        x: 1371
+        y: 58
+        width: 248
+        height: 337
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31beb40618fed0547af3d3ca98450b59
+      internalID: 2051054348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CARDSHEET_REWARD_ICON_17
+      rect:
+        serializedVersion: 2
+        x: 1643
+        y: 58
+        width: 249
+        height: 338
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a427d9ff1be0dc429f9db4ae1643750
+      internalID: 1732675708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: a51d785bac407df468be3287004340a0
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      CARDSHEET_REWARD_ICON_4: 1927263302
+      CARDSHEET_REWARD_ICON_5: -785365662
+      CARDSHEET_REWARD_ICON_1: 1900758159
+      CARDSHEET_REWARD_ICON_11: -1404543516
+      CARDSHEET_REWARD_ICON_16: 2051054348
+      CARDSHEET_REWARD_ICON_10: -1558377736
+      CARDSHEET_REWARD_ICON_12: 1220259538
+      CARDSHEET_REWARD_ICON_6: 230460338
+      CARDSHEET_REWARD_ICON_15: -151368298
+      CARDSHEET_REWARD_ICON_17: 1732675708
+      CARDSHEET_REWARD_ICON_8: 271501560
+      CARDSHEET_REWARD_ICON_14: 30731135
+      CARDSHEET_REWARD_ICON_3: -1254123299
+      CARDSHEET_REWARD_ICON_9: -1632611298
+      CARDSHEET_REWARD_ICON_2: 1490227950
+      CARDSHEET_REWARD_ICON_7: 686045420
+      CARDSHEET_REWARD_ICON_13: 301312198
+      CARDSHEET_REWARD_ICON_0: 582492324
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

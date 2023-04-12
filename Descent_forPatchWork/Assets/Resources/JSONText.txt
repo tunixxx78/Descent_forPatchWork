@@ -1,0 +1,16 @@
+{
+	"playerxd": [
+		{
+			"txt": "Warrior",
+			"ruleId": 100
+		},
+		{
+			"txt": "Mage",
+			"ruleId": 100
+		},
+		{
+			"txt": "Ranger",
+			"ruleId": 100
+		}
+	]
+}
