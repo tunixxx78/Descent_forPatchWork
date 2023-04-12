@@ -452,7 +452,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &97340474
 RectTransform:
   m_ObjectHideFlags: 0
@@ -465,9 +465,9 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1959081084}
   - {fileID: 179531951}
   - {fileID: 909093151}
-  - {fileID: 1959081084}
   - {fileID: 1492345090}
   - {fileID: 1978550330}
   - {fileID: 674029313}
@@ -493,15 +493,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Color: {r: 0.9150943, g: 0.9150943, b: 0.9150943, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 0}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -987,7 +987,7 @@ PrefabInstance:
     - target: {fileID: 7565671126214520891, guid: 807631402c18e79468f8826d48a30940,
         type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7565671126214520891, guid: 807631402c18e79468f8826d48a30940,
         type: 3}
@@ -1351,7 +1351,7 @@ GameObject:
   - component: {fileID: 269586328}
   - component: {fileID: 269586330}
   - component: {fileID: 269586329}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2931,7 +2931,7 @@ GameObject:
   - component: {fileID: 789934609}
   - component: {fileID: 789934608}
   - component: {fileID: 789934607}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: Button_CancelDelete
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3382,7 +3382,7 @@ RectTransform:
   m_Children:
   - {fileID: 1458056795}
   m_Father: {fileID: 97340474}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -4732,7 +4732,7 @@ GameObject:
   - component: {fileID: 1175176097}
   - component: {fileID: 1175176099}
   - component: {fileID: 1175176098}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4873,7 +4873,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1206086521
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4910,14 +4910,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 0}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -6849,7 +6849,7 @@ GameObject:
   - component: {fileID: 1749708066}
   - component: {fileID: 1749708065}
   - component: {fileID: 1749708064}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: Button_DeleteFinal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7796,7 +7796,7 @@ GameObject:
   - component: {fileID: 1891935605}
   - component: {fileID: 1891935607}
   - component: {fileID: 1891935606}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: Text_deletingtext
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8203,7 +8203,7 @@ GameObject:
   - component: {fileID: 1959081084}
   - component: {fileID: 1959081086}
   - component: {fileID: 1959081085}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: Panel_DeleteAffirmation
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8226,7 +8226,7 @@ RectTransform:
   - {fileID: 1749708063}
   - {fileID: 789934606}
   m_Father: {fileID: 97340474}
-  m_RootOrder: 2
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -8246,14 +8246,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Color: {r: 0.4339623, g: 0.4339623, b: 0.4339623, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 0}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
