@@ -28,7 +28,8 @@ public class SelectableHero : MonoBehaviour
     //[SerializeField] Material material;
     [SerializeField] Material selectedMaterial;
     [SerializeField] Material unselectedMaterial;
-    public List<CombatItem> combatItems;
+    //public List<CombatItem> combatItems;
+    public List<string> combatItems  = new List<string>();
     public List<JourneyItem> journeyItems;
     public List<HiddenItem> hiddenItems;
 

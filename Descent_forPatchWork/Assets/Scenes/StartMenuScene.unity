@@ -4028,12 +4028,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   heroName: 
   heroRole: Bardi
+  currentHealth: 0
   maxHealth: 7
-  currentXP: 0
-  level: 1
+  currentActionPoints: 0
+  maxActionPoints: 0
+  atk: 0
+  def: 0
+  fate: 0
+  exp: 0
+  maxCombatItems: 0
+  maxItems: 0
   selected: 0
   selectedMaterial: {fileID: 2100000, guid: 4c41a64ab89545d4bb81af3f6e4ec207, type: 2}
   unselectedMaterial: {fileID: 2100000, guid: 19da78ee865e8724dbf5dbf054a901f6, type: 2}
+  combatItems: []
+  journeyItems: []
+  hiddenItems: []
 --- !u!136 &1024721121
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -4147,12 +4157,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   heroName: 
   heroRole: Maagi
+  currentHealth: 0
   maxHealth: 6
-  currentXP: 0
-  level: 1
+  currentActionPoints: 0
+  maxActionPoints: 0
+  atk: 0
+  def: 0
+  fate: 0
+  exp: 0
+  maxCombatItems: 0
+  maxItems: 0
   selected: 0
   selectedMaterial: {fileID: 2100000, guid: 9c70e30df8b5e164e9130a5b4a191eb9, type: 2}
   unselectedMaterial: {fileID: 2100000, guid: f212bce461b811f40ab4216141d9c72c, type: 2}
+  combatItems:
+  - mci001
+  - mci011
+  - mci101
+  journeyItems: []
+  hiddenItems: []
 --- !u!136 &1098033130
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -4535,12 +4558,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   heroName: 
   heroRole: Tiedustelija
+  currentHealth: 0
   maxHealth: 4
-  currentXP: 0
-  level: 1
+  currentActionPoints: 0
+  maxActionPoints: 0
+  atk: 0
+  def: 0
+  fate: 0
+  exp: 0
+  maxCombatItems: 0
+  maxItems: 0
   selected: 0
   selectedMaterial: {fileID: 2100000, guid: 1d7b28edd73eec748b5b711acbd2bd02, type: 2}
   unselectedMaterial: {fileID: 2100000, guid: e5428d6607e74a74fb613aae512c5eb3, type: 2}
+  combatItems: []
+  journeyItems: []
+  hiddenItems: []
 --- !u!136 &1163861969
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -6897,12 +6930,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   heroName: 
   heroRole: Ritari
+  currentHealth: 0
   maxHealth: 10
-  currentXP: 0
-  level: 1
+  currentActionPoints: 0
+  maxActionPoints: 0
+  atk: 0
+  def: 0
+  fate: 0
+  exp: 0
+  maxCombatItems: 0
+  maxItems: 0
   selected: 0
   selectedMaterial: {fileID: 2100000, guid: dcd43ce9b9868e746a98d43abb0dfc2a, type: 2}
   unselectedMaterial: {fileID: 2100000, guid: e704ca7ddba1fc34e9c400381411bcfc, type: 2}
+  combatItems: []
+  journeyItems: []
+  hiddenItems: []
 --- !u!136 &1861099092
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -8001,6 +8044,26 @@ PrefabInstance:
         type: 3}
       propertyPath: heroRole
       value: Soturi
+      objectReference: {fileID: 0}
+    - target: {fileID: 2316674083732294116, guid: 3f9e114991d36544c8e5f364b44098d0,
+        type: 3}
+      propertyPath: combatItems.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2316674083732294116, guid: 3f9e114991d36544c8e5f364b44098d0,
+        type: 3}
+      propertyPath: combatItems.Array.data[0]
+      value: sci001
+      objectReference: {fileID: 0}
+    - target: {fileID: 2316674083732294116, guid: 3f9e114991d36544c8e5f364b44098d0,
+        type: 3}
+      propertyPath: combatItems.Array.data[1]
+      value: sci002
+      objectReference: {fileID: 0}
+    - target: {fileID: 2316674083732294116, guid: 3f9e114991d36544c8e5f364b44098d0,
+        type: 3}
+      propertyPath: combatItems.Array.data[2]
+      value: sci003
       objectReference: {fileID: 0}
     - target: {fileID: 2316674083732294117, guid: 3f9e114991d36544c8e5f364b44098d0,
         type: 3}
