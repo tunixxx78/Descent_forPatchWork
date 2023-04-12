@@ -19,8 +19,9 @@ public class SavingSystem : MonoBehaviour
     public int activeSaveSlot;
     public string activeScene;
     public List<SelectableHero> partyHeroes;
-    //public SelectableHero[] partyHeroes = new SelectableHero[5];
+    
 
+    //MAKING SINGLETON
     private void Awake()
     {
         if(savingSystem != null && savingSystem != this)
@@ -44,7 +45,7 @@ public class SavingSystem : MonoBehaviour
 
         for(int i = 0; i < partyHeroes.Count; i++)
         {
-            SelectableHero hero = partyHeroes[i]; //faster to write below..
+            SelectableHero hero = partyHeroes[i]; //faster to use below..
             SavedHero sHero = new SavedHero();  //create serializable hero for saving data
 
             sHero.heroName = hero.heroName;
@@ -61,8 +62,10 @@ public class SavingSystem : MonoBehaviour
             sHero.maxCombatItems = hero.maxCombatItems;
             sHero.maxItems = hero.maxItems;
 
-
+            //this saves only cards' ids
             sHero.savedCombatItems = hero.combatItems;
+            //if saving whole classes/objects..
+
             //foreach(CombatItem item in hero.combatItems)
             //{
             //    sHero.savedCombatItems.Add(item.id);    //save only IDs
@@ -89,7 +92,7 @@ public class SavingSystem : MonoBehaviour
 
         public void LoadGame(int saveName)
         {
-            //TODO NEW VERSION AS IN SAVEGAME..
+            //TODO NEW universal savepath(for macs and pcs)
             string filePath = Application.persistentDataPath + "/save" + saveName.ToString() + ".json";
             if (File.Exists(filePath))
             {
@@ -107,11 +110,11 @@ public class SavingSystem : MonoBehaviour
                 
                         heroGameObject.AddComponent<SelectableHero>();
                 heroGameObject.AddComponent<MeshRenderer>();
-                //TODO add all other components(material, meshrenderer ..) too?
+                //TODO add all other components(material, meshrenderer ..) too? or not?
                 
 
                         SelectableHero hero = heroGameObject.GetComponent<SelectableHero>();
-                        hero.name = sHero.heroRole; //role shows in hierarchy
+                        hero.name = sHero.heroRole; //role shows in hierarchy if this works
                         hero.heroName = sHero.heroName;
                         hero.heroRole = sHero.heroRole;
                         hero.currentHealth = sHero.currentHealth;
@@ -161,7 +164,7 @@ public class SavingSystem : MonoBehaviour
             this.saveSlots[3] = names.save3;
             this.saveSlots[4] = names.save4;
         }
-        else { Debug.Log("Not yet saved names file, no problem."); }
+        else { Debug.Log("Not yet saved names file."); }
         
         }
         public void SaveSavedNames()
@@ -180,6 +183,7 @@ public class SavingSystem : MonoBehaviour
         File.WriteAllText(filePath, saveableNames);
         }
 
+    //deleting just changes the string of the name in saveslots to "" -> save actually exists until overwitten
     private void DeleteSave(int saveSlot)
     {
         saveSlots[saveSlot] = "";
@@ -187,16 +191,14 @@ public class SavingSystem : MonoBehaviour
 
 }
 
+//serializable class for saved data.
     [Serializable]
     class GameSavedData
     {
         public string savedGroupName;
         public string currentSceneName;
 
-    //public string[] heroNames = new string[5];
-    //public string[] heroRoles = new string[5];
-
-    public List<SavedHero> savedHeroes = new List<SavedHero>();
+        public List<SavedHero> savedHeroes = new List<SavedHero>();
     
     }
 
@@ -208,6 +210,7 @@ public class SavingSystem : MonoBehaviour
         public string  save0, save1, save2, save3, save4;
     }
 
+//serializable class for hero-monobehaviours
 [Serializable]
 class SavedHero
 {
