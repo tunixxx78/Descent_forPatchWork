@@ -9,7 +9,7 @@ public class EnemyHordPanelController : MonoBehaviour
 
     private void Awake()
     {
-        hordHealthAmount = this.gameObject.transform.GetChild(0).GetChild(0).GetComponent<TMP_Text>();
+        hordHealthAmount = this.gameObject.transform.GetChild(0).GetChild(1).GetComponent<TMP_Text>();
         hordStrenghtAmount = this.gameObject.transform.GetChild(1).GetChild(0).GetComponentInChildren<TMP_Text>();
     }
 

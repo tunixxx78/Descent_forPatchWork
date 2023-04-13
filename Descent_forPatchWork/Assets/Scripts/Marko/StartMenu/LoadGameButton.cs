@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using Unity.UI;
+//using Unity.UI;
 
 public class LoadGameButton : MonoBehaviour
 {
@@ -33,7 +33,7 @@ public class LoadGameButton : MonoBehaviour
     private void LoadSavedNames()
     {
         buttonDisplayName = savingSystem.saveSlots[buttonId];
-        Debug.Log("tallennetussa nimess‰ "+ buttonDisplayName);
+        Debug.Log("tallennetussa nimess? "+ buttonDisplayName);
         if (buttonDisplayName == null || buttonDisplayName == "")
         {
             buttonDisplayName = defaultEmpty;
@@ -51,10 +51,10 @@ public class LoadGameButton : MonoBehaviour
             savingSystem.LoadGame(buttonId);
             SceneManager.LoadScene(savingSystem.activeScene);
         }
-        //tehd‰‰n uusi peli
+        //tehd??n uusi peli
         else
         {
-            //Pit‰‰ laittaa avaamaan paneeli, NewGamePanel
+            //Pit?? laittaa avaamaan paneeli, NewGamePanel
             savingSystem.activeSaveSlot = this.buttonId;
             newGamePanel.SetActive(true); //activate NewGamePanel in Canvas
         }

@@ -15,7 +15,7 @@ public class GameManager : MonoBehaviour
     public float attackForce = 1;
 
     public GameObject QuestLorePanel, currentMission;
-    public int currentAreaMissions, currentMissionInQuest = 0, currentMissionIndex = 0, activePlayer, round = 0;
+    public int currentAreaMissions, currentMissionInQuest = 0, currentMissionIndex = 0, activePlayer, round = 0, activeEnemy;
 
     public Transform[] lootSpawnPoints;
     public GameObject[] lootObjects;
@@ -79,7 +79,7 @@ public class GameManager : MonoBehaviour
                 GameObject lootInstance = Instantiate(lootObjects[i], lootSpawnPoints[i].position, Quaternion.identity);
 
                 lootInstance.transform.SetParent(GameObject.Find("Canvas").transform);
-                lootInstance.transform.localScale = new Vector3(1f, 1f, 1f);
+                lootInstance.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
             }
             
         }

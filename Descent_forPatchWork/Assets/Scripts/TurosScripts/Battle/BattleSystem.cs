@@ -13,7 +13,11 @@ public class BattleSystem : MonoBehaviour
         {
             Debug.Log("HIIRTÄ PAINETTU");
             this.gameObject.GetComponent<EnemyOne>().eB.enemyHealth -= GameManager.gm.attackForce;
-            GameManager.gm.enemyHordHealth -= GameManager.gm.attackForce;
+            if(this.gameObject.GetComponent<EnemyOne>().eB.enemyType == 1)
+            {
+                GameManager.gm.enemyHordHealth -= GameManager.gm.attackForce;
+            }
+            
         }
         if(gameObject.CompareTag("Hero") && GameManager.gm.enemyCanAttack == true)
         {

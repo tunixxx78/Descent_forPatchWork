@@ -31,20 +31,45 @@ public class EnemyButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 
         if (this.gameObject.CompareTag("Enemy") && GameManager.gm.plrCanAttack == false)
         {
-            GameObject statsPanel = this.gameObject.transform.Find("EnemyStatsPanel").gameObject;
+            if(this.gameObject.GetComponent<EnemyOne>().eB.enemyType == 1)
+            {
+                GameObject statsPanel = this.gameObject.transform.Find("EnemyStatsPanel").gameObject;
 
-            if (statsPanel.activeSelf == false)
-            {
-                statsPanel.SetActive(true);
-                GameManager.gm.enemyCanAttack = true;
-                GameManager.gm.attackForce = this.gameObject.GetComponent<EnemyOne>().eB.enemyStrength;
+                if (statsPanel.activeSelf == false)
+                {
+                    statsPanel.SetActive(true);
+                    GameManager.gm.enemyCanAttack = true;
+                    GameManager.gm.attackForce = this.gameObject.GetComponent<EnemyOne>().eB.enemyStrength;
+                }
+                else
+                {
+                    statsPanel.SetActive(false);
+                    GameManager.gm.enemyCanAttack = false;
+                    GameManager.gm.attackForce = 0;
+                }
             }
-            else
+            if (this.gameObject.GetComponent<EnemyOne>().eB.enemyType == 2)
             {
-                statsPanel.SetActive(false);
-                GameManager.gm.enemyCanAttack = false;
-                GameManager.gm.attackForce = 0;
+                //GameObject enemyPanel = GameObject.Find("MapPanel").transform.GetChild(GameManager.gm.currentMissionIndex).GetChild(2).GetChild(10).gameObject;
+                GameObject statsPanel = this.gameObject.transform.Find("EnemyStatsPanel").gameObject;
+
+                if (statsPanel.activeSelf == false)
+                {
+                    //enemyPanel.SetActive(true);
+                    statsPanel.SetActive(true);
+                    GameManager.gm.enemyCanAttack = true;
+                    GameManager.gm.attackForce = this.gameObject.GetComponent<EnemyOne>().eB.enemyStrength;
+                }
+                else
+                {
+                    //enemyPanel.SetActive(false);
+                    statsPanel.SetActive(false);
+                    GameManager.gm.enemyCanAttack = false;
+                    GameManager.gm.attackForce = 0;
+                }
+
             }
+            
         }
     }
 

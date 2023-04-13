@@ -1,0 +1,806 @@
+fileFormatVersion: 2
+guid: e979d228718d04c94ab01410bfcf75fa
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: CARDSHEET_BOSS_EVENT_0
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 1020
+        width: 303
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7426689aa485d4c03b0356d50ff670e0
+      internalID: 994340774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CARDSHEET_BOSS_EVENT_1
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 558
+        width: 252
+        height: 341
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef618322b0e7c49b597814563d455604
+      internalID: 999216831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CARDSHEET_BOSS_EVENT_2
+      rect:
+        serializedVersion: 2
+        x: 319
+        y: 558
+        width: 251
+        height: 341
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f28862162159d40cd94187412478c8e1
+      internalID: 1166740706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CARDSHEET_BOSS_EVENT_3
+      rect:
+        serializedVersion: 2
+        x: 589
+        y: 558
+        width: 252
+        height: 341
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7a5ea2ed82144357acdbf07fa35e576
+      internalID: 143109419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CARDSHEET_BOSS_EVENT_4
+      rect:
+        serializedVersion: 2
+        x: 859
+        y: 558
+        width: 251
+        height: 341
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86816763d632e4b7ba905a8405bb8321
+      internalID: 1523320850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CARDSHEET_BOSS_EVENT_5
+      rect:
+        serializedVersion: 2
+        x: 1129
+        y: 558
+        width: 252
+        height: 341
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f22a5b4af96b4ef68f166249e0b96ca
+      internalID: 1252040086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CARDSHEET_BOSS_EVENT_6
+      rect:
+        serializedVersion: 2
+        x: 1399
+        y: 558
+        width: 252
+        height: 341
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8d0bdba429004c7f96804808bb838dc
+      internalID: 1367947721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CARDSHEET_BOSS_EVENT_7
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 223
+        width: 167
+        height: 262
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee6b76b66f0234ad4a1a6832f87d615c
+      internalID: -768494213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CARDSHEET_BOSS_EVENT_8
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 180
+        width: 252
+        height: 342
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef6525254743f4095a9a6fe45ac56e2e
+      internalID: 1235053990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CARDSHEET_BOSS_EVENT_9
+      rect:
+        serializedVersion: 2
+        x: 518
+        y: 180
+        width: 252
+        height: 342
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de1bba6f251d24c4db410dc0ed678c1b
+      internalID: -963921308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CARDSHEET_BOSS_EVENT_10
+      rect:
+        serializedVersion: 2
+        x: 798
+        y: 180
+        width: 252
+        height: 342
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3de86ba69b78b4a4a88b8ca9cad3fbfe
+      internalID: 1455414304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CARDSHEET_BOSS_EVENT_11
+      rect:
+        serializedVersion: 2
+        x: 1078
+        y: 180
+        width: 252
+        height: 342
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f70b603f57884bd58367ba46af6f80b
+      internalID: 274643053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CARDSHEET_BOSS_EVENT_12
+      rect:
+        serializedVersion: 2
+        x: 1358
+        y: 180
+        width: 252
+        height: 342
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 443e5de6aa4724b96914d912f3ff73cd
+      internalID: 605148335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CARDSHEET_BOSS_EVENT_13
+      rect:
+        serializedVersion: 2
+        x: 1638
+        y: 180
+        width: 252
+        height: 342
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 941ffe43f38814406b8c63754292f33e
+      internalID: 1453533312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CARDSHEET_BOSS_EVENT_14
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 41
+        width: 375
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d33706f4c5a7a41beb4ba57695f72ad7
+      internalID: -771449110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CARDSHEET_BOSS_EVENT_15
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 46
+        width: 19
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4fee4b572292c4f37bb8df61e057e9b0
+      internalID: -1825562773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CARDSHEET_BOSS_EVENT_16
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 46
+        width: 21
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2e61346f4fec4b67bf9dda1f9b88fef
+      internalID: 1818835444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CARDSHEET_BOSS_EVENT_17
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 46
+        width: 20
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cee3f7ba0434b46aebfce26677ea0fd3
+      internalID: 1848129533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CARDSHEET_BOSS_EVENT_18
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 46
+        width: 20
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4437280e9c0b74c589ad30339fd4aafe
+      internalID: -585873676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CARDSHEET_BOSS_EVENT_19
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 45
+        width: 17
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f550bcd8658b240f194a583fa4da660b
+      internalID: -254551462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CARDSHEET_BOSS_EVENT_20
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 45
+        width: 18
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd989b1fc25f14a5485d9812bebcc4fe
+      internalID: 19208092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CARDSHEET_BOSS_EVENT_21
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 46
+        width: 21
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5c4953d8230f43edb7ce9dc3b4d1fa6
+      internalID: 609295772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CARDSHEET_BOSS_EVENT_22
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 45
+        width: 18
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3949e075092c4c2295ed51483827396
+      internalID: -1878935202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CARDSHEET_BOSS_EVENT_23
+      rect:
+        serializedVersion: 2
+        x: 243
+        y: 46
+        width: 21
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 201b2401231bd4992adea7c970f745a1
+      internalID: 212310693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CARDSHEET_BOSS_EVENT_24
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 46
+        width: 20
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6694513b41a7a44d8bbf11aae0746f0f
+      internalID: 1206699212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CARDSHEET_BOSS_EVENT_25
+      rect:
+        serializedVersion: 2
+        x: 287
+        y: 45
+        width: 18
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ac96e975ae904981be63e784384898c
+      internalID: 1458971436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CARDSHEET_BOSS_EVENT_26
+      rect:
+        serializedVersion: 2
+        x: 314
+        y: 45
+        width: 41
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ffac8fba251aa4da49bc402d12ecde41
+      internalID: -866714428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CARDSHEET_BOSS_EVENT_27
+      rect:
+        serializedVersion: 2
+        x: 358
+        y: 46
+        width: 20
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12c7c2073f68c4debbd790a809db471c
+      internalID: 927413705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CARDSHEET_BOSS_EVENT_28
+      rect:
+        serializedVersion: 2
+        x: 381
+        y: 46
+        width: 22
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfd1f20c60f84413fac28b2924f40231
+      internalID: 1540450446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CARDSHEET_BOSS_EVENT_29
+      rect:
+        serializedVersion: 2
+        x: 404
+        y: 45
+        width: 17
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f824acc68318549498719892bbaf2bb1
+      internalID: -67296123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 86f6dcf2ff85446ea89d7ffae583aacc
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      CARDSHEET_BOSS_EVENT_9: -963921308
+      CARDSHEET_BOSS_EVENT_11: 274643053
+      CARDSHEET_BOSS_EVENT_8: 1235053990
+      CARDSHEET_BOSS_EVENT_23: 212310693
+      CARDSHEET_BOSS_EVENT_27: 927413705
+      CARDSHEET_BOSS_EVENT_10: 1455414304
+      CARDSHEET_BOSS_EVENT_24: 1206699212
+      CARDSHEET_BOSS_EVENT_4: 1523320850
+      CARDSHEET_BOSS_EVENT_21: 609295772
+      CARDSHEET_BOSS_EVENT_28: 1540450446
+      CARDSHEET_BOSS_EVENT_25: 1458971436
+      CARDSHEET_BOSS_EVENT_29: -67296123
+      CARDSHEET_BOSS_EVENT_19: -254551462
+      CARDSHEET_BOSS_EVENT_5: 1252040086
+      CARDSHEET_BOSS_EVENT_18: -585873676
+      CARDSHEET_BOSS_EVENT_0: 994340774
+      CARDSHEET_BOSS_EVENT_6: 1367947721
+      CARDSHEET_BOSS_EVENT_7: -768494213
+      CARDSHEET_BOSS_EVENT_26: -866714428
+      CARDSHEET_BOSS_EVENT_12: 605148335
+      CARDSHEET_BOSS_EVENT_2: 1166740706
+      CARDSHEET_BOSS_EVENT_1: 999216831
+      CARDSHEET_BOSS_EVENT_13: 1453533312
+      CARDSHEET_BOSS_EVENT_20: 19208092
+      CARDSHEET_BOSS_EVENT_15: -1825562773
+      CARDSHEET_BOSS_EVENT_17: 1848129533
+      CARDSHEET_BOSS_EVENT_3: 143109419
+      CARDSHEET_BOSS_EVENT_14: -771449110
+      CARDSHEET_BOSS_EVENT_16: 1818835444
+      CARDSHEET_BOSS_EVENT_22: -1878935202
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

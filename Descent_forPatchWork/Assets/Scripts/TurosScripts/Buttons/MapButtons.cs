@@ -158,6 +158,7 @@ public class MapButtons : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
             }
 
             maps.enemyHordPanel.SetActive(false);
+            maps.enemyTwoPanel.SetActive(false);
             maps.mapPiecesBattle.Clear();
             GameManager.gm.QuestLorePanel.SetActive(true);
 
@@ -195,14 +196,18 @@ public class MapButtons : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
                 GameManager.gm.heroesInGame[i].GetComponent<HeroOne>().hb.plrLevel);
 
 
-
-                for (int j = 0; j <= GameManager.gm.heroesInGame[i].GetComponent<HeroOne>().hbi.cardItems.Count - 1; j++)
+                
+                for (int j = 0; j < GameManager.gm.heroesInGame[i].GetComponent<HeroOne>().hbi.cardItems.Count - 1; j++)
                 {
-                    GameObject lootInst = GameObject.Find("CollectedLootPanel").transform.GetChild(0).gameObject;
-                    Debug.Log(lootInst);
-                    lootInst.transform.SetParent(GameObject.Find("InventoryHolder").transform);
+                    if(GameObject.Find("CollectedLootPanel").transform.childCount != 0)
+                    {
+                        GameObject lootInst = GameObject.Find("CollectedLootPanel").transform.GetChild(0).gameObject;
+                        Debug.Log(lootInst);
+                        lootInst.transform.SetParent(GameObject.Find("InventoryHolder").transform);
+                    }
+                    
                 }
-
+                
             }
 
             for (int i = 0; i < GameManager.gm.heroesInGame.Count; i++)
@@ -226,6 +231,7 @@ public class MapButtons : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 
             maps.mapsButton.SetActive(true);
             maps.enemyHordPanel.SetActive(false);
+            maps.enemyTwoPanel.SetActive(false);
 
             //for turning off player stat panels
 

@@ -20,7 +20,7 @@ public class MapsController : MonoBehaviour
     [SerializeField] Transform[] enemySpawnPoints;
     [SerializeField] GameObject[] enemyBase;
 
-    public GameObject mapsButton, enemyHordPanel;
+    public GameObject mapsButton, enemyHordPanel, enemyTwoPanel;
     int heroNumIndex;
 
     private void Awake()
@@ -28,6 +28,8 @@ public class MapsController : MonoBehaviour
         mapsButton = GameObject.Find("MapsButton");
         enemyHordPanel = GameObject.Find("EnemyHordeStats");
         enemyHordPanel.SetActive(false);
+        enemyTwoPanel = GameObject.Find("EnemyPanel");
+        enemyTwoPanel.SetActive(false);
         heroNumIndex = 0;
     }
 
@@ -160,14 +162,21 @@ public class MapsController : MonoBehaviour
             enemyInstance.transform.position = enemySpawnPoints[e].position;
             enemyInstance.transform.localScale = new Vector3(1, 1, 1);
 
-            GameManager.gm.enemyHordHealth += enemyInstance.GetComponent<EnemyOne>().eB.enemyHealth;
-            GameManager.gm.enemyHordStrenght += enemyInstance.GetComponent<EnemyOne>().eB.enemyStrength;
+            // for adding enemytype 1 health to enemyHordePool
+
+            if(enemyInstance.GetComponent<EnemyOne>().eB.enemyType == 1)
+            {
+                GameManager.gm.enemyHordHealth += enemyInstance.GetComponent<EnemyOne>().eB.enemyHealth;
+            }
+            
+            //GameManager.gm.enemyHordStrenght += enemyInstance.GetComponent<EnemyOne>().eB.enemyStrength;
             GameManager.gm.enemysInGame.Add(enemyInstance);
 
             
         }
 
         enemyHordPanel.SetActive(true);
+        enemyTwoPanel.SetActive(true);
         GameManager.gm.battleIsOn = true;
     }
 }
