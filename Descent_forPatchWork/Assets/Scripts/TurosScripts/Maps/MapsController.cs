@@ -62,6 +62,13 @@ public class MapsController : MonoBehaviour
             areaMapChild.transform.GetChild(i).GetComponent<Image>().sprite = mapPiecesArea[i];
         }
 
+        //to hide anything else than first mission
+
+        for(int j = amountOfPieces - 1; j > 0; j--)
+        {
+            areaMapChild.transform.GetChild(j).gameObject.SetActive(false);
+        }
+
     }
 
     public void SetRealBattleMap()

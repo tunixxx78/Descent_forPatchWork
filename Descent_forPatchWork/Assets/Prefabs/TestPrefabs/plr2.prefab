@@ -721,7 +721,10 @@ MonoBehaviour:
     plrHealth: 20
     plrStrength: 3
     plrLevel: 1
+    plrShield: 2
+    plrActionPoints: 4
     plrIndex: 0
+    plrMove: 2
     heroImages:
     - {fileID: 1272818542, guid: bf8776e6a16e5485aa24ea0ca71cedf0, type: 3}
     thisHeroIsAttacking: 0

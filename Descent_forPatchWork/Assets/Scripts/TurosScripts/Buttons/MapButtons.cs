@@ -66,11 +66,15 @@ public class MapButtons : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 
             Debug.Log(GameObject.Find("QuestLorePanel").transform.GetChild(5).GetChild(0).transform.childCount);
 
+            // for clearing AreaMaps sidePanel
+
             for (int i = GameObject.Find("QuestLorePanel").transform.GetChild(5).GetChild(0).transform.childCount - 1; i > 0; i--)
             {
                 Destroy(GameObject.Find("QuestLorePanel").transform.GetChild(5).GetChild(0).GetChild(i).gameObject);
             }
 
+
+            //for setting areaMaps missions to sidePanel
 
             for (int i = 0; i < mapPanel.transform.GetChild(GameManager.gm.currentMissionIndex).GetChild(1).GetChild(1).transform.childCount; i++)
             {
@@ -82,7 +86,16 @@ public class MapButtons : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
                 obj.GetComponent<Image>().sprite = this.gameObject.GetComponent<BlockInformation>().blockImages[i];
                 obj.AddComponent<QuestLorePanelButton>();
 
+                GameManager.gm.missionsInAreaMap.Add(obj);
+
                 subMissionIndex++;
+            }
+
+            //for hiding missions from side panel
+
+            for(int j = GameManager.gm.missionsInAreaMap.Count - 1; j > 0; j--)
+            {
+                GameManager.gm.missionsInAreaMap[j].gameObject.SetActive(false);
             }
 
             
