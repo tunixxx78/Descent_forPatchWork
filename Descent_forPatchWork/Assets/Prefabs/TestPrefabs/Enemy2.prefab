@@ -902,9 +902,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   eB:
     EnemyName: Executioner
-    enemyStrength: 1
+    enemyStrength: 3
     enemyHealth: 10
     enemyLevel: 1
+    enemyShield: 1
+    enemyMove: 1
     enemyType: 2
     enemyImages:
     - {fileID: -699438020, guid: bf8776e6a16e5485aa24ea0ca71cedf0, type: 3}

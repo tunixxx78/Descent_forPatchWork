@@ -34,6 +34,9 @@ public class EnemyOne : MonoBehaviour
         {
             GameObject enemyPanel = GameObject.Find("MapPanel").transform.GetChild(GameManager.gm.currentMissionIndex).GetChild(2).GetChild(10).gameObject;
             enemyPanel.transform.GetChild(1).GetChild(0).GetComponent<TMP_Text>().text = eB.enemyHealth.ToString();
+            enemyPanel.transform.GetChild(2).GetComponent<TMP_Text>().text = eB.enemyShield.ToString();
+            enemyPanel.transform.GetChild(3).GetComponent<TMP_Text>().text = eB.enemyStrength.ToString();
+            enemyPanel.transform.GetChild(4).GetComponent<TMP_Text>().text = eB.enemyMove.ToString();
         }
 
         if (eB.enemyHealth <= 0)

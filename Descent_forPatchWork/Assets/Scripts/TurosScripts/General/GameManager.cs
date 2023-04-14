@@ -11,7 +11,7 @@ public class GameManager : MonoBehaviour
     public List<GameObject> enemysInGame;
     public float enemyHordHealth, enemyHordStrenght;
 
-    public bool plrCanAttack, enemyCanAttack, battleIsOn, plrIsAttacking;
+    public bool plrCanAttack, enemyCanAttack, battleIsOn, plrIsAttacking, enemyIsAttacking;
     public float attackForce = 1;
 
     public GameObject QuestLorePanel, currentMission;
@@ -19,6 +19,8 @@ public class GameManager : MonoBehaviour
 
     public Transform[] lootSpawnPoints;
     public GameObject[] lootObjects;
+
+    public List<GameObject> missionsInAreaMap;
 
     private void Awake()
     {
