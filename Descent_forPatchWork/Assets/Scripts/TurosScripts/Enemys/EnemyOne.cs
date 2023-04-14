@@ -30,6 +30,12 @@ public class EnemyOne : MonoBehaviour
         enemyStats.transform.GetChild(1).GetComponent<TMP_Text>().text = eB.enemyStrength.ToString();
         //enemyStats.transform.GetChild(2).GetComponent<TMP_Text>().text = eB.enemyLevel.ToString();
 
+        if(eB.enemyType == 2)
+        {
+            GameObject enemyPanel = GameObject.Find("MapPanel").transform.GetChild(GameManager.gm.currentMissionIndex).GetChild(2).GetChild(10).gameObject;
+            enemyPanel.transform.GetChild(1).GetChild(0).GetComponent<TMP_Text>().text = eB.enemyHealth.ToString();
+        }
+
         if (eB.enemyHealth <= 0)
         {
             GameManager.gm.enemysInGame.Remove(this.gameObject);

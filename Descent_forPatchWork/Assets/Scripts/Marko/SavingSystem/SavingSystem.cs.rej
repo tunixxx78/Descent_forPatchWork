@@ -1,0 +1,20 @@
+diff a/Descent_forPatchWork/Assets/Scripts/Marko/SavingSystem/SavingSystem.cs b/Descent_forPatchWork/Assets/Scripts/Marko/SavingSystem/SavingSystem.cs	(rejected hunks)
+@@ -191,16 +191,14 @@
+ 
+ }
+ 
++//serializable class for saved data.
+     [Serializable]
+     class GameSavedData
+     {
+         public string savedGroupName;
+         public string currentSceneName;
+ 
+-    //public string[] heroNames = new string[5];
+-    //public string[] heroRoles = new string[5];
+-
+-    public List<SavedHero> savedHeroes = new List<SavedHero>();
++        public List<SavedHero> savedHeroes = new List<SavedHero>();
+     
+     }
+ 

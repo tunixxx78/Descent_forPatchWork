@@ -16,6 +16,7 @@ TagManager:
   - Level
   - QuestLore
   - SideQuest
+  - LootItem
   layers:
   - Default
   - TransparentFX

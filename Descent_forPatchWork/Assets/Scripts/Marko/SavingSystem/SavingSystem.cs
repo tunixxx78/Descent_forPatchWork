@@ -164,7 +164,7 @@ public class SavingSystem : MonoBehaviour
             this.saveSlots[3] = names.save3;
             this.saveSlots[4] = names.save4;
         }
-        else { Debug.Log("Not yet saved names file."); }
+        else { Debug.Log("Not yet saved names file, no problem."); }
         
         }
         public void SaveSavedNames()
@@ -183,7 +183,6 @@ public class SavingSystem : MonoBehaviour
         File.WriteAllText(filePath, saveableNames);
         }
 
-    //deleting just changes the string of the name in saveslots to "" -> save actually exists until overwitten
     private void DeleteSave(int saveSlot)
     {
         saveSlots[saveSlot] = "";
@@ -191,14 +190,16 @@ public class SavingSystem : MonoBehaviour
 
 }
 
-//serializable class for saved data.
     [Serializable]
     class GameSavedData
     {
         public string savedGroupName;
         public string currentSceneName;
 
-        public List<SavedHero> savedHeroes = new List<SavedHero>();
+    //public string[] heroNames = new string[5];
+    //public string[] heroRoles = new string[5];
+
+    public List<SavedHero> savedHeroes = new List<SavedHero>();
     
     }
 
@@ -210,7 +211,6 @@ public class SavingSystem : MonoBehaviour
         public string  save0, save1, save2, save3, save4;
     }
 
-//serializable class for hero-monobehaviours
 [Serializable]
 class SavedHero
 {

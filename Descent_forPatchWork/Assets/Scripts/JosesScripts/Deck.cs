@@ -75,7 +75,7 @@ public class Deck : MonoBehaviour
         }
         SkillCard card = SkillCards[0];
         SkillCards.RemoveAt(0);
-        // Tämä tehtäisiin vasta kun kortti pelataan pelaajan kädestä
+        // T?m? teht?isiin vasta kun kortti pelataan pelaajan k?dest?
         SkillCardsDiscard.Add(card);
 
         return card;
@@ -97,6 +97,8 @@ public class Deck : MonoBehaviour
         return card;
     }
 
+    //Had to hide this for build!!
+    /*
     public void GetHeroSkillCards(string characterName)
     {
         // GUID tarkoittaa Globally Unique Identifier ja SO = Scriptable Object
@@ -109,5 +111,5 @@ public class Deck : MonoBehaviour
             SkillCards.Add(sCard);
         }
     }
-
+    */
 }

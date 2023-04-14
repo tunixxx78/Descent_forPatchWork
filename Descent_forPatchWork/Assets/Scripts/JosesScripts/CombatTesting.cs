@@ -14,7 +14,7 @@ public class CombatTesting : MonoBehaviour
         Player1Deck.ShuffleFaithCards();
 
         // Get individual hero's cards by their name
-        Player1Deck.GetHeroSkillCards("Hero1");
+        //Player1Deck.GetHeroSkillCards("Hero1");
         Player1Deck.ShuffleSkillCards();
 
 

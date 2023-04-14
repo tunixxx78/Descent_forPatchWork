@@ -53,7 +53,7 @@ public class MapButtons : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
         if (this.gameObject.CompareTag("WorldMapButton"))
         {
             GameManager.gm.currentAreaMissions = this.gameObject.GetComponent<BlockInformation>().blockImages.Length;
-            GameObject.Find("AreaMapPanel").transform.GetChild(0).GetComponent<Image>().sprite = this.gameObject.GetComponent<BlockInformation>().RealAreaMap; //mapPanel.transform.GetChild(GameManager.gm.currentMissionIndex).GetChild(0).GetChild(1).GetChild(GameManager.gm.currentMissionInQuest).GetComponent<BlockInformation>().RealAreaMap;
+            GameObject.Find("AreaMapPanel").transform.GetChild(0).GetComponent<Image>().sprite = this.gameObject.GetComponent<BlockInformation>().RealAreaMap; 
 
             //mapAnimator.SetTrigger(animationTrigger);
             mapAnimator.SetBool(animationTrigger, true);
@@ -80,7 +80,6 @@ public class MapButtons : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
                 obj.tag = "SideQuest";
                 obj.AddComponent<Image>().transform.localScale = new Vector3(1, 1, 1);
                 obj.GetComponent<Image>().sprite = this.gameObject.GetComponent<BlockInformation>().blockImages[i];
-                //obj.GetComponent<Image>().sprite = mapPanel.transform.GetChild(GameManager.gm.currentMissionIndex).GetChild(0).GetChild(1).GetChild(GameManager.gm.currentMissionInQuest).GetComponent<BlockInformation>().blockImages[i];
                 obj.AddComponent<QuestLorePanelButton>();
 
                 subMissionIndex++;
@@ -104,7 +103,33 @@ public class MapButtons : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
         {
             mapAnimator.SetBool(animationTrigger, false);
 
+            //for saving plrData for this session.
 
+            for (int i = 0; i < GameManager.gm.heroesInGame.Count; i++)
+            {
+                DataHolder.dataHolder.SetData(i, GameManager.gm.heroesInGame[i].GetComponent<HeroOne>().hb.plrName,
+                GameManager.gm.heroesInGame[i].GetComponent<HeroOne>().hb.plrHealth,
+                GameManager.gm.heroesInGame[i].GetComponent<HeroOne>().hb.plrStrength,
+                GameManager.gm.heroesInGame[i].GetComponent<HeroOne>().hb.plrLevel);
+
+                
+                /*
+                for (int j = 0; j < GameManager.gm.heroesInGame[i].GetComponent<HeroOne>().hbi.cardItems.Count - 1; j++)
+                {
+                    GameObject lootInst = GameObject.Find("CollectedLootPanel").transform.GetChild(0).gameObject;
+                    Debug.Log(lootInst);
+                    lootInst.transform.SetParent(GameObject.Find("InventoryHolder").transform);
+                }
+                */
+            }
+            
+            for (int j = 0; j <= 3; j++)
+            {
+                GameObject lootInst = GameObject.Find("CollectedLootPanel").transform.GetChild(0).gameObject;
+                Debug.Log(lootInst);
+                lootInst.transform.SetParent(GameObject.Find("InventoryHolder").transform);
+            }
+            
 
             //for turning off player stat panels
 
@@ -133,10 +158,22 @@ public class MapButtons : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
             }
 
             maps.enemyHordPanel.SetActive(false);
+            maps.enemyTwoPanel.SetActive(false);
             maps.mapPiecesBattle.Clear();
             GameManager.gm.QuestLorePanel.SetActive(true);
 
-            GameObject.Find("MapPanel").transform.GetChild(GameManager.gm.currentMissionIndex).GetChild(2).GetChild(9).gameObject.SetActive(false);
+            mapPanel.transform.GetChild(GameManager.gm.currentMissionIndex).GetChild(2).GetChild(9).gameObject.SetActive(false);
+
+            //for clearing lootListing in hierarchy
+            /*
+            for (int i = mapPanel.transform.GetChild(GameManager.gm.currentMissionIndex).GetChild(2).GetChild(9).GetChild(5).childCount; i > 0; i--)
+            {
+                Destroy(mapPanel.transform.GetChild(GameManager.gm.currentMissionIndex).GetChild(2).GetChild(9).GetChild(5).GetChild(i - 1).gameObject);
+            }
+            */
+
+            GameManager.gm.round++;
+            
 
         }
 
@@ -149,6 +186,29 @@ public class MapButtons : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
             maps.mapPiecesArea.Clear();
             maps.mapPiecesBattle.Clear();
 
+            //for saving plrData for this session.
+
+            for (int i = 0; i < GameManager.gm.heroesInGame.Count; i++)
+            {
+                DataHolder.dataHolder.SetData(i, GameManager.gm.heroesInGame[i].GetComponent<HeroOne>().hb.plrName,
+                GameManager.gm.heroesInGame[i].GetComponent<HeroOne>().hb.plrHealth,
+                GameManager.gm.heroesInGame[i].GetComponent<HeroOne>().hb.plrStrength,
+                GameManager.gm.heroesInGame[i].GetComponent<HeroOne>().hb.plrLevel);
+
+
+                
+                for (int j = 0; j < GameManager.gm.heroesInGame[i].GetComponent<HeroOne>().hbi.cardItems.Count - 1; j++)
+                {
+                    if(GameObject.Find("CollectedLootPanel").transform.childCount != 0)
+                    {
+                        GameObject lootInst = GameObject.Find("CollectedLootPanel").transform.GetChild(0).gameObject;
+                        Debug.Log(lootInst);
+                        lootInst.transform.SetParent(GameObject.Find("InventoryHolder").transform);
+                    }
+                    
+                }
+                
+            }
 
             for (int i = 0; i < GameManager.gm.heroesInGame.Count; i++)
             {
@@ -171,6 +231,7 @@ public class MapButtons : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 
             maps.mapsButton.SetActive(true);
             maps.enemyHordPanel.SetActive(false);
+            maps.enemyTwoPanel.SetActive(false);
 
             //for turning off player stat panels
 
@@ -182,7 +243,16 @@ public class MapButtons : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
             }
 
 
-            GameObject.Find("MapPanel").transform.GetChild(GameManager.gm.currentMissionIndex).GetChild(2).GetChild(9).gameObject.SetActive(false);
+            mapPanel.transform.GetChild(GameManager.gm.currentMissionIndex).GetChild(2).GetChild(9).gameObject.SetActive(false);
+
+            //for clearing lootListing in hierarchy
+
+            for(int i = mapPanel.transform.GetChild(GameManager.gm.currentMissionIndex).GetChild(2).GetChild(9).GetChild(5).childCount; i > 0; i--)
+            {
+                Destroy(mapPanel.transform.GetChild(GameManager.gm.currentMissionIndex).GetChild(2).GetChild(9).GetChild(5).GetChild(i - 1).gameObject);
+            }
+
+            
         }
 
     }
