@@ -909,8 +909,10 @@ MonoBehaviour:
     - {fileID: 1378608774, guid: bf8776e6a16e5485aa24ea0ca71cedf0, type: 3}
     thisHeroIsAttacking: 0
   hbi:
-    weaponItems: []
-    cardItems: []
+    weaponItems:
+    - {fileID: 537869927679791651, guid: ba1046e8f80614e7396b5bcffb3fff57, type: 3}
+    cardItems:
+    - {fileID: 800937722610588210, guid: 2a79e11fd92364e0aa8981556b4a3c26, type: 3}
     gold: []
   currentObj: {fileID: 0}
 --- !u!61 &5469608273261799511

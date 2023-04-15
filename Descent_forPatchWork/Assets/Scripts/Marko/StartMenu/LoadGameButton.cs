@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-<<<<<<< HEAD
+//<<<<<<< HEAD
 using Unity.UI;
 using System;
 using Unity.VisualScripting;
-=======
+//=======
 //using Unity.UI;
->>>>>>> origin/main
+//>>>>>>> origin/main
 
 public class LoadGameButton : MonoBehaviour
 {
@@ -39,11 +39,11 @@ public class LoadGameButton : MonoBehaviour
     private void LoadSavedNames()
     {
         buttonDisplayName = savingSystem.saveSlots[buttonId];
-<<<<<<< HEAD
-        //(Debug.Log("tallennetussa nimessä " + buttonId + ": "+ buttonDisplayName);
-=======
+//<<<<<<< HEAD
+        //(Debug.Log("tallennetussa nimess? " + buttonId + ": "+ buttonDisplayName);
+//=======
         Debug.Log("tallennetussa nimess? "+ buttonDisplayName);
->>>>>>> origin/main
+//>>>>>>> origin/main
         if (buttonDisplayName == null || buttonDisplayName == "")
         {
             buttonDisplayName = defaultEmpty;
@@ -65,10 +65,10 @@ public class LoadGameButton : MonoBehaviour
         //tehd??n uusi peli
         else
         {
-<<<<<<< HEAD
-=======
+//<<<<<<< HEAD
+//=======
             //Pit?? laittaa avaamaan paneeli, NewGamePanel
->>>>>>> origin/main
+//>>>>>>> origin/main
             savingSystem.activeSaveSlot = this.buttonId;
             newGamePanel.SetActive(true); //activate NewGamePanel in Canvas
         }

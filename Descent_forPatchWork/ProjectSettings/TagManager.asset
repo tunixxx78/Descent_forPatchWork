@@ -18,6 +18,7 @@ TagManager:
   - SideQuest
   - LootItem
   - Action
+  - Inventory
   layers:
   - Default
   - TransparentFX
