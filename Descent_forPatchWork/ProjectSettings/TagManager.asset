@@ -17,6 +17,8 @@ TagManager:
   - QuestLore
   - SideQuest
   - LootItem
+  - Action
+  - Inventory
   layers:
   - Default
   - TransparentFX
@@ -24,7 +26,7 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - UI2
   - 
   - 
   - player

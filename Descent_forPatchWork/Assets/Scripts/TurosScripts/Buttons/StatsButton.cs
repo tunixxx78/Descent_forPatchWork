@@ -17,6 +17,7 @@ public class StatsButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
             buttonClick = new UnityEvent();
         }
 
+        /*
         if (isHero)
         {
             parentObject = GetComponentInParent<HeroOne>().gameObject;
@@ -25,7 +26,7 @@ public class StatsButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
         {
             parentObject = GetComponentInParent<EnemyOne>().gameObject;
         }
-        
+        */
 
     }
 
@@ -39,16 +40,52 @@ public class StatsButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
             {
                 if (this.gameObject.CompareTag("Health"))
                 {
-                    parentObject.GetComponent<HeroOne>().hb.plrHealth--;
+                    //parentObject.GetComponent<HeroOne>().hb.plrHealth--;
+
+                    for (int i = 0; i < GameManager.gm.heroesInGame.Count; i++)
+                    {
+                        if (GameManager.gm.activePlayer == i)
+                        {
+                            GameManager.gm.heroesInGame[i].GetComponent<HeroOne>().hb.plrHealth--;
+                        }
+                    }
+
+
                 }
                 if (this.gameObject.CompareTag("Strenght"))
                 {
-                    parentObject.GetComponent<HeroOne>().hb.plrStrength--;
-                    GameManager.gm.attackForce = parentObject.GetComponent<HeroOne>().hb.plrStrength;
+                    for (int j = 0; j < GameManager.gm.heroesInGame.Count; j++)
+                    {
+                        if (GameManager.gm.activePlayer == j)
+                        {
+                            GameManager.gm.heroesInGame[j].GetComponent<HeroOne>().hb.plrStrength--;
+                            GameManager.gm.attackForce = GameManager.gm.heroesInGame[j].GetComponent<HeroOne>().hb.plrStrength;
+                        }
+                    }
+                    //parentObject.GetComponent<HeroOne>().hb.plrStrength--;
+                    //GameManager.gm.attackForce = parentObject.GetComponent<HeroOne>().hb.plrStrength;
                 }
                 if (this.gameObject.CompareTag("Level"))
                 {
-                    parentObject.GetComponent<HeroOne>().hb.plrLevel--;
+                    for(int k = 0; k < GameManager.gm.heroesInGame.Count; k++)
+                    {
+                        if(GameManager.gm.activePlayer == k)
+                        {
+                            GameManager.gm.heroesInGame[k].GetComponent<HeroOne>().hb.plrLevel--;
+                        }
+                        
+                    }
+                    //parentObject.GetComponent<HeroOne>().hb.plrLevel--;
+                }
+                if (this.gameObject.CompareTag("Action"))
+                {
+                    for(int a = 0; a < GameManager.gm.heroesInGame.Count; a++)
+                    {
+                        if(GameManager.gm.activePlayer == a)
+                        {
+                            GameManager.gm.heroesInGame[a].GetComponent<HeroOne>().hb.plrActionPoints--;
+                        }
+                    }
                 }
 
             }
@@ -56,16 +93,51 @@ public class StatsButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
             {
                 if (this.gameObject.CompareTag("Health"))
                 {
-                    parentObject.GetComponent<HeroOne>().hb.plrHealth++;
+                    //parentObject.GetComponent<HeroOne>().hb.plrHealth++;
+
+                    for (int i = 0; i < GameManager.gm.heroesInGame.Count; i++)
+                    {
+                        if (GameManager.gm.activePlayer == i)
+                        {
+                            GameManager.gm.heroesInGame[i].GetComponent<HeroOne>().hb.plrHealth++;
+                        }
+                    }
                 }
                 if (this.gameObject.CompareTag("Strenght"))
                 {
-                    parentObject.GetComponent<HeroOne>().hb.plrStrength++;
-                    GameManager.gm.attackForce = parentObject.GetComponent<HeroOne>().hb.plrStrength;
+                    for (int j = 0; j < GameManager.gm.heroesInGame.Count; j++)
+                    {
+                        if (GameManager.gm.activePlayer == j)
+                        {
+                            GameManager.gm.heroesInGame[j].GetComponent<HeroOne>().hb.plrStrength++;
+                            GameManager.gm.attackForce = GameManager.gm.heroesInGame[j].GetComponent<HeroOne>().hb.plrStrength;
+                        }
+                    }
+
+                    //parentObject.GetComponent<HeroOne>().hb.plrStrength++;
+                    //GameManager.gm.attackForce = parentObject.GetComponent<HeroOne>().hb.plrStrength;
                 }
                 if (this.gameObject.CompareTag("Level"))
                 {
-                    parentObject.GetComponent<HeroOne>().hb.plrLevel++;
+                    for (int k = 0; k < GameManager.gm.heroesInGame.Count; k++)
+                    {
+                        if(GameManager.gm.activePlayer == k)
+                        {
+                            GameManager.gm.heroesInGame[k].GetComponent<HeroOne>().hb.plrLevel++;
+                        }
+                        
+                    }
+                    //parentObject.GetComponent<HeroOne>().hb.plrLevel++;
+                }
+                if (this.gameObject.CompareTag("Action"))
+                {
+                    for (int a = 0; a < GameManager.gm.heroesInGame.Count; a++)
+                    {
+                        if (GameManager.gm.activePlayer == a)
+                        {
+                            GameManager.gm.heroesInGame[a].GetComponent<HeroOne>().hb.plrActionPoints++;
+                        }
+                    }
                 }
             }
         }

@@ -14,6 +14,7 @@ public class NewGameCreator : MonoBehaviour
     {
         savingSystem = FindObjectOfType<SavingSystem>();
     }
+
     public void SetGroupName()
     {
         //default name for empty field: nameless group + number
@@ -26,24 +27,32 @@ public class NewGameCreator : MonoBehaviour
         else { savingSystem.groupName = groupNameInput.text; }
 
         //saving party first time..
-        Debug.Log("group's name is " + savingSystem.groupName);
-        savingSystem.saveSlots[savingSystem.activeSaveSlot]
-            = savingSystem.groupName;
+        //Debug.Log("group's name is " + savingSystem.groupName);
+        //savingSystem.saveSlots[savingSystem.activeSaveSlot]
+        //    = savingSystem.groupName;
         
         //update name in hero selection panel
         partyNameHeroSelectText.text = savingSystem.groupName;
+        EmptyNameField();
+    }
+
+    public void EmptyNameField()
+    {
+        groupNameInput.text = "";  //wanna empty name input field..
     }
 
     public void StartNewGame(string firstScene)
     {
+
+        savingSystem.saveSlots[savingSystem.activeSaveSlot]
+            = savingSystem.groupName;
         //go to first scene of adventuring - map scene??
-        
+
         savingSystem.activeScene = firstScene;
         savingSystem.SaveSavedNames();
         savingSystem.SaveGame();
         Debug.Log("aktiivinen skene on "+ savingSystem.activeScene);
         SceneManager.LoadScene(firstScene);
     }
-
 
 }

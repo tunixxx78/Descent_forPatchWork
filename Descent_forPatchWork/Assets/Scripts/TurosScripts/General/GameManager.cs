@@ -11,18 +11,22 @@ public class GameManager : MonoBehaviour
     public List<GameObject> enemysInGame;
     public float enemyHordHealth, enemyHordStrenght;
 
-    public bool plrCanAttack, enemyCanAttack, battleIsOn, plrIsAttacking;
+    public bool plrCanAttack, enemyCanAttack, battleIsOn, plrIsAttacking, enemyIsAttacking;
     public float attackForce = 1;
 
     public GameObject QuestLorePanel, currentMission;
-    public int currentAreaMissions, currentMissionInQuest = 0, currentMissionIndex = 0, activePlayer, round = 0;
+    public int currentAreaMissions, currentMissionInQuest = 0, currentMissionIndex = 0, activePlayer, round = 0, activeEnemy;
 
     public Transform[] lootSpawnPoints;
     public GameObject[] lootObjects;
 
+    public List<GameObject> missionsInAreaMap;
+
+    public GameObject InventorySlotBase;
+
     private void Awake()
     {
-        Screen.SetResolution(1920, 1080, false);
+        Screen.SetResolution(1920, 1080, true);
 
         if(GameManager.gm == null)
         {
@@ -46,6 +50,7 @@ public class GameManager : MonoBehaviour
 
         QuestLorePanel = GameObject.Find("MapPanel").transform.GetChild(currentMissionInQuest).GetChild(3).gameObject;
         QuestLorePanel.transform.GetChild(0).GetComponent<Image>().sprite = GameObject.Find("MapPanel").transform.GetChild(0).GetComponent<Quest>().questImage;
+        QuestLorePanel.transform.GetChild(0).GetComponent<Image>().SetNativeSize();
         QuestLorePanel.transform.GetChild(1).GetComponent<TMP_Text>().text = GameObject.Find("MapPanel").transform.GetChild(0).GetComponent<Quest>().questName;
     }
 
@@ -79,7 +84,7 @@ public class GameManager : MonoBehaviour
                 GameObject lootInstance = Instantiate(lootObjects[i], lootSpawnPoints[i].position, Quaternion.identity);
 
                 lootInstance.transform.SetParent(GameObject.Find("Canvas").transform);
-                lootInstance.transform.localScale = new Vector3(1f, 1f, 1f);
+                lootInstance.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
             }
             
         }

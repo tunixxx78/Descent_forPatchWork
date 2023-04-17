@@ -3,7 +3,13 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+//<<<<<<< HEAD
 using Unity.UI;
+using System;
+using Unity.VisualScripting;
+//=======
+//using Unity.UI;
+//>>>>>>> origin/main
 
 public class LoadGameButton : MonoBehaviour
 {
@@ -21,19 +27,23 @@ public class LoadGameButton : MonoBehaviour
 
     private void Awake()
     {
-        savingSystem = FindObjectOfType<SavingSystem>();
+        savingSystem = FindObjectOfType<SavingSystem>();       
     }
 
-    void Start()
+    private void OnEnable()
     {
+        Debug.Log("updated load game button names - _ - _");
         LoadSavedNames();
     }
-
 
     private void LoadSavedNames()
     {
         buttonDisplayName = savingSystem.saveSlots[buttonId];
-        Debug.Log("tallennetussa nimess‰ "+ buttonDisplayName);
+//<<<<<<< HEAD
+        //(Debug.Log("tallennetussa nimess? " + buttonId + ": "+ buttonDisplayName);
+//=======
+        Debug.Log("tallennetussa nimess? "+ buttonDisplayName);
+//>>>>>>> origin/main
         if (buttonDisplayName == null || buttonDisplayName == "")
         {
             buttonDisplayName = defaultEmpty;
@@ -41,6 +51,7 @@ public class LoadGameButton : MonoBehaviour
         TM_loadGameName.text = buttonDisplayName;
 
     }
+
 
     public void StartPlaying()
     {
@@ -51,10 +62,13 @@ public class LoadGameButton : MonoBehaviour
             savingSystem.LoadGame(buttonId);
             SceneManager.LoadScene(savingSystem.activeScene);
         }
-        //tehd‰‰n uusi peli
+        //tehd??n uusi peli
         else
         {
-            //Pit‰‰ laittaa avaamaan paneeli, NewGamePanel
+//<<<<<<< HEAD
+//=======
+            //Pit?? laittaa avaamaan paneeli, NewGamePanel
+//>>>>>>> origin/main
             savingSystem.activeSaveSlot = this.buttonId;
             newGamePanel.SetActive(true); //activate NewGamePanel in Canvas
         }

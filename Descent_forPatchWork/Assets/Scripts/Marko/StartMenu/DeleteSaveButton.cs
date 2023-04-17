@@ -2,14 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class DeleteSaveButton : MonoBehaviour
 {
 
     public int buttonId;
-    [SerializeField] TMP_Text TM_buttonText;
+    public TMP_Text TM_buttonText;
     SavingSystem savingSystem;
-    //[SerializeField] Canvas mainUI;
+    [SerializeField] DeleteSaveUI deleteSaveUI;
+    
     
 
     private void Awake()
@@ -24,6 +26,11 @@ public class DeleteSaveButton : MonoBehaviour
         UpdateButtonText();
     }
 
+    public void SetDeletableId()
+    {
+        deleteSaveUI.deletableSaveId = buttonId;
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -35,20 +42,22 @@ public class DeleteSaveButton : MonoBehaviour
     //when a new game is created on that slot)
     public void DeleteSave()
     {
-        savingSystem.saveSlots[buttonId] = null;
-        Debug.Log("savingsystemin teksti " + savingSystem.saveSlots[buttonId]);
-        savingSystem.groupName= null;
-        Debug.Log("saving system groupname: " + savingSystem.groupName);
-        savingSystem.SaveSavedNames();
+        //savingSystem.saveSlots[buttonId] = null;
+        //Debug.Log("savingsystemin teksti " + savingSystem.saveSlots[buttonId]);
+        //savingSystem.groupName= null;
+        //Debug.Log("saving system groupname: " + savingSystem.groupName);
+        //savingSystem.SaveSavedNames();
         
         UpdateButtonText();
     }
 
-    private void UpdateButtonText()
+    public void UpdateButtonText()
     {
         if (savingSystem.saveSlots[buttonId] == null || savingSystem.saveSlots[buttonId] == "") {
 
             TM_buttonText.text = "Empty Save";
+            GetComponent<Button>().interactable = false;
+
         }
         else
         {

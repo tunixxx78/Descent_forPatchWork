@@ -19,7 +19,9 @@ public class SavingSystem : MonoBehaviour
     public int activeSaveSlot;
     public string activeScene;
     public List<SelectableHero> partyHeroes;
+    
 
+    //MAKING SINGLETON
     private void Awake()
     {
         if(savingSystem != null && savingSystem != this)
@@ -41,17 +43,45 @@ public class SavingSystem : MonoBehaviour
         gameSessionData.currentSceneName = activeScene;
         gameSessionData.savedGroupName= groupName;
 
-        if (partyHeroes.Count >= 1)
+        for(int i = 0; i < partyHeroes.Count; i++)
         {
-            gameSessionData.hero0Name = partyHeroes[0].name;
-            gameSessionData.hero0Role = partyHeroes[0].role;
-        }
-        //if (partyHeroes[1])
-        //{
-        //    gameSessionData.hero1Name = partyHeroes[1].name;
-        //    gameSessionData.hero1Role = partyHeroes[1].role;
-        //}
+            SelectableHero hero = partyHeroes[i]; //faster to use below..
+            SavedHero sHero = new SavedHero();  //create serializable hero for saving data
 
+            sHero.heroName = hero.heroName;
+            sHero.heroRole  = hero.heroRole;
+            sHero.currentHealth = hero.currentHealth;
+            sHero.maxHealth = hero.maxHealth;
+            sHero.currentHealth= hero.currentHealth;
+            sHero.currentActionPoints = hero.currentActionPoints;
+            sHero.maxActionPoints = hero.maxActionPoints;
+            sHero.atk = hero.atk;
+            sHero.def =     hero.def;
+            sHero.fate = hero.fate;
+            sHero.exp = hero.exp;
+            sHero.maxCombatItems = hero.maxCombatItems;
+            sHero.maxItems = hero.maxItems;
+
+            //this saves only cards' ids
+            sHero.savedCombatItems = hero.combatItems;
+            //if saving whole classes/objects..
+
+            //foreach(CombatItem item in hero.combatItems)
+            //{
+            //    sHero.savedCombatItems.Add(item.id);    //save only IDs
+            //}
+            foreach(JourneyItem item in hero.journeyItems)
+            {
+                sHero.savedJourneyItems.Add(item.id);
+            }
+            foreach(HiddenItem item in hero.hiddenItems)
+            {
+                sHero.savedHiddenItems.Add(item.id);
+            }
+
+            gameSessionData.savedHeroes.Add(sHero);
+
+        }
 
         string saveableData = JsonUtility.ToJson(gameSessionData,true);
         string filePath = Application.persistentDataPath + "/save" + activeSaveSlot.ToString() + ".json";
@@ -62,14 +92,63 @@ public class SavingSystem : MonoBehaviour
 
         public void LoadGame(int saveName)
         {
-        string filePath = Application.persistentDataPath + "/save" + saveName.ToString() + ".json";
-        string savedData = File.ReadAllText(filePath);
+            //TODO NEW universal savepath(for macs and pcs)
+            string filePath = Application.persistentDataPath + "/save" + saveName.ToString() + ".json";
+            if (File.Exists(filePath))
+            {
+                    string savedData = File.ReadAllText(filePath);
 
-        GameSavedData loadableData = JsonUtility.FromJson<GameSavedData>(savedData);
-        this.groupName = loadableData.savedGroupName;
-        this.activeScene = loadableData.currentSceneName;
-        
-    }
+                    GameSavedData loadableData = JsonUtility.FromJson<GameSavedData>(savedData);
+                    this.groupName = loadableData.savedGroupName;
+                    this.activeScene = loadableData.currentSceneName;
+
+                    foreach (SavedHero sHero in loadableData.savedHeroes)
+                    {
+                        
+                
+                        GameObject heroGameObject = new GameObject();
+                
+                        heroGameObject.AddComponent<SelectableHero>();
+                heroGameObject.AddComponent<MeshRenderer>();
+                //TODO add all other components(material, meshrenderer ..) too? or not?
+                
+
+                        SelectableHero hero = heroGameObject.GetComponent<SelectableHero>();
+                        hero.name = sHero.heroRole; //role shows in hierarchy if this works
+                        hero.heroName = sHero.heroName;
+                        hero.heroRole = sHero.heroRole;
+                        hero.currentHealth = sHero.currentHealth;
+                        hero.maxHealth = sHero.maxHealth;
+                        hero.currentActionPoints = sHero.currentActionPoints;
+                        hero.maxActionPoints = sHero.maxActionPoints;
+
+                        hero.atk = sHero.atk;
+                        hero.def = sHero.def;
+                        hero.fate = sHero.fate;
+                        hero.exp = sHero.exp;
+
+                        hero.maxCombatItems = sHero.maxCombatItems;
+                        hero.maxItems = sHero.maxItems;
+
+                            foreach(string sCombatCID in sHero.savedCombatItems)
+                            {
+                                //TODO search for CombatItem by ID..
+                            }
+                            foreach(string sJourneyCID in sHero.savedJourneyItems)
+                            {
+                                //TODO journeycard by id
+                            }
+                            foreach(string hiddenCID in sHero.savedHiddenItems)
+                            {
+                                //TODO hidden cards by id..
+                            }
+                Debug.Log("kokeillaan lisätä heroa");
+                        partyHeroes.Add(hero);
+                Debug.Log("heroja on: " +partyHeroes.Count);
+                    }
+            }
+
+        }
 
         public void LoadSaveNames()
         {
@@ -117,12 +196,10 @@ public class SavingSystem : MonoBehaviour
         public string savedGroupName;
         public string currentSceneName;
 
-    public string hero0Name;
-    public string hero0Role;
+    //public string[] heroNames = new string[5];
+    //public string[] heroRoles = new string[5];
 
-    public string hero1Name;
-    public string hero1Role;
-
+    public List<SavedHero> savedHeroes = new List<SavedHero>();
     
     }
 
@@ -131,5 +208,30 @@ public class SavingSystem : MonoBehaviour
     [Serializable]
     class SavedNamesData
     {
-        public string save1, save2, save3, save4, save0;
+        public string  save0, save1, save2, save3, save4;
     }
+
+[Serializable]
+class SavedHero
+{
+    public string heroName;
+    public string heroRole;
+
+    public int currentHealth;
+    public int maxHealth;
+
+    public int currentActionPoints;
+    public int maxActionPoints;
+
+    public int atk;
+    public int def;
+    public int fate;
+    public int exp;
+
+    public int maxCombatItems;
+    public int maxItems;
+
+    public List<string> savedCombatItems;
+    public List<string> savedJourneyItems;
+    public List<string> savedHiddenItems;
+}

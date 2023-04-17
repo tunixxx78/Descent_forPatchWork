@@ -20,11 +20,21 @@ public class MainMenuUI : MonoBehaviour
 
     public void AddSelectedHeroes()
     {
-        foreach (SelectableHero hero in selectableHeroesList)
+        //debuglog, print sizes of lists/arrays
+        Debug.Log("paryheroes koko: " + savingSystem.partyHeroes.Count);
+        Debug.Log("selectableHeroesList koko: "+ selectableHeroesList.Count);
+        //add hero to savingSystem's list, not yet in list
+        for(int i = 0; i < selectableHeroesList.Count;i++)
         {
-            if (hero.IsSelected())
-            {
-                savingSystem.partyHeroes.Add(hero);
+
+            if (selectableHeroesList[i].IsSelected())
+            {   //no same heroes multiple times)
+                if (!savingSystem.partyHeroes.Contains(selectableHeroesList[i]))
+                {
+                    Debug.Log("lisäätään sankaria " + selectableHeroesList[i].heroName);
+                    savingSystem.partyHeroes.Add(selectableHeroesList[i]);
+                }
+                
             }
         }
     }

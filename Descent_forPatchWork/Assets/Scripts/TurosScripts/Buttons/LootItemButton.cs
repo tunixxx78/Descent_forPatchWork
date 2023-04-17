@@ -29,9 +29,10 @@ public class LootItemButton : MonoBehaviour, IPointerDownHandler, IPointerUpHand
         if (this.gameObject.CompareTag("LootItem"))
         {
             GameObject lootInstance = Instantiate(lootItems[randItem], this.gameObject.transform.position, Quaternion.identity);
+
             
             lootInstance.transform.SetParent(GameObject.Find("MapPanel").transform.GetChild(GameManager.gm.currentMissionIndex).GetChild(2).GetChild(9).GetChild(5));
-            lootInstance.transform.localScale = new Vector3(1f, 1f, 1f);
+            lootInstance.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
 
             if (GameManager.gm.heroesInGame[GameManager.gm.activePlayer].GetComponent<HeroOne>().hbi.weaponItems.Contains(lootInstance) == false && lootIndex == 0)
             {
