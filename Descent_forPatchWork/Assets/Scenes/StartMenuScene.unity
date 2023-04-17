@@ -732,6 +732,16 @@ PrefabInstance:
       objectReference: {fileID: 411426096}
     - target: {fileID: 9039318120607418242, guid: fe235226617eebb46a5c3bd1b9a7d0e0,
         type: 3}
+      propertyPath: heroRoleText
+      value: 
+      objectReference: {fileID: 1558767812}
+    - target: {fileID: 9039318120607418242, guid: fe235226617eebb46a5c3bd1b9a7d0e0,
+        type: 3}
+      propertyPath: heroClassText
+      value: 
+      objectReference: {fileID: 1558767812}
+    - target: {fileID: 9039318120607418242, guid: fe235226617eebb46a5c3bd1b9a7d0e0,
+        type: 3}
       propertyPath: selectedColor.a
       value: 1
       objectReference: {fileID: 0}
@@ -1357,6 +1367,16 @@ PrefabInstance:
       propertyPath: kuvaPrkl
       value: 
       objectReference: {fileID: 1067524994}
+    - target: {fileID: 9039318120607418242, guid: fe235226617eebb46a5c3bd1b9a7d0e0,
+        type: 3}
+      propertyPath: heroRoleText
+      value: 
+      objectReference: {fileID: 604702799}
+    - target: {fileID: 9039318120607418242, guid: fe235226617eebb46a5c3bd1b9a7d0e0,
+        type: 3}
+      propertyPath: heroClassText
+      value: 
+      objectReference: {fileID: 604702799}
     - target: {fileID: 9039318120607418242, guid: fe235226617eebb46a5c3bd1b9a7d0e0,
         type: 3}
       propertyPath: selectedColor.a
@@ -2732,6 +2752,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 536217386}
   m_CullTransparentMesh: 1
+--- !u!114 &604702799 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8798431153737336032, guid: fe235226617eebb46a5c3bd1b9a7d0e0,
+    type: 3}
+  m_PrefabInstance: {fileID: 176636691}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &632048756 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8798431154999072212, guid: fe235226617eebb46a5c3bd1b9a7d0e0,
@@ -7179,6 +7211,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1558767812 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8798431153737336032, guid: fe235226617eebb46a5c3bd1b9a7d0e0,
+    type: 3}
+  m_PrefabInstance: {fileID: 110612153}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &1607850658 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8798431154999072212, guid: fe235226617eebb46a5c3bd1b9a7d0e0,
