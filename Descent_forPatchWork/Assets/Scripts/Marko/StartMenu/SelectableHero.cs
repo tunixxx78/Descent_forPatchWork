@@ -26,8 +26,8 @@ public class SelectableHero : MonoBehaviour
 
     [SerializeField] bool selected = false;
     //[SerializeField] Material material;
-    [SerializeField] Material selectedMaterial;
-    [SerializeField] Material unselectedMaterial;
+    //[SerializeField] Material selectedMaterial;
+    //[SerializeField] Material unselectedMaterial;
     //public List<CombatItem> combatItems;
     public List<string> combatItems  = new List<string>();
     public List<JourneyItem> journeyItems;
@@ -36,21 +36,21 @@ public class SelectableHero : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        GetComponent<Renderer>().material = unselectedMaterial;
+        //GetComponent<Renderer>().material = unselectedMaterial;
     }
 
     public void SelectHero()
     {
         selected = !selected;
-        if(selected)
-        {
-            GetComponent<Renderer>().material = selectedMaterial;
-            //material = selectedMaterial;
-        }else
-        {
-            //material = unselectedMaterial;
-            GetComponent<Renderer>().material = unselectedMaterial;
-        }
+        //if(selected)
+        //{
+        //    GetComponent<Renderer>().material = selectedMaterial;
+        //    //material = selectedMaterial;
+        //}else
+        //{
+        //    //material = unselectedMaterial;
+        //    GetComponent<Renderer>().material = unselectedMaterial;
+        //}
     }
 
     public bool IsSelected()
