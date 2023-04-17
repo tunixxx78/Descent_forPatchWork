@@ -11,6 +11,8 @@ public class BattleSystem : MonoBehaviour
 
         if (gameObject.CompareTag("Enemy") && GameManager.gm.plrCanAttack == true)
         {
+            SFXHolder.sH.sword.Play();
+
             Debug.Log("HIIRTÄ PAINETTU");
             this.gameObject.GetComponent<EnemyOne>().eB.enemyHealth -= GameManager.gm.attackForce;
             if(this.gameObject.GetComponent<EnemyOne>().eB.enemyType == 1)
@@ -28,6 +30,15 @@ public class BattleSystem : MonoBehaviour
             Debug.Log("HIIRTÄ PAINETTU");
             if ((GameManager.gm.attackForce - this.gameObject.GetComponent<HeroOne>().hb.plrShield) >= this.gameObject.GetComponent<HeroOne>().hb.plrShield)
             {
+                if(GameManager.gm.activeEnemy == 1)
+                {
+                    SFXHolder.sH.arrow.Play();
+                }
+                if(GameManager.gm.activeEnemy == 2)
+                {
+                    SFXHolder.sH.sword.Play();
+                }
+
                 this.gameObject.GetComponent<HeroOne>().hb.plrHealth -= (GameManager.gm.attackForce - this.gameObject.GetComponent<HeroOne>().hb.plrShield);
             }
             
