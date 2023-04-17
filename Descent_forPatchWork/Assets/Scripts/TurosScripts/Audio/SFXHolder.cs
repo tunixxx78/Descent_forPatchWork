@@ -1,18 +1,28 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class SFXHolder : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public static SFXHolder sH;
+    public AudioSource button, sword, arrow;
 
-    // Update is called once per frame
-    void Update()
+    private void Awake()
     {
-        
+        if (SFXHolder.sH == null)
+        {
+            SFXHolder.sH = this;
+        }
+        else
+        {
+            if (SFXHolder.sH != this)
+            {
+                Destroy(SFXHolder.sH.gameObject);
+                SFXHolder.sH = this;
+            }
+        }
+
+        DontDestroyOnLoad(this.gameObject);
     }
 }

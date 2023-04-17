@@ -11,6 +11,8 @@ public class MapButtons : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
     [SerializeField] Animator mapAnimator;
     [SerializeField] string animationTrigger;
 
+    [SerializeField] bool isClosableButton;
+
     MapsController maps;
 
     GameObject mapPanel;
@@ -34,6 +36,8 @@ public class MapButtons : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 
         if (this.gameObject.CompareTag("Map"))
         {
+            SFXHolder.sH.button.Play();
+
             maps.mapsButton.SetActive(false);
             //mapAnimator.SetTrigger(animationTrigger);
             mapAnimator.SetBool(animationTrigger, true);
@@ -56,6 +60,8 @@ public class MapButtons : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 
         if (this.gameObject.CompareTag("WorldMapButton"))
         {
+            SFXHolder.sH.button.Play();
+
             GameManager.gm.currentAreaMissions = this.gameObject.GetComponent<BlockInformation>().blockImages.Length;
             GameObject.Find("AreaMapPanel").transform.GetChild(0).GetComponent<Image>().sprite = this.gameObject.GetComponent<BlockInformation>().RealAreaMap; 
 
@@ -110,10 +116,18 @@ public class MapButtons : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 
         if (this.gameObject.CompareTag("AreaMapButton"))
         {
+            if (isClosableButton)
+            {
+                this.gameObject.transform.parent.gameObject.SetActive(false);
+            }
+
+            SFXHolder.sH.button.Play();
+
             //mapAnimator.SetTrigger(animationTrigger);
             mapAnimator.SetBool(animationTrigger, true);
-            
-            GetComponent<BlockInformation>().SetBattleImageInfo();
+
+            GetComponentInParent<BlockInformation>().SetBattleImageInfo();
+            //GetComponent<BlockInformation>().SetBattleImageInfo();
 
             maps.SetRealBattleMap();
             GameManager.gm.QuestLorePanel.SetActive(false);
@@ -121,6 +135,12 @@ public class MapButtons : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 
         if (this.gameObject.CompareTag("BackMapButton"))
         {
+            SFXHolder.sH.button.Play();
+
+            MusicHolder.mH.MusicOff(0);
+
+            
+
             mapAnimator.SetBool(animationTrigger, false);
 
             //for saving plrData for this session.
@@ -193,13 +213,47 @@ public class MapButtons : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
             */
 
             GameManager.gm.round++;
-            
+
+            // for seting up areaMap
+
+            GameObject areaMap = GameObject.Find("MapPanel").transform.GetChild(GameManager.gm.currentMissionIndex).GetChild(1).gameObject;
+            //GameObject areaMap = currentObject.transform.Find("AreaMapPanel").gameObject;
+            GameObject areaMapChild = areaMap.transform.GetChild(1).gameObject;
+            int amountOfPieces = areaMapChild.transform.childCount;
+
+            int whatToHide = (GameManager.gm.round);
+
+            for (int j = 0; j < amountOfPieces; j++)
+            {
+                if (j <= whatToHide)
+                {
+                    areaMapChild.transform.GetChild(j).gameObject.SetActive(true);
+                }
+
+            }
+
+            // for showing missions in sidePanel
+
+            for (int s = 0; s < GameManager.gm.missionsInAreaMap.Count; s++)
+            {
+                if(s <= whatToHide)
+                {
+                    GameManager.gm.missionsInAreaMap[s].gameObject.SetActive(true);
+                }
+                
+            }
+
+
 
         }
 
 
         if (this.gameObject.CompareTag("ExitMapButton"))
         {
+            SFXHolder.sH.button.Play();
+
+            MusicHolder.mH.MusicOff(0);
+
             mapAnimator.SetTrigger(animationTrigger);
             mapAnimator.SetBool("AreaMapReveal_", false);
             mapAnimator.SetBool("BattleMapReveal_", false);

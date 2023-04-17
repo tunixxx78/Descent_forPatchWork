@@ -62,17 +62,30 @@ public class MapsController : MonoBehaviour
             areaMapChild.transform.GetChild(i).GetComponent<Image>().sprite = mapPiecesArea[i];
         }
 
-        //to hide anything else than first mission
+        //to hide not wanted missions in area
 
-        for(int j = amountOfPieces - 1; j > 0; j--)
+        int whatToHide = (GameManager.gm.round);
+
+        for (int j = 0; j < amountOfPieces; j++)
+        {
+            if(j > whatToHide)
+            {
+                areaMapChild.transform.GetChild(j).gameObject.SetActive(false);
+            }
+            
+        }
+        /*
+        for(int j = amountOfPieces - (whatToHide + 1); j >= 0; j--)
         {
             areaMapChild.transform.GetChild(j).gameObject.SetActive(false);
         }
-
+        */
     }
 
     public void SetRealBattleMap()
     {
+        MusicHolder.mH.MusicOff(1);
+
         heroNumIndex = 0;
 
         GameObject battleMap = currentObject.transform.Find("BattleMapPanel").gameObject;

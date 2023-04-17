@@ -40,6 +40,8 @@ public class StatsButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
             {
                 if (this.gameObject.CompareTag("Health"))
                 {
+                    SFXHolder.sH.button.Play();
+
                     //parentObject.GetComponent<HeroOne>().hb.plrHealth--;
 
                     for (int i = 0; i < GameManager.gm.heroesInGame.Count; i++)
@@ -54,6 +56,8 @@ public class StatsButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
                 }
                 if (this.gameObject.CompareTag("Strenght"))
                 {
+                    SFXHolder.sH.button.Play();
+
                     for (int j = 0; j < GameManager.gm.heroesInGame.Count; j++)
                     {
                         if (GameManager.gm.activePlayer == j)
@@ -67,7 +71,9 @@ public class StatsButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
                 }
                 if (this.gameObject.CompareTag("Level"))
                 {
-                    for(int k = 0; k < GameManager.gm.heroesInGame.Count; k++)
+                    SFXHolder.sH.button.Play();
+
+                    for (int k = 0; k < GameManager.gm.heroesInGame.Count; k++)
                     {
                         if(GameManager.gm.activePlayer == k)
                         {
@@ -79,7 +85,9 @@ public class StatsButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
                 }
                 if (this.gameObject.CompareTag("Action"))
                 {
-                    for(int a = 0; a < GameManager.gm.heroesInGame.Count; a++)
+                    SFXHolder.sH.button.Play();
+
+                    for (int a = 0; a < GameManager.gm.heroesInGame.Count; a++)
                     {
                         if(GameManager.gm.activePlayer == a)
                         {
@@ -93,6 +101,8 @@ public class StatsButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
             {
                 if (this.gameObject.CompareTag("Health"))
                 {
+
+                    SFXHolder.sH.button.Play();
                     //parentObject.GetComponent<HeroOne>().hb.plrHealth++;
 
                     for (int i = 0; i < GameManager.gm.heroesInGame.Count; i++)
@@ -105,6 +115,9 @@ public class StatsButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
                 }
                 if (this.gameObject.CompareTag("Strenght"))
                 {
+
+                    SFXHolder.sH.button.Play();
+
                     for (int j = 0; j < GameManager.gm.heroesInGame.Count; j++)
                     {
                         if (GameManager.gm.activePlayer == j)
@@ -119,6 +132,8 @@ public class StatsButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
                 }
                 if (this.gameObject.CompareTag("Level"))
                 {
+                    SFXHolder.sH.button.Play();
+
                     for (int k = 0; k < GameManager.gm.heroesInGame.Count; k++)
                     {
                         if(GameManager.gm.activePlayer == k)
@@ -131,6 +146,8 @@ public class StatsButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
                 }
                 if (this.gameObject.CompareTag("Action"))
                 {
+                    SFXHolder.sH.button.Play();
+
                     for (int a = 0; a < GameManager.gm.heroesInGame.Count; a++)
                     {
                         if (GameManager.gm.activePlayer == a)
@@ -147,11 +164,15 @@ public class StatsButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
             {
                 if (this.gameObject.CompareTag("Health"))
                 {
+                    SFXHolder.sH.button.Play();
+
                     parentObject.GetComponent<EnemyOne>().eB.enemyHealth--;
                     GameManager.gm.enemyHordHealth--;
                 }
                 if (this.gameObject.CompareTag("Strenght"))
                 {
+                    SFXHolder.sH.button.Play();
+
                     parentObject.GetComponent<EnemyOne>().eB.enemyStrength--;
                     GameManager.gm.enemyHordStrenght--;
 
@@ -162,11 +183,15 @@ public class StatsButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
             {
                 if (this.gameObject.CompareTag("Health"))
                 {
+                    SFXHolder.sH.button.Play();
+
                     parentObject.GetComponent<EnemyOne>().eB.enemyHealth++;
                     GameManager.gm.enemyHordHealth++;
                 }
                 if (this.gameObject.CompareTag("Strenght"))
                 {
+                    SFXHolder.sH.button.Play();
+
                     parentObject.GetComponent<EnemyOne>().eB.enemyStrength++;
                     GameManager.gm.enemyHordStrenght++;
                 }
@@ -175,6 +200,8 @@ public class StatsButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 
             if (isKillButton)
             {
+                SFXHolder.sH.button.Play();
+
                 GameManager.gm.enemyHordHealth -= GetComponentInParent<EnemyOne>().eB.enemyHealth;
                 GameManager.gm.enemyHordStrenght -= GetComponentInParent<EnemyOne>().eB.enemyStrength;
 
