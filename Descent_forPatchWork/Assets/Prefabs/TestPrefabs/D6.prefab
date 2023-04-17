@@ -108,12 +108,12 @@ MonoBehaviour:
   diceSize: 6
   diceResultText: {fileID: 0}
   diceSprites:
-  - {fileID: 537583215, guid: 24a9fdd225c286f4daef523e4b2094f3, type: 3}
-  - {fileID: -752567279, guid: 24a9fdd225c286f4daef523e4b2094f3, type: 3}
-  - {fileID: -1198694336, guid: 24a9fdd225c286f4daef523e4b2094f3, type: 3}
-  - {fileID: 1327373036, guid: 24a9fdd225c286f4daef523e4b2094f3, type: 3}
-  - {fileID: -1689277587, guid: 24a9fdd225c286f4daef523e4b2094f3, type: 3}
-  - {fileID: 1171509012, guid: 24a9fdd225c286f4daef523e4b2094f3, type: 3}
+  - {fileID: -1237180378, guid: bf8776e6a16e5485aa24ea0ca71cedf0, type: 3}
+  - {fileID: -1824244917, guid: bf8776e6a16e5485aa24ea0ca71cedf0, type: 3}
+  - {fileID: -223550297, guid: bf8776e6a16e5485aa24ea0ca71cedf0, type: 3}
+  - {fileID: -1733138514, guid: bf8776e6a16e5485aa24ea0ca71cedf0, type: 3}
+  - {fileID: -452154434, guid: bf8776e6a16e5485aa24ea0ca71cedf0, type: 3}
+  - {fileID: 1043649789, guid: bf8776e6a16e5485aa24ea0ca71cedf0, type: 3}
 --- !u!114 &8290740136377900212
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -134,7 +134,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 1171509012, guid: 24a9fdd225c286f4daef523e4b2094f3, type: 3}
+  m_Sprite: {fileID: 1043649789, guid: bf8776e6a16e5485aa24ea0ca71cedf0, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
