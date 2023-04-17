@@ -2,7 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FaithCard : MonoBehaviour
+[CreateAssetMenu(menuName = "FaithCard")]
+public class FaithCard : ScriptableObject
 {
     private int faithValue;
     private bool multiply;

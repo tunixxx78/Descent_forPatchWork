@@ -11,5 +11,5 @@ public class SkillCard : ScriptableObject
     public string info;
     public int skillId;
     public bool closeRange, longRange;
-    public Sprite Sprite;
+    public Sprite sprite;
 }

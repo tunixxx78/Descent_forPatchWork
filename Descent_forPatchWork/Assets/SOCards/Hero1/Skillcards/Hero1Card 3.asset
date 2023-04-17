@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd83c8606ab2a914a9af29a267374b19, type: 3}
+  m_Name: Hero1Card 3
+  m_EditorClassIdentifier: 
+  initiativeValue: 82
+  atk: 30
+  heal: 0
+  info: Does something
+  skillId: 3
+  closeRange: 0
+  longRange: 0
+  sprite: {fileID: 1220259538, guid: e9d8303162c5f5f4f9b841abdcc8b36e, type: 3}

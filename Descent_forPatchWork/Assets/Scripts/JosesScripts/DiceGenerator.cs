@@ -19,7 +19,7 @@ public class DiceGenerator : MonoBehaviour
     }
     public void ThrowDice()
     {
-        int roll = Random.Range(1, diceSize);
+        int roll = Random.Range(0, diceSize);
         StartCoroutine(AnimateRoll(10));
         image.sprite = diceSprites[roll];
     }
@@ -28,7 +28,7 @@ public class DiceGenerator : MonoBehaviour
     {
         for(int i = 0; i <= cycles; i++)
         {
-            image.sprite = diceSprites[Random.Range(1, diceSize)];
+            image.sprite = diceSprites[Random.Range(0, diceSize)];
             yield return new WaitForSeconds(0.2f);
             i++;
         }

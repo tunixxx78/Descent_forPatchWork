@@ -4,41 +4,24 @@ using UnityEditor;
 using UnityEngine;
 using UnityEngine.TextCore.Text;
 
+class GenericList<T>
+{
+    public List<T> list;
+}
 public class Deck : MonoBehaviour
 {
-    //public static Deck Instance;
-    private List<SkillCard> SkillCards;
-    private List<SkillCard> SkillCardsDiscard;
+    public List<SkillCard> SkillCards;
+    public List<SkillCard> SkillCardsDiscard;
 
-    private List<FaithCard> FaithCards;
-    private List<FaithCard> FaithCardsDiscard;
+    public List<FaithCard> FaithCards;
+    public List<FaithCard> FaithCardsDiscard;
 
-    //private void Awake()
-    //{
-    //    if(Instance != null && Instance != this)
-    //    {
-    //        Destroy(this);
-    //    }
-    //    else
-    //    {
-    //        Instance = this;
-    //    }
-    //}
     private void Awake()
     {
         SkillCards = new List<SkillCard>();
         SkillCardsDiscard = new List<SkillCard>();
         FaithCards = new List<FaithCard>();
         FaithCardsDiscard = new List<FaithCard>();
-    }
-    public void GenerateFaithCards()
-    {
-        for (int i = -2; i <= 2; i++)
-        {
-            FaithCard newCard = gameObject.AddComponent<FaithCard>();
-            newCard.SetFaithValue(i);
-            for (int j = 0; j != 10; j++, FaithCards.Add(newCard));
-        }
     }
 
     public void ShuffleSkillCards()
@@ -96,11 +79,22 @@ public class Deck : MonoBehaviour
 
         return card;
     }
-
-    public void GetHeroSkillCards(string characterName)
+    public void GetFaithCards(string characterName)
     {
         // GUID tarkoittaa Globally Unique Identifier ja SO = Scriptable Object
-        string[] guids = AssetDatabase.FindAssets(characterName, new[] { "Assets/SOCards/"+characterName });
+        string[] guids = AssetDatabase.FindAssets(characterName, new[] { "Assets/SOCards/" + characterName + "/Faithcards" });
+        SkillCards.Clear();
+        foreach (string SO in guids)
+        {
+            string path = AssetDatabase.GUIDToAssetPath(SO);
+            SkillCard sCard = AssetDatabase.LoadAssetAtPath<SkillCard>(path);
+            SkillCards.Add(sCard);
+        }
+    }
+    public void GetSkillCards(string characterName)
+    {
+        // GUID tarkoittaa Globally Unique Identifier ja SO = Scriptable Object
+        string[] guids = AssetDatabase.FindAssets(characterName, new[] { "Assets/SOCards/" + characterName + "/Skillcards" });
         SkillCards.Clear();
         foreach (string SO in guids)
         {   
@@ -109,5 +103,12 @@ public class Deck : MonoBehaviour
             SkillCards.Add(sCard);
         }
     }
-
+    public List<SkillCard> GetSkillCardList()
+    {
+        return SkillCards;
+    }
+    public List<FaithCard> GetFaithCardList()
+    {
+        return FaithCards;
+    }
 }
