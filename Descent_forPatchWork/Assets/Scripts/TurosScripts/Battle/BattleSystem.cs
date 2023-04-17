@@ -15,14 +15,22 @@ public class BattleSystem : MonoBehaviour
             this.gameObject.GetComponent<EnemyOne>().eB.enemyHealth -= GameManager.gm.attackForce;
             if(this.gameObject.GetComponent<EnemyOne>().eB.enemyType == 1)
             {
-                GameManager.gm.enemyHordHealth -= GameManager.gm.attackForce;
+                if((GameManager.gm.attackForce - this.gameObject.GetComponent<EnemyOne>().eB.enemyShield) >= this.gameObject.GetComponent<EnemyOne>().eB.enemyShield)
+                {
+                    GameManager.gm.enemyHordHealth -= (GameManager.gm.attackForce - this.gameObject.GetComponent<EnemyOne>().eB.enemyShield);
+                }
+                
             }
             
         }
         if(gameObject.CompareTag("Hero") && GameManager.gm.enemyCanAttack == true)
         {
             Debug.Log("HIIRTÄ PAINETTU");
-            this.gameObject.GetComponent<HeroOne>().hb.plrHealth -= GameManager.gm.attackForce;
+            if ((GameManager.gm.attackForce - this.gameObject.GetComponent<HeroOne>().hb.plrShield) >= this.gameObject.GetComponent<HeroOne>().hb.plrShield)
+            {
+                this.gameObject.GetComponent<HeroOne>().hb.plrHealth -= (GameManager.gm.attackForce - this.gameObject.GetComponent<HeroOne>().hb.plrShield);
+            }
+            
 
         }
     }

@@ -11,7 +11,7 @@ public class GameManager : MonoBehaviour
     public List<GameObject> enemysInGame;
     public float enemyHordHealth, enemyHordStrenght;
 
-    public bool plrCanAttack, enemyCanAttack, battleIsOn, plrIsAttacking;
+    public bool plrCanAttack, enemyCanAttack, battleIsOn, plrIsAttacking, enemyIsAttacking;
     public float attackForce = 1;
 
     public GameObject QuestLorePanel, currentMission;
@@ -20,9 +20,13 @@ public class GameManager : MonoBehaviour
     public Transform[] lootSpawnPoints;
     public GameObject[] lootObjects;
 
+    public List<GameObject> missionsInAreaMap;
+
+    public GameObject InventorySlotBase;
+
     private void Awake()
     {
-        Screen.SetResolution(1920, 1080, false);
+        Screen.SetResolution(1920, 1080, true);
 
         if(GameManager.gm == null)
         {
@@ -46,6 +50,7 @@ public class GameManager : MonoBehaviour
 
         QuestLorePanel = GameObject.Find("MapPanel").transform.GetChild(currentMissionInQuest).GetChild(3).gameObject;
         QuestLorePanel.transform.GetChild(0).GetComponent<Image>().sprite = GameObject.Find("MapPanel").transform.GetChild(0).GetComponent<Quest>().questImage;
+        QuestLorePanel.transform.GetChild(0).GetComponent<Image>().SetNativeSize();
         QuestLorePanel.transform.GetChild(1).GetComponent<TMP_Text>().text = GameObject.Find("MapPanel").transform.GetChild(0).GetComponent<Quest>().questName;
     }
 

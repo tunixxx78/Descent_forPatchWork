@@ -1,0 +1,1180 @@
+fileFormatVersion: 2
+guid: 7ae91027cc77a4375b531520b05da6a3
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: QuestMenuBoxSet_0
+      rect:
+        serializedVersion: 2
+        x: 844
+        y: 1038
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69fb1d85c43cd49f09a2eeb2b70f0e26
+      internalID: 960623753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuestMenuBoxSet_1
+      rect:
+        serializedVersion: 2
+        x: 856
+        y: 1039
+        width: 13
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3ee016b9db214a68b781153a975cd5e
+      internalID: 423307778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuestMenuBoxSet_2
+      rect:
+        serializedVersion: 2
+        x: 870
+        y: 1039
+        width: 11
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55d1150e3e690430ebd7cbb92edfe922
+      internalID: 805472070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuestMenuBoxSet_3
+      rect:
+        serializedVersion: 2
+        x: 882
+        y: 1039
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 449df1ffbb03743edb643748aaf0005f
+      internalID: -671974388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuestMenuBoxSet_4
+      rect:
+        serializedVersion: 2
+        x: 893
+        y: 1039
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b108f067bcfd74fd796fc71abf684d11
+      internalID: 425645068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuestMenuBoxSet_5
+      rect:
+        serializedVersion: 2
+        x: 904
+        y: 1038
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2462468674f354370a7b69085c6a62a7
+      internalID: -40378176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuestMenuBoxSet_6
+      rect:
+        serializedVersion: 2
+        x: 915
+        y: 1039
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e6941a7d556c4395aaa8ab777c995ea
+      internalID: 410272679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuestMenuBoxSet_7
+      rect:
+        serializedVersion: 2
+        x: 1361
+        y: 1016
+        width: 14
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6fb42f1624fa4e33a05359234cbd5d3
+      internalID: -1146260290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuestMenuBoxSet_8
+      rect:
+        serializedVersion: 2
+        x: 1376
+        y: 1016
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f629c1f16297d4c799a836373c643d97
+      internalID: 1007349435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuestMenuBoxSet_9
+      rect:
+        serializedVersion: 2
+        x: 1389
+        y: 1016
+        width: 4
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7833550132aca4b1fa01c4ce013249f8
+      internalID: -1397814053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuestMenuBoxSet_10
+      rect:
+        serializedVersion: 2
+        x: 1395
+        y: 1016
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14d88c7922d0e4fd78f4c2eae16838d7
+      internalID: -277915958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuestMenuBoxSet_11
+      rect:
+        serializedVersion: 2
+        x: 1414
+        y: 1014
+        width: 13
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e427656e0db042ecab8719d1c1d93d2
+      internalID: -1639157010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuestMenuBoxSet_12
+      rect:
+        serializedVersion: 2
+        x: 1428
+        y: 1015
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25177739f27374692b58a81d0ef703f0
+      internalID: -937404745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuestMenuBoxSet_13
+      rect:
+        serializedVersion: 2
+        x: 1441
+        y: 1015
+        width: 32
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20d1134c03cac4f038b0cf0eb8f185b9
+      internalID: -2044619738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuestMenuBoxSet_14
+      rect:
+        serializedVersion: 2
+        x: 757
+        y: 940
+        width: 273
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96f0f5bd9b260421a947834cc8f21c39
+      internalID: 232082722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuestMenuBoxSet_15
+      rect:
+        serializedVersion: 2
+        x: 1176
+        y: 877
+        width: 493
+        height: 127
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c2889a2e75164bd8b47a8f39d7b1c8a
+      internalID: -113729871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuestMenuBoxSet_16
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 147
+        width: 575
+        height: 731
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6080af98e4b164712bd1ce3c00ac6bda
+      internalID: -740242166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuestMenuBoxSet_17
+      rect:
+        serializedVersion: 2
+        x: 801
+        y: 780
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 196000a7fab2246c686b66718538c577
+      internalID: 911184772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuestMenuBoxSet_18
+      rect:
+        serializedVersion: 2
+        x: 811
+        y: 780
+        width: 25
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 152a2fecfa4504c37a5b053b12059e6d
+      internalID: 1718837992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuestMenuBoxSet_19
+      rect:
+        serializedVersion: 2
+        x: 837
+        y: 781
+        width: 13
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb699e613f4544b90999e9271d36e226
+      internalID: -1867473471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuestMenuBoxSet_20
+      rect:
+        serializedVersion: 2
+        x: 851
+        y: 780
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd6054e74c7cf4394b0ba9106e46d5e6
+      internalID: 106440175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuestMenuBoxSet_21
+      rect:
+        serializedVersion: 2
+        x: 862
+        y: 781
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f940272aec57b4675acc6fe6e37a7b47
+      internalID: -503876654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuestMenuBoxSet_22
+      rect:
+        serializedVersion: 2
+        x: 880
+        y: 780
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8a46fca30f904116b608b0b51b44f51
+      internalID: -385684463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuestMenuBoxSet_23
+      rect:
+        serializedVersion: 2
+        x: 893
+        y: 781
+        width: 4
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b597aa133820f44b8a37c38a1fb1a23d
+      internalID: 1267353733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuestMenuBoxSet_24
+      rect:
+        serializedVersion: 2
+        x: 899
+        y: 781
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2aef8a2576b3464a9a41409bb6b821b
+      internalID: -521148845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuestMenuBoxSet_25
+      rect:
+        serializedVersion: 2
+        x: 912
+        y: 780
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2de68e64be2934a3691fe9e4f08b4386
+      internalID: -442471152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuestMenuBoxSet_26
+      rect:
+        serializedVersion: 2
+        x: 928
+        y: 779
+        width: 13
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 584331baf14f541fdb0ba276b8bc8ef2
+      internalID: 1455598132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuestMenuBoxSet_27
+      rect:
+        serializedVersion: 2
+        x: 942
+        y: 780
+        width: 12
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1983d4fa4af8d43bc9cde9132509face
+      internalID: 1896938039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuestMenuBoxSet_28
+      rect:
+        serializedVersion: 2
+        x: 955
+        y: 780
+        width: 32
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d921ff63dcde048a5a6596b13d4ef252
+      internalID: 1267728862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuestMenuBoxSet_29
+      rect:
+        serializedVersion: 2
+        x: 679
+        y: 634
+        width: 493
+        height: 127
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f6f7a6edffe84842b098c618f28dcbe
+      internalID: -454572636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuestMenuBoxSet_30
+      rect:
+        serializedVersion: 2
+        x: 1272
+        y: 56
+        width: 575
+        height: 716
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32315a9813fc744608753f5fbbacd6bf
+      internalID: -722389795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuestMenuBoxSet_31
+      rect:
+        serializedVersion: 2
+        x: 679
+        y: 367
+        width: 493
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a141016223834d3dad2e70ed4ad63d7
+      internalID: 242955868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuestMenuBoxSet_32
+      rect:
+        serializedVersion: 2
+        x: 679
+        y: 225
+        width: 493
+        height: 127
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25943e8c27d734326a7c00d206bd628c
+      internalID: 1131860262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuestMenuBoxSet_33
+      rect:
+        serializedVersion: 2
+        x: 811
+        y: 172
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07ae5650f969e48a09f26d8c07d02612
+      internalID: 1296195879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuestMenuBoxSet_34
+      rect:
+        serializedVersion: 2
+        x: 821
+        y: 172
+        width: 13
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 699615d1e9c74486b8be1d262e27d81c
+      internalID: 884291437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuestMenuBoxSet_35
+      rect:
+        serializedVersion: 2
+        x: 835
+        y: 172
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b830296623b1b456c9d36863e59a8842
+      internalID: 924427295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuestMenuBoxSet_36
+      rect:
+        serializedVersion: 2
+        x: 848
+        y: 173
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4814fdb59ed7445f8b08b8f792a3d019
+      internalID: -445831644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuestMenuBoxSet_37
+      rect:
+        serializedVersion: 2
+        x: 861
+        y: 172
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1607aa5cacdc4a7f9cb71b0d358e582
+      internalID: 2105301796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuestMenuBoxSet_38
+      rect:
+        serializedVersion: 2
+        x: 873
+        y: 173
+        width: 11
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf2523e9fca0f4e1c89fa607c0e25935
+      internalID: 1002893696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuestMenuBoxSet_39
+      rect:
+        serializedVersion: 2
+        x: 892
+        y: 173
+        width: 14
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59be5a0ae23c64eb99740b48d8e67da2
+      internalID: 1964121263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuestMenuBoxSet_40
+      rect:
+        serializedVersion: 2
+        x: 907
+        y: 173
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14a6fa8a447e142c6bae1be4883a2df7
+      internalID: -602521873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuestMenuBoxSet_41
+      rect:
+        serializedVersion: 2
+        x: 920
+        y: 173
+        width: 4
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f518aa4c5dc6b47d59cfeeb35853c23f
+      internalID: 892194202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuestMenuBoxSet_42
+      rect:
+        serializedVersion: 2
+        x: 926
+        y: 173
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 830ee0818e0bb4b64ace0475b69824da
+      internalID: 286696879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuestMenuBoxSet_43
+      rect:
+        serializedVersion: 2
+        x: 945
+        y: 171
+        width: 13
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5c897d1d518147eeba793ba089d2630
+      internalID: -718619628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuestMenuBoxSet_44
+      rect:
+        serializedVersion: 2
+        x: 959
+        y: 172
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3412ff4395f3b43609c832be784fc2bd
+      internalID: -697553863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuestMenuBoxSet_45
+      rect:
+        serializedVersion: 2
+        x: 972
+        y: 172
+        width: 32
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38d56cdf78dc2488abe7b224c472c55f
+      internalID: -49937762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuestMenuBoxSet_46
+      rect:
+        serializedVersion: 2
+        x: 683
+        y: 29
+        width: 493
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f26c65ec2a8f74226b85b8e4029a8fb7
+      internalID: -1213525601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5d6e01ce4e1ac4c43a5e7d2aa36c5889
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      QuestMenuBoxSet_24: -521148845
+      QuestMenuBoxSet_35: 924427295
+      QuestMenuBoxSet_3: -671974388
+      QuestMenuBoxSet_10: -277915958
+      QuestMenuBoxSet_18: 1718837992
+      QuestMenuBoxSet_5: -40378176
+      QuestMenuBoxSet_19: -1867473471
+      QuestMenuBoxSet_44: -697553863
+      QuestMenuBoxSet_12: -937404745
+      QuestMenuBoxSet_25: -442471152
+      QuestMenuBoxSet_6: 410272679
+      QuestMenuBoxSet_26: 1455598132
+      QuestMenuBoxSet_17: 911184772
+      QuestMenuBoxSet_38: 1002893696
+      QuestMenuBoxSet_43: -718619628
+      QuestMenuBoxSet_46: -1213525601
+      QuestMenuBoxSet_28: 1267728862
+      QuestMenuBoxSet_40: -602521873
+      QuestMenuBoxSet_33: 1296195879
+      QuestMenuBoxSet_0: 960623753
+      QuestMenuBoxSet_11: -1639157010
+      QuestMenuBoxSet_36: -445831644
+      QuestMenuBoxSet_45: -49937762
+      QuestMenuBoxSet_23: 1267353733
+      QuestMenuBoxSet_37: 2105301796
+      QuestMenuBoxSet_34: 884291437
+      QuestMenuBoxSet_15: -113729871
+      QuestMenuBoxSet_30: -722389795
+      QuestMenuBoxSet_42: 286696879
+      QuestMenuBoxSet_29: -454572636
+      QuestMenuBoxSet_31: 242955868
+      QuestMenuBoxSet_9: -1397814053
+      QuestMenuBoxSet_16: -740242166
+      QuestMenuBoxSet_20: 106440175
+      QuestMenuBoxSet_27: 1896938039
+      QuestMenuBoxSet_13: -2044619738
+      QuestMenuBoxSet_2: 805472070
+      QuestMenuBoxSet_7: -1146260290
+      QuestMenuBoxSet_32: 1131860262
+      QuestMenuBoxSet_4: 425645068
+      QuestMenuBoxSet_14: 232082722
+      QuestMenuBoxSet_41: 892194202
+      QuestMenuBoxSet_1: 423307778
+      QuestMenuBoxSet_8: 1007349435
+      QuestMenuBoxSet_21: -503876654
+      QuestMenuBoxSet_22: -385684463
+      QuestMenuBoxSet_39: 1964121263
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

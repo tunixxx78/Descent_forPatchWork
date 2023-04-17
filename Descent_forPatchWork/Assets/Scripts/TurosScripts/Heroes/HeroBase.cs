@@ -10,7 +10,10 @@ public class HeroBase
     public float plrHealth;
     public float plrStrength;
     public int plrLevel;
+    public int plrShield;
+    public int plrActionPoints;
     public int plrIndex;
+    public int plrMove;
 
     public Sprite[] heroImages;
 

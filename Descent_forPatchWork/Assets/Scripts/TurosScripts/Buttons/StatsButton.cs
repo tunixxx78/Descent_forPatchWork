@@ -77,6 +77,16 @@ public class StatsButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
                     }
                     //parentObject.GetComponent<HeroOne>().hb.plrLevel--;
                 }
+                if (this.gameObject.CompareTag("Action"))
+                {
+                    for(int a = 0; a < GameManager.gm.heroesInGame.Count; a++)
+                    {
+                        if(GameManager.gm.activePlayer == a)
+                        {
+                            GameManager.gm.heroesInGame[a].GetComponent<HeroOne>().hb.plrActionPoints--;
+                        }
+                    }
+                }
 
             }
             else
@@ -118,6 +128,16 @@ public class StatsButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
                         
                     }
                     //parentObject.GetComponent<HeroOne>().hb.plrLevel++;
+                }
+                if (this.gameObject.CompareTag("Action"))
+                {
+                    for (int a = 0; a < GameManager.gm.heroesInGame.Count; a++)
+                    {
+                        if (GameManager.gm.activePlayer == a)
+                        {
+                            GameManager.gm.heroesInGame[a].GetComponent<HeroOne>().hb.plrActionPoints++;
+                        }
+                    }
                 }
             }
         }
