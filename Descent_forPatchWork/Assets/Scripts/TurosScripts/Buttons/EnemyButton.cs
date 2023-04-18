@@ -21,8 +21,8 @@ public class EnemyButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
     {
         Debug.Log("BUTTON DOWN!");
 
-        
- 
+        SFXHolder.sH.button.Play();
+
     }
 
     public void OnPointerUp(PointerEventData eventData)
@@ -45,6 +45,7 @@ public class EnemyButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 
                             GetComponent<EnemyOne>().eB.thisEnemyIsAttacking = true;
                             GameManager.gm.enemyIsAttacking = true;
+                            GameManager.gm.activeEnemy = 1;
                     }
                         else
                         {
@@ -54,6 +55,7 @@ public class EnemyButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 
                             GetComponent<EnemyOne>().eB.thisEnemyIsAttacking = false;
                             GameManager.gm.enemyIsAttacking = false;
+                            GameManager.gm.activeEnemy = 0;
                     }
                     }
                     if (this.gameObject.GetComponent<EnemyOne>().eB.enemyType == 2)
@@ -70,6 +72,7 @@ public class EnemyButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 
                             GetComponent<EnemyOne>().eB.thisEnemyIsAttacking = true;
                             GameManager.gm.enemyIsAttacking = true;
+                            GameManager.gm.activeEnemy = 2;
                     }   
                         else
                         {
@@ -80,6 +83,7 @@ public class EnemyButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 
                             GetComponent<EnemyOne>().eB.thisEnemyIsAttacking = false;
                             GameManager.gm.enemyIsAttacking = false;
+                            GameManager.gm.activeEnemy = 0;
                     }
 
                     }

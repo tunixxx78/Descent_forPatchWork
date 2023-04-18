@@ -21,8 +21,8 @@ public class HeroButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandler,
     {
         Debug.Log("BUTTON DOWN!");
 
-        
- 
+        SFXHolder.sH.button.Play();
+
     }
 
     public void OnPointerUp(PointerEventData eventData)
