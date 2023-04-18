@@ -7,33 +7,35 @@ public class MainMenuUI : MonoBehaviour
 {
     
     SavingSystem savingSystem;
-    [SerializeField] List<SelectableHero> selectableHeroesList;    
+    [SerializeField] SelectableHero[] selectableHeroesArray = new SelectableHero[4];   
     [SerializeField] List<SelectHeroButton> selectHeroButtons;
     void Start()
     {
         //Get names of saveslots
         savingSystem= FindObjectOfType<SavingSystem>();
         savingSystem.LoadSaveNames();
+        //create array for heroes
+         
     }
 
 
 
     public void AddSelectedHeroes()
     {
-        //debuglog, print sizes of lists/arrays
-        Debug.Log("paryheroes koko: " + savingSystem.partyHeroes.Count);
-        Debug.Log("selectableHeroesList koko: "+ selectableHeroesList.Count);
+        //debuglog, print sizes of lists/arraysLength);
+        Debug.Log("selectableHeroesList koko: "+ selectableHeroesArray.Length);
         //add hero to savingSystem's list, not yet in list
-        for(int i = 0; i < selectableHeroesList.Count;i++)
+        for(int i = 0; i < selectableHeroesArray.Length;i++)
         {
-
-            if (selectableHeroesList[i].IsSelected())
+            //if here in index is selected 
+            if (selectableHeroesArray[i].IsSelected())
             {   //no same heroes multiple times)
-                if (!savingSystem.partyHeroes.Contains(selectableHeroesList[i]))
-                {
-                    Debug.Log("lisäätään sankaria " + selectableHeroesList[i].heroName);
-                    savingSystem.partyHeroes.Add(selectableHeroesList[i]);
-                }
+                //if (!savingSystem.partyHeroes.Contains(selectableHeroesArray[i]))
+                //{
+                    Debug.Log("lisäätään sankaria " + selectableHeroesArray[i].heroName);
+                    savingSystem.partyHeroes[i] 
+                    = selectableHeroesArray[i]; //add hero to proper index in partyHeroes-Array
+                //}
                 
             }
         }
