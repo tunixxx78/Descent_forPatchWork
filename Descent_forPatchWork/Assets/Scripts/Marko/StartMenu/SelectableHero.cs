@@ -58,4 +58,9 @@ public class SelectableHero : MonoBehaviour
     {
         return this.selected;
     }
+
+    public void changeSelectedStatus(bool status)
+    {
+        this.selected = status;
+    }
 }

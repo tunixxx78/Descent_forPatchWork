@@ -27,12 +27,11 @@ public class SelectHeroButton : MonoBehaviour
         heroRoleText.text = hero.heroRole;
     }
 
-
     public void SelectHeroPressed()
     {
         
-        hero.SelectHero();
         isSelected = !isSelected;
+        hero.changeSelectedStatus(isSelected); //update hero status with same status as in this button
         if (isSelected)
         {
             image.color = selectedColor;
@@ -40,6 +39,14 @@ public class SelectHeroButton : MonoBehaviour
         else
         {
              image.color = unselectedColor;
+        }
+    }
+
+    public void UnselectHeroButton()
+    {
+        if (isSelected)
+        {
+            SelectHeroPressed();
         }
     }
 }

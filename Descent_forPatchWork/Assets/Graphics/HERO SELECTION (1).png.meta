@@ -1,0 +1,393 @@
+fileFormatVersion: 2
+guid: f79bcf9c9ddde1748b6ab51e5c1a9cd4
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 9
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: HERO SELECTION (1)_0
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 529
+        width: 425
+        height: 410
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 996e312f53f4a704ea7b55090a40557f
+      internalID: -956811226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HERO SELECTION (1)_3
+      rect:
+        serializedVersion: 2
+        x: 503
+        y: 530
+        width: 420
+        height: 408
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3387c28a4c55d634eb05745f86c72b26
+      internalID: -1692885731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HERO SELECTION (1)_7
+      rect:
+        serializedVersion: 2
+        x: 935
+        y: 530
+        width: 425
+        height: 408
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 337dcb78497ba7d4b9c391ecb1d7a538
+      internalID: 1430992535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HERO SELECTION (1)_11
+      rect:
+        serializedVersion: 2
+        x: 1384
+        y: 527
+        width: 425
+        height: 413
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a91f2ac2c715cf949a4419ac18a5605c
+      internalID: 407198066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HERO SELECTION (1)_14
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 843
+        width: 4
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7bf115c1b2eedbf4ebf6bdf2e64d93b1
+      internalID: 1535371304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HERO SELECTION (1)_42
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 137
+        width: 279
+        height: 292
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ccc3166f3b7e5b8479db981931b0972b
+      internalID: -882011209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HERO SELECTION (1)_43
+      rect:
+        serializedVersion: 2
+        x: 571
+        y: 139
+        width: 278
+        height: 288
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d43cd0298fb16324e81bf7a673a813d7
+      internalID: -1819108736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HERO SELECTION (1)_44
+      rect:
+        serializedVersion: 2
+        x: 1019
+        y: 142
+        width: 279
+        height: 287
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 834463a60abc3ae42857af06e06069bf
+      internalID: 1371307740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HERO SELECTION (1)_45
+      rect:
+        serializedVersion: 2
+        x: 1470
+        y: 137
+        width: 279
+        height: 287
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e52d1edb65650d940aaa9ba4535f2c04
+      internalID: 715012869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 1537655665
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      HERO SELECTION (1)_24: 521784616
+      HERO SELECTION (1)_29: 275303451
+      HERO SELECTION (1)_12: 957760483
+      HERO SELECTION (1)_30: -76794432
+      HERO SELECTION (1)_10: -1005428445
+      HERO SELECTION (1)_31: 819625134
+      HERO SELECTION (1)_38: -952853731
+      HERO SELECTION (1)_28: 1346965073
+      HERO SELECTION (1)_0: -956811226
+      HERO SELECTION (1)_44: 1371307740
+      HERO SELECTION (1)_5: 337270439
+      HERO SELECTION (1)_19: 1579086614
+      HERO SELECTION (1)_3: -1692885731
+      HERO SELECTION (1)_43: -1819108736
+      HERO SELECTION (1)_11: 407198066
+      HERO SELECTION (1)_26: -1941105619
+      HERO SELECTION (1)_32: 1751577245
+      HERO SELECTION (1)_39: -1641360234
+      HERO SELECTION (1)_4: -1977960026
+      HERO SELECTION (1)_40: -1248462216
+      HERO SELECTION (1)_15: 424703002
+      HERO SELECTION (1)_36: -386062588
+      HERO SELECTION (1)_6: -1577634310
+      HERO SELECTION (1)_16: 220071240
+      HERO SELECTION (1)_14: 1535371304
+      HERO SELECTION (1)_2: -2107660573
+      HERO SELECTION (1)_42: -882011209
+      HERO SELECTION (1)_9: 896285662
+      HERO SELECTION (1)_21: 428716224
+      HERO SELECTION (1)_41: -1870906316
+      HERO SELECTION (1)_37: 1751769388
+      HERO SELECTION (1)_13: -2014260342
+      HERO SELECTION (1)_35: 452259495
+      HERO SELECTION (1)_7: 1430992535
+      HERO SELECTION (1)_1: -400284943
+      HERO SELECTION (1)_17: 106824250
+      HERO SELECTION (1)_45: 715012869
+      HERO SELECTION (1)_33: -2055000002
+      HERO SELECTION (1)_18: -1990615234
+      HERO SELECTION (1)_23: -1669400772
+      HERO SELECTION (1)_20: -150651289
+      HERO SELECTION (1)_8: 875902272
+      HERO SELECTION (1)_25: 1285954088
+      HERO SELECTION (1)_34: 697131305
+      HERO SELECTION (1)_22: 956244011
+      HERO SELECTION (1)_27: -2024448344
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
