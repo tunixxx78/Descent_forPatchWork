@@ -9,13 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cd83c8606ab2a914a9af29a267374b19, type: 3}
-  m_Name: Hero1Card 5
+  m_Script: {fileID: 11500000, guid: 36e0664a0d1237c439428d37f72931df, type: 3}
+  m_Name: Boss1Skill1
   m_EditorClassIdentifier: 
-  initiativeValue: 4
-  atk: 1
-  heal: 0
-  info: Does something
-  skillId: 5
-  closeRange: 0
-  longRange: 0
+  sprite: {fileID: 999216831, guid: e979d228718d04c94ab01410bfcf75fa, type: 3}

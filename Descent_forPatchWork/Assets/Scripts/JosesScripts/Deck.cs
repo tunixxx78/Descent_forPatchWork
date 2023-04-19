@@ -6,110 +6,46 @@ using UnityEngine.TextCore.Text;
 
 public class Deck : MonoBehaviour
 {
-    //public static Deck Instance;
-    private List<SkillCard> SkillCards;
-    private List<SkillCard> SkillCardsDiscard;
-
-    private List<FaithCard> FaithCards;
-    private List<FaithCard> FaithCardsDiscard;
-
-    //private void Awake()
-    //{
-    //    if(Instance != null && Instance != this)
-    //    {
-    //        Destroy(this);
-    //    }
-    //    else
-    //    {
-    //        Instance = this;
-    //    }
-    //}
+    private List<Card> Cards;
+    private List<Card> Discard;
     private void Awake()
     {
-        SkillCards = new List<SkillCard>();
-        SkillCardsDiscard = new List<SkillCard>();
-        FaithCards = new List<FaithCard>();
-        FaithCardsDiscard = new List<FaithCard>();
-    }
-    public void GenerateFaithCards()
-    {
-        for (int i = -2; i <= 2; i++)
-        {
-            FaithCard newCard = gameObject.AddComponent<FaithCard>();
-            newCard.SetFaithValue(i);
-            for (int j = 0; j != 10; j++, FaithCards.Add(newCard));
-        }
+        Cards = new List<Card>();
+        Discard = new List<Card>();
     }
 
-    public void ShuffleSkillCards()
+    public void ShuffleCards(List<Card> ListToShuffle)
     {
         System.Random random = new System.Random();
 
-        for (int i = 0; i < SkillCards.Count; i++)
+        for (int i = 0; i < ListToShuffle.Count; i++)
         {
-            int j = random.Next(i, SkillCards.Count);
-            (SkillCards[j], SkillCards[i]) = (SkillCards[i], SkillCards[j]);
+            int j = random.Next(i, ListToShuffle.Count);
+            (ListToShuffle[j], ListToShuffle[i]) = (ListToShuffle[i], ListToShuffle[j]);
         }
     }
-
-    public void ShuffleFaithCards()
+    public Card DrawCard()
     {
-        System.Random random = new System.Random();
-
-        for (int i = 0; i < FaithCards.Count; i++)
-        {
-            int j = random.Next(i, FaithCards.Count);
-            (FaithCards[j], FaithCards[i]) = (FaithCards[i], FaithCards[j]);
-        }
-    }
-
-    public SkillCard DrawSkillCard()
-    {
-        if (SkillCards.Count == 0) {
-            // Kortit loppu
-            // return null;
-            SkillCards = SkillCardsDiscard;
-            SkillCardsDiscard.Clear();
-            ShuffleSkillCards();
-
-        }
-        SkillCard card = SkillCards[0];
-        SkillCards.RemoveAt(0);
-        // T?m? teht?isiin vasta kun kortti pelataan pelaajan k?dest?
-        SkillCardsDiscard.Add(card);
-
+        Card card = Cards[0];
+        Cards.RemoveAt(0);
+        Discard.Add(card);
         return card;
     }
 
-    public FaithCard DrawFaithCard()
+    // Cardtypes can be "Skillcards", "FateCards", "BattleEvent".
+    public void GetCards(string characterName, string cardType)
     {
-        if (FaithCards.Count == 0) {
-            // Kortit loppu
-            // return null;
-            FaithCards = FaithCardsDiscard;
-            FaithCardsDiscard.Clear();
-            ShuffleFaithCards();
-        }
-        FaithCard card = FaithCards[0];
-        FaithCards.RemoveAt(0);
-        FaithCardsDiscard.Add(card);
-
-        return card;
-    }
-
-    //Had to hide this for build!!
-    /*
-    public void GetHeroSkillCards(string characterName)
-    {
-        // GUID tarkoittaa Globally Unique Identifier ja SO = Scriptable Object
-        string[] guids = AssetDatabase.FindAssets(characterName, new[] { "Assets/SOCards" });
-        SkillCards.Clear();
-        foreach (string SO in guids)
-        {   
-            string path = AssetDatabase.GUIDToAssetPath(SO);
-            SkillCard sCard = AssetDatabase.LoadAssetAtPath<SkillCard>(path);
-            SkillCards.Add(sCard);
+        Card[] allCards = Resources.LoadAll<Card>($"SOCards/{characterName}/{cardType}" );
+        Debug.Log(allCards.Length);
+        Cards.Clear();
+        foreach (Card card in allCards)
+        {
+            Cards.Add(card);
         }
     }
-    */
+
+    public List<Card> GetCardList()
+    {
+        return Cards;
+    }
 }
