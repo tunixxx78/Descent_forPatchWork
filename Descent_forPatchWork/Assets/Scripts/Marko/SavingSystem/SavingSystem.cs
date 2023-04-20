@@ -94,10 +94,13 @@ public class SavingSystem : MonoBehaviour
         //loops each and saves to corresponding hero
         for (int i = 0; i < 4; i++)
         {
-            sData.savedHeroes[i].heroName = hNames[i];
-            sData.savedHeroes[i].maxHealth = (int)hHealths[i];
-            sData.savedHeroes[i].strength = (int)hStrengths[i];
-            sData.savedHeroes[i].level = heroLevels[i];
+            SavedHero sHero = new SavedHero(); 
+            sHero.heroName = hNames[i];
+            sHero.maxHealth = (int)hHealths[i];
+            sHero.strength = (int)hStrengths[i];
+            sHero.level = heroLevels[i];
+
+            sData.savedHeroes[i] = sHero;
         }
         string saveableData = JsonUtility.ToJson(sData, true);
         string filePath = Application.persistentDataPath + "/save" + activeSaveSlot.ToString() + ".json";
