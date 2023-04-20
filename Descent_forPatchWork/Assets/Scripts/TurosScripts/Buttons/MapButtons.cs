@@ -163,6 +163,9 @@ public class MapButtons : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
                 }
                 */
             }
+
+            //Moves saved data to savingSystem
+            DataHolder.dataHolder.TakeCareOfSaving();
             
             for (int j = 0; j <= 3; j++)
             {

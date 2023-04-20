@@ -88,6 +88,15 @@ public class SavingSystem : MonoBehaviour
     //another way, gets arrays of attributes as parameters
     public void SaveGame2(string[] hNames, float[] hHealths, float[] hStrengths, int[]heroLevels)
     {
+
+        for(int x = 0; x < 4; x++)
+        {
+            Debug.Log(hNames[x]);
+            Debug.Log(hHealths[x]);
+            Debug.Log(hStrengths[x]);
+            Debug.Log(heroLevels[x]);
+        }
+
         GameSavedData sData = new GameSavedData();
 
         sData.currentSceneName = activeScene;
@@ -121,7 +130,7 @@ public class SavingSystem : MonoBehaviour
 
     //public void SaveGame(string[] saveableHeroes, float[] health)
     //{
-    //    //TÄHÄN pelinaikainen tallennus
+    //    //T?H?N pelinaikainen tallennus
     //    GameSavedData gameSessionData = new GameSavedData();
         
     //    for(int i = 0; i < saveableHeroes.Length; i++)
@@ -296,7 +305,7 @@ public class SavingSystem : MonoBehaviour
                         {
                             //TODO hidden cards by id..
                         }
-                        Debug.Log("kokeillaan lisätä heroa");
+                        Debug.Log("kokeillaan lis?t? heroa");
                         partyHeroes[i] = hero;
                         Debug.Log("heroja on: " + partyHeroes.Length);
                     }

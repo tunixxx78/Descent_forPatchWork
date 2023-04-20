@@ -11,28 +11,28 @@ public class DataHolder : MonoBehaviour
     float wantedStrength;
     int wantedLevel;
 
-    public string plrOneName;
-    public float plrOneHealth;
-    public float plrOneStrength;
-    public int plrOneLevel;
+    public string plrOneName = "";
+    public float plrOneHealth = 0;
+    public float plrOneStrength = 0;
+    public int plrOneLevel = 0;
     //public int plrOneIndex;
 
-    public string plrTwoName;
-    public float plrTwoHealth;
-    public float plrTwoStrength;
-    public int plrTwoLevel;
+    public string plrTwoName = "";
+    public float plrTwoHealth = 0;
+    public float plrTwoStrength = 0;
+    public int plrTwoLevel = 0;
     //public int plrOneIndex;
 
-    public string plrThreeName;
-    public float plrThreeHealth;
-    public float plrThreeStrength;
-    public int plrThreeLevel;
+    public string plrThreeName = "";
+    public float plrThreeHealth = 0;
+    public float plrThreeStrength = 0;
+    public int plrThreeLevel = 0;
     //public int plrOneIndex;
 
-    public string plrFourName;
-    public float plrFourHealth;
-    public float plrFourStrength;
-    public int plrFourLevel;
+    public string plrFourName = "";
+    public float plrFourHealth = 0;
+    public float plrFourStrength = 0;
+    public int plrFourLevel = 0;
     //public int plrOneIndex;
 
     public List<GameObject> plrOneWeaponItems;
@@ -102,6 +102,20 @@ public class DataHolder : MonoBehaviour
             plrFourStrength = strength;
             plrFourLevel = level;
         }
+
+
+    }
+
+    public void TakeCareOfSaving()
+    {
+        
+        string[] names = {plrOneName, plrTwoName, plrThreeName, plrFourName };
+        float[] healths = {plrOneHealth, plrTwoHealth, plrThreeHealth, plrFourHealth };
+        float[] strenghts = {plrOneStrength, plrTwoStrength, plrThreeStrength, plrFourStrength };
+        int[] levels = {plrOneLevel, plrTwoLevel, plrThreeLevel, plrFourLevel };
+
+        SavingSystem.savingSystem.SaveGame2(names, healths, strenghts, levels);
+
     }
 
     public void SetLoot(int plrIndex, int lootIndex, GameObject item)
