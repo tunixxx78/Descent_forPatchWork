@@ -36,14 +36,12 @@ public class Deck : MonoBehaviour
     public void GetCards(string characterName, string cardType)
     {
         Card[] allCards = Resources.LoadAll<Card>($"SOCards/{characterName}/{cardType}" );
-        Debug.Log(allCards.Length);
         Cards.Clear();
         foreach (Card card in allCards)
         {
             Cards.Add(card);
         }
     }
-
     public List<Card> GetCardList()
     {
         return Cards;

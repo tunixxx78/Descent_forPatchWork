@@ -108,16 +108,16 @@ public class MapsController : MonoBehaviour
             heroInstance.GetComponent<HeroOne>().hb.plrIndex = heroNumIndex;
 
             // Replace this with the name of the selected hero. In the style of -> DataHolder.dataHolder.GetHeroName(i);
-            if(i == 0)
-            {
-                heroInstance.GetComponent<HeroOne>().hc.SkillCards.GetCards("Turo", "Skillcards");
-                heroInstance.GetComponent<HeroOne>().hc.FateCards.GetCards("Turo", "Fatecards");
-            }
-            else
-            {
-                heroInstance.GetComponent<HeroOne>().hc.SkillCards.GetCards("Tero", "Skillcards");
-                heroInstance.GetComponent<HeroOne>().hc.FateCards.GetCards("Tero", "Fatecards");
-            }
+            //if(i == 0)
+            //{
+            //    heroInstance.GetComponent<HeroOne>().hc.SkillCards.GetCards("Turo", "Skillcards");
+            //    heroInstance.GetComponent<HeroOne>().hc.FateCards.GetCards("Turo", "Fatecards");
+            //}
+            //else
+            //{
+            //    heroInstance.GetComponent<HeroOne>().hc.SkillCards.GetCards("Tero", "Skillcards");
+            //    heroInstance.GetComponent<HeroOne>().hc.FateCards.GetCards("Tero", "Fatecards");
+            //}
             
 
             if (GameManager.gm.round != 0)
@@ -205,9 +205,11 @@ public class MapsController : MonoBehaviour
 
             
         }
-
-        GameObject.Find("/Canvas/MapPanel/CardViewButton").SetActive(true);
-        GameObject.Find("/Canvas/MapPanel/CardView").SetActive(true);
+        if (GameObject.Find("/Canvas/MapPanel/CardViewButton"))
+        {
+            GameObject.Find("/Canvas/MapPanel/CardViewButton").SetActive(true);
+            GameObject.Find("/Canvas/MapPanel/CardView").SetActive(true);
+        }
         enemyHordPanel.SetActive(true);
         enemyTwoPanel.SetActive(true);
         GameManager.gm.battleIsOn = true;

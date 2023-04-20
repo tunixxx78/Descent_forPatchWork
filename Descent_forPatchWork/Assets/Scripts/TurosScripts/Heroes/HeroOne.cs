@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using System.Xml;
 
 public class HeroOne : MonoBehaviour
 {
@@ -15,8 +16,9 @@ public class HeroOne : MonoBehaviour
     private void Awake()
     {
         // Jose koodi
-        hc.SkillCards = gameObject.AddComponent<Deck>();
-        hc.FateCards = gameObject.AddComponent<Deck>();
+        hc = new HeroCards();
+        hc.skillCards = gameObject.AddComponent<Deck>();
+        hc.fateCards = gameObject.AddComponent<Deck>();
         // Jose koodloppu
 
         GetComponent<Image>().sprite = hb.heroImages[0];
