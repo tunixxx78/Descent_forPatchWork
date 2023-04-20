@@ -40,8 +40,10 @@ public class SavingSystem : MonoBehaviour
     //gets DataHolder itself as parameter
     public void SaveGame(DataHolder gData)
     {
+        //creates GameSavedData class
+        //gets data from DataHolder, and saves each hero's data
+        //to corresponding indexed hero in GameSavedData's herolist
         GameSavedData sData = new GameSavedData();
-
 
         sData.savedHeroes[0].heroName   = gData.plrOneName;
         sData.savedHeroes[0].maxHealth  = (int)gData.plrOneHealth;
@@ -98,7 +100,9 @@ public class SavingSystem : MonoBehaviour
         //all data that is going to be saved
         gameSessionData.currentSceneName = activeScene;
         gameSessionData.savedGroupName= groupName;
-
+        //startsave takes selected heroes from list in loop, and creates
+        //a savedHero(serializable) class for each
+        //which are then saved to a list in GameSavedData class.
         for(int i = 0; i < partyHeroes.Length; i++)
         {
             SelectableHero hero = partyHeroes[i];
@@ -154,14 +158,17 @@ public class SavingSystem : MonoBehaviour
 
 
     //public void LoadGame(DataHolder gData)
+    //needs buttonId to  know which saveslot loaded
     public void LoadGame(int buttonId)
     {
         string filePath = Application.persistentDataPath + "/save" + buttonId.ToString() + ".json";
         if (File.Exists(filePath))
         {
 
-
             string savedData = File.ReadAllText(filePath);
+
+            //creates a DataHolderclass, takes heroes' data from GameSavedData from saveslot
+            //tranfers data to corresponding heroes from savedheroes-list.
             DataHolder gData = new DataHolder(); //new DataHolder
             GameSavedData sData = JsonUtility.FromJson<GameSavedData>(savedData);
             this.groupName = sData.savedGroupName;
