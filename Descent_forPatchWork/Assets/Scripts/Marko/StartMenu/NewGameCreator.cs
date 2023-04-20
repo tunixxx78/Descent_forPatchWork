@@ -50,7 +50,7 @@ public class NewGameCreator : MonoBehaviour
 
         savingSystem.activeScene = firstScene;
         savingSystem.SaveSavedNames();
-        savingSystem.SaveGame();
+        savingSystem.SaveStartPhase();
         Debug.Log("aktiivinen skene on "+ savingSystem.activeScene);
         SceneManager.LoadScene(firstScene);
     }
