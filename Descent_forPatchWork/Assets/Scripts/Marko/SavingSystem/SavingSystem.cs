@@ -45,6 +45,8 @@ public class SavingSystem : MonoBehaviour
         //to corresponding indexed hero in GameSavedData's herolist
         GameSavedData sData = new GameSavedData();
 
+        sData.currentSceneName = activeScene;
+
         sData.savedHeroes[0].heroName   = gData.plrOneName;
         sData.savedHeroes[0].maxHealth  = (int)gData.plrOneHealth;
         sData.savedHeroes[0].strength   = (int)gData.plrOneStrength;
@@ -79,6 +81,51 @@ public class SavingSystem : MonoBehaviour
 
         File.WriteAllText(filePath, saveableData);
 
+    }
+
+    //another way, gets arrays of attributes as parameters
+    public void SaveGame2(string[] hNames, float[] hHealths, float[] hStregnths, int[]heroLevels, int[]hShields)
+    {
+        GameSavedData sData = new GameSavedData();
+
+        sData.currentSceneName = activeScene;
+        //loops each and saves to corresponding hero
+        for (int i = 0; i < hNames.Length; i++)
+        {
+            sData.savedHeroes[i].heroName = hNames[i];
+        }
+        for(int i = 0;i < hHealths.Length; i++)
+        {
+            sData.savedHeroes[i].maxHealth = (int)hHealths[i];
+        }
+        for(int i = 0;i<hStregnths.Length;i++)
+        {
+            sData.savedHeroes[i].strength = (int)hStregnths[i];
+        }
+        for(int i = 0;i<heroLevels.Length;i++)
+        {
+            sData.savedHeroes[i].level = heroLevels[i];
+        }
+        for(int i = 0; i <hShields.Length;i++)
+        {
+            sData.savedHeroes[i].shield = hShields[i];
+        }
+
+        string saveableData = JsonUtility.ToJson(sData, true);
+        string filePath = Application.persistentDataPath + "/save" + activeSaveSlot.ToString() + ".json";
+        Debug.Log("saving to: " + filePath);
+
+        File.WriteAllText(filePath, saveableData);
+    }
+
+    public void Save3(HeroBase[] heroes)
+    {
+        //just gets the serializable HeroBase-heroes in array and saves them?
+        string sHeroes = JsonUtility.ToJson(heroes, true);
+        string filePath = Application.persistentDataPath + "/save" + activeSaveSlot.ToString() + ".json";
+        Debug.Log("saving to: " + filePath);
+
+        File.WriteAllText(filePath, sHeroes);
     }
 
     //public void SaveGame(string[] saveableHeroes, float[] health)
