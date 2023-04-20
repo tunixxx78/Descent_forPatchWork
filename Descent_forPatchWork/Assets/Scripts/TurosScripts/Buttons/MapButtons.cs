@@ -139,7 +139,8 @@ public class MapButtons : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 
             MusicHolder.mH.MusicOff(0);
 
-            
+            GameManager.gm.hordePanel.SetActive(true);
+            GameManager.gm.enemyPanel.SetActive(true);
 
             mapAnimator.SetBool(animationTrigger, false);
 
