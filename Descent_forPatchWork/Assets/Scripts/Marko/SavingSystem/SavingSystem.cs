@@ -179,12 +179,9 @@ public class SavingSystem : MonoBehaviour
                 
                 gameSessionData.savedHeroes[i] = sHero;
             }
-            foreach (int number in selectedHeroes)
-            {
-                if (!gameSessionData.heroNumbers.Contains(number)){
-                    gameSessionData.heroNumbers.Add(number);
-                }               
-            }
+
+            gameSessionData.heroNumbers = selectedHeroes;
+            
         }
 
         string saveableData = JsonUtility.ToJson(gameSessionData,true);
