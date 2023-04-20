@@ -8,6 +8,7 @@ using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using Unity.UI;
+using System.Linq;
 
 public class SavingSystem : MonoBehaviour
 {
@@ -20,6 +21,7 @@ public class SavingSystem : MonoBehaviour
     public int activeSaveSlot;
     public string activeScene;
     public SelectableHero[] partyHeroes = new SelectableHero[4];
+    public List<int> selectedHeroes;  //selectedHeroes
 
     
 
@@ -84,33 +86,19 @@ public class SavingSystem : MonoBehaviour
     }
 
     //another way, gets arrays of attributes as parameters
-    public void SaveGame2(string[] hNames, float[] hHealths, float[] hStregnths, int[]heroLevels, int[]hShields)
+    public void SaveGame2(string[] hNames, float[] hHealths, float[] hStrengths, int[]heroLevels)
     {
         GameSavedData sData = new GameSavedData();
 
         sData.currentSceneName = activeScene;
         //loops each and saves to corresponding hero
-        for (int i = 0; i < hNames.Length; i++)
+        for (int i = 0; i < 4; i++)
         {
             sData.savedHeroes[i].heroName = hNames[i];
-        }
-        for(int i = 0;i < hHealths.Length; i++)
-        {
             sData.savedHeroes[i].maxHealth = (int)hHealths[i];
-        }
-        for(int i = 0;i<hStregnths.Length;i++)
-        {
-            sData.savedHeroes[i].strength = (int)hStregnths[i];
-        }
-        for(int i = 0;i<heroLevels.Length;i++)
-        {
+            sData.savedHeroes[i].strength = (int)hStrengths[i];
             sData.savedHeroes[i].level = heroLevels[i];
         }
-        for(int i = 0; i <hShields.Length;i++)
-        {
-            sData.savedHeroes[i].shield = hShields[i];
-        }
-
         string saveableData = JsonUtility.ToJson(sData, true);
         string filePath = Application.persistentDataPath + "/save" + activeSaveSlot.ToString() + ".json";
         Debug.Log("saving to: " + filePath);
@@ -118,7 +106,7 @@ public class SavingSystem : MonoBehaviour
         File.WriteAllText(filePath, saveableData);
     }
 
-    public void Save3(HeroBase[] heroes)
+    public void SaveGame3(HeroBase[] heroes)
     {
         //just gets the serializable HeroBase-heroes in array and saves them?
         string sHeroes = JsonUtility.ToJson(heroes, true);
@@ -188,9 +176,14 @@ public class SavingSystem : MonoBehaviour
                 {
                     sHero.savedHiddenItems.Add(item.id);
                 }
-
+                
                 gameSessionData.savedHeroes[i] = sHero;
-
+            }
+            foreach (int number in selectedHeroes)
+            {
+                if (!gameSessionData.heroNumbers.Contains(number)){
+                    gameSessionData.heroNumbers.Add(number);
+                }               
             }
         }
 
@@ -287,7 +280,7 @@ public class SavingSystem : MonoBehaviour
                         hero.plrShield = sHero.shield;
                         hero.fate = sHero.fate;
                         hero.exp = sHero.exp;
-                        hero.plrIndex = sHero.plrIndex;
+                        hero.heroNumber = sHero.plrIndex;
                         hero.maxCombatItems = sHero.maxCombatItems;
                         hero.maxItems = sHero.maxItems;
 
@@ -359,6 +352,7 @@ public class SavingSystem : MonoBehaviour
         public string currentSceneName;
 
     //public List<SavedHero> savedHeroes = new List<SavedHero>();
+    public List<int> heroNumbers;
     public SavedHero[]  savedHeroes = new SavedHero[4];
     
     }
@@ -374,6 +368,8 @@ public class SavingSystem : MonoBehaviour
 [Serializable]
 class SavedHero
 {
+    //public List<int> savedHeroNumbers;
+
     public int plrIndex;
     public string heroName;
     public string heroRole;

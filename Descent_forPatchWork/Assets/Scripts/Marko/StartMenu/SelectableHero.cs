@@ -6,7 +6,7 @@ using UnityEngine;
 //For Beginning of the campaign, selecting heroes
 public class SelectableHero : MonoBehaviour
 {
-    public int plrIndex;
+    public int heroNumber;
     public string heroName;
     public string heroRole;
 

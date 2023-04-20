@@ -2118,7 +2118,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fac7987262e3f7d459297a74a1a6727c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  plrIndex: 0
+  heroNumber: 0
   heroName: Darna
   heroRole: Barbarian
   currentHealth: 10
@@ -2318,7 +2318,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fac7987262e3f7d459297a74a1a6727c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  plrIndex: 0
+  heroNumber: 1
   heroName: Mareen
   heroRole: Wizard
   currentHealth: 4
@@ -6355,7 +6355,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fac7987262e3f7d459297a74a1a6727c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  plrIndex: 0
+  heroNumber: 3
   heroName: Valek
   heroRole: Ranger
   currentHealth: 12
@@ -6603,7 +6603,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fac7987262e3f7d459297a74a1a6727c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  plrIndex: 0
+  heroNumber: 4
   heroName: Senta
   heroRole: Assassin
   currentHealth: 12
@@ -6820,6 +6820,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  selectedHeroes: 00000000000000000000000000000000
 --- !u!4 &1501575199
 Transform:
   m_ObjectHideFlags: 0
