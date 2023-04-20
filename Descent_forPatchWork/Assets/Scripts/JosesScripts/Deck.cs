@@ -32,7 +32,7 @@ public class Deck : MonoBehaviour
         return card;
     }
 
-    // Cardtypes can be "Skillcards", "FateCards", "BattleEvent".
+    // Cardtypes: "Skillcards", "FateCards", "BattleEvent".
     public void GetCards(string characterName, string cardType)
     {
         Card[] allCards = Resources.LoadAll<Card>($"SOCards/{characterName}/{cardType}" );
@@ -47,5 +47,10 @@ public class Deck : MonoBehaviour
     public List<Card> GetCardList()
     {
         return Cards;
+    }
+    public void PlayCard(Card card)
+    {
+        Discard.Add(card);
+        Cards.Remove(card);
     }
 }

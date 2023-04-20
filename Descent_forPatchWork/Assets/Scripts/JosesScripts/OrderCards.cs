@@ -2,115 +2,64 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using Unity.VisualScripting;
-using UnityEditor.SceneManagement;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class OrderCards : MonoBehaviour
 {
-    struct PLR
-    {
-        public Deck SkillCards;
-        public Deck FateCards;
-    }
 
     public GameObject cardPref;
+    public string cardsShown;
+    public Button ShowAllCards, ShowHandCards, ShowFateCards;
+    public List<Button> playerCardButtons;
 
-    public string currentPlayer, cardsShown;
-
-    public Button plr1, plr2, plr3, plr4, ShowAllCards, ShowHandCards, ShowFateCards;
-
-    Deck SkillCardsInit1;
-    Deck SkillCardsInit2;
-    Deck FateCardsInit1;
-    Deck FateCardsInit2;
-
-    PLR Player1Cards;
-    PLR Player2Cards;
-    PLR Player3Cards;
-    PLR Player4Cards;
-
-
-    IDictionary<string, PLR> stringPlayer = new Dictionary<string, PLR>();
+    private HeroCards currentHeroCards;
+    private IDictionary<Button, HeroCards> playerButtonDict;
 
     private void Awake()
     {
-        Player1Cards = new PLR();
-        Player2Cards = new PLR();
-        Player3Cards = new PLR();
-        Player4Cards = new PLR();
-
-
-        SkillCardsInit1 = gameObject.AddComponent<Deck>();
-        SkillCardsInit2 = gameObject.AddComponent<Deck>();
-        FateCardsInit1 = gameObject.AddComponent<Deck>();
-        FateCardsInit2 = gameObject.AddComponent<Deck>();
-
-
-        Player1Cards.SkillCards = SkillCardsInit1;
-        Player1Cards.FateCards = FateCardsInit1;
-        Player2Cards.SkillCards = SkillCardsInit2;
-        Player2Cards.FateCards = FateCardsInit2;
-
-        Player1Cards.SkillCards.GetCards("Hero1", "Skillcards");
-        Player1Cards.FateCards.GetCards("Hero1", "Fatecards");
-        Player2Cards.SkillCards.GetCards("Boss1", "Skillcards");
+        playerButtonDict = new Dictionary<Button, HeroCards>();
     }
     private void Start()
     {
-        plr1 = plr1.GetComponent<Button>();
-        plr2 = plr2.GetComponent<Button>();
-        plr3 = plr3.GetComponent<Button>();
-        plr4 = plr4.GetComponent<Button>();
+        for (int i = 0; i < GameManager.gm.heroesInGame.Count; i++)
+        {
+            Button button = playerCardButtons[i].GetComponent<Button>();
+            button.onClick.AddListener(() => { SelectedPlayer(button); });
+            button.gameObject.SetActive(true);
+            playerButtonDict.Add(button, GameManager.gm.heroesInGame[i].GetComponent<HeroOne>().hc);
+
+        }
+
         ShowAllCards = ShowAllCards.GetComponent<Button>();
         ShowHandCards = ShowHandCards.GetComponent<Button>();
         ShowFateCards = ShowFateCards.GetComponent<Button>();
 
-        plr1.onClick.AddListener(() => { SelectedPlayer(plr1); });
-        plr2.onClick.AddListener(() => { SelectedPlayer(plr2); });
-        plr3.onClick.AddListener(() => { SelectedPlayer(plr3); });
-        plr4.onClick.AddListener(() => { SelectedPlayer(plr4); });
         ShowAllCards.onClick.AddListener(() => { SelectedCardType(ShowAllCards); });
         ShowHandCards.onClick.AddListener(() => { SelectedCardType(ShowHandCards); });
-        ShowFateCards?.onClick.AddListener(() => { SelectedCardType(ShowFateCards); });
+        ShowFateCards.onClick.AddListener(() => { SelectedCardType(ShowFateCards); });
 
-        stringPlayer.Add("Player1", Player1Cards);
-        stringPlayer.Add("Player2", Player2Cards);
-        stringPlayer.Add("Player3", Player3Cards);
-        stringPlayer.Add("Player4", Player4Cards);
-
-
-        currentPlayer = "Player1";
-        cardsShown = "HandCards";
-
+        InitializeCards();
         HandleCardPrinting();
     }
-    
-    
+
+    private void InitializeCards()
+    {
+        playerButtonDict.TryGetValue(playerCardButtons[0], out currentHeroCards);
+        cardsShown = "HandCards";
+    }
     private void SelectedPlayer(Button btn)
     {
-        if(btn.transform.name == "Player1")
-        {
-            currentPlayer = "Player1";
-        }else if(btn.transform.name == "Player2")
-        {
-            currentPlayer = "Player2";
-        }else if(btn.transform.name == "Player3")
-        {
-            currentPlayer = "Player3";
-        }else if(btn.transform.name == "Player4")
-        {
-            currentPlayer = "Player4";
-        }
+        playerButtonDict.TryGetValue(btn, out currentHeroCards);
         HandleCardPrinting();
     }
 
+    // Switch for the type of cards shown in cardview.
     private void SelectedCardType(Button btn)
     {
         if (btn.transform.name == "AllCards")
         {
             cardsShown = "AllCards";
-            // Lis‰‰ fate kortit viel‰ mutta nyt ei ole 
         }
         else if (btn.transform.name == "HandCards")
         {
@@ -123,32 +72,30 @@ public class OrderCards : MonoBehaviour
         HandleCardPrinting();
     }
 
-
-    private void HandleCardPrinting()
+    // Handling method to get the wanted list of cards to ShowCards() method
+    public void HandleCardPrinting()
     {
-        PLR x = new PLR();
-        stringPlayer.TryGetValue(currentPlayer, out x);
-        List<Card> printedCards = new List<Card>();
-
+        List<Card> printedCards = new();
         if (cardsShown == "AllCards")
         {
-            printedCards = x.SkillCards.GetCardList().Concat(x.FateCards.GetCardList()).ToList();
+            printedCards = currentHeroCards.SkillCards.GetCardList().Concat(currentHeroCards.FateCards.GetCardList()).ToList();
         }
         else if (cardsShown == "HandCards")
         {
-            printedCards = x.SkillCards.GetCardList();
+            printedCards = currentHeroCards.SkillCards.GetCardList();
         }
         else if (cardsShown == "FateCards")
         {
-            printedCards = x.FateCards.GetCardList();
+            printedCards = currentHeroCards.FateCards.GetCardList();
         }
         ShowCards(printedCards);
     }
 
+    // Prints the cards given in a list by the param
     public void ShowCards(List<Card> cardList)
     {
-        // Tyhjennet‰‰n ennenkuin printataan uudellleen.
-        GameObject gameObject = this.transform.Find("CardPanel/Scroll View/Viewport/Content").gameObject;
+        // Emptying the content before adding updated content
+        GameObject gameObject = this.transform.Find("Container/CardPanel/Scroll View/Viewport/Content").gameObject;
         foreach(Transform child in gameObject.transform)
         {
             GameObject.Destroy(child.gameObject);
@@ -157,9 +104,35 @@ public class OrderCards : MonoBehaviour
         for (int i = 0; i < cardList.Count; i++)
         {
             cardPref.GetComponent<Image>().sprite = cardList[i].sprite;
+            cardPref.GetComponent<InteractableCard>().cardId = cardList[i].cardId;
             GameObject currentCard = Instantiate(cardPref, transform.parent);
-            currentCard.transform.SetParent(this.transform.Find("CardPanel/Scroll View/Viewport/Content"));
+            currentCard.transform.SetParent(gameObject.transform);
         }
+    }
+
+    // 
+    public void HandleCardPlay(string cardId)
+    {
+
+        foreach(Card card in currentHeroCards.SkillCards.GetCardList())
+        {
+            if (card.cardId == cardId)
+            {
+                currentHeroCards.SkillCards.PlayCard(card);
+                HandleCardPrinting();
+                return;
+            }
+        }
+        foreach(Card card in currentHeroCards.FateCards.GetCardList())
+        {
+            if (card.cardId == cardId)
+            {
+                currentHeroCards.FateCards.PlayCard(card);
+                HandleCardPrinting();
+                return;
+            }
+        }
+        Debug.Log("Did not return.");
     }
 
 }

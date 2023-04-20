@@ -19,6 +19,9 @@ TagManager:
   - LootItem
   - Action
   - Inventory
+  - DiceMenu
+  - DiceMenuButton
+  - CardViewButton
   layers:
   - Default
   - TransparentFX

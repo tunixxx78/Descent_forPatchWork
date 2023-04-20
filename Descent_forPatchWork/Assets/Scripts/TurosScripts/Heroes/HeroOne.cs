@@ -8,11 +8,17 @@ public class HeroOne : MonoBehaviour
 {
     public HeroBase hb;
     public HeroInventoryBase hbi;
+    public HeroCards hc;
     TMP_Text heroName, health, strength, level;
     [SerializeField] GameObject currentObj;
 
     private void Awake()
     {
+        // Jose koodi
+        hc.SkillCards = gameObject.AddComponent<Deck>();
+        hc.FateCards = gameObject.AddComponent<Deck>();
+        // Jose koodloppu
+
         GetComponent<Image>().sprite = hb.heroImages[0];
         heroName = GetComponentInChildren<TMP_Text>();
         heroName.text = hb.plrName;

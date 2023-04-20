@@ -101,16 +101,27 @@ public class MapsController : MonoBehaviour
         }
         */
 
-
         // for spawning heroes for fight
         for (int i = 0; i < heroBase.Length; i++)
         {
             var heroInstance = Instantiate(heroBase[i], heroSpawnPoints[i].position, Quaternion.identity);
             heroInstance.GetComponent<HeroOne>().hb.plrIndex = heroNumIndex;
 
-            if(GameManager.gm.round != 0)
+            // Replace this with the name of the selected hero. In the style of -> DataHolder.dataHolder.GetHeroName(i);
+            if(i == 0)
             {
+                heroInstance.GetComponent<HeroOne>().hc.SkillCards.GetCards("Turo", "Skillcards");
+                heroInstance.GetComponent<HeroOne>().hc.FateCards.GetCards("Turo", "Fatecards");
+            }
+            else
+            {
+                heroInstance.GetComponent<HeroOne>().hc.SkillCards.GetCards("Tero", "Skillcards");
+                heroInstance.GetComponent<HeroOne>().hc.FateCards.GetCards("Tero", "Fatecards");
+            }
+            
 
+            if (GameManager.gm.round != 0)
+            {
                 heroInstance.GetComponent<HeroOne>().hb.plrName = DataHolder.dataHolder.GetName(i);
                 Debug.Log(heroInstance.GetComponent<HeroOne>().hb.plrName);
                 heroInstance.GetComponent<HeroOne>().hb.plrHealth = DataHolder.dataHolder.GetHealth(i);
@@ -168,7 +179,7 @@ public class MapsController : MonoBehaviour
             heroInstance.transform.position = heroSpawnPoints[i].position;
             heroInstance.transform.localScale = new Vector3(1, 1, 1);
             GameManager.gm.heroesInGame.Add(heroInstance);
-
+            
             heroNumIndex++;
         }
 
@@ -195,6 +206,8 @@ public class MapsController : MonoBehaviour
             
         }
 
+        GameObject.Find("/Canvas/MapPanel/CardViewButton").SetActive(true);
+        GameObject.Find("/Canvas/MapPanel/CardView").SetActive(true);
         enemyHordPanel.SetActive(true);
         enemyTwoPanel.SetActive(true);
         GameManager.gm.battleIsOn = true;
