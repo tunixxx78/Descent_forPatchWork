@@ -7,6 +7,7 @@ using UnityEngine;
 public class SelectableHero : MonoBehaviour
 {
 
+    public int plrIndex;
     public string heroName;
     public string heroRole;
 
@@ -16,8 +17,8 @@ public class SelectableHero : MonoBehaviour
     public int currentActionPoints;
     public int maxActionPoints;
 
-    public int atk;
-    public int def;
+    public int plrStrength;
+    public int plrShield;
     public int fate;
     public int exp;
 
@@ -56,5 +57,10 @@ public class SelectableHero : MonoBehaviour
     public bool IsSelected()
     {
         return this.selected;
+    }
+
+    public void changeSelectedStatus(bool status)
+    {
+        this.selected = status;
     }
 }

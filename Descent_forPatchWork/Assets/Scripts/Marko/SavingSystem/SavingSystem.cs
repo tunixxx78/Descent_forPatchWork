@@ -58,12 +58,13 @@ public class SavingSystem : MonoBehaviour
                 sHero.currentHealth = hero.currentHealth;
                 sHero.currentActionPoints = hero.currentActionPoints;
                 sHero.maxActionPoints = hero.maxActionPoints;
-                sHero.atk = hero.atk;
-                sHero.def = hero.def;
+                sHero.strength = hero.plrStrength;
+                sHero.shield = hero.plrShield;
                 sHero.fate = hero.fate;
                 sHero.exp = hero.exp;
                 sHero.maxCombatItems = hero.maxCombatItems;
                 sHero.maxItems = hero.maxItems;
+                sHero.plrIndex = i;
 
                 //this saves only cards' ids
                 sHero.savedCombatItems = hero.combatItems;
@@ -129,11 +130,11 @@ public class SavingSystem : MonoBehaviour
                         hero.currentActionPoints = sHero.currentActionPoints;
                         hero.maxActionPoints = sHero.maxActionPoints;
 
-                        hero.atk = sHero.atk;
-                        hero.def = sHero.def;
+                        hero.plrStrength = sHero.strength;
+                        hero.plrShield = sHero.shield;
                         hero.fate = sHero.fate;
                         hero.exp = sHero.exp;
-
+                        hero.plrIndex = sHero.plrIndex;
                         hero.maxCombatItems = sHero.maxCombatItems;
                         hero.maxItems = sHero.maxItems;
 
@@ -220,6 +221,7 @@ public class SavingSystem : MonoBehaviour
 [Serializable]
 class SavedHero
 {
+    public int plrIndex;
     public string heroName;
     public string heroRole;
 
@@ -229,8 +231,8 @@ class SavedHero
     public int currentActionPoints;
     public int maxActionPoints;
 
-    public int atk;
-    public int def;
+    public int strength;
+    public int shield;
     public int fate;
     public int exp;
 
