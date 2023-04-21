@@ -717,16 +717,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hb:
-    plrName: Darna
+    plrName: MAREEN
     plrHealth: 20
-    plrStrength: 3
+    plrStrength: 1
     plrLevel: 1
     plrShield: 2
     plrActionPoints: 4
     plrIndex: 0
     plrMove: 2
     heroImages:
-    - {fileID: 585218553, guid: 977916ec4dddf45e3b87a8187ad7aa19, type: 3}
+    - {fileID: -1865252928, guid: 977916ec4dddf45e3b87a8187ad7aa19, type: 3}
     thisHeroIsAttacking: 0
   hbi:
     weaponItems:
