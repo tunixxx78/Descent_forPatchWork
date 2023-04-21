@@ -15,8 +15,8 @@ public class InteractableCard : MonoBehaviour
         copy.GetComponent<Image>().rectTransform.sizeDelta = new Vector2(250, 340);
         copy.GetComponent<Image>().rectTransform.localScale = new Vector3(2, 2, 1); 
         copy.GetComponent<Image>().rectTransform.position = new Vector3(Screen.width * 0.5f, Screen.height * 0.6f, 0);
-        copy.transform.SetParent(GameObject.Find("/Canvas/MapPanel/CardView/Container/PlayCardPanel").transform);
-        GameObject PlayCardPanel = GameObject.Find("/Canvas/MapPanel/CardView/Container/PlayCardPanel");
+        copy.transform.SetParent(GameObject.Find("/Canvas/MapPanel/TestMission/CardView/Container/PlayCardPanel").transform);
+        GameObject PlayCardPanel = GameObject.Find("/Canvas/MapPanel/TestMission/CardView/Container/PlayCardPanel");
         PlayCardPanel.SetActive(true);
         PlayCardPanel.GetComponent<PlayCard>().PlayOrCancel(cardId);
 

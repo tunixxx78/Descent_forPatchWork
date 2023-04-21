@@ -41,26 +41,13 @@ public class OrderCards : MonoBehaviour
     // Gets each currently in the game hero's skillcards and fatecards
     public void InitializeCards()
     {
-        for(int i = 0; i < GameManager.gm.heroesInGame.Count; i++)
+        foreach (GameObject gameObject in GameManager.gm.heroesInGame)
         {
-            if(i == 0)
-            {
-                GameManager.gm.heroesInGame[i].GetComponent<HeroOne>().hc.skillCards.GetCards("Turo", "Skillcards");
-                GameManager.gm.heroesInGame[i].GetComponent<HeroOne>().hc.fateCards.GetCards("Turo", "Fatecards");
-            }
-            else
-            {
-                GameManager.gm.heroesInGame[i].GetComponent<HeroOne>().hc.skillCards.GetCards("Tero", "Skillcards");
-                GameManager.gm.heroesInGame[i].GetComponent<HeroOne>().hc.fateCards.GetCards("Tero", "Fatecards");
-            }
+            Debug.Log(gameObject.GetComponent<HeroOne>().hb.plrName);
+            gameObject.GetComponent<HeroOne>().hc.skillCards.GetCards(gameObject.GetComponent<HeroOne>().hb.plrName, "Skillcards");
+            gameObject.GetComponent<HeroOne>().hc.fateCards.GetCards(gameObject.GetComponent<HeroOne>().hb.plrName, "Fatecards");
         }
-        /* 
-        foreach(GameObject gameObject in GameManager.gm.heroesInGame)
-        {
-            gameObject.GetComponent<HeroOne>().hc.SkillCards.GetCards(gameObject.GetComponent<HeroOne>().hb.plrName, "Skillcards");
-            gameObject.GetComponent<HeroOne>().hc.SkillCards.GetCards(gameObject.GetComponent<HeroOne>().hb.plrName, "Fatecards");
-        }
-        */
+
     }
     // Sets active the correct amount of player buttons and inserts buttons as keys to a dictionary with the corresponding decks as values
     public void InitializeButtons()

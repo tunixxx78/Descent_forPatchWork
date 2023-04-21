@@ -198,7 +198,8 @@ public class MapsController : MonoBehaviour
 
             
         }
-
+        GameObject.Find("/Canvas/MapPanel/TestMission/CardView").SetActive(true);
+        GameObject.Find("/Canvas/MapPanel/TestMission/CardViewButton").SetActive(true);
         enemyHordPanel.SetActive(true);
         enemyTwoPanel.SetActive(true);
         GameManager.gm.battleIsOn = true;
