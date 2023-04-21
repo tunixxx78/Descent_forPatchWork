@@ -139,7 +139,8 @@ public class MapButtons : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 
             MusicHolder.mH.MusicOff(0);
 
-            
+            GameManager.gm.hordePanel.SetActive(true);
+            GameManager.gm.enemyPanel.SetActive(true);
 
             mapAnimator.SetBool(animationTrigger, false);
 
@@ -147,7 +148,7 @@ public class MapButtons : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 
             for (int i = 0; i < GameManager.gm.heroesInGame.Count; i++)
             {
-                DataHolder.dataHolder.SetData(i, GameManager.gm.heroesInGame[i].GetComponent<HeroOne>().hb.plrName,
+                DataHolder.dataHolder.SetData(GameManager.gm.heroesInGame[i].GetComponent<HeroOne>().hb.plrIndex, GameManager.gm.heroesInGame[i].GetComponent<HeroOne>().hb.plrName,
                 GameManager.gm.heroesInGame[i].GetComponent<HeroOne>().hb.plrHealth,
                 GameManager.gm.heroesInGame[i].GetComponent<HeroOne>().hb.plrStrength,
                 GameManager.gm.heroesInGame[i].GetComponent<HeroOne>().hb.plrLevel);
@@ -162,6 +163,9 @@ public class MapButtons : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
                 }
                 */
             }
+
+            //Moves saved data to savingSystem
+            DataHolder.dataHolder.TakeCareOfSaving();
             
             for (int j = 0; j <= 3; j++)
             {

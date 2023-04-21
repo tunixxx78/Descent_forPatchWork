@@ -24,6 +24,9 @@ public class GameManager : MonoBehaviour
 
     public GameObject InventorySlotBase;
 
+    public GameObject hordePanel;
+    public GameObject enemyPanel;
+
     private void Awake()
     {
         Screen.SetResolution(1920, 1080, true);
@@ -52,6 +55,9 @@ public class GameManager : MonoBehaviour
         QuestLorePanel.transform.GetChild(0).GetComponent<Image>().sprite = GameObject.Find("MapPanel").transform.GetChild(0).GetComponent<Quest>().questImage;
         QuestLorePanel.transform.GetChild(0).GetComponent<Image>().SetNativeSize();
         QuestLorePanel.transform.GetChild(1).GetComponent<TMP_Text>().text = GameObject.Find("MapPanel").transform.GetChild(0).GetComponent<Quest>().questName;
+
+        enemyPanel = GameObject.Find("MapPanel").transform.GetChild(GameManager.gm.currentMissionIndex).GetChild(2).GetChild(10).gameObject;
+        hordePanel = GameObject.Find("MapPanel").transform.GetChild(GameManager.gm.currentMissionIndex).GetChild(2).GetChild(6).gameObject;
     }
 
     private void Update()
@@ -76,6 +82,8 @@ public class GameManager : MonoBehaviour
             }
 
             GameObject.Find("MapPanel").transform.GetChild(currentMissionIndex).GetChild(2).GetChild(9).gameObject.SetActive(true);
+            enemyPanel.SetActive(false);
+            hordePanel.SetActive(false);
 
             // for instanciating lootObjects to map
 

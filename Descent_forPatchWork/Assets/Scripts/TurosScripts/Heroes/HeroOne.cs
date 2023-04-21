@@ -50,19 +50,21 @@ public class HeroOne : MonoBehaviour
 
         for(int i = 0; i < GameManager.gm.heroesInGame.Count; i++)
         {
-            if(this.hb.plrIndex == i)
+            int y = GameManager.gm.heroesInGame[i].GetComponent<HeroOne>().hb.plrIndex;
+
+            if(this.hb.plrIndex == y)
             {
                 GameObject thisPlrStats = GameObject.Find("PlayerPanels");
-                thisPlrStats.transform.GetChild(i).GetChild(0).GetComponent<Image>().sprite = this.hb.heroImages[0];
-                thisPlrStats.transform.GetChild(i).GetChild(1).GetComponent<TMP_Text>().text = this.hb.plrName;
-                thisPlrStats.transform.GetChild(i).GetChild(2).GetChild(2).GetComponent<TMP_Text>().text = this.hb.plrHealth.ToString();
-                thisPlrStats.transform.GetChild(i).GetChild(3).GetChild(2).GetComponent<TMP_Text>().text = this.hb.plrStrength.ToString();
-                thisPlrStats.transform.GetChild(i).GetChild(4).GetChild(2).GetComponent<TMP_Text>().text = this.hb.plrLevel.ToString();
-                thisPlrStats.transform.GetChild(i).GetChild(5).GetChild(2).GetComponent<TMP_Text>().text = this.hb.plrActionPoints.ToString();
-                thisPlrStats.transform.GetChild(i).GetChild(1).GetChild(0).GetComponent<TMP_Text>().text = this.hb.plrShield.ToString();
-                thisPlrStats.transform.GetChild(i).GetChild(1).GetChild(1).GetComponent<TMP_Text>().text = this.hb.plrMove.ToString();
+                thisPlrStats.transform.GetChild(y).GetChild(0).GetComponent<Image>().sprite = this.hb.heroImages[0];
+                thisPlrStats.transform.GetChild(y).GetChild(1).GetComponent<TMP_Text>().text = this.hb.plrName;
+                thisPlrStats.transform.GetChild(y).GetChild(2).GetChild(2).GetComponent<TMP_Text>().text = this.hb.plrHealth.ToString();
+                thisPlrStats.transform.GetChild(y).GetChild(3).GetChild(2).GetComponent<TMP_Text>().text = this.hb.plrStrength.ToString();
+                thisPlrStats.transform.GetChild(y).GetChild(4).GetChild(2).GetComponent<TMP_Text>().text = this.hb.plrLevel.ToString();
+                thisPlrStats.transform.GetChild(y).GetChild(5).GetChild(2).GetComponent<TMP_Text>().text = this.hb.plrActionPoints.ToString();
+                thisPlrStats.transform.GetChild(y).GetChild(1).GetChild(0).GetComponent<TMP_Text>().text = this.hb.plrShield.ToString();
+                thisPlrStats.transform.GetChild(y).GetChild(1).GetChild(1).GetComponent<TMP_Text>().text = this.hb.plrMove.ToString();
 
-                thisPlrStats.transform.GetChild(i).gameObject.SetActive(true);
+                thisPlrStats.transform.GetChild(y).gameObject.SetActive(true);
             }   
         }
     }

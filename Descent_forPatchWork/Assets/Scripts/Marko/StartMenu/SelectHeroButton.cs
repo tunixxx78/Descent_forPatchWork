@@ -35,6 +35,7 @@ public class SelectHeroButton : MonoBehaviour
         if (isSelected)
         {
             image.color = selectedColor;
+            SavingSystem.savingSystem.selectedHeroes.Add(hero.heroNumber);
         }
         else
         {

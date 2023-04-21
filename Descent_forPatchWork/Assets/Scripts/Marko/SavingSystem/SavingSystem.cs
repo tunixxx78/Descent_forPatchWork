@@ -8,6 +8,7 @@ using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 //using Unity.UI;
+using System.Linq;
 
 public class SavingSystem : MonoBehaviour
 {
@@ -20,6 +21,8 @@ public class SavingSystem : MonoBehaviour
     public int activeSaveSlot;
     public string activeScene;
     public SelectableHero[] partyHeroes = new SelectableHero[4];
+    public List<int> selectedHeroes;  //selectedHeroes
+
     
 
     //MAKING SINGLETON
@@ -36,14 +39,117 @@ public class SavingSystem : MonoBehaviour
         }
     }
 
+    //gets DataHolder itself as parameter
+    public void SaveGame(DataHolder gData)
+    {
+        //creates GameSavedData class
+        //gets data from DataHolder, and saves each hero's data
+        //to corresponding indexed hero in GameSavedData's herolist
+        GameSavedData sData = new GameSavedData();
 
-    public void SaveGame()
+        sData.currentSceneName = activeScene;
+
+        sData.savedHeroes[0].heroName   = gData.plrOneName;
+        sData.savedHeroes[0].maxHealth  = (int)gData.plrOneHealth;
+        sData.savedHeroes[0].strength   = (int)gData.plrOneStrength;
+        sData.savedHeroes[0].level      = gData.plrOneLevel;
+
+        sData.savedHeroes[1].heroName = gData.plrTwoName;
+        sData.savedHeroes[1].maxHealth = (int)gData.plrTwoHealth;
+        sData.savedHeroes[1].strength = (int)gData.plrTwoStrength;
+        sData.savedHeroes[1].level = gData.plrTwoLevel;
+
+        sData.savedHeroes[2].heroName = gData.plrThreeName;
+        sData.savedHeroes[2].maxHealth = (int)gData.plrThreeHealth;
+        sData.savedHeroes[2].strength = (int)gData.plrThreeStrength;
+        sData.savedHeroes[2].level = gData.plrThreeLevel;
+
+        sData.savedHeroes[3].heroName = gData.plrFourName;
+        sData.savedHeroes[3].maxHealth = (int)gData.plrFourHealth;
+        sData.savedHeroes[3].strength = (int)gData.plrFourStrength;
+        sData.savedHeroes[3].level = gData.plrFourLevel;
+
+        //IN PROGRESS
+        //saving item lists.. for each hero..
+        //foreach(GameObject go in gData.plrOneWeaponItems)
+        //{
+        //    //savedCombatItems is list of strings, supposed to take only the name of the item.
+        //    sData.savedHeroes[0].savedCombatItems.Add(go.name); 
+        //}
+
+        string saveableData = JsonUtility.ToJson(sData, true);
+        string filePath = Application.persistentDataPath + "/save" + activeSaveSlot.ToString() + ".json";
+        Debug.Log("saving to: " + filePath);
+
+        File.WriteAllText(filePath, saveableData);
+
+    }
+
+    //another way, gets arrays of attributes as parameters
+    public void SaveGame2(string[] hNames, float[] hHealths, float[] hStrengths, int[]heroLevels)
+    {
+
+        for(int x = 0; x < 4; x++)
+        {
+            Debug.Log(hNames[x]);
+            Debug.Log(hHealths[x]);
+            Debug.Log(hStrengths[x]);
+            Debug.Log(heroLevels[x]);
+        }
+
+        GameSavedData sData = new GameSavedData();
+
+        sData.currentSceneName = activeScene;
+        //loops each and saves to corresponding hero
+        for (int i = 0; i < 4; i++)
+        {
+            SavedHero sHero = new SavedHero(); 
+            sHero.heroName = hNames[i];
+            sHero.maxHealth = (int)hHealths[i];
+            sHero.strength = (int)hStrengths[i];
+            sHero.level = heroLevels[i];
+
+            sData.savedHeroes[i] = sHero;
+        }
+        string saveableData = JsonUtility.ToJson(sData, true);
+        string filePath = Application.persistentDataPath + "/save" + activeSaveSlot.ToString() + ".json";
+        Debug.Log("saving to: " + filePath);
+
+        File.WriteAllText(filePath, saveableData);
+    }
+
+    public void SaveGame3(HeroBase[] heroes)
+    {
+        //just gets the serializable HeroBase-heroes in array and saves them?
+        string sHeroes = JsonUtility.ToJson(heroes, true);
+        string filePath = Application.persistentDataPath + "/save" + activeSaveSlot.ToString() + ".json";
+        Debug.Log("saving to: " + filePath);
+
+        File.WriteAllText(filePath, sHeroes);
+    }
+
+    //public void SaveGame(string[] saveableHeroes, float[] health)
+    //{
+    //    //T?H?N pelinaikainen tallennus
+    //    GameSavedData gameSessionData = new GameSavedData();
+        
+    //    for(int i = 0; i < saveableHeroes.Length; i++)
+    //    {
+    //        gameSessionData.savedHeroes[i].heroName = saveableHeroes[i];
+    //        gameSessionData.savedHeroes[i].maxHealth = (int)health[i];
+    //        //TESTATTAVA TOIMIIKO
+    //        //seivioperaatio loppuun asti
+    //    }
+    //}
+    public void SaveStartPhase()
     {
         GameSavedData gameSessionData = new GameSavedData();
         //all data that is going to be saved
         gameSessionData.currentSceneName = activeScene;
         gameSessionData.savedGroupName= groupName;
-
+        //startsave takes selected heroes from list in loop, and creates
+        //a savedHero(serializable) class for each
+        //which are then saved to a list in GameSavedData class.
         for(int i = 0; i < partyHeroes.Length; i++)
         {
             SelectableHero hero = partyHeroes[i];
@@ -82,10 +188,12 @@ public class SavingSystem : MonoBehaviour
                 {
                     sHero.savedHiddenItems.Add(item.id);
                 }
-
+                
                 gameSessionData.savedHeroes[i] = sHero;
-
             }
+
+            gameSessionData.heroNumbers = selectedHeroes;
+            
         }
 
         string saveableData = JsonUtility.ToJson(gameSessionData,true);
@@ -95,10 +203,57 @@ public class SavingSystem : MonoBehaviour
         File.WriteAllText(filePath, saveableData);
     }
 
-        public void LoadGame(int saveName)
+
+
+
+    //public void LoadGame(DataHolder gData)
+    //needs buttonId to  know which saveslot loaded
+    public void LoadGame(int buttonId)
+    {
+        string filePath = Application.persistentDataPath + "/save" + buttonId.ToString() + ".json";
+        if (File.Exists(filePath))
+        {
+
+            string savedData = File.ReadAllText(filePath);
+
+            //creates a DataHolderclass, takes heroes' data from GameSavedData from saveslot
+            //tranfers data to corresponding heroes from savedheroes-list.
+            DataHolder gData = new DataHolder(); //new DataHolder
+            GameSavedData sData = JsonUtility.FromJson<GameSavedData>(savedData);
+            this.groupName = sData.savedGroupName;
+            this.activeScene = sData.currentSceneName;
+
+            gData.plrOneName =      sData.savedHeroes[0].heroName;
+            gData.plrOneHealth =    sData.savedHeroes[0].maxHealth;
+            gData.plrOneStrength =  sData.savedHeroes[0].strength;
+            gData.plrOneLevel =     sData.savedHeroes[0].level;
+
+            gData.plrTwoName =      sData.savedHeroes[1].heroName;
+            gData.plrTwoHealth =    sData.savedHeroes[1].maxHealth;
+            gData.plrTwoStrength =  sData.savedHeroes[1].strength;
+            gData.plrTwoLevel =     sData.savedHeroes[1].level;
+
+            gData.plrThreeName =    sData.savedHeroes[2].heroName;
+            gData.plrThreeHealth =  sData.savedHeroes[2].maxHealth;
+            gData.plrThreeStrength = sData.savedHeroes[2].strength;
+            gData.plrThreeLevel =   sData.savedHeroes[2].level;
+
+            gData.plrFourName =     sData.savedHeroes[3].heroName;
+            gData.plrFourHealth =   sData.savedHeroes[3].maxHealth;
+            gData.plrFourStrength = sData.savedHeroes[3].strength;
+            gData.plrFourLevel =    sData.savedHeroes[3].level;
+
+            //NoItemLists yet..
+            //prolly need to search by stringnames on some other databank and add then..
+
+        }
+    }
+    //TODO LATAUS JOTENKIN
+        public void OldLoadGame() //
+        //gamesessiondata.saveheroes[indeksi]
         {
             //TODO NEW universal savepath(for macs and pcs)
-            string filePath = Application.persistentDataPath + "/save" + saveName.ToString() + ".json";
+            string filePath = Application.persistentDataPath + "/save" + activeSaveSlot.ToString() + ".json";
             if (File.Exists(filePath))
             {
                         string savedData = File.ReadAllText(filePath);
@@ -134,7 +289,7 @@ public class SavingSystem : MonoBehaviour
                         hero.plrShield = sHero.shield;
                         hero.fate = sHero.fate;
                         hero.exp = sHero.exp;
-                        hero.plrIndex = sHero.plrIndex;
+                        hero.heroNumber = sHero.plrIndex;
                         hero.maxCombatItems = sHero.maxCombatItems;
                         hero.maxItems = sHero.maxItems;
 
@@ -150,7 +305,7 @@ public class SavingSystem : MonoBehaviour
                         {
                             //TODO hidden cards by id..
                         }
-                        Debug.Log("kokeillaan lisätä heroa");
+                        Debug.Log("kokeillaan lis?t? heroa");
                         partyHeroes[i] = hero;
                         Debug.Log("heroja on: " + partyHeroes.Length);
                     }
@@ -206,6 +361,7 @@ public class SavingSystem : MonoBehaviour
         public string currentSceneName;
 
     //public List<SavedHero> savedHeroes = new List<SavedHero>();
+    public List<int> heroNumbers;
     public SavedHero[]  savedHeroes = new SavedHero[4];
     
     }
@@ -221,6 +377,8 @@ public class SavingSystem : MonoBehaviour
 [Serializable]
 class SavedHero
 {
+    //public List<int> savedHeroNumbers;
+
     public int plrIndex;
     public string heroName;
     public string heroRole;
@@ -230,6 +388,8 @@ class SavedHero
 
     public int currentActionPoints;
     public int maxActionPoints;
+
+    public int level;
 
     public int strength;
     public int shield;

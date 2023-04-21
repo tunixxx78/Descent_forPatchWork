@@ -34,17 +34,33 @@ public class LootItemButton : MonoBehaviour, IPointerDownHandler, IPointerUpHand
             lootInstance.transform.SetParent(GameObject.Find("MapPanel").transform.GetChild(GameManager.gm.currentMissionIndex).GetChild(2).GetChild(9).GetChild(5));
             lootInstance.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
 
-            if (GameManager.gm.heroesInGame[GameManager.gm.activePlayer].GetComponent<HeroOne>().hbi.weaponItems.Contains(lootInstance) == false && lootIndex == 0)
+            // HERE IS A BUG, MUST BE FIXED!!!
+
+            for(int i = 0; i < GameManager.gm.heroesInGame.Count; i++)
             {
-                GameManager.gm.heroesInGame[GameManager.gm.activePlayer].GetComponent<HeroOne>().hbi.weaponItems.Add(lootInstance);
-                DataHolder.dataHolder.SetLoot(GameManager.gm.activePlayer, lootIndex, lootInstance);
+                if (GameManager.gm.heroesInGame[i].GetComponent<HeroOne>().hb.plrIndex == GameManager.gm.activePlayer && /*GameManager.gm.heroesInGame[GameManager.gm.activePlayer].GetComponent<HeroOne>().hbi.weaponItems.Contains(lootInstance) == false &&*/ lootIndex == 0)
+                {
+                    Debug.Log("SISÄLLÄ lootissa");
+
+                    //GameManager.gm.heroesInGame[GameManager.gm.activePlayer].GetComponent<HeroOne>().hbi.weaponItems.Add(lootInstance);
+                    GameManager.gm.heroesInGame[i].GetComponent<HeroOne>().hbi.weaponItems.Add(lootInstance);
+                    DataHolder.dataHolder.SetLoot(GameManager.gm.heroesInGame[i].GetComponent<HeroOne>().hb.plrIndex, lootIndex, lootInstance);
+                    //DataHolder.dataHolder.SetLoot(GameManager.gm.activePlayer, lootIndex, lootInstance);
+                }
+
+                if (GameManager.gm.heroesInGame[i].GetComponent<HeroOne>().hb.plrIndex == GameManager.gm.activePlayer && /*GameManager.gm.heroesInGame[GameManager.gm.activePlayer].GetComponent<HeroOne>().hbi.cardItems.Contains(lootInstance) == false &&*/ lootIndex == 1)
+                {
+                    Debug.Log("SISÄLLÄ lootissa");
+
+                    //GameManager.gm.heroesInGame[GameManager.gm.activePlayer].GetComponent<HeroOne>().hbi.cardItems.Add(lootInstance);
+                    //DataHolder.dataHolder.SetLoot(GameManager.gm.activePlayer, lootIndex, lootInstance);
+
+                    GameManager.gm.heroesInGame[i].GetComponent<HeroOne>().hbi.cardItems.Add(lootInstance);
+                    DataHolder.dataHolder.SetLoot(GameManager.gm.heroesInGame[i].GetComponent<HeroOne>().hb.plrIndex, lootIndex, lootInstance);
+                }
             }
 
-            if (GameManager.gm.heroesInGame[GameManager.gm.activePlayer].GetComponent<HeroOne>().hbi.cardItems.Contains(lootInstance) == false && lootIndex == 1)
-            {
-                GameManager.gm.heroesInGame[GameManager.gm.activePlayer].GetComponent<HeroOne>().hbi.cardItems.Add(lootInstance);
-                DataHolder.dataHolder.SetLoot(GameManager.gm.activePlayer, lootIndex, lootInstance);
-            }
+            
             
 
             
