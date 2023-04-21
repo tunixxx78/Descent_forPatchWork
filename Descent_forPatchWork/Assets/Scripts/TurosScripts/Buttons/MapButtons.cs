@@ -148,7 +148,7 @@ public class MapButtons : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 
             for (int i = 0; i < GameManager.gm.heroesInGame.Count; i++)
             {
-                DataHolder.dataHolder.SetData(i, GameManager.gm.heroesInGame[i].GetComponent<HeroOne>().hb.plrName,
+                DataHolder.dataHolder.SetData(GameManager.gm.heroesInGame[i].GetComponent<HeroOne>().hb.plrIndex, GameManager.gm.heroesInGame[i].GetComponent<HeroOne>().hb.plrName,
                 GameManager.gm.heroesInGame[i].GetComponent<HeroOne>().hb.plrHealth,
                 GameManager.gm.heroesInGame[i].GetComponent<HeroOne>().hb.plrStrength,
                 GameManager.gm.heroesInGame[i].GetComponent<HeroOne>().hb.plrLevel);

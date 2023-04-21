@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/StartMenuScene.unity
+    guid: 85b2ea6555aaff34782ab2e081fd8000
+  - enabled: 1
     path: Assets/Scenes/TuroTestScene.unity
     guid: dc507e30a6284456eae4d380f62b8631
   m_configObjects: {}

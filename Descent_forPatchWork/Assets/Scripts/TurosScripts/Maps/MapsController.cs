@@ -103,22 +103,26 @@ public class MapsController : MonoBehaviour
 
 
         // for spawning heroes for fight
-        for (int i = 0; i < heroBase.Length; i++)
+
+        for(int i = 0; i < SavingSystem.savingSystem.selectedHeroes.Count; i++) //for (int i = 0; i < heroBase.Length; i++)
         {
-            var heroInstance = Instantiate(heroBase[i], heroSpawnPoints[i].position, Quaternion.identity);
-            heroInstance.GetComponent<HeroOne>().hb.plrIndex = heroNumIndex;
+
+            Debug.Log("PITÄISI TULLA HERO NRO: " + SavingSystem.savingSystem.selectedHeroes[i]);
+
+            var heroInstance = Instantiate(heroBase[SavingSystem.savingSystem.selectedHeroes[i]], heroSpawnPoints[SavingSystem.savingSystem.selectedHeroes[i]].position, Quaternion.identity);
+            heroInstance.GetComponent<HeroOne>().hb.plrIndex = SavingSystem.savingSystem.selectedHeroes[i];
 
             if(GameManager.gm.round != 0)
             {
 
-                heroInstance.GetComponent<HeroOne>().hb.plrName = DataHolder.dataHolder.GetName(i);
+                heroInstance.GetComponent<HeroOne>().hb.plrName = DataHolder.dataHolder.GetName(SavingSystem.savingSystem.selectedHeroes[i]);
                 Debug.Log(heroInstance.GetComponent<HeroOne>().hb.plrName);
-                heroInstance.GetComponent<HeroOne>().hb.plrHealth = DataHolder.dataHolder.GetHealth(i);
+                heroInstance.GetComponent<HeroOne>().hb.plrHealth = DataHolder.dataHolder.GetHealth(SavingSystem.savingSystem.selectedHeroes[i]);
                 Debug.Log(heroInstance.GetComponent<HeroOne>().hb.plrHealth);
-                heroInstance.GetComponent<HeroOne>().hb.plrStrength = DataHolder.dataHolder.GetStrenght(i);
-                heroInstance.GetComponent<HeroOne>().hb.plrLevel = DataHolder.dataHolder.GetLevel(i);
+                heroInstance.GetComponent<HeroOne>().hb.plrStrength = DataHolder.dataHolder.GetStrenght(SavingSystem.savingSystem.selectedHeroes[i]);
+                heroInstance.GetComponent<HeroOne>().hb.plrLevel = DataHolder.dataHolder.GetLevel(SavingSystem.savingSystem.selectedHeroes[i]);
 
-                if(i == 0)
+                if(SavingSystem.savingSystem.selectedHeroes[i] == 0)
                 {
                     if(DataHolder.dataHolder.plrOneCardItems.Count != 0)
                     {
@@ -133,7 +137,7 @@ public class MapsController : MonoBehaviour
                     }
                        
                 }
-                if (i == 1)
+                if (SavingSystem.savingSystem.selectedHeroes[i] == 1)
                 {
                     if(DataHolder.dataHolder.plrTwoCardItems.Count != 0)
                     {
@@ -148,14 +152,14 @@ public class MapsController : MonoBehaviour
                     }
                     
                 }
-                if (i == 2)
+                if (SavingSystem.savingSystem.selectedHeroes[i] == 2)
                 {
                     for (int j = 0; j < DataHolder.dataHolder.plrThreeCardItems.Count; j++)
                     {
                         heroInstance.GetComponent<HeroOne>().hbi.cardItems.Add(DataHolder.dataHolder.plrThreeCardItems[j]);
                     }
                 }
-                if (i == 3)
+                if (SavingSystem.savingSystem.selectedHeroes[i] == 3)
                 {
                     for (int j = 0; j < DataHolder.dataHolder.plrFourCardItems.Count; j++)
                     {
@@ -165,7 +169,7 @@ public class MapsController : MonoBehaviour
             }
             
             heroInstance.transform.SetParent(battleMap.transform);
-            heroInstance.transform.position = heroSpawnPoints[i].position;
+            heroInstance.transform.position = heroSpawnPoints[SavingSystem.savingSystem.selectedHeroes[i]].position;
             heroInstance.transform.localScale = new Vector3(1, 1, 1);
             GameManager.gm.heroesInGame.Add(heroInstance);
 

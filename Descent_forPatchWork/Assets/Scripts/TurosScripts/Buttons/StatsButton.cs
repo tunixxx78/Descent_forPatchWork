@@ -46,7 +46,7 @@ public class StatsButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 
                     for (int i = 0; i < GameManager.gm.heroesInGame.Count; i++)
                     {
-                        if (GameManager.gm.activePlayer == i)
+                        if (GameManager.gm.activePlayer == GameManager.gm.heroesInGame[i].GetComponent<HeroOne>().hb.plrIndex)
                         {
                             GameManager.gm.heroesInGame[i].GetComponent<HeroOne>().hb.plrHealth--;
                         }
@@ -60,7 +60,7 @@ public class StatsButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 
                     for (int j = 0; j < GameManager.gm.heroesInGame.Count; j++)
                     {
-                        if (GameManager.gm.activePlayer == j)
+                        if (GameManager.gm.activePlayer == GameManager.gm.heroesInGame[j].GetComponent<HeroOne>().hb.plrIndex)
                         {
                             GameManager.gm.heroesInGame[j].GetComponent<HeroOne>().hb.plrStrength--;
                             GameManager.gm.attackForce = GameManager.gm.heroesInGame[j].GetComponent<HeroOne>().hb.plrStrength;
@@ -75,7 +75,7 @@ public class StatsButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 
                     for (int k = 0; k < GameManager.gm.heroesInGame.Count; k++)
                     {
-                        if(GameManager.gm.activePlayer == k)
+                        if(GameManager.gm.activePlayer == GameManager.gm.heroesInGame[k].GetComponent<HeroOne>().hb.plrIndex)
                         {
                             GameManager.gm.heroesInGame[k].GetComponent<HeroOne>().hb.plrLevel--;
                         }
@@ -89,7 +89,7 @@ public class StatsButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 
                     for (int a = 0; a < GameManager.gm.heroesInGame.Count; a++)
                     {
-                        if(GameManager.gm.activePlayer == a)
+                        if(GameManager.gm.activePlayer == GameManager.gm.heroesInGame[a].GetComponent<HeroOne>().hb.plrIndex)
                         {
                             GameManager.gm.heroesInGame[a].GetComponent<HeroOne>().hb.plrActionPoints--;
                         }
@@ -107,7 +107,7 @@ public class StatsButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 
                     for (int i = 0; i < GameManager.gm.heroesInGame.Count; i++)
                     {
-                        if (GameManager.gm.activePlayer == i)
+                        if (GameManager.gm.activePlayer == GameManager.gm.heroesInGame[i].GetComponent<HeroOne>().hb.plrIndex)
                         {
                             GameManager.gm.heroesInGame[i].GetComponent<HeroOne>().hb.plrHealth++;
                         }
@@ -120,7 +120,7 @@ public class StatsButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 
                     for (int j = 0; j < GameManager.gm.heroesInGame.Count; j++)
                     {
-                        if (GameManager.gm.activePlayer == j)
+                        if (GameManager.gm.activePlayer == GameManager.gm.heroesInGame[j].GetComponent<HeroOne>().hb.plrIndex)
                         {
                             GameManager.gm.heroesInGame[j].GetComponent<HeroOne>().hb.plrStrength++;
                             GameManager.gm.attackForce = GameManager.gm.heroesInGame[j].GetComponent<HeroOne>().hb.plrStrength;
@@ -136,7 +136,7 @@ public class StatsButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 
                     for (int k = 0; k < GameManager.gm.heroesInGame.Count; k++)
                     {
-                        if(GameManager.gm.activePlayer == k)
+                        if(GameManager.gm.activePlayer == GameManager.gm.heroesInGame[k].GetComponent<HeroOne>().hb.plrIndex)
                         {
                             GameManager.gm.heroesInGame[k].GetComponent<HeroOne>().hb.plrLevel++;
                         }
@@ -150,7 +150,7 @@ public class StatsButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 
                     for (int a = 0; a < GameManager.gm.heroesInGame.Count; a++)
                     {
-                        if (GameManager.gm.activePlayer == a)
+                        if (GameManager.gm.activePlayer == GameManager.gm.heroesInGame[a].GetComponent<HeroOne>().hb.plrIndex)
                         {
                             GameManager.gm.heroesInGame[a].GetComponent<HeroOne>().hb.plrActionPoints++;
                         }

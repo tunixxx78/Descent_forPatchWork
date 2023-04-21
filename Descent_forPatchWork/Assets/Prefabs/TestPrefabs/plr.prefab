@@ -897,7 +897,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hb:
-    plrName: Turo
+    plrName: Valek
     plrHealth: 10
     plrStrength: 1
     plrLevel: 1
@@ -906,7 +906,7 @@ MonoBehaviour:
     plrIndex: 0
     plrMove: 1
     heroImages:
-    - {fileID: 1378608774, guid: bf8776e6a16e5485aa24ea0ca71cedf0, type: 3}
+    - {fileID: -1656082591, guid: 977916ec4dddf45e3b87a8187ad7aa19, type: 3}
     thisHeroIsAttacking: 0
   hbi:
     weaponItems:

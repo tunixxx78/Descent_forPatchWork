@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using Unity.VisualScripting;
-using UnityEditor.SceneManagement;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -110,7 +110,7 @@ public class OrderCards : MonoBehaviour
         if (btn.transform.name == "AllCards")
         {
             cardsShown = "AllCards";
-            // Lis‰‰ fate kortit viel‰ mutta nyt ei ole 
+            // Lis?? fate kortit viel? mutta nyt ei ole 
         }
         else if (btn.transform.name == "HandCards")
         {
@@ -147,7 +147,7 @@ public class OrderCards : MonoBehaviour
 
     public void ShowCards(List<Card> cardList)
     {
-        // Tyhjennet‰‰n ennenkuin printataan uudellleen.
+        // Tyhjennet??n ennenkuin printataan uudellleen.
         GameObject gameObject = this.transform.Find("CardPanel/Scroll View/Viewport/Content").gameObject;
         foreach(Transform child in gameObject.transform)
         {
