@@ -14,7 +14,16 @@ public class BattleSystem : MonoBehaviour
             SFXHolder.sH.sword.Play();
 
             Debug.Log("HIIRTÄ PAINETTU");
-            this.gameObject.GetComponent<EnemyOne>().eB.enemyHealth -= GameManager.gm.attackForce;
+            if (this.gameObject.GetComponent<EnemyOne>().eB.enemyHealth - GameManager.gm.attackForce >= 0)
+            {
+                this.gameObject.GetComponent<EnemyOne>().eB.enemyHealth -= GameManager.gm.attackForce;
+            }
+            else
+            {
+                this.gameObject.GetComponent<EnemyOne>().eB.enemyHealth = 0;
+            }
+
+            
             if(this.gameObject.GetComponent<EnemyOne>().eB.enemyType == 1)
             {
                 if((GameManager.gm.attackForce - this.gameObject.GetComponent<EnemyOne>().eB.enemyShield) >= this.gameObject.GetComponent<EnemyOne>().eB.enemyShield)

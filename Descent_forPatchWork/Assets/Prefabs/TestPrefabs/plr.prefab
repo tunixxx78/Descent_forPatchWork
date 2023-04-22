@@ -899,7 +899,7 @@ MonoBehaviour:
   hb:
     plrName: DARNA
     plrHealth: 10
-    plrStrength: 1
+    plrStrength: 4
     plrLevel: 1
     plrShield: 1
     plrActionPoints: 1
