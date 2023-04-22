@@ -99,6 +99,7 @@ public class SavingSystem : MonoBehaviour
         GameSavedData sData = new GameSavedData();
         sData.saveSlot = this.activeSaveSlot;
         sData.currentSceneName = activeScene;
+        sData.savedGroupName = groupName;
         //loops each and saves to corresponding hero
         for (int i = 0; i < 4; i++)
         {
@@ -205,12 +206,21 @@ public class SavingSystem : MonoBehaviour
 
 
 
-//Sets the activaSaveSlot to proper button Id,
-//so DataHolder knows which save to load in next scene..
- public void LoadLoadingSettings(int buttonId)
+    //Sets the activaSaveSlot to proper button Id,
+    //so DataHolder knows which save to load in next scene..
+    public void LoadLoadingSettings(int buttonId)
     {
-            this.activeSaveSlot = buttonId;
-    }   
+        this.activeSaveSlot = buttonId;
+        //get and set the scene, which has to be loaded.
+        string filePath = Application.persistentDataPath + "/save" + activeSaveSlot.ToString() + ".json";
+        if (File.Exists(filePath))
+        {
+            string savedData = File.ReadAllText(filePath);
+            GameSavedData sData = JsonUtility.FromJson<GameSavedData>(savedData);
+            this.activeScene = sData.currentSceneName;
+
+        }
+    }
     public void LoadGame()
     {
         string filePath = Application.persistentDataPath + "/save" + activeSaveSlot.ToString() + ".json";
