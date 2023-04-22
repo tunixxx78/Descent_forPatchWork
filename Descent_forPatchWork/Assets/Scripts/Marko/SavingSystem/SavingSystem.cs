@@ -88,7 +88,6 @@ public class SavingSystem : MonoBehaviour
     //another way, gets arrays of attributes as parameters
     public void SaveGame2(string[] hNames, float[] hHealths, float[] hStrengths, int[]heroLevels)
     {
-
         for(int x = 0; x < 4; x++)
         {
             Debug.Log(hNames[x]);
@@ -98,7 +97,7 @@ public class SavingSystem : MonoBehaviour
         }
 
         GameSavedData sData = new GameSavedData();
-
+        sData.saveSlot = this.activeSaveSlot;
         sData.currentSceneName = activeScene;
         //loops each and saves to corresponding hero
         for (int i = 0; i < 4; i++)
@@ -118,15 +117,15 @@ public class SavingSystem : MonoBehaviour
         File.WriteAllText(filePath, saveableData);
     }
 
-    public void SaveGame3(HeroBase[] heroes)
-    {
-        //just gets the serializable HeroBase-heroes in array and saves them?
-        string sHeroes = JsonUtility.ToJson(heroes, true);
-        string filePath = Application.persistentDataPath + "/save" + activeSaveSlot.ToString() + ".json";
-        Debug.Log("saving to: " + filePath);
+    //public void SaveGame3(HeroBase[] heroes)
+    //{
+    //    //just gets the serializable HeroBase-heroes in array and saves them?
+    //    string sHeroes = JsonUtility.ToJson(heroes, true);
+    //    string filePath = Application.persistentDataPath + "/save" + activeSaveSlot.ToString() + ".json";
+    //    Debug.Log("saving to: " + filePath);
 
-        File.WriteAllText(filePath, sHeroes);
-    }
+    //    File.WriteAllText(filePath, sHeroes);
+    //}
 
     //public void SaveGame(string[] saveableHeroes, float[] health)
     //{
@@ -147,6 +146,7 @@ public class SavingSystem : MonoBehaviour
         //all data that is going to be saved
         gameSessionData.currentSceneName = activeScene;
         gameSessionData.savedGroupName= groupName;
+        gameSessionData.saveSlot= this.activeSaveSlot;
         //startsave takes selected heroes from list in loop, and creates
         //a savedHero(serializable) class for each
         //which are then saved to a list in GameSavedData class.
@@ -205,12 +205,15 @@ public class SavingSystem : MonoBehaviour
 
 
 
-
-    //public void LoadGame(DataHolder gData)
-    //needs buttonId to  know which saveslot loaded
-    public void LoadGame(int buttonId)
+//Sets the activaSaveSlot to proper button Id,
+//so DataHolder knows which save to load in next scene..
+ public void LoadLoadingSettings(int buttonId)
     {
-        string filePath = Application.persistentDataPath + "/save" + buttonId.ToString() + ".json";
+            this.activeSaveSlot = buttonId;
+    }   
+    public void LoadGame()
+    {
+        string filePath = Application.persistentDataPath + "/save" + activeSaveSlot.ToString() + ".json";
         if (File.Exists(filePath))
         {
 
@@ -218,10 +221,16 @@ public class SavingSystem : MonoBehaviour
 
             //creates a DataHolderclass, takes heroes' data from GameSavedData from saveslot
             //tranfers data to corresponding heroes from savedheroes-list.
-            DataHolder gData = new DataHolder(); //new DataHolder
+
+            //Load DataHolderin tilalle: Load napista vain otetaan slotin numero,
+            //sitten Turoskenessä DataHolder lataa loput oikeasta slotista
+            DataHolder gData = FindObjectOfType<DataHolder>();
+            
             GameSavedData sData = JsonUtility.FromJson<GameSavedData>(savedData);
             this.groupName = sData.savedGroupName;
+            Debug.Log("LOADIN SCENENAME: " + sData.currentSceneName);
             this.activeScene = sData.currentSceneName;
+            this.activeSaveSlot = sData.saveSlot;
 
             gData.plrOneName =      sData.savedHeroes[0].heroName;
             gData.plrOneHealth =    sData.savedHeroes[0].maxHealth;
@@ -354,9 +363,11 @@ public class SavingSystem : MonoBehaviour
 
 }
 
+//The Class which is actually saved in game save slots! ('the' save)
     [Serializable]
     class GameSavedData
     {
+        public int saveSlot;
         public string savedGroupName;
         public string currentSceneName;
 
@@ -367,13 +378,15 @@ public class SavingSystem : MonoBehaviour
     }
 
 
-    //Saveable list of names for LoadGame - buttons
+    //Saveable list of names for LoadGame - buttons - if string is empty -> considered as free slot
     [Serializable]
     class SavedNamesData
     {
         public string  save0, save1, save2, save3, save4;
     }
 
+//All data that is saved from heroes, and then given to GameSaveData,
+//which saves heroes in list/array
 [Serializable]
 class SavedHero
 {
