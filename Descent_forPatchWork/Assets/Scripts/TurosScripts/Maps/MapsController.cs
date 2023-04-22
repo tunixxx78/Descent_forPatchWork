@@ -15,12 +15,13 @@ public class MapsController : MonoBehaviour
     GameObject currentObject;
 
     [SerializeField] Transform[] heroSpawnPoints;
-    [SerializeField] GameObject[] heroBase;
+    public GameObject[] heroBase;
 
     [SerializeField] Transform[] enemySpawnPoints;
-    [SerializeField] GameObject[] enemyBase;
+    public GameObject[] enemyBase;
 
     public GameObject mapsButton, enemyHordPanel, enemyTwoPanel;
+    public Transform bossEnemySpawnPoint;
     int heroNumIndex;
 
     private void Awake()
@@ -31,6 +32,7 @@ public class MapsController : MonoBehaviour
         enemyTwoPanel = GameObject.Find("EnemyPanel");
         enemyTwoPanel.SetActive(false);
         heroNumIndex = 0;
+        bossEnemySpawnPoint = GameObject.Find("BossSpawnPoint").transform;
     }
 
     private void Start()
@@ -181,7 +183,7 @@ public class MapsController : MonoBehaviour
         
         for(int e = 0; e < enemyBase.Length; e++)
         {
-            var enemyInstance = Instantiate(enemyBase[e], enemySpawnPoints[e].position, Quaternion.identity);
+            var enemyInstance = Instantiate(enemyBase[0], enemySpawnPoints[e].position, Quaternion.identity);
             enemyInstance.transform.SetParent(battleMap.transform);
             enemyInstance.transform.position = enemySpawnPoints[e].position;
             enemyInstance.transform.localScale = new Vector3(1, 1, 1);
@@ -201,7 +203,7 @@ public class MapsController : MonoBehaviour
         GameObject.Find("/Canvas/MapPanel/TestMission/CardView").SetActive(true);
         GameObject.Find("/Canvas/MapPanel/TestMission/CardViewButton").SetActive(true);
         enemyHordPanel.SetActive(true);
-        enemyTwoPanel.SetActive(true);
+        //enemyTwoPanel.SetActive(true);
         GameManager.gm.battleIsOn = true;
     }
 }

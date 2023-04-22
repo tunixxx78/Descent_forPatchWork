@@ -9,9 +9,10 @@ public class GameManager : MonoBehaviour
     public static GameManager gm;
     public List<GameObject> heroesInGame;
     public List<GameObject> enemysInGame;
+    public List<GameObject> enemyBossesInGame;
     public float enemyHordHealth, enemyHordStrenght;
 
-    public bool plrCanAttack, enemyCanAttack, battleIsOn, plrIsAttacking, enemyIsAttacking;
+    public bool plrCanAttack, enemyCanAttack, battleIsOn, plrIsAttacking, enemyIsAttacking, villagerSelected, bossIsSpawned, mergeHorde;
     public float attackForce = 1;
 
     public GameObject QuestLorePanel, currentMission;
@@ -26,6 +27,7 @@ public class GameManager : MonoBehaviour
 
     public GameObject hordePanel;
     public GameObject enemyPanel;
+    MapsController maps;
 
     private void Awake()
     {
@@ -46,8 +48,12 @@ public class GameManager : MonoBehaviour
 
         DontDestroyOnLoad(this.gameObject);
 
+        maps = FindObjectOfType<MapsController>();
+
         plrCanAttack = false;
         enemyCanAttack = false;
+        bossIsSpawned = false;
+        mergeHorde = false;
 
         //for filling the QuestLorePanel information
 
@@ -67,14 +73,24 @@ public class GameManager : MonoBehaviour
             Application.Quit();
         }
 
-        if(enemysInGame.Count <= 0 && battleIsOn)
+        if(enemysInGame.Count <= 0 && battleIsOn && bossIsSpawned == false)
+        {
+
+            GameObject bossInstance = Instantiate(maps.enemyBase[2], maps.bossEnemySpawnPoint.position, Quaternion.identity);
+            bossInstance.transform.SetParent(maps.transform.GetChild(GameManager.gm.currentMissionIndex).GetChild(2));
+            GameManager.gm.enemyBossesInGame.Add(bossInstance);
+            maps.enemyTwoPanel.SetActive(true);
+            bossIsSpawned = true;
+            
+        }
+        if(enemysInGame.Count <= 0 && enemyBossesInGame.Count <= 0 && battleIsOn)
         {
             Debug.Log("PELAAJA ON VOITTANUT TAISTELUN!");
             battleIsOn = false;
             currentAreaMissions--;
 
             //test for showing next mission
-            if(currentAreaMissions <= 0)
+            if (currentAreaMissions <= 0)
             {
                 currentMissionInQuest++;
                 currentMission.GetComponent<Quest>().missions[currentMissionInQuest].SetActive(true);
@@ -87,20 +103,41 @@ public class GameManager : MonoBehaviour
 
             // for instanciating lootObjects to map
 
-            for(int i = 0; i < lootSpawnPoints.Length; i++)
+            for (int i = 0; i < lootSpawnPoints.Length; i++)
             {
                 GameObject lootInstance = Instantiate(lootObjects[i], lootSpawnPoints[i].position, Quaternion.identity);
 
                 lootInstance.transform.SetParent(GameObject.Find("Canvas").transform);
                 lootInstance.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
             }
-            
         }
+
         if(heroesInGame.Count <= 0 && battleIsOn)
         {
             Debug.Log("PELAAJA ON HÄVINNYT TAISTELUN!");
             battleIsOn = false;
         }
 
+        if (mergeHorde)
+        {
+            MergeEnemyHorde();
+        }
+
+    }
+
+    public void MergeEnemyHorde()
+    {
+        mergeHorde = false;
+
+        Debug.Log("GAMEMANAGER MERGE FUNCTIO SAAVUTETTU");
+
+        GameObject temp = GameObject.Find("TempHolder");
+        temp.transform.GetChild(0).GetComponent<EnemyOne>().eB.enemyHealth = temp.transform.GetChild(0).GetComponent<EnemyOne>().eB.enemyHealth + temp.transform.GetChild(1).GetComponent<EnemyOne>().eB.enemyHealth;
+        temp.transform.GetChild(0).GetComponent<Image>().sprite = temp.transform.GetChild(0).GetComponent<EnemyOne>().eB.enemyImages[1];
+
+        enemysInGame.Remove(temp.transform.GetChild(1).gameObject);
+        Destroy(temp.transform.GetChild(1).gameObject);
+
+        temp.transform.GetChild(0).gameObject.transform.SetParent(maps.gameObject.transform.GetChild(currentMissionIndex).GetChild(2));
     }
 }
