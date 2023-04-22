@@ -27,6 +27,7 @@ public class GameManager : MonoBehaviour
 
     public GameObject hordePanel;
     public GameObject enemyPanel;
+    public GameObject BossInfoPanel;
     MapsController maps;
 
     private void Awake()
@@ -49,6 +50,8 @@ public class GameManager : MonoBehaviour
         DontDestroyOnLoad(this.gameObject);
 
         maps = FindObjectOfType<MapsController>();
+        BossInfoPanel = GameObject.Find("StoryForBossPanel").gameObject;
+        BossInfoPanel.SetActive(false);
 
         plrCanAttack = false;
         enemyCanAttack = false;
@@ -75,6 +78,8 @@ public class GameManager : MonoBehaviour
 
         if(enemysInGame.Count <= 0 && battleIsOn && bossIsSpawned == false)
         {
+
+            BossInfoPanel.SetActive(true);
 
             GameObject bossInstance = Instantiate(maps.enemyBase[2], maps.bossEnemySpawnPoint.position, Quaternion.identity);
             bossInstance.transform.SetParent(maps.transform.GetChild(GameManager.gm.currentMissionIndex).GetChild(2));

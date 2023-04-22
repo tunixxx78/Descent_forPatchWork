@@ -911,7 +911,7 @@ MonoBehaviour:
     enemyType: 1
     enemyImages:
     - {fileID: -1627722314, guid: bf8776e6a16e5485aa24ea0ca71cedf0, type: 3}
-    - {fileID: -1846571019, guid: bf8776e6a16e5485aa24ea0ca71cedf0, type: 3}
+    - {fileID: 1480196348, guid: 628685737db9047808000352f8a935b0, type: 3}
     thisEnemyIsAttacking: 0
   currentObject: {fileID: 0}
 --- !u!114 &3310864016639711982
