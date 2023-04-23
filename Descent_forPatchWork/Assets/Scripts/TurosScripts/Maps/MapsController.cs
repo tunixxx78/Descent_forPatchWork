@@ -33,6 +33,7 @@ public class MapsController : MonoBehaviour
         enemyTwoPanel.SetActive(false);
         heroNumIndex = 0;
         bossEnemySpawnPoint = GameObject.Find("BossSpawnPoint").transform;
+        
     }
 
     private void Start()
@@ -50,6 +51,8 @@ public class MapsController : MonoBehaviour
 
             worldBlocksAreChecked = true;
         }
+
+        FindObjectOfType<EnemySpawnerButton>().AddThisSpawnerToList();
     }
 
 
@@ -86,12 +89,15 @@ public class MapsController : MonoBehaviour
 
     public void SetRealBattleMap()
     {
+        GameObject.Find("Canvas").transform.GetChild(0).GetComponent<Image>().sprite = GameManager.gm.BGImages[1];
+
         MusicHolder.mH.MusicOff(1);
 
         heroNumIndex = 0;
 
         GameObject battleMap = currentObject.transform.Find("BattleMapPanel").gameObject;
         GameObject battleMapChild = battleMap.transform.GetChild(0).gameObject;
+        GameObject characterHolder = battleMap.transform.GetChild(16).gameObject;
         int amountOfPieces = battleMapChild.transform.childCount;
 
         battleMapChild.transform.GetChild(0).GetComponent<Image>().sprite = mapPiecesBattle[0];
@@ -160,6 +166,10 @@ public class MapsController : MonoBehaviour
                     {
                         heroInstance.GetComponent<HeroOne>().hbi.cardItems.Add(DataHolder.dataHolder.plrThreeCardItems[j]);
                     }
+                    for (int k = 0; k < DataHolder.dataHolder.plrThreeWeaponItems.Count; k++)
+                    {
+                        heroInstance.GetComponent<HeroOne>().hbi.weaponItems.Add(DataHolder.dataHolder.plrThreeWeaponItems[k]);
+                    }
                 }
                 if (SavingSystem.savingSystem.selectedHeroes[i] == 3)
                 {
@@ -167,10 +177,14 @@ public class MapsController : MonoBehaviour
                     {
                         heroInstance.GetComponent<HeroOne>().hbi.cardItems.Add(DataHolder.dataHolder.plrFourCardItems[j]);
                     }
+                    for (int k = 0; k < DataHolder.dataHolder.plrFourWeaponItems.Count; k++)
+                    {
+                        heroInstance.GetComponent<HeroOne>().hbi.weaponItems.Add(DataHolder.dataHolder.plrFourWeaponItems[k]);
+                    }
                 }
             }
             
-            heroInstance.transform.SetParent(battleMap.transform);
+            heroInstance.transform.SetParent(characterHolder.transform);
             heroInstance.transform.position = heroSpawnPoints[SavingSystem.savingSystem.selectedHeroes[i]].position;
             heroInstance.transform.localScale = new Vector3(1, 1, 1);
             GameManager.gm.heroesInGame.Add(heroInstance);
@@ -184,7 +198,7 @@ public class MapsController : MonoBehaviour
         for(int e = 0; e < enemyBase.Length; e++)
         {
             var enemyInstance = Instantiate(enemyBase[0], enemySpawnPoints[e].position, Quaternion.identity);
-            enemyInstance.transform.SetParent(battleMap.transform);
+            enemyInstance.transform.SetParent(characterHolder.transform);
             enemyInstance.transform.position = enemySpawnPoints[e].position;
             enemyInstance.transform.localScale = new Vector3(1, 1, 1);
 

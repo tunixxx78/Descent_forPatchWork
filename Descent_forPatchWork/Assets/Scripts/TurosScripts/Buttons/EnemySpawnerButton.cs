@@ -62,4 +62,11 @@ public class EnemySpawnerButton : MonoBehaviour, IPointerDownHandler, IPointerUp
             }
         }
     }
+
+    public void AddThisSpawnerToList()
+    {
+        GameManager.gm.enemySpawnersIngame.Add(this.gameObject);
+    }
+
+    
 }

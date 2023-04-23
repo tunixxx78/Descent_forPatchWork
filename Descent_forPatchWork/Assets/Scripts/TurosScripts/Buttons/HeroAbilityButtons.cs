@@ -34,6 +34,7 @@ public class HeroAbilityButtons : MonoBehaviour, IPointerDownHandler, IPointerUp
             if (btnId == 0 && this.isClicked == false)
             {
                 this.isClicked = true;
+                SFXHolder.sH.button.Play();
 
                 for (int i = 0; i < GameManager.gm.heroesInGame.Count; i++)
                 {
@@ -48,6 +49,7 @@ public class HeroAbilityButtons : MonoBehaviour, IPointerDownHandler, IPointerUp
             else if (btnId == 0 && this.isClicked == true)
             {
                 this.isClicked = false;
+                SFXHolder.sH.button.Play();
 
                 for (int i = 0; i < GameManager.gm.heroesInGame.Count; i++)
                 {
@@ -63,6 +65,7 @@ public class HeroAbilityButtons : MonoBehaviour, IPointerDownHandler, IPointerUp
             if (btnId == 1 && this.isClicked == false)
             {
                 this.isClicked = true;
+                SFXHolder.sH.button.Play();
 
                 for (int i = 0; i < GameManager.gm.heroesInGame.Count; i++)
                 {
@@ -77,6 +80,7 @@ public class HeroAbilityButtons : MonoBehaviour, IPointerDownHandler, IPointerUp
             else if (btnId == 1 && this.isClicked == true)
             {
                 this.isClicked = false;
+                SFXHolder.sH.button.Play();
 
                 for (int i = 0; i < GameManager.gm.heroesInGame.Count; i++)
                 {
@@ -92,6 +96,7 @@ public class HeroAbilityButtons : MonoBehaviour, IPointerDownHandler, IPointerUp
             if (btnId == 2 && this.isClicked == false)
             {
                 this.isClicked = true;
+                SFXHolder.sH.button.Play();
 
                 for (int i = 0; i < GameManager.gm.heroesInGame.Count; i++)
                 {
@@ -106,6 +111,7 @@ public class HeroAbilityButtons : MonoBehaviour, IPointerDownHandler, IPointerUp
             else if (btnId == 2 && this.isClicked == true)
             {
                 this.isClicked = false;
+                SFXHolder.sH.button.Play();
 
                 for (int i = 0; i < GameManager.gm.heroesInGame.Count; i++)
                 {
@@ -127,16 +133,19 @@ public class HeroAbilityButtons : MonoBehaviour, IPointerDownHandler, IPointerUp
                     {
                         if (tempValue == 0 || tempValue == 1 || tempValue == 2)
                         {
+                            SFXHolder.sH.button.Play();
                             GameManager.gm.heroesInGame[i].GetComponent<HeroOne>().hb.plrStrength++;
                             GameManager.gm.attackForce = GameManager.gm.heroesInGame[i].GetComponent<HeroOne>().hb.plrStrength;
                         }
                         if (tempValue == 3)
                         {
+                            SFXHolder.sH.button.Play();
                             GameManager.gm.heroesInGame[i].GetComponent<HeroOne>().hb.plrStrength = 50;
                             GameManager.gm.attackForce = GameManager.gm.heroesInGame[i].GetComponent<HeroOne>().hb.plrStrength;
                         }
                         if (tempValue == 4)
                         {
+                            SFXHolder.sH.button.Play();
                             GameManager.gm.heroesInGame[i].GetComponent<HeroOne>().hb.plrStrength = 1;
                             GameManager.gm.attackForce = GameManager.gm.heroesInGame[i].GetComponent<HeroOne>().hb.plrStrength;
                         }
@@ -155,6 +164,7 @@ public class HeroAbilityButtons : MonoBehaviour, IPointerDownHandler, IPointerUp
             if(btnId == 4 && this.isClicked == true)
             {
                 this.isClicked = false;
+                SFXHolder.sH.button.Play();
 
                 this.gameObject.GetComponent<Image>().sprite = this.icons[1];
 
@@ -162,6 +172,7 @@ public class HeroAbilityButtons : MonoBehaviour, IPointerDownHandler, IPointerUp
             else if(btnId == 4 && this.isClicked == false)
             {
                 this.isClicked = true;
+                SFXHolder.sH.button.Play();
 
                 this.gameObject.GetComponent<Image>().sprite = this.icons[0];
             }
@@ -175,11 +186,13 @@ public class HeroAbilityButtons : MonoBehaviour, IPointerDownHandler, IPointerUp
                     {
                         if (tempValue == 0 || tempValue == 1 || tempValue == 2 || tempValue == 3)
                         {
+                            SFXHolder.sH.button.Play();
                             GameManager.gm.heroesInGame[i].GetComponent<HeroOne>().hb.plrStrength++;
                             GameManager.gm.attackForce = GameManager.gm.heroesInGame[i].GetComponent<HeroOne>().hb.plrStrength;
                         }
                         if (tempValue == 4)
                         {
+                            SFXHolder.sH.button.Play();
                             GameManager.gm.heroesInGame[i].GetComponent<HeroOne>().hb.plrStrength = 1;
                             GameManager.gm.attackForce = GameManager.gm.heroesInGame[i].GetComponent<HeroOne>().hb.plrStrength;
                         }
