@@ -29,7 +29,7 @@ public class EnemyButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
     {
         Debug.Log("BUTTON UP!");
 
-        if (GetComponent<EnemyOne>().eB.thisEnemyIsAttacking && GameManager.gm.enemyIsAttacking || GetComponent<EnemyOne>().eB.thisEnemyIsAttacking == false && GameManager.gm.enemyIsAttacking == false)
+        if (GetComponent<EnemyOne>().eB.thisEnemyIsAttacking && GameManager.gm.enemyIsAttacking || GetComponent<EnemyOne>().eB.thisEnemyIsAttacking == false && GameManager.gm.enemyIsAttacking == false && GameManager.gm.villagerSelected == false)
             {
                 if (this.gameObject.CompareTag("Enemy") && GameManager.gm.plrCanAttack == false)
                 {
