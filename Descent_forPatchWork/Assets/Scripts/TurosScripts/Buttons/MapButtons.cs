@@ -36,6 +36,8 @@ public class MapButtons : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 
         if (this.gameObject.CompareTag("Map"))
         {
+            SavingSystem.savingSystem.LoadGame();
+
             SFXHolder.sH.button.Play();
 
             maps.mapsButton.SetActive(false);
