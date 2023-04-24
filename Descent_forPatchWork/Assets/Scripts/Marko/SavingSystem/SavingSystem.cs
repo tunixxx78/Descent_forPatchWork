@@ -225,6 +225,7 @@ public class SavingSystem : MonoBehaviour
     }
     public void LoadGame()
     {
+        string[] heroesData = new string[16]; //all hero data goes here
         string filePath = Application.persistentDataPath + "/save" + activeSaveSlot.ToString() + ".json";
         if (File.Exists(filePath))
         {
@@ -236,38 +237,67 @@ public class SavingSystem : MonoBehaviour
 
             //Load DataHolderin tilalle: Load napista vain otetaan slotin numero,
             //sitten Turoskenessä DataHolder lataa loput oikeasta slotista
-            DataHolder gData = FindObjectOfType<DataHolder>();
-            
+            //DataHolder gData = FindObjectOfType<DataHolder>();
+           
             GameSavedData sData = JsonUtility.FromJson<GameSavedData>(savedData);
             this.groupName = sData.savedGroupName;
             Debug.Log("LOADIN SCENENAME: " + sData.currentSceneName);
             this.activeScene = sData.currentSceneName;
             this.activeSaveSlot = sData.saveSlot;
+            
+            for (int i = 0; i < 4; i++)
+            {
+                DataHolder.dataHolder.SetData(i, sData.savedHeroes[i].heroName,
+                    sData.savedHeroes[i].maxHealth,
+                    sData.savedHeroes[i].strength,
+                    sData.savedHeroes[i].level);
+            }
 
-            gData.plrOneName =      sData.savedHeroes[0].heroName;
-            gData.plrOneHealth =    sData.savedHeroes[0].maxHealth;
-            gData.plrOneStrength =  sData.savedHeroes[0].strength;
-            gData.plrOneLevel =     sData.savedHeroes[0].level;
 
-            gData.plrTwoName =      sData.savedHeroes[1].heroName;
-            gData.plrTwoHealth =    sData.savedHeroes[1].maxHealth;
-            gData.plrTwoStrength =  sData.savedHeroes[1].strength;
-            gData.plrTwoLevel =     sData.savedHeroes[1].level;
+            //heroesData[0] = sData.savedHeroes[0].heroName;
+            //heroesData[1] = sData.savedHeroes[0].maxHealth.ToString();
+            //heroesData[2] = sData.savedHeroes[0].strength.ToString();
+            //heroesData[3] = sData.savedHeroes[0].level.ToString();
 
-            gData.plrThreeName =    sData.savedHeroes[2].heroName;
-            gData.plrThreeHealth =  sData.savedHeroes[2].maxHealth;
-            gData.plrThreeStrength = sData.savedHeroes[2].strength;
-            gData.plrThreeLevel =   sData.savedHeroes[2].level;
+            //heroesData[4] = sData.savedHeroes[1].heroName;
+            //heroesData[5] = sData.savedHeroes[1].maxHealth.ToString();
+            //heroesData[6] = sData.savedHeroes[1].strength.ToString();
+            //heroesData[7] = sData.savedHeroes[1].level.ToString();
 
-            gData.plrFourName =     sData.savedHeroes[3].heroName;
-            gData.plrFourHealth =   sData.savedHeroes[3].maxHealth;
-            gData.plrFourStrength = sData.savedHeroes[3].strength;
-            gData.plrFourLevel =    sData.savedHeroes[3].level;
+            //heroesData[8] = sData.savedHeroes[2].heroName;
+            //heroesData[9] = sData.savedHeroes[2].maxHealth.ToString();
+            //heroesData[10] = sData.savedHeroes[2].strength.ToString();
+            //heroesData[11] = sData.savedHeroes[2].level.ToString();
+
+            //heroesData[12] = sData.savedHeroes[3].heroName;
+            //heroesData[13] = sData.savedHeroes[3].maxHealth.ToString();
+            //heroesData[14] = sData.savedHeroes[3].strength.ToString();
+            //heroesData[15] = sData.savedHeroes[3].level.ToString();
+
+            //DataHolder.dataHolder.plrOneName = sData.savedHeroes[0].heroName;
+            //DataHolder.dataHolder = float.Parse(sData.savedHeroes[0].maxHealth);
+            //DataHolder.dataHolder = sData.savedHeroes[0].strength;
+            //DataHolder.dataHolder = sData.savedHeroes[0].level;
+
+            //DataHolder.dataHolder = sData.savedHeroes[1].heroName;
+            //DataHolder.dataHolder = sData.savedHeroes[1].strength;
+            //DataHolder.dataHolder = sData.savedHeroes[1].level;
+
+            //DataHolder.dataHolder = sData.savedHeroes[2].heroName;
+            //DataHolder.dataHolder = sData.savedHeroes[2].maxHealth;
+            //DataHolder.dataHolder = sData.savedHeroes[2].strength;
+            //DataHolder.dataHolder = sData.savedHeroes[2].level;
+
+            //DataHolder.dataHolder = sData.savedHeroes[3].heroName;
+            //DataHolder.dataHolder = sData.savedHeroes[3].maxHealth;
+            //DataHolder.dataHolder = sData.savedHeroes[3].strength;
+            //DataHolder.dataHolder = sData.savedHeroes[3].level;
 
             //NoItemLists yet..
             //prolly need to search by stringnames on some other databank and add then..
 
         }
+        //return heroesData; //return heroesData-string-array
     }
     //TODO LATAUS JOTENKIN
         public void OldLoadGame() //
