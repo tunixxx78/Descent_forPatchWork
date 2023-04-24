@@ -119,29 +119,7 @@ public class SavingSystem : MonoBehaviour
         File.WriteAllText(filePath, saveableData);
     }
 
-    //public void SaveGame3(HeroBase[] heroes)
-    //{
-    //    //just gets the serializable HeroBase-heroes in array and saves them?
-    //    string sHeroes = JsonUtility.ToJson(heroes, true);
-    //    string filePath = Application.persistentDataPath + "/save" + activeSaveSlot.ToString() + ".json";
-    //    Debug.Log("saving to: " + filePath);
-
-    //    File.WriteAllText(filePath, sHeroes);
-    //}
-
-    //public void SaveGame(string[] saveableHeroes, float[] health)
-    //{
-    //    //T?H?N pelinaikainen tallennus
-    //    GameSavedData gameSessionData = new GameSavedData();
-        
-    //    for(int i = 0; i < saveableHeroes.Length; i++)
-    //    {
-    //        gameSessionData.savedHeroes[i].heroName = saveableHeroes[i];
-    //        gameSessionData.savedHeroes[i].maxHealth = (int)health[i];
-    //        //TESTATTAVA TOIMIIKO
-    //        //seivioperaatio loppuun asti
-    //    }
-    //}
+    
     public void SaveStartPhase()
     {
         GameSavedData gameSessionData = new GameSavedData();
@@ -231,17 +209,10 @@ public class SavingSystem : MonoBehaviour
         {
 
             string savedData = File.ReadAllText(filePath);
-
-            //creates a DataHolderclass, takes heroes' data from GameSavedData from saveslot
-            //tranfers data to corresponding heroes from savedheroes-list.
-
-            //Load DataHolderin tilalle: Load napista vain otetaan slotin numero,
-            //sitten Turoskenessä DataHolder lataa loput oikeasta slotista
-            //DataHolder gData = FindObjectOfType<DataHolder>();
            
             GameSavedData sData = JsonUtility.FromJson<GameSavedData>(savedData);
             this.groupName = sData.savedGroupName;
-            Debug.Log("LOADIN SCENENAME: " + sData.currentSceneName);
+            Debug.Log("LOADING SCENENAME: " + sData.currentSceneName);
             this.activeScene = sData.currentSceneName;
             this.activeSaveSlot = sData.saveSlot;
             
@@ -253,53 +224,13 @@ public class SavingSystem : MonoBehaviour
                     sData.savedHeroes[i].level);
             }
 
-
-            //heroesData[0] = sData.savedHeroes[0].heroName;
-            //heroesData[1] = sData.savedHeroes[0].maxHealth.ToString();
-            //heroesData[2] = sData.savedHeroes[0].strength.ToString();
-            //heroesData[3] = sData.savedHeroes[0].level.ToString();
-
-            //heroesData[4] = sData.savedHeroes[1].heroName;
-            //heroesData[5] = sData.savedHeroes[1].maxHealth.ToString();
-            //heroesData[6] = sData.savedHeroes[1].strength.ToString();
-            //heroesData[7] = sData.savedHeroes[1].level.ToString();
-
-            //heroesData[8] = sData.savedHeroes[2].heroName;
-            //heroesData[9] = sData.savedHeroes[2].maxHealth.ToString();
-            //heroesData[10] = sData.savedHeroes[2].strength.ToString();
-            //heroesData[11] = sData.savedHeroes[2].level.ToString();
-
-            //heroesData[12] = sData.savedHeroes[3].heroName;
-            //heroesData[13] = sData.savedHeroes[3].maxHealth.ToString();
-            //heroesData[14] = sData.savedHeroes[3].strength.ToString();
-            //heroesData[15] = sData.savedHeroes[3].level.ToString();
-
-            //DataHolder.dataHolder.plrOneName = sData.savedHeroes[0].heroName;
-            //DataHolder.dataHolder = float.Parse(sData.savedHeroes[0].maxHealth);
-            //DataHolder.dataHolder = sData.savedHeroes[0].strength;
-            //DataHolder.dataHolder = sData.savedHeroes[0].level;
-
-            //DataHolder.dataHolder = sData.savedHeroes[1].heroName;
-            //DataHolder.dataHolder = sData.savedHeroes[1].strength;
-            //DataHolder.dataHolder = sData.savedHeroes[1].level;
-
-            //DataHolder.dataHolder = sData.savedHeroes[2].heroName;
-            //DataHolder.dataHolder = sData.savedHeroes[2].maxHealth;
-            //DataHolder.dataHolder = sData.savedHeroes[2].strength;
-            //DataHolder.dataHolder = sData.savedHeroes[2].level;
-
-            //DataHolder.dataHolder = sData.savedHeroes[3].heroName;
-            //DataHolder.dataHolder = sData.savedHeroes[3].maxHealth;
-            //DataHolder.dataHolder = sData.savedHeroes[3].strength;
-            //DataHolder.dataHolder = sData.savedHeroes[3].level;
-
             //NoItemLists yet..
             //prolly need to search by stringnames on some other databank and add then..
 
         }
-        //return heroesData; //return heroesData-string-array
+        
     }
-    //TODO LATAUS JOTENKIN
+    
         public void OldLoadGame() //
         //gamesessiondata.saveheroes[indeksi]
         {
