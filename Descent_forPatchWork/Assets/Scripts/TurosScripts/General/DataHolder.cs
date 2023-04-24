@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class DataHolder : MonoBehaviour
@@ -68,6 +69,13 @@ public class DataHolder : MonoBehaviour
 
         DontDestroyOnLoad(this.gameObject);
     }
+
+    private void Start()
+    {
+        //marko testing load-game method:
+        SavingSystem.savingSystem.LoadGame();
+    }
+    
 
     public void SetData(int plrIndex, string name, float health, float strength, int level)
     {
