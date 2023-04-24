@@ -24,6 +24,7 @@ TagManager:
   - CardViewButton
   - Villager
   - AbilityButton
+  - MainMenu
   layers:
   - Default
   - TransparentFX

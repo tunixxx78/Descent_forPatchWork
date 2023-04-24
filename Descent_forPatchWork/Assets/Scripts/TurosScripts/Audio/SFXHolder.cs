@@ -25,4 +25,12 @@ public class SFXHolder : MonoBehaviour
 
         DontDestroyOnLoad(this.gameObject);
     }
+
+    public void SetVolume(float volume)
+    {
+        button.volume = volume;
+        sword.volume = volume;
+        arrow.volume = volume;
+        PlayerPrefs.SetFloat("SFXVolume", volume);
+    }
 }

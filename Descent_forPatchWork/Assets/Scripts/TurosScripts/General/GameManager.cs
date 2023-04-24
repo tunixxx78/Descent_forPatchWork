@@ -79,11 +79,6 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            Application.Quit();
-        }
-
         if(enemysInGame.Count <= 0 && battleIsOn && bossIsSpawned == false)
         {
             characterHolder = GameObject.Find("CharacterHolder");

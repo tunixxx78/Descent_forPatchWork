@@ -27,7 +27,7 @@ public class MusicHolder : MonoBehaviour
 
         DontDestroyOnLoad(this.gameObject);
 
-        music = GameObject.Find("Music").GetComponent<AudioSource>();
+        music = GetComponent<AudioSource>();
         currentVolume = 0;
     }
 
@@ -83,5 +83,12 @@ public class MusicHolder : MonoBehaviour
     public void MusicOff(int musicIndex)
     {
         StartCoroutine(FadeMusicOff(musicIndex));
+    }
+
+    public void SetVolume(float volume)
+    {
+        music.volume = volume;
+        currentVolume = volume;
+        PlayerPrefs.SetFloat("MusicVolume", volume);
     }
 }
