@@ -1,0 +1,10 @@
+diff a/Descent_forPatchWork/Assets/Scripts/TurosScripts/Buttons/MapButtons.cs b/Descent_forPatchWork/Assets/Scripts/TurosScripts/Buttons/MapButtons.cs	(rejected hunks)
+@@ -36,6 +36,8 @@
+ 
+         if (this.gameObject.CompareTag("Map"))
+         {
++            SavingSystem.savingSystem.LoadGame();
++
+             SFXHolder.sH.button.Play();
+ 
+             maps.mapsButton.SetActive(false);
