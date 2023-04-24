@@ -40,6 +40,7 @@ public class SelectHeroButton : MonoBehaviour
         else
         {
              image.color = unselectedColor;
+            SavingSystem.savingSystem.selectedHeroes.Remove(hero.heroNumber);
         }
     }
 

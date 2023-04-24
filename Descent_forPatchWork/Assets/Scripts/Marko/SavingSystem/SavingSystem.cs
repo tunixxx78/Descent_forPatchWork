@@ -100,6 +100,7 @@ public class SavingSystem : MonoBehaviour
         sData.saveSlot = this.activeSaveSlot;
         sData.currentSceneName = activeScene;
         sData.savedGroupName = groupName;
+        sData.heroNumbers = selectedHeroes;
         //loops each and saves to corresponding hero
         for (int i = 0; i < 4; i++)
         {
@@ -218,6 +219,7 @@ public class SavingSystem : MonoBehaviour
             string savedData = File.ReadAllText(filePath);
             GameSavedData sData = JsonUtility.FromJson<GameSavedData>(savedData);
             this.activeScene = sData.currentSceneName;
+            selectedHeroes = sData.heroNumbers;
 
         }
     }
