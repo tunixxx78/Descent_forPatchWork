@@ -41,10 +41,32 @@ public class EnemyOne : MonoBehaviour
 
         if (eB.enemyHealth <= 0)
         {
-            GameManager.gm.enemysInGame.Remove(this.gameObject);
-            GameManager.gm.enemyHordHealth -= this.eB.enemyHealth;
-            GameManager.gm.enemyHordStrenght -= this.eB.enemyStrength;
-            Destroy(this.gameObject);
+            if(eB.enemyType == 1)
+            {
+                GameManager.gm.enemysInGame.Remove(this.gameObject);
+                GameManager.gm.enemyHordHealth -= this.eB.enemyHealth;
+                GameManager.gm.enemyHordStrenght -= this.eB.enemyStrength;
+                Destroy(this.gameObject);
+            }
+
+            if(eB.enemyType == 2)
+            {
+                GameManager.gm.enemyBossesInGame.Remove(this.gameObject);
+                Destroy(this.gameObject);
+            }
+            
+        }
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Enemy") && eB.enemyType == 1)
+        {
+            this.gameObject.transform.SetParent(GameObject.Find("TempHolder").transform);
+
+            Debug.Log("SISÄLLÄ ENEMYJEN MERGEEMISESSÄ");
+
+            GameManager.gm.mergeHorde = true;
+            
         }
     }
 }

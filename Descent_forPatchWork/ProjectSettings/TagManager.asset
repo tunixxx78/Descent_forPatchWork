@@ -22,6 +22,8 @@ TagManager:
   - DiceMenu
   - DiceMenuButton
   - CardViewButton
+  - Villager
+  - AbilityButton
   layers:
   - Default
   - TransparentFX

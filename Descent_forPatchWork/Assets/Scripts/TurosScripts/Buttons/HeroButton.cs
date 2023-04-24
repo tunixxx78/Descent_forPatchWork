@@ -29,7 +29,7 @@ public class HeroButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandler,
     {
         Debug.Log("BUTTON UP!");
 
-        if(GetComponent<HeroOne>().hb.thisHeroIsAttacking && GameManager.gm.plrIsAttacking || GetComponent<HeroOne>().hb.thisHeroIsAttacking == false && GameManager.gm.plrIsAttacking == false)
+        if(GetComponent<HeroOne>().hb.thisHeroIsAttacking && GameManager.gm.plrIsAttacking || GetComponent<HeroOne>().hb.thisHeroIsAttacking == false && GameManager.gm.plrIsAttacking == false && GameManager.gm.villagerSelected == false)
         {
             if (this.gameObject.CompareTag("Hero") && GameManager.gm.enemyCanAttack == false)
             {

@@ -135,6 +135,7 @@ public class MapButtons : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 
         if (this.gameObject.CompareTag("BackMapButton"))
         {
+            GameManager.gm.SetupForNextRound();
             SFXHolder.sH.button.Play();
 
             MusicHolder.mH.MusicOff(0);
@@ -166,12 +167,19 @@ public class MapButtons : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 
             //Moves saved data to savingSystem
             DataHolder.dataHolder.TakeCareOfSaving();
-            
-            for (int j = 0; j <= 3; j++)
+
+            // Moves collected loot to inventoryHolder
+
+            int moveIndex = GameObject.Find("CollectedLootPanel").transform.childCount;
+
+            for (int j = 0; j < moveIndex; j++)
             {
+                Debug.Log("Collected Loot folder child count is: " + GameObject.Find("CollectedLootPanel").transform.childCount);
+
                 GameObject lootInst = GameObject.Find("CollectedLootPanel").transform.GetChild(0).gameObject;
-                Debug.Log(lootInst);
                 lootInst.transform.SetParent(GameObject.Find("InventoryHolder").transform);
+
+                Debug.Log("Round: " + j + " fo moving loot items");
             }
             
 
@@ -248,6 +256,8 @@ public class MapButtons : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
             }
 
 
+
+            GameObject.Find("Canvas").transform.GetChild(0).GetComponent<Image>().sprite = GameManager.gm.BGImages[0];
 
         }
 
