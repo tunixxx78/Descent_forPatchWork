@@ -203,7 +203,6 @@ public class SavingSystem : MonoBehaviour
     }
     public void LoadGame()
     {
-        string[] heroesData = new string[16]; //all hero data goes here
         string filePath = Application.persistentDataPath + "/save" + activeSaveSlot.ToString() + ".json";
         if (File.Exists(filePath))
         {
