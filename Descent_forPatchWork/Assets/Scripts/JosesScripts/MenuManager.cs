@@ -1,5 +1,8 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
+using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.UI;
@@ -9,6 +12,7 @@ public class MenuManager : MonoBehaviour
     public static MenuManager mG;
     public Slider master, music, sfx;
     public Toggle mute;
+    [SerializeField] TMP_Text masterValue, musicValue, sfxValue;
     private void Awake()
     {
 
@@ -32,18 +36,22 @@ public class MenuManager : MonoBehaviour
         {
             SetMasterVolume(PlayerPrefs.GetFloat("MasterVolume"));
             master.value = PlayerPrefs.GetFloat("MasterVolume");
+            masterValue.text = Math.Round(master.value, 2).ToString();
         }
         if (PlayerPrefs.HasKey("MusicVolume"))
         {
             //SetMusicVolume(PlayerPrefs.GetFloat("MusicVolume"));
             music.value = PlayerPrefs.GetFloat("MusicVolume");
-            MusicHolder.mH.SetWantedVolume(music.value); 
+            MusicHolder.mH.SetWantedVolume(music.value);
+            musicValue.text = Math.Round(music.value, 2).ToString();
 
         }
         if (PlayerPrefs.HasKey("SFXVolume"))
         {
             SetSFXVolume(PlayerPrefs.GetFloat("SFXVolume"));
             sfx.value = PlayerPrefs.GetFloat("SFXVolume");
+            sfxValue.text = Math.Round(sfx.value, 2).ToString();
+
         }
         if (PlayerPrefs.HasKey("Muted"))
         {
@@ -62,7 +70,6 @@ public class MenuManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            Debug.Log("ALO");
             this.transform.GetChild(0).gameObject.SetActive(!this.transform.GetChild(0).gameObject.activeInHierarchy);
         }
     }
@@ -79,20 +86,24 @@ public class MenuManager : MonoBehaviour
     {
         AudioListener.volume = volume;
         PlayerPrefs.SetFloat("MasterVolume", volume);
+        masterValue.text = Math.Round(volume, 2).ToString();
+        mute.isOn = false;
     }
     public void SetMusicVolume(float volume)
     {
         MusicHolder.mH.SetVolume(volume);
         PlayerPrefs.SetFloat("MusicVolume", volume);
+        musicValue.text = Math.Round(volume, 2).ToString();
     }
     public void SetSFXVolume(float volume)
     {
         SFXHolder.sH.SetVolume(volume);
         PlayerPrefs.SetFloat("SFXVolume", volume);
+        sfxValue.text = Math.Round(volume, 2).ToString();
     }
-    public void Mute(bool mute)
+    public void Mute(bool isMuted)
     {
-        if(mute == true)
+        if(isMuted == true)
         {
             PlayerPrefs.SetInt("Muted", 1);
             AudioListener.volume = 0;

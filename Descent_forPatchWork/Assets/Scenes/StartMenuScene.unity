@@ -11411,6 +11411,10 @@ MonoBehaviour:
   music: {fileID: 359367306}
   sfx: {fileID: 644419173}
   mute: {fileID: 1735935206}
+  unmute: {fileID: 0}
+  masterValue: {fileID: 1341320067}
+  musicValue: {fileID: 1408014917}
+  sfxValue: {fileID: 966021184}
 --- !u!224 &1894005431
 RectTransform:
   m_ObjectHideFlags: 0
