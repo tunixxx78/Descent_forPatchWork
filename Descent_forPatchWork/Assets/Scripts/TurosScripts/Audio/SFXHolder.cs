@@ -31,6 +31,5 @@ public class SFXHolder : MonoBehaviour
         button.volume = volume;
         sword.volume = volume;
         arrow.volume = volume;
-        PlayerPrefs.SetFloat("SFXVolume", volume);
     }
 }

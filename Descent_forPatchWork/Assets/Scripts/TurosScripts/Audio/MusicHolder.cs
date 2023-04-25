@@ -89,6 +89,9 @@ public class MusicHolder : MonoBehaviour
     {
         music.volume = volume;
         currentVolume = volume;
-        PlayerPrefs.SetFloat("MusicVolume", volume);
+    }
+    public void SetWantedVolume(float volume)
+    {
+        wantedVolume = volume;
     }
 }

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering;
 using UnityEngine.UI;
 
 public class MenuManager : MonoBehaviour
@@ -34,8 +35,10 @@ public class MenuManager : MonoBehaviour
         }
         if (PlayerPrefs.HasKey("MusicVolume"))
         {
-            SetMusicVolume(PlayerPrefs.GetFloat("MusicVolume"));
-            music.value = PlayerPrefs.GetFloat("MusicVolume");  
+            //SetMusicVolume(PlayerPrefs.GetFloat("MusicVolume"));
+            music.value = PlayerPrefs.GetFloat("MusicVolume");
+            MusicHolder.mH.SetWantedVolume(music.value); 
+
         }
         if (PlayerPrefs.HasKey("SFXVolume"))
         {
@@ -55,7 +58,6 @@ public class MenuManager : MonoBehaviour
         }
     
     }
-
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
@@ -81,10 +83,12 @@ public class MenuManager : MonoBehaviour
     public void SetMusicVolume(float volume)
     {
         MusicHolder.mH.SetVolume(volume);
+        PlayerPrefs.SetFloat("MusicVolume", volume);
     }
     public void SetSFXVolume(float volume)
     {
         SFXHolder.sH.SetVolume(volume);
+        PlayerPrefs.SetFloat("SFXVolume", volume);
     }
     public void Mute(bool mute)
     {
