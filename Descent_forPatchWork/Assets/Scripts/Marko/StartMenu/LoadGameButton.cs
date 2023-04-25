@@ -49,9 +49,14 @@ public class LoadGameButton : MonoBehaviour
         //jos on jo joku nimi(ei start new game) eli kohtaan on tallennettu jo peli
         if (buttonDisplayName != defaultEmpty)
         {
-            //loads save based on buttonId and changes to proper scene
-            savingSystem.LoadGame(buttonId);
-            SceneManager.LoadScene(savingSystem.activeScene);
+            //loads save based on buttonId and changes to proper scene(not used here)
+            //savingSystem.LoadGame(buttonId);
+
+            //This just sets the propper Button ID/saveslot number 
+            //so Dataholder whichever knows which slot to load
+            savingSystem.LoadLoadingSettings(buttonId);
+            //Go to next scene
+           SceneManager.LoadScene(savingSystem.activeScene);
         }
         //tehd??n uusi peli
         else
