@@ -177,7 +177,7 @@ public class SavingSystem : MonoBehaviour
         }
 
         string saveableData = JsonUtility.ToJson(gameSessionData,true);
-        string filePath = Application.persistentDataPath + "/save" + activeSaveSlot.ToString() + ".json";
+        string filePath = Path.Combine(Application.persistentDataPath,"save" + activeSaveSlot.ToString() +".json");
         Debug.Log("saving to: " + filePath);
 
         File.WriteAllText(filePath, saveableData);
@@ -186,35 +186,37 @@ public class SavingSystem : MonoBehaviour
 
 
     //Sets the activaSaveSlot to proper button Id,
-    //so DataHolder knows which save to load in next scene..
+    //so DataHolder gets proper slot
     public void LoadLoadingSettings(int buttonId)
     {
-        this.activeSaveSlot = buttonId;
+        activeSaveSlot = buttonId;
         //get and set the scene, which has to be loaded.
-        string filePath = Application.persistentDataPath + "/save" + activeSaveSlot.ToString() + ".json";
+        string filePath = Path.Combine(Application.persistentDataPath,"save" + activeSaveSlot.ToString() + ".json");
         if (File.Exists(filePath))
         {
             string savedData = File.ReadAllText(filePath);
             GameSavedData sData = JsonUtility.FromJson<GameSavedData>(savedData);
-            this.activeScene = sData.currentSceneName;
+            activeScene = sData.currentSceneName;
             selectedHeroes = sData.heroNumbers;
 
         }
     }
     public void LoadGame()
     {
-        string filePath = Application.persistentDataPath + "/save" + activeSaveSlot.ToString() + ".json";
+        string filePath = Path.Combine(Application.persistentDataPath, "save" + activeSaveSlot.ToString() + ".json");
         if (File.Exists(filePath))
         {
 
             string savedData = File.ReadAllText(filePath);
            
             GameSavedData sData = JsonUtility.FromJson<GameSavedData>(savedData);
-            this.groupName = sData.savedGroupName;
+            groupName = sData.savedGroupName;
             Debug.Log("LOADING SCENENAME: " + sData.currentSceneName);
-            this.activeScene = sData.currentSceneName;
-            this.activeSaveSlot = sData.saveSlot;
+            activeScene = sData.currentSceneName;
+            activeSaveSlot = sData.saveSlot;
             
+            //loop - load data for each hero,
+            //from sData-class' heroes-array, and set it with SetData-method
             for (int i = 0; i < 4; i++)
             {
                 DataHolder.dataHolder.SetData(i, sData.savedHeroes[i].heroName,
@@ -229,75 +231,10 @@ public class SavingSystem : MonoBehaviour
         }
         
     }
-    
-        public void OldLoadGame() //
-        //gamesessiondata.saveheroes[indeksi]
-        {
-            //TODO NEW universal savepath(for macs and pcs)
-            string filePath = Application.persistentDataPath + "/save" + activeSaveSlot.ToString() + ".json";
-            if (File.Exists(filePath))
-            {
-                        string savedData = File.ReadAllText(filePath);
-
-                        GameSavedData loadableData = JsonUtility.FromJson<GameSavedData>(savedData);
-                        this.groupName = loadableData.savedGroupName;
-                        this.activeScene = loadableData.currentSceneName;
-
-                //foreach (SavedHero sHero in loadableData.savedHeroes)
-                for (int i = 0; i < loadableData.savedHeroes.Length; i++)
-                {
-                    SavedHero sHero = loadableData.savedHeroes[i];
-                    if (sHero == null)
-                    {
-
-                        GameObject heroGameObject = new GameObject();
-
-                        heroGameObject.AddComponent<SelectableHero>();
-                        heroGameObject.AddComponent<MeshRenderer>();
-                        //TODO add all other components(material, meshrenderer ..) too? or not?
-
-
-                        SelectableHero hero = heroGameObject.GetComponent<SelectableHero>();
-                        hero.name = sHero.heroRole; //role shows in hierarchy if this works
-                        hero.heroName = sHero.heroName;
-                        hero.heroRole = sHero.heroRole;
-                        hero.currentHealth = sHero.currentHealth;
-                        hero.maxHealth = sHero.maxHealth;
-                        hero.currentActionPoints = sHero.currentActionPoints;
-                        hero.maxActionPoints = sHero.maxActionPoints;
-
-                        hero.plrStrength = sHero.strength;
-                        hero.plrShield = sHero.shield;
-                        hero.fate = sHero.fate;
-                        hero.exp = sHero.exp;
-                        hero.heroNumber = sHero.plrIndex;
-                        hero.maxCombatItems = sHero.maxCombatItems;
-                        hero.maxItems = sHero.maxItems;
-
-                        foreach (string sCombatCID in sHero.savedCombatItems)
-                        {
-                            //TODO search for CombatItem by ID..
-                        }
-                        foreach (string sJourneyCID in sHero.savedJourneyItems)
-                        {
-                            //TODO journeycard by id
-                        }
-                        foreach (string hiddenCID in sHero.savedHiddenItems)
-                        {
-                            //TODO hidden cards by id..
-                        }
-                        Debug.Log("kokeillaan lis?t? heroa");
-                        partyHeroes[i] = hero;
-                        Debug.Log("heroja on: " + partyHeroes.Length);
-                    }
-                }
-            }
-
-        }
-
+          
         public void LoadSaveNames()
         {
-        string filePath = Application.persistentDataPath + "/savedNames.json";
+        string filePath = Path.Combine(Application.persistentDataPath,"savedNames.json");
         if(File.Exists(filePath))
         {
             string savedNames = File.ReadAllText(filePath);
@@ -324,7 +261,7 @@ public class SavingSystem : MonoBehaviour
             data.save4 = saveSlots[4];
 
         string saveableNames = JsonUtility.ToJson(data,true);
-        string filePath = Application.persistentDataPath + "/savedNames.json";
+        string filePath = Path.Combine(Application.persistentDataPath,"savedNames.json");
         File.WriteAllText(filePath, saveableNames);
         }
 
