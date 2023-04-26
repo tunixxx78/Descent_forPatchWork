@@ -28,12 +28,15 @@ public class SavingSystem : MonoBehaviour
     //MAKING SINGLETON
     private void Awake()
     {
+        //if one is already, and it is not this 
         if(savingSystem != null && savingSystem != this)
         {
+            //destroy this one (keep the one already existing)
             Destroy(this);
         }
         else
         {
+            //make this one the singleton (no other earlier ones present)
             savingSystem = this;
             DontDestroyOnLoad(this);
         }
