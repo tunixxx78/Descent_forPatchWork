@@ -18,5 +18,6 @@ public class HeroBase
     public Sprite[] heroImages;
 
     public bool thisHeroIsAttacking;
+    public bool thisHeroIsTakingDamageOnActivation, thisHeroIsTakingDamageOnActivation2;
 
 }

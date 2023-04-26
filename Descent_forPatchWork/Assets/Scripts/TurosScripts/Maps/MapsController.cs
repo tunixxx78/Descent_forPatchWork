@@ -207,6 +207,7 @@ public class MapsController : MonoBehaviour
             if(enemyInstance.GetComponent<EnemyOne>().eB.enemyType == 1)
             {
                 GameManager.gm.enemyHordHealth += enemyInstance.GetComponent<EnemyOne>().eB.enemyHealth;
+                GameManager.gm.enemyHordStrenght += enemyInstance.GetComponent<EnemyOne>().eB.enemyStrength;
             }
             
             //GameManager.gm.enemyHordStrenght += enemyInstance.GetComponent<EnemyOne>().eB.enemyStrength;

@@ -207,9 +207,22 @@ public class StatsButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 
                 Destroy(parentObject);
             }
-        }
-        
 
+
+        }
+
+        if (this.gameObject.CompareTag("OnOff"))
+        {
+            if(this.gameObject.transform.GetChild(0).gameObject.activeSelf == true)
+            {
+                this.gameObject.transform.GetChild(0).gameObject.SetActive(false);
+            }
+            else
+            {
+                this.gameObject.transform.GetChild(0).gameObject.SetActive(true);
+            }
+            
+        }
     }
 
     public void OnPointerUp(PointerEventData eventData)
