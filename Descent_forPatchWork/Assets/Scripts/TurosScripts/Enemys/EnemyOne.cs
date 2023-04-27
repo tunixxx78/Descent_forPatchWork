@@ -19,7 +19,7 @@ public class EnemyOne : MonoBehaviour
         currentObject = this.gameObject;
 
         GameObject enemyStats = currentObject.transform.Find("EnemyStatsPanel").gameObject;
-        this.gameObject.transform.GetChild(0).GetComponent<TMP_Text>().text = eB.enemyHealth.ToString();
+        this.gameObject.transform.GetChild(1).GetComponent<TMP_Text>().text = eB.enemyHealth.ToString();
         //enemyStats.transform.GetChild(0).GetComponent<TMP_Text>().text = eB.enemyHealth.ToString();
         enemyStats.transform.GetChild(0).GetComponent<TMP_Text>().text = eB.enemyStrength.ToString();
         //enemyStats.transform.GetChild(2).GetComponent<TMP_Text>().text = eB.enemyLevel.ToString();
@@ -27,7 +27,7 @@ public class EnemyOne : MonoBehaviour
     private void Update()
     {
         GameObject enemyStats = currentObject.transform.Find("EnemyStatsPanel").gameObject;
-        this.gameObject.transform.GetChild(0).GetComponent<TMP_Text>().text = eB.enemyHealth.ToString();
+        this.gameObject.transform.GetChild(1).GetComponent<TMP_Text>().text = eB.enemyHealth.ToString();
         //enemyStats.transform.GetChild(0).GetComponent<TMP_Text>().text = eB.enemyHealth.ToString();
         enemyStats.transform.GetChild(0).GetComponent<TMP_Text>().text = eB.enemyStrength.ToString();
         //enemyStats.transform.GetChild(2).GetComponent<TMP_Text>().text = eB.enemyLevel.ToString();
