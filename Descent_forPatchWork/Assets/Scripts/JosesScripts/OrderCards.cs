@@ -32,7 +32,7 @@ public class OrderCards : MonoBehaviour
         ShowHandCards.onClick.AddListener(() => { SelectedCardType(ShowHandCards); });
         ShowFateCards.onClick.AddListener(() => { SelectedCardType(ShowFateCards); });
 
-        playerButtonDict.TryGetValue(playerCardButtons[0], out currentHeroCards);
+        playerButtonDict.TryGetValue(playerCardButtons[GameManager.gm.heroesInGame[0].GetComponent<HeroOne>().hb.plrIndex], out currentHeroCards);
         cardsShown = "HandCards";
 
         HandleCardPrinting();
@@ -43,7 +43,6 @@ public class OrderCards : MonoBehaviour
     {
         foreach (GameObject gameObject in GameManager.gm.heroesInGame)
         {
-            Debug.Log(gameObject.GetComponent<HeroOne>().hb.plrName);
             gameObject.GetComponent<HeroOne>().hc.skillCards.GetCards(gameObject.GetComponent<HeroOne>().hb.plrName, "Skillcards");
             gameObject.GetComponent<HeroOne>().hc.fateCards.GetCards(gameObject.GetComponent<HeroOne>().hb.plrName, "Fatecards");
         }
@@ -55,7 +54,7 @@ public class OrderCards : MonoBehaviour
         playerButtonDict.Clear();
         for (int i = 0; i < GameManager.gm.heroesInGame.Count; i++)
         {
-            Button button = playerCardButtons[i].GetComponent<Button>();
+            Button button = playerCardButtons[GameManager.gm.heroesInGame[i].GetComponent<HeroOne>().hb.plrIndex].GetComponent<Button>();
             button.onClick.AddListener(() => { SelectedPlayer(button); });
             button.gameObject.SetActive(true);
             playerButtonDict.Add(button, GameManager.gm.heroesInGame[i].GetComponent<HeroOne>().hc);
