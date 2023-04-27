@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class DiceGenerator : MonoBehaviour
 {
     public Button btn;
-    public int diceSize;
+    public int diceSize, diceResult;
     public TMP_Text diceResultText;
     public Sprite[] diceSprites;
     private Image image;
@@ -15,23 +15,25 @@ public class DiceGenerator : MonoBehaviour
     {
         image = GetComponent<Image>();
         btn = btn.GetComponent<Button>();
-        btn.onClick.AddListener(ThrowDice);
+        btn.onClick.AddListener(() => { StartCoroutine(AnimateRoll(10)); });
     }
     public void ThrowDice()
     {
-        int roll = Random.Range(0, diceSize);
         StartCoroutine(AnimateRoll(10));
-        image.sprite = diceSprites[roll];
     }
 
     IEnumerator AnimateRoll(int cycles)
     {
+        int roll = 0;
         for(int i = 0; i <= cycles; i++)
         {
-            image.sprite = diceSprites[Random.Range(0, diceSize)];
+            roll = Random.Range(1, diceSize);
+            image.sprite = diceSprites[roll];
             yield return new WaitForSeconds(0.2f);
             i++;
         }
+        diceResult = roll + 1;
+        image.sprite = diceSprites[roll];
         yield return null;
     }
 }

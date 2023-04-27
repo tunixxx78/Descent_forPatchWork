@@ -1,5 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
+using Unity.VisualScripting;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.TextCore.Text;
@@ -37,10 +39,7 @@ public class Deck : MonoBehaviour
     {
         Card[] allCards = Resources.LoadAll<Card>($"SOCards/{characterName}/{cardType}" );
         Cards.Clear();
-        foreach (Card card in allCards)
-        {
-            Cards.Add(card);
-        }
+        Cards = allCards.ToList();
     }
     public List<Card> GetCardList()
     {

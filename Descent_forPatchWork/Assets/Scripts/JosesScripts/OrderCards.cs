@@ -23,10 +23,6 @@ public class OrderCards : MonoBehaviour
     {
         InitializeCards();
         InitializeButtons();
-        
-        ShowAllCards = ShowAllCards.GetComponent<Button>();
-        ShowHandCards = ShowHandCards.GetComponent<Button>();
-        ShowFateCards = ShowFateCards.GetComponent<Button>();
 
         ShowAllCards.onClick.AddListener(() => { SelectedCardType(ShowAllCards); });
         ShowHandCards.onClick.AddListener(() => { SelectedCardType(ShowHandCards); });
