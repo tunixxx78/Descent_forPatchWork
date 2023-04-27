@@ -208,6 +208,42 @@ public class HeroAbilityButtons : MonoBehaviour, IPointerDownHandler, IPointerUp
 
             }
 
+            if (btnId == 6 && this.isClicked == true)
+            {
+                this.isClicked = false;
+                SFXHolder.sH.button.Play();
+
+                this.gameObject.GetComponent<Image>().sprite = this.icons[1];
+                GameManager.gm.heroesInGame[GameManager.gm.activePlayer].GetComponent<HeroOne>().hb.thisHeroIsTakingDamageOnActivation = true;
+
+            }
+            else if (btnId == 6 && this.isClicked == false)
+            {
+                this.isClicked = true;
+                SFXHolder.sH.button.Play();
+
+                this.gameObject.GetComponent<Image>().sprite = this.icons[0];
+                GameManager.gm.heroesInGame[GameManager.gm.activePlayer].GetComponent<HeroOne>().hb.thisHeroIsTakingDamageOnActivation = false;
+            }
+
+            if (btnId == 7 && this.isClicked == true)
+            {
+                this.isClicked = false;
+                SFXHolder.sH.button.Play();
+
+                this.gameObject.GetComponent<Image>().sprite = this.icons[1];
+                GameManager.gm.heroesInGame[GameManager.gm.activePlayer].GetComponent<HeroOne>().hb.thisHeroIsTakingDamageOnActivation2 = true;
+
+            }
+            else if (btnId == 7 && this.isClicked == false)
+            {
+                this.isClicked = true;
+                SFXHolder.sH.button.Play();
+
+                this.gameObject.GetComponent<Image>().sprite = this.icons[0];
+                GameManager.gm.heroesInGame[GameManager.gm.activePlayer].GetComponent<HeroOne>().hb.thisHeroIsTakingDamageOnActivation2 = false;
+            }
+
         }
     }
 }

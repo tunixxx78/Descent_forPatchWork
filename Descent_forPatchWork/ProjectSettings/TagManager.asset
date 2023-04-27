@@ -25,6 +25,8 @@ TagManager:
   - Villager
   - AbilityButton
   - MainMenu
+  - OnOff
+  - Loner
   layers:
   - Default
   - TransparentFX

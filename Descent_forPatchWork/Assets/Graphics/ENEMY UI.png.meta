@@ -1,0 +1,4920 @@
+fileFormatVersion: 2
+guid: 14bb280af82624a2a891d86e166ec182
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: ENEMY UI_0
+      rect:
+        serializedVersion: 2
+        x: 1368
+        y: 1004
+        width: 46
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2467a63dff32044959fc5d85075e6dda
+      internalID: -248585836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ENEMY UI_1
+      rect:
+        serializedVersion: 2
+        x: 1623
+        y: 1043
+        width: 62
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89902832e00874df08a76644810de532
+      internalID: -908888386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ENEMY UI_2
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 875
+        width: 143
+        height: 143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5698fe73ce36348c29d8ee5916fb9bd3
+      internalID: 1631215198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ENEMY UI_3
+      rect:
+        serializedVersion: 2
+        x: 317
+        y: 875
+        width: 144
+        height: 143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ba5d636174e2483dbd12f4dc3b8b079
+      internalID: 614907444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ENEMY UI_4
+      rect:
+        serializedVersion: 2
+        x: 551
+        y: 875
+        width: 144
+        height: 143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 970bb0bdff5d44fc68f2bb942e7d5d69
+      internalID: -972967194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ENEMY UI_5
+      rect:
+        serializedVersion: 2
+        x: 1482
+        y: 1013
+        width: 30
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f124f65481528430785afa999874769a
+      internalID: 1887217761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ENEMY UI_6
+      rect:
+        serializedVersion: 2
+        x: 1514
+        y: 1013
+        width: 11
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75822161f247e47ffbe9b57eefa3fe93
+      internalID: -1258988111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ENEMY UI_7
+      rect:
+        serializedVersion: 2
+        x: 1527
+        y: 1014
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f8c4905c02ee410997d28ed63119571
+      internalID: 1334114855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ENEMY UI_8
+      rect:
+        serializedVersion: 2
+        x: 1542
+        y: 1014
+        width: 15
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a48d099c1ecfd4ecaab58891182c7c95
+      internalID: 754380808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ENEMY UI_9
+      rect:
+        serializedVersion: 2
+        x: 1564
+        y: 1014
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18b5c5a09e25d467db0f515c7cca7426
+      internalID: 1837765970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ENEMY UI_10
+      rect:
+        serializedVersion: 2
+        x: 1579
+        y: 1014
+        width: 5
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45a0e72bf8ea84b9bad060db993b940d
+      internalID: -1996158067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ENEMY UI_11
+      rect:
+        serializedVersion: 2
+        x: 1587
+        y: 1013
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 642579db471384d86a738a823634f475
+      internalID: 838866791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ENEMY UI_12
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 1013
+        width: 11
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80c9aabe9e7c7420f96f7a0121b485fe
+      internalID: -2052013960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ENEMY UI_13
+      rect:
+        serializedVersion: 2
+        x: 1612
+        y: 1014
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b46184ff32efc47158955d17cb4ac2a1
+      internalID: -139915111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ENEMY UI_14
+      rect:
+        serializedVersion: 2
+        x: 1627
+        y: 1013
+        width: 15
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d7541c97a7754af9848702a8c386ce9
+      internalID: -1122458392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ENEMY UI_15
+      rect:
+        serializedVersion: 2
+        x: 1644
+        y: 1013
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3429cc6b012c46b2a635b6c2b5a4080
+      internalID: 404225178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ENEMY UI_16
+      rect:
+        serializedVersion: 2
+        x: 1657
+        y: 1014
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae0694eb4a24948f69536134c45d2e38
+      internalID: 1991231348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ENEMY UI_17
+      rect:
+        serializedVersion: 2
+        x: 1679
+        y: 1014
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0cda5a2fb056941599d11490e2aaaa1b
+      internalID: -1276266640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ENEMY UI_18
+      rect:
+        serializedVersion: 2
+        x: 1691
+        y: 1014
+        width: 15
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bdcd6f963124d4a358c21df03e99afa2
+      internalID: -1241961818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ENEMY UI_19
+      rect:
+        serializedVersion: 2
+        x: 1707
+        y: 1014
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5eabe4dca10147689f8eaa865523735
+      internalID: 1190530288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ENEMY UI_20
+      rect:
+        serializedVersion: 2
+        x: 1722
+        y: 1013
+        width: 16
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76a0d90210696488f8ced230df1541b2
+      internalID: 746730148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ENEMY UI_21
+      rect:
+        serializedVersion: 2
+        x: 1739
+        y: 1013
+        width: 25
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d53721069d7540ba83795f722d20005
+      internalID: 1620485846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ENEMY UI_22
+      rect:
+        serializedVersion: 2
+        x: 1764
+        y: 1013
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23505835167994eb6845bdc7d1564ba5
+      internalID: -1608388792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ENEMY UI_23
+      rect:
+        serializedVersion: 2
+        x: 1784
+        y: 1014
+        width: 13
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3b2f36403d2248e0927c1d8641b707b
+      internalID: -360381584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ENEMY UI_24
+      rect:
+        serializedVersion: 2
+        x: 1799
+        y: 1014
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48d78ae91b1d045158a3e6a1d34f7149
+      internalID: 1047818825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ENEMY UI_25
+      rect:
+        serializedVersion: 2
+        x: 1815
+        y: 1013
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 628ab36079ede4da0a0396761cceb3a5
+      internalID: 2085903872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ENEMY UI_26
+      rect:
+        serializedVersion: 2
+        x: 1525
+        y: 982
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3354f72c52f246a98365f7fe7134ef8
+      internalID: 1235648022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ENEMY UI_27
+      rect:
+        serializedVersion: 2
+        x: 1538
+        y: 981
+        width: 27
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a0484ec7e49c45999586a4156bb7b8e
+      internalID: 1966521879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ENEMY UI_28
+      rect:
+        serializedVersion: 2
+        x: 1565
+        y: 982
+        width: 15
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bebaccf381a9b45e793cdafd6382eedb
+      internalID: 773050714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ENEMY UI_29
+      rect:
+        serializedVersion: 2
+        x: 1581
+        y: 981
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e680a11ce78774f0394fe7b0aa7f1a1d
+      internalID: 2022166965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ENEMY UI_30
+      rect:
+        serializedVersion: 2
+        x: 1594
+        y: 982
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ab4bb3795acb45fa8fc1b3fdfa5796d
+      internalID: 485391117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ENEMY UI_31
+      rect:
+        serializedVersion: 2
+        x: 1616
+        y: 982
+        width: 19
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92d9bdc76564149dcb047ea60b607150
+      internalID: -1846308561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ENEMY UI_32
+      rect:
+        serializedVersion: 2
+        x: 1637
+        y: 982
+        width: 5
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc3a521f69fdb4dc197c57851c2a62eb
+      internalID: 1095005505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ENEMY UI_33
+      rect:
+        serializedVersion: 2
+        x: 1643
+        y: 982
+        width: 13
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11ea583feaa27496aaffe6d41d2d305e
+      internalID: 1806163976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ENEMY UI_34
+      rect:
+        serializedVersion: 2
+        x: 1658
+        y: 982
+        width: 13
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53da895a213494b83bd02054c1f15811
+      internalID: -1368596872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ENEMY UI_35
+      rect:
+        serializedVersion: 2
+        x: 1681
+        y: 981
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5aa31ab0204d64ddea9d5af1c79fe2bc
+      internalID: 1917765481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ENEMY UI_36
+      rect:
+        serializedVersion: 2
+        x: 1694
+        y: 981
+        width: 52
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16c40c91ab6d746aa98689b2edae3643
+      internalID: 1106165859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ENEMY UI_37
+      rect:
+        serializedVersion: 2
+        x: 1754
+        y: 982
+        width: 15
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bcf4ce959d98f41f1b2ae9b180ab901f
+      internalID: 231971179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ENEMY UI_38
+      rect:
+        serializedVersion: 2
+        x: 1771
+        y: 982
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e4daadbc663a4c41b18819bbb27c1d3
+      internalID: 1107917016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ENEMY UI_39
+      rect:
+        serializedVersion: 2
+        x: 876
+        y: 700
+        width: 247
+        height: 246
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d115f3c0407b74326b3fb597ca1ef044
+      internalID: 1782417935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ENEMY UI_40
+      rect:
+        serializedVersion: 2
+        x: 1368
+        y: 874
+        width: 46
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be115d22a12b94c578af1bb7bbd13fcb
+      internalID: 709471941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ENEMY UI_41
+      rect:
+        serializedVersion: 2
+        x: 1580
+        y: 906
+        width: 133
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f265d405a2354dd09e0f1975835420c
+      internalID: 1669295169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ENEMY UI_42
+      rect:
+        serializedVersion: 2
+        x: 1601
+        y: 909
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82d80286bc13f4f9a9db5361dbe38952
+      internalID: 1257978852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ENEMY UI_43
+      rect:
+        serializedVersion: 2
+        x: 1617
+        y: 910
+        width: 13
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90ccf530f5cd544b4b69604308b09722
+      internalID: 1744401310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ENEMY UI_44
+      rect:
+        serializedVersion: 2
+        x: 1632
+        y: 910
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81f04aeadc8474050a6fccd7a7837bab
+      internalID: -2055192857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ENEMY UI_45
+      rect:
+        serializedVersion: 2
+        x: 1646
+        y: 909
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76eb7369d2e1c4ac88c7d02ddb017c34
+      internalID: 543486371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ENEMY UI_46
+      rect:
+        serializedVersion: 2
+        x: 1660
+        y: 909
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e67eba135e9a41638e9dd65a2790571
+      internalID: 970857759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ENEMY UI_47
+      rect:
+        serializedVersion: 2
+        x: 1674
+        y: 910
+        width: 5
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 302642695be1f48e1a73dd3d0f276197
+      internalID: -355065153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ENEMY UI_48
+      rect:
+        serializedVersion: 2
+        x: 1681
+        y: 909
+        width: 15
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc8c43694a4f84fd5a29eb69965aaf7b
+      internalID: -893313552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ENEMY UI_49
+      rect:
+        serializedVersion: 2
+        x: 1698
+        y: 910
+        width: 13
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2ecf9af304414f98a45ae1d043f3c13
+      internalID: -2098542488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ENEMY UI_50
+      rect:
+        serializedVersion: 2
+        x: 1464
+        y: 877
+        width: 5
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ecf262851fb314ff78454ced07364407
+      internalID: 852642908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ENEMY UI_51
+      rect:
+        serializedVersion: 2
+        x: 1471
+        y: 877
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 463841550f4a745fe8097183e034b254
+      internalID: -559187876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ENEMY UI_52
+      rect:
+        serializedVersion: 2
+        x: 1486
+        y: 876
+        width: 26
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1dc5b15989684b108424e1c45560232
+      internalID: 373118515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ENEMY UI_53
+      rect:
+        serializedVersion: 2
+        x: 1513
+        y: 876
+        width: 26
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4490138ba0e9f4e1aa1a1b34d7a8a80a
+      internalID: 2089974817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ENEMY UI_54
+      rect:
+        serializedVersion: 2
+        x: 1541
+        y: 877
+        width: 13
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc5e922a39248406ba1f923ddefc76d1
+      internalID: -1144812746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ENEMY UI_55
+      rect:
+        serializedVersion: 2
+        x: 1563
+        y: 876
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 915443b0fa68e4ea7b84694181d1f165
+      internalID: -690351543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ENEMY UI_56
+      rect:
+        serializedVersion: 2
+        x: 1578
+        y: 877
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 282b3b28b86ca471d8901ff025da924e
+      internalID: -1763585598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ENEMY UI_57
+      rect:
+        serializedVersion: 2
+        x: 1598
+        y: 876
+        width: 9
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07bd02783e8044669b73f7e7c4742cc3
+      internalID: 517880826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ENEMY UI_58
+      rect:
+        serializedVersion: 2
+        x: 1609
+        y: 876
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6826bc72079fc4fc9abf18c68677893c
+      internalID: -1913628885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ENEMY UI_59
+      rect:
+        serializedVersion: 2
+        x: 1625
+        y: 877
+        width: 5
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3412af02d2864b53af8ae7b931528e3
+      internalID: 1354816965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ENEMY UI_60
+      rect:
+        serializedVersion: 2
+        x: 1632
+        y: 877
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 401a30f10dde048839e6d2d88be9f82a
+      internalID: -466050717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ENEMY UI_61
+      rect:
+        serializedVersion: 2
+        x: 1648
+        y: 877
+        width: 5
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f56a44993f07479da0c9119186dd53c
+      internalID: -1208484091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ENEMY UI_62
+      rect:
+        serializedVersion: 2
+        x: 1656
+        y: 877
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5fc18a498260d46f4b524eb682ec2eb5
+      internalID: 1644318165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ENEMY UI_63
+      rect:
+        serializedVersion: 2
+        x: 1671
+        y: 876
+        width: 16
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0b72d201e0254159adbd5284d6f782b
+      internalID: 525387650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ENEMY UI_64
+      rect:
+        serializedVersion: 2
+        x: 1695
+        y: 877
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cbf96d44bbf104dac9a7d6543a9b6840
+      internalID: -439704376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ENEMY UI_65
+      rect:
+        serializedVersion: 2
+        x: 1709
+        y: 877
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 864a8a252158a4e8c953731a8d72868d
+      internalID: 1975970926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ENEMY UI_66
+      rect:
+        serializedVersion: 2
+        x: 1725
+        y: 876
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7b48927a7863439488a1fc0e809cbdf
+      internalID: 51143731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ENEMY UI_67
+      rect:
+        serializedVersion: 2
+        x: 1746
+        y: 877
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4f90164760154d8386824dde60915b2
+      internalID: 1632529121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ENEMY UI_68
+      rect:
+        serializedVersion: 2
+        x: 1762
+        y: 876
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4848b0bab2d71492e99a057279044df5
+      internalID: 1448772286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ENEMY UI_69
+      rect:
+        serializedVersion: 2
+        x: 1778
+        y: 877
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c3bc10c98e9d43debe716bcc200dbea
+      internalID: -1176661157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ENEMY UI_70
+      rect:
+        serializedVersion: 2
+        x: 1794
+        y: 877
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99fc6c05c3b484362baac2ed12bb3e25
+      internalID: -287946614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ENEMY UI_71
+      rect:
+        serializedVersion: 2
+        x: 1809
+        y: 876
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c40b2f225cbb34739befd8fd59c0a266
+      internalID: 1677076185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ENEMY UI_72
+      rect:
+        serializedVersion: 2
+        x: 1823
+        y: 874
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d6575071d5de44ea8d8c68454426c35
+      internalID: 1320298907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ENEMY UI_73
+      rect:
+        serializedVersion: 2
+        x: 1466
+        y: 844
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f8469f24ed834696acff3abe95c4f15
+      internalID: 68752085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ENEMY UI_74
+      rect:
+        serializedVersion: 2
+        x: 1479
+        y: 844
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e844623b155894ba68aa25cf8bc653d3
+      internalID: -1253467103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ENEMY UI_75
+      rect:
+        serializedVersion: 2
+        x: 1495
+        y: 845
+        width: 13
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9f408f2d5d8d445e82c55160a0e0b3f
+      internalID: -1996140750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ENEMY UI_76
+      rect:
+        serializedVersion: 2
+        x: 1510
+        y: 844
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b99d3699800064d5ba3641d1bb260541
+      internalID: 1847100923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ENEMY UI_77
+      rect:
+        serializedVersion: 2
+        x: 1523
+        y: 844
+        width: 28
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fdc96b3a5696943408f2bae69baec766
+      internalID: 356917535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ENEMY UI_78
+      rect:
+        serializedVersion: 2
+        x: 1559
+        y: 845
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87d23a560370348dfb41591aea9027fb
+      internalID: 1227014245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ENEMY UI_79
+      rect:
+        serializedVersion: 2
+        x: 1575
+        y: 845
+        width: 5
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6c22b84c7c6346639b32db0b2cc9477
+      internalID: 1994177003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ENEMY UI_80
+      rect:
+        serializedVersion: 2
+        x: 1583
+        y: 844
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c374d263d9fe4b45a6d342e72afc469
+      internalID: 1995158413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ENEMY UI_81
+      rect:
+        serializedVersion: 2
+        x: 1602
+        y: 845
+        width: 19
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0c126f4871ac41418a2a9a412472cf9
+      internalID: -1041370717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ENEMY UI_82
+      rect:
+        serializedVersion: 2
+        x: 1622
+        y: 845
+        width: 15
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 103ef64933065434b8084b7102413d7b
+      internalID: 1584812009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ENEMY UI_83
+      rect:
+        serializedVersion: 2
+        x: 1639
+        y: 844
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3bb35ab2fcadd4156a651fdd22d96412
+      internalID: -1519256220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ENEMY UI_84
+      rect:
+        serializedVersion: 2
+        x: 1652
+        y: 845
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7cd8531897be486a9a3f3e35fc9db2b
+      internalID: 786318104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ENEMY UI_85
+      rect:
+        serializedVersion: 2
+        x: 1675
+        y: 845
+        width: 5
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c9142dc97da4473b914e03ebb34c5c9
+      internalID: 906403394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ENEMY UI_86
+      rect:
+        serializedVersion: 2
+        x: 1682
+        y: 845
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9714a59902ea49748d1cee9249f5c0d
+      internalID: -1378792999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ENEMY UI_87
+      rect:
+        serializedVersion: 2
+        x: 1704
+        y: 844
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3af46803f2004593a416302994d4877
+      internalID: -1566904162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ENEMY UI_88
+      rect:
+        serializedVersion: 2
+        x: 1717
+        y: 845
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98eedf91bb21f4219b4cc7409402dc62
+      internalID: 1057593418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ENEMY UI_89
+      rect:
+        serializedVersion: 2
+        x: 1732
+        y: 845
+        width: 17
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab1c873f4d5c84d45896fe4bcefc79a0
+      internalID: -1362820221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ENEMY UI_90
+      rect:
+        serializedVersion: 2
+        x: 1752
+        y: 844
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8038d598063e4bb5ab0ae388438801e
+      internalID: -1854832352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ENEMY UI_91
+      rect:
+        serializedVersion: 2
+        x: 1771
+        y: 845
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75a6fc0576d2242cfbffa379410a35dc
+      internalID: 847674835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ENEMY UI_92
+      rect:
+        serializedVersion: 2
+        x: 1786
+        y: 845
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41ee3e70cd8164390a35cdd298914f8d
+      internalID: -267196943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ENEMY UI_93
+      rect:
+        serializedVersion: 2
+        x: 1801
+        y: 844
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f06f738ebb05348a5a447b78ef2d9534
+      internalID: -779776665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ENEMY UI_94
+      rect:
+        serializedVersion: 2
+        x: 1814
+        y: 845
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 464deb1e3dde845378ebfa5f553aa2b3
+      internalID: 668141625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ENEMY UI_95
+      rect:
+        serializedVersion: 2
+        x: 1590
+        y: 787
+        width: 113
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8940036755b624c77951530069dcba77
+      internalID: -1308069616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ENEMY UI_96
+      rect:
+        serializedVersion: 2
+        x: 1613
+        y: 792
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0eabbcfb1672141b59dc675d26c0e717
+      internalID: -1990559910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ENEMY UI_97
+      rect:
+        serializedVersion: 2
+        x: 1628
+        y: 791
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 689f93b1a29be4643acae1856daf58b9
+      internalID: 319846813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ENEMY UI_98
+      rect:
+        serializedVersion: 2
+        x: 1641
+        y: 792
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ffb5acf62bb1f416fb9251522f185c71
+      internalID: -794491464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ENEMY UI_99
+      rect:
+        serializedVersion: 2
+        x: 1657
+        y: 792
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91e8d5fc44a7b41cda55377da5e27e7c
+      internalID: 298701178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ENEMY UI_100
+      rect:
+        serializedVersion: 2
+        x: 1672
+        y: 791
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b420b0a98da8c41b4be795942c881c4c
+      internalID: -187146671
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ENEMY UI_101
+      rect:
+        serializedVersion: 2
+        x: 1688
+        y: 792
+        width: 13
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a42b169a868c47378c9a735c63815b2
+      internalID: 597753892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ENEMY UI_102
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 638
+        width: 148
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48a668e8499a34cc7968d09bba958a4e
+      internalID: -45904160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ENEMY UI_103
+      rect:
+        serializedVersion: 2
+        x: 317
+        y: 638
+        width: 145
+        height: 147
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66adafcff56104764945b4e7f3d7722a
+      internalID: 522995242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ENEMY UI_104
+      rect:
+        serializedVersion: 2
+        x: 551
+        y: 638
+        width: 148
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a71e957a608164d59903bbf678cc3ca1
+      internalID: -1013445602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ENEMY UI_105
+      rect:
+        serializedVersion: 2
+        x: 1368
+        y: 745
+        width: 46
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25ba6971fea914dc597217e21423cf71
+      internalID: -279880891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ENEMY UI_106
+      rect:
+        serializedVersion: 2
+        x: 1537
+        y: 758
+        width: 6
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 759b5f3d302174c3c9fecc1456a09b75
+      internalID: -1513258207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ENEMY UI_107
+      rect:
+        serializedVersion: 2
+        x: 1546
+        y: 758
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84411529b8f5e4812aa4f35fb261c865
+      internalID: 1935224074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ENEMY UI_108
+      rect:
+        serializedVersion: 2
+        x: 1566
+        y: 758
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8f22892078c44e13bd15fb28a689d62
+      internalID: -224241237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ENEMY UI_109
+      rect:
+        serializedVersion: 2
+        x: 1588
+        y: 758
+        width: 17
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 976f89c5a988b476ca3d07d37d698ccf
+      internalID: -38023228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ENEMY UI_110
+      rect:
+        serializedVersion: 2
+        x: 1606
+        y: 757
+        width: 40
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 000a41f2f6fc24d64af58d60b2bc185c
+      internalID: 1374120560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ENEMY UI_111
+      rect:
+        serializedVersion: 2
+        x: 1655
+        y: 758
+        width: 5
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e09e268b4c6e442cb6ccf3bf0868b4c
+      internalID: -1598028682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ENEMY UI_112
+      rect:
+        serializedVersion: 2
+        x: 1661
+        y: 757
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4e3df757a77945c79a70339d69dd531
+      internalID: -1206410624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ENEMY UI_113
+      rect:
+        serializedVersion: 2
+        x: 1682
+        y: 758
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c67072b5aab143a1a4fbddddcf66901
+      internalID: -891843726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ENEMY UI_114
+      rect:
+        serializedVersion: 2
+        x: 1695
+        y: 757
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f5e15182153d4858a931e4f11d53e2d
+      internalID: 1383358084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ENEMY UI_115
+      rect:
+        serializedVersion: 2
+        x: 1711
+        y: 758
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0635e03fc390d4b4eb90efa3ab130401
+      internalID: -302161456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ENEMY UI_116
+      rect:
+        serializedVersion: 2
+        x: 1727
+        y: 758
+        width: 16
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 541bc0dfb706541888c661b2b81f54c1
+      internalID: 540615929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ENEMY UI_117
+      rect:
+        serializedVersion: 2
+        x: 1746
+        y: 757
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0924f856916dc445c9639d54c4403057
+      internalID: -1135688615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ENEMY UI_118
+      rect:
+        serializedVersion: 2
+        x: 1759
+        y: 758
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95be055aeec844ba6b3bb5aa2a9cfece
+      internalID: 672345895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ENEMY UI_119
+      rect:
+        serializedVersion: 2
+        x: 1619
+        y: 727
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b62d4e2b525774c3ca8319b26759c35a
+      internalID: -702317216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ENEMY UI_120
+      rect:
+        serializedVersion: 2
+        x: 1633
+        y: 725
+        width: 13
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f83d058f20dcf4019aaac60e067c0f11
+      internalID: -1316391692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ENEMY UI_121
+      rect:
+        serializedVersion: 2
+        x: 1654
+        y: 726
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fdac06cfdd08840c693c8b09e4028c26
+      internalID: 1661754606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ENEMY UI_122
+      rect:
+        serializedVersion: 2
+        x: 1668
+        y: 726
+        width: 13
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 291e9a95d03834cd09489ceea10ffbb9
+      internalID: 809649589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ENEMY UI_123
+      rect:
+        serializedVersion: 2
+        x: 1682
+        y: 726
+        width: 16
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8184b260bbc6c422fbad4f606ee2eeae
+      internalID: 1247939422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ENEMY UI_124
+      rect:
+        serializedVersion: 2
+        x: 1368
+        y: 616
+        width: 46
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abd90cf5b02424746840e35ac1d9799e
+      internalID: 1444569435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ENEMY UI_125
+      rect:
+        serializedVersion: 2
+        x: 1622
+        y: 653
+        width: 63
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a96de13ee6bd47e098a174b3d6a1216
+      internalID: -361130222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ENEMY UI_126
+      rect:
+        serializedVersion: 2
+        x: 1625
+        y: 658
+        width: 18
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e941de81f8b404ebaa27450725331de3
+      internalID: 841295489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ENEMY UI_127
+      rect:
+        serializedVersion: 2
+        x: 1661
+        y: 658
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f1fdd46dcd8543bb8a9e91745bb4acb
+      internalID: 2083998485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ENEMY UI_128
+      rect:
+        serializedVersion: 2
+        x: 1677
+        y: 657
+        width: 6
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc7638608cd2b4d01bc9800cc11bab7a
+      internalID: -2089881555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ENEMY UI_129
+      rect:
+        serializedVersion: 2
+        x: 1489
+        y: 621
+        width: 19
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5bed7de264a3546998fef8d9209b0e8f
+      internalID: -967857000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ENEMY UI_130
+      rect:
+        serializedVersion: 2
+        x: 1509
+        y: 620
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1fc48009be8434854ad3b98ccbf6929f
+      internalID: 277569806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ENEMY UI_131
+      rect:
+        serializedVersion: 2
+        x: 1522
+        y: 620
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2edbaacbbaa17425a822e86ea098722d
+      internalID: 814973985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ENEMY UI_132
+      rect:
+        serializedVersion: 2
+        x: 1542
+        y: 621
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e164ab9c553f8478fbcafa31f6e7ecf1
+      internalID: 85163655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ENEMY UI_133
+      rect:
+        serializedVersion: 2
+        x: 1556
+        y: 621
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af4552551fc7b42aeafa852c43a87666
+      internalID: -1885950975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ENEMY UI_134
+      rect:
+        serializedVersion: 2
+        x: 1572
+        y: 620
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f01b363a86d54b06b8bfab2d9137831
+      internalID: -1790633423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ENEMY UI_135
+      rect:
+        serializedVersion: 2
+        x: 1591
+        y: 621
+        width: 15
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf82afdd17dd145c69231e62eddb55a6
+      internalID: -627814883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ENEMY UI_136
+      rect:
+        serializedVersion: 2
+        x: 1607
+        y: 621
+        width: 5
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32076d39e54194b0faf4eb8a81d2128f
+      internalID: 556038778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ENEMY UI_137
+      rect:
+        serializedVersion: 2
+        x: 1614
+        y: 620
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a4b25efa05834fe78fcec6196659950
+      internalID: -589076837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ENEMY UI_138
+      rect:
+        serializedVersion: 2
+        x: 1627
+        y: 620
+        width: 26
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 731ab797740684f64a9ce811dfc891f7
+      internalID: -1479976155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ENEMY UI_139
+      rect:
+        serializedVersion: 2
+        x: 1654
+        y: 620
+        width: 16
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba06d832df28c4295975dfc02062e1d9
+      internalID: -1079259471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ENEMY UI_140
+      rect:
+        serializedVersion: 2
+        x: 1671
+        y: 620
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba01989b6972b49418e2f89aef053135
+      internalID: 1585180138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ENEMY UI_141
+      rect:
+        serializedVersion: 2
+        x: 1684
+        y: 620
+        width: 28
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91dc75249d433458f96412030feffef3
+      internalID: 699697703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ENEMY UI_142
+      rect:
+        serializedVersion: 2
+        x: 1721
+        y: 622
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 853058710fb714572a9ced1640819584
+      internalID: -1652335162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ENEMY UI_143
+      rect:
+        serializedVersion: 2
+        x: 1737
+        y: 621
+        width: 8
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38411fa966ea24135a276ae2f1b3a268
+      internalID: -1782230185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ENEMY UI_144
+      rect:
+        serializedVersion: 2
+        x: 1757
+        y: 621
+        width: 17
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d08569ad3773c46fb9925bd1d4154a0c
+      internalID: 1130202552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ENEMY UI_145
+      rect:
+        serializedVersion: 2
+        x: 1776
+        y: 620
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 957b08faddce040d2beb5efc9a5be9c8
+      internalID: 762228331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ENEMY UI_146
+      rect:
+        serializedVersion: 2
+        x: 1791
+        y: 621
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fdcec28249b3e454492ef9005f4aaf12
+      internalID: 1894133558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ENEMY UI_147
+      rect:
+        serializedVersion: 2
+        x: 1806
+        y: 620
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbdb385b17cb84d6694d8e5ab470a2a6
+      internalID: -12363413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ENEMY UI_148
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 339
+        width: 1220
+        height: 262
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9b6b41a8962a4ce3ad9d671084650f9
+      internalID: -1802455315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ENEMY UI_149
+      rect:
+        serializedVersion: 2
+        x: 1368
+        y: 487
+        width: 46
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3dc8cdc3c8d4a413097cd4095736a494
+      internalID: -173211818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ENEMY UI_150
+      rect:
+        serializedVersion: 2
+        x: 1591
+        y: 522
+        width: 111
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e1dce9b1f66a452dab61543763b730a
+      internalID: 1499860734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ENEMY UI_151
+      rect:
+        serializedVersion: 2
+        x: 1593
+        y: 527
+        width: 22
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbfdad852d70740d19f9cdd544a5b909
+      internalID: 1907684668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ENEMY UI_152
+      rect:
+        serializedVersion: 2
+        x: 1617
+        y: 527
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ffe65f6659dac448ca379489adecf413
+      internalID: 1934693568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ENEMY UI_153
+      rect:
+        serializedVersion: 2
+        x: 1633
+        y: 527
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c9e2a3a10d3245bb809841007fb253c
+      internalID: 1297052286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ENEMY UI_154
+      rect:
+        serializedVersion: 2
+        x: 1648
+        y: 527
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4eefca51969254ef5bd8f028ed5a900c
+      internalID: 1620295970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ENEMY UI_155
+      rect:
+        serializedVersion: 2
+        x: 1689
+        y: 526
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f434aaf25278845569a9dc18f79e54a1
+      internalID: -682075929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ENEMY UI_156
+      rect:
+        serializedVersion: 2
+        x: 1491
+        y: 491
+        width: 19
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2508f6f1524f041e88ef594429b285b9
+      internalID: 1707022685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ENEMY UI_157
+      rect:
+        serializedVersion: 2
+        x: 1511
+        y: 490
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 392c267b377064ae494505384fa77aed
+      internalID: -1873942188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ENEMY UI_158
+      rect:
+        serializedVersion: 2
+        x: 1524
+        y: 490
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6ba2708cff0a4868a190abe802a9b4c
+      internalID: 1235874304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ENEMY UI_159
+      rect:
+        serializedVersion: 2
+        x: 1543
+        y: 491
+        width: 13
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1295bde29e27540119361f2c37ed56b8
+      internalID: 1158469842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ENEMY UI_160
+      rect:
+        serializedVersion: 2
+        x: 1558
+        y: 491
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 837f9046c07ae48c49eadf07428e8d50
+      internalID: -1023869900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ENEMY UI_161
+      rect:
+        serializedVersion: 2
+        x: 1574
+        y: 490
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a00836e537fcf4d61bd1c9045b60753e
+      internalID: 942251049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ENEMY UI_162
+      rect:
+        serializedVersion: 2
+        x: 1593
+        y: 491
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6106ee5ea2adc48909461974f82e81ce
+      internalID: -331649493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ENEMY UI_163
+      rect:
+        serializedVersion: 2
+        x: 1609
+        y: 491
+        width: 5
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 072a9e1ae3095441384008b2b58e890b
+      internalID: -263948310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ENEMY UI_164
+      rect:
+        serializedVersion: 2
+        x: 1616
+        y: 490
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 993a0ab4740ae4c5485a7a1976c92405
+      internalID: 293319521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ENEMY UI_165
+      rect:
+        serializedVersion: 2
+        x: 1629
+        y: 490
+        width: 26
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b679e24537d27473ba251ab3b9821a30
+      internalID: -1576563072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ENEMY UI_166
+      rect:
+        serializedVersion: 2
+        x: 1656
+        y: 490
+        width: 16
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 706b1c1ce1ea347559fa4bcf3bdf6490
+      internalID: 990917303
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ENEMY UI_167
+      rect:
+        serializedVersion: 2
+        x: 1673
+        y: 490
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50f8c8780375f4628b3f613004820aeb
+      internalID: 950085761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ENEMY UI_168
+      rect:
+        serializedVersion: 2
+        x: 1686
+        y: 490
+        width: 28
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b0d6c7a7123645949c6dc401e79006a
+      internalID: 1410605395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ENEMY UI_169
+      rect:
+        serializedVersion: 2
+        x: 1723
+        y: 492
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60e661dbf934f436f93df8daa520cb4d
+      internalID: 1218417344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ENEMY UI_170
+      rect:
+        serializedVersion: 2
+        x: 1739
+        y: 491
+        width: 7
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad76e99f2bbc8440c9005cf3717cea93
+      internalID: 274380443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ENEMY UI_171
+      rect:
+        serializedVersion: 2
+        x: 1758
+        y: 491
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b411a120402c46d89a5f8948c2417b2
+      internalID: -1023862438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ENEMY UI_172
+      rect:
+        serializedVersion: 2
+        x: 1772
+        y: 491
+        width: 13
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78dd8cb0e7c49410aad9a8f610a0d4cd
+      internalID: 476006094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ENEMY UI_173
+      rect:
+        serializedVersion: 2
+        x: 1787
+        y: 491
+        width: 15
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3f85f9dfd0474524a2f40a8a9e637e1
+      internalID: -2054002281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ENEMY UI_174
+      rect:
+        serializedVersion: 2
+        x: 1620
+        y: 407
+        width: 67
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3f4862b33b3c4eedae71501ebb5a453
+      internalID: -253916675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ENEMY UI_175
+      rect:
+        serializedVersion: 2
+        x: 1623
+        y: 411
+        width: 22
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51cce47277b8046aab2506b9cca4bd35
+      internalID: -665062712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ENEMY UI_176
+      rect:
+        serializedVersion: 2
+        x: 1368
+        y: 356
+        width: 47
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41a0b87fafe6246b192a9ec3aff0b5ba
+      internalID: -1795686031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ENEMY UI_177
+      rect:
+        serializedVersion: 2
+        x: 1476
+        y: 375
+        width: 19
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c246b087f96eb412cb978d3d399678c2
+      internalID: -499698644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ENEMY UI_178
+      rect:
+        serializedVersion: 2
+        x: 1497
+        y: 374
+        width: 11
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86b66b0bb4aad446da36cccdfe259edd
+      internalID: -506957203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ENEMY UI_179
+      rect:
+        serializedVersion: 2
+        x: 1510
+        y: 374
+        width: 11
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f0948481b4ae458db85bf7edbe8f36e
+      internalID: 197927056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ENEMY UI_180
+      rect:
+        serializedVersion: 2
+        x: 1529
+        y: 375
+        width: 13
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9019aa8090aac4be1a996a5ec04b52e6
+      internalID: 301615109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ENEMY UI_181
+      rect:
+        serializedVersion: 2
+        x: 1543
+        y: 375
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cca54f3383e4645e98cafae3b2b97154
+      internalID: 279520594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ENEMY UI_182
+      rect:
+        serializedVersion: 2
+        x: 1559
+        y: 374
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf48d820c86454ff7b47e5b6f6bc5512
+      internalID: 874755791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ENEMY UI_183
+      rect:
+        serializedVersion: 2
+        x: 1579
+        y: 374
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5206e43f45c7349f0949e18a5a6eca91
+      internalID: 1075728904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ENEMY UI_184
+      rect:
+        serializedVersion: 2
+        x: 1592
+        y: 374
+        width: 15
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 168412ded967d4f68b2240560268d123
+      internalID: 691830472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ENEMY UI_185
+      rect:
+        serializedVersion: 2
+        x: 1608
+        y: 375
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d2bed330cbac483ab8c54db54a8b993
+      internalID: 1978338234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ENEMY UI_186
+      rect:
+        serializedVersion: 2
+        x: 1624
+        y: 374
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13514128d918d484f9299c495699a4a4
+      internalID: 622497430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ENEMY UI_187
+      rect:
+        serializedVersion: 2
+        x: 1637
+        y: 375
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03c4ad69d8436431d85dd76ff21af223
+      internalID: 1345708779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ENEMY UI_188
+      rect:
+        serializedVersion: 2
+        x: 1652
+        y: 374
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab7203d8f03c643c0ab7f9604bcc22a6
+      internalID: -671033071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ENEMY UI_189
+      rect:
+        serializedVersion: 2
+        x: 1671
+        y: 375
+        width: 20
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9879a7dd271d84bb28c36e4f6cd57801
+      internalID: -618697789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ENEMY UI_190
+      rect:
+        serializedVersion: 2
+        x: 1692
+        y: 375
+        width: 5
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 111e96618d8564f799373a1afa51dea8
+      internalID: 1525837143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ENEMY UI_191
+      rect:
+        serializedVersion: 2
+        x: 1700
+        y: 374
+        width: 11
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2699a657ab2843879407c5e5efe2293
+      internalID: -351138873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ENEMY UI_192
+      rect:
+        serializedVersion: 2
+        x: 1713
+        y: 374
+        width: 11
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b59b552d0620144a5a24466352524090
+      internalID: -925669765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ENEMY UI_193
+      rect:
+        serializedVersion: 2
+        x: 1732
+        y: 374
+        width: 9
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7fd595ee9bf545b5b49664daec4a350
+      internalID: -908839854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ENEMY UI_194
+      rect:
+        serializedVersion: 2
+        x: 1743
+        y: 374
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e6225062479541ea816bd3427c8f8b6
+      internalID: 428339751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ENEMY UI_195
+      rect:
+        serializedVersion: 2
+        x: 1759
+        y: 375
+        width: 5
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ae6a8b8f5e4a4d22a45d3284a91d1fb
+      internalID: 49805968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ENEMY UI_196
+      rect:
+        serializedVersion: 2
+        x: 1767
+        y: 375
+        width: 13
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c04bf554bc8d4b77a7777437a58cd51
+      internalID: -1508983320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ENEMY UI_197
+      rect:
+        serializedVersion: 2
+        x: 1788
+        y: 375
+        width: 13
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55567db23968047f8a2e7baffd58638b
+      internalID: 1063081109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ENEMY UI_198
+      rect:
+        serializedVersion: 2
+        x: 1803
+        y: 375
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c611f99f468d94e8aa66f49b82d619b1
+      internalID: -1128775614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ENEMY UI_199
+      rect:
+        serializedVersion: 2
+        x: 1819
+        y: 374
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a2e5fcc42b2244be9edaa34facf5c36
+      internalID: -464215027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ENEMY UI_200
+      rect:
+        serializedVersion: 2
+        x: 1564
+        y: 343
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 069e100ca1470499c95049b075bb4a33
+      internalID: -866855167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ENEMY UI_201
+      rect:
+        serializedVersion: 2
+        x: 1580
+        y: 342
+        width: 26
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 326fa95b2e2b543ca89d0ffd8d873a87
+      internalID: -409906889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ENEMY UI_202
+      rect:
+        serializedVersion: 2
+        x: 1607
+        y: 343
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7bb7e57f2fc694ad29e9d8405a70b543
+      internalID: 85450926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ENEMY UI_203
+      rect:
+        serializedVersion: 2
+        x: 1623
+        y: 342
+        width: 11
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc6fb952e6a094fd8bbf4519a574a8d3
+      internalID: -119275573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ENEMY UI_204
+      rect:
+        serializedVersion: 2
+        x: 1635
+        y: 342
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23737d3f9097548c8bd5d2fce4fa3d32
+      internalID: 1764276445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ENEMY UI_205
+      rect:
+        serializedVersion: 2
+        x: 1648
+        y: 343
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c142a97f086034b21ad3f821dab6f87b
+      internalID: -690055020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ENEMY UI_206
+      rect:
+        serializedVersion: 2
+        x: 1669
+        y: 343
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8019d0c2647df42be871db271a0df6b8
+      internalID: -2061873063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ENEMY UI_207
+      rect:
+        serializedVersion: 2
+        x: 1685
+        y: 342
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 145a2b91bf65944a0ab4f688cb01fb12
+      internalID: 352856890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ENEMY UI_208
+      rect:
+        serializedVersion: 2
+        x: 1701
+        y: 343
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8cf76ed6018f04d3ea7e1ca8696cb853
+      internalID: -269419416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ENEMY UI_209
+      rect:
+        serializedVersion: 2
+        x: 1717
+        y: 343
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7f037b8add174104a453f78a6c668c0
+      internalID: 1881805261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ENEMY UI_210
+      rect:
+        serializedVersion: 2
+        x: 1732
+        y: 342
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3390ff1b9afd44d57b63db224a5bd288
+      internalID: -415955719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ENEMY UI_211
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 42
+        width: 1218
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41164aa9bf9594a97bcaa0702b42b943
+      internalID: -193070266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ENEMY UI_212
+      rect:
+        serializedVersion: 2
+        x: 1523
+        y: 107
+        width: 136
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 720a95e8a61d148aebf6657184c5550c
+      internalID: -903266225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ENEMY UI_213
+      rect:
+        serializedVersion: 2
+        x: 1715
+        y: 166
+        width: 33
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4f79eea873ac44818d66b6168be9d4e
+      internalID: 1579691808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ENEMY UI_214
+      rect:
+        serializedVersion: 2
+        x: 1777
+        y: 173
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db7e030f7f5614e4183cbe3b5ef46b6b
+      internalID: -1343952690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ENEMY UI_215
+      rect:
+        serializedVersion: 2
+        x: 1790
+        y: 172
+        width: 24
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34790c700968b47c8a506e0a90c8d73f
+      internalID: 1685886798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ENEMY UI_216
+      rect:
+        serializedVersion: 2
+        x: 1843
+        y: 164
+        width: 34
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b63904a373eb342df8d686eaddb6642f
+      internalID: -1264307626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: b50a372c887954308b17a7c3cda9415f
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      ENEMY UI_23: -360381584
+      ENEMY UI_58: -1913628885
+      ENEMY UI_174: -253916675
+      ENEMY UI_164: 293319521
+      ENEMY UI_173: -2054002281
+      ENEMY UI_210: -415955719
+      ENEMY UI_175: -665062712
+      ENEMY UI_6: -1258988111
+      ENEMY UI_200: -866855167
+      ENEMY UI_17: -1276266640
+      ENEMY UI_135: -627814883
+      ENEMY UI_184: 691830472
+      ENEMY UI_35: 1917765481
+      ENEMY UI_185: 1978338234
+      ENEMY UI_64: -439704376
+      ENEMY UI_42: 1257978852
+      ENEMY UI_178: -506957203
+      ENEMY UI_55: -690351543
+      ENEMY UI_187: 1345708779
+      ENEMY UI_188: -671033071
+      ENEMY UI_212: -903266225
+      ENEMY UI_27: 1966521879
+      ENEMY UI_145: 762228331
+      ENEMY UI_31: -1846308561
+      ENEMY UI_139: -1079259471
+      ENEMY UI_216: -1264307626
+      ENEMY UI_34: -1368596872
+      ENEMY UI_134: -1790633423
+      ENEMY UI_87: -1566904162
+      ENEMY UI_172: 476006094
+      ENEMY UI_158: 1235874304
+      ENEMY UI_62: 1644318165
+      ENEMY UI_12: -2052013960
+      ENEMY UI_16: 1991231348
+      ENEMY UI_90: -1854832352
+      ENEMY UI_143: -1782230185
+      ENEMY UI_162: -331649493
+      ENEMY UI_70: -287946614
+      ENEMY UI_214: -1343952690
+      ENEMY UI_38: 1107917016
+      ENEMY UI_20: 746730148
+      ENEMY UI_155: -682075929
+      ENEMY UI_48: -893313552
+      ENEMY UI_21: 1620485846
+      ENEMY UI_59: 1354816965
+      ENEMY UI_104: -1013445602
+      ENEMY UI_85: 906403394
+      ENEMY UI_110: 1374120560
+      ENEMY UI_10: -1996158067
+      ENEMY UI_28: 773050714
+      ENEMY UI_140: 1585180138
+      ENEMY UI_107: 1935224074
+      ENEMY UI_46: 970857759
+      ENEMY UI_91: 847674835
+      ENEMY UI_65: 1975970926
+      ENEMY UI_179: 197927056
+      ENEMY UI_109: -38023228
+      ENEMY UI_197: 1063081109
+      ENEMY UI_203: -119275573
+      ENEMY UI_148: -1802455315
+      ENEMY UI_72: 1320298907
+      ENEMY UI_39: 1782417935
+      ENEMY UI_61: -1208484091
+      ENEMY UI_195: 49805968
+      ENEMY UI_80: 1995158413
+      ENEMY UI_14: -1122458392
+      ENEMY UI_60: -466050717
+      ENEMY UI_201: -409906889
+      ENEMY UI_152: 1934693568
+      ENEMY UI_26: 1235648022
+      ENEMY UI_24: 1047818825
+      ENEMY UI_96: -1990559910
+      ENEMY UI_149: -173211818
+      ENEMY UI_165: -1576563072
+      ENEMY UI_54: -1144812746
+      ENEMY UI_181: 279520594
+      ENEMY UI_208: -269419416
+      ENEMY UI_168: 1410605395
+      ENEMY UI_99: 298701178
+      ENEMY UI_133: -1885950975
+      ENEMY UI_52: 373118515
+      ENEMY UI_75: -1996140750
+      ENEMY UI_106: -1513258207
+      ENEMY UI_132: 85163655
+      ENEMY UI_117: -1135688615
+      ENEMY UI_127: 2083998485
+      ENEMY UI_33: 1806163976
+      ENEMY UI_92: -267196943
+      ENEMY UI_103: 522995242
+      ENEMY UI_95: -1308069616
+      ENEMY UI_137: -589076837
+      ENEMY UI_211: -193070266
+      ENEMY UI_160: -1023869900
+      ENEMY UI_43: 1744401310
+      ENEMY UI_166: 990917303
+      ENEMY UI_76: 1847100923
+      ENEMY UI_159: 1158469842
+      ENEMY UI_169: 1218417344
+      ENEMY UI_78: 1227014245
+      ENEMY UI_86: -1378792999
+      ENEMY UI_56: -1763585598
+      ENEMY UI_129: -967857000
+      ENEMY UI_88: 1057593418
+      ENEMY UI_176: -1795686031
+      ENEMY UI_77: 356917535
+      ENEMY UI_69: -1176661157
+      ENEMY UI_113: -891843726
+      ENEMY UI_209: 1881805261
+      ENEMY UI_180: 301615109
+      ENEMY UI_9: 1837765970
+      ENEMY UI_94: 668141625
+      ENEMY UI_51: -559187876
+      ENEMY UI_151: 1907684668
+      ENEMY UI_83: -1519256220
+      ENEMY UI_156: 1707022685
+      ENEMY UI_3: 614907444
+      ENEMY UI_141: 699697703
+      ENEMY UI_198: -1128775614
+      ENEMY UI_205: -690055020
+      ENEMY UI_189: -618697789
+      ENEMY UI_199: -464215027
+      ENEMY UI_53: 2089974817
+      ENEMY UI_29: 2022166965
+      ENEMY UI_119: -702317216
+      ENEMY UI_0: -248585836
+      ENEMY UI_118: 672345895
+      ENEMY UI_30: 485391117
+      ENEMY UI_13: -139915111
+      ENEMY UI_84: 786318104
+      ENEMY UI_191: -351138873
+      ENEMY UI_18: -1241961818
+      ENEMY UI_138: -1479976155
+      ENEMY UI_206: -2061873063
+      ENEMY UI_47: -355065153
+      ENEMY UI_101: 597753892
+      ENEMY UI_108: -224241237
+      ENEMY UI_183: 1075728904
+      ENEMY UI_40: 709471941
+      ENEMY UI_89: -1362820221
+      ENEMY UI_81: -1041370717
+      ENEMY UI_22: -1608388792
+      ENEMY UI_130: 277569806
+      ENEMY UI_128: -2089881555
+      ENEMY UI_131: 814973985
+      ENEMY UI_192: -925669765
+      ENEMY UI_186: 622497430
+      ENEMY UI_171: -1023862438
+      ENEMY UI_93: -779776665
+      ENEMY UI_11: 838866791
+      ENEMY UI_115: -302161456
+      ENEMY UI_120: -1316391692
+      ENEMY UI_114: 1383358084
+      ENEMY UI_190: 1525837143
+      ENEMY UI_147: -12363413
+      ENEMY UI_2: 1631215198
+      ENEMY UI_67: 1632529121
+      ENEMY UI_170: 274380443
+      ENEMY UI_161: 942251049
+      ENEMY UI_19: 1190530288
+      ENEMY UI_213: 1579691808
+      ENEMY UI_41: 1669295169
+      ENEMY UI_111: -1598028682
+      ENEMY UI_154: 1620295970
+      ENEMY UI_45: 543486371
+      ENEMY UI_124: 1444569435
+      ENEMY UI_79: 1994177003
+      ENEMY UI_32: 1095005505
+      ENEMY UI_207: 352856890
+      ENEMY UI_57: 517880826
+      ENEMY UI_1: -908888386
+      ENEMY UI_44: -2055192857
+      ENEMY UI_105: -279880891
+      ENEMY UI_194: 428339751
+      ENEMY UI_150: 1499860734
+      ENEMY UI_102: -45904160
+      ENEMY UI_82: 1584812009
+      ENEMY UI_215: 1685886798
+      ENEMY UI_163: -263948310
+      ENEMY UI_98: -794491464
+      ENEMY UI_71: 1677076185
+      ENEMY UI_126: 841295489
+      ENEMY UI_202: 85450926
+      ENEMY UI_49: -2098542488
+      ENEMY UI_116: 540615929
+      ENEMY UI_157: -1873942188
+      ENEMY UI_122: 809649589
+      ENEMY UI_193: -908839854
+      ENEMY UI_121: 1661754606
+      ENEMY UI_15: 404225178
+      ENEMY UI_100: -187146671
+      ENEMY UI_66: 51143731
+      ENEMY UI_177: -499698644
+      ENEMY UI_142: -1652335162
+      ENEMY UI_153: 1297052286
+      ENEMY UI_7: 1334114855
+      ENEMY UI_68: 1448772286
+      ENEMY UI_74: -1253467103
+      ENEMY UI_123: 1247939422
+      ENEMY UI_125: -361130222
+      ENEMY UI_8: 754380808
+      ENEMY UI_36: 1106165859
+      ENEMY UI_182: 874755791
+      ENEMY UI_196: -1508983320
+      ENEMY UI_204: 1764276445
+      ENEMY UI_37: 231971179
+      ENEMY UI_144: 1130202552
+      ENEMY UI_4: -972967194
+      ENEMY UI_112: -1206410624
+      ENEMY UI_167: 950085761
+      ENEMY UI_73: 68752085
+      ENEMY UI_5: 1887217761
+      ENEMY UI_50: 852642908
+      ENEMY UI_25: 2085903872
+      ENEMY UI_63: 525387650
+      ENEMY UI_146: 1894133558
+      ENEMY UI_97: 319846813
+      ENEMY UI_136: 556038778
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
