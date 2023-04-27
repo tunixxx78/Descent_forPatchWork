@@ -40,6 +40,14 @@ public class HeroButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandler,
                     statsPanel.SetActive(true);
                     GameManager.gm.plrCanAttack = true;
                     GameManager.gm.attackForce = this.gameObject.GetComponent<HeroOne>().hb.plrStrength;
+                    if(this.gameObject.GetComponent<HeroOne>().hb.thisHeroIsTakingDamageOnActivation == true)
+                    {
+                        this.gameObject.GetComponent<HeroOne>().hb.plrHealth--;
+                    }
+                    if (this.gameObject.GetComponent<HeroOne>().hb.thisHeroIsTakingDamageOnActivation2 == true)
+                    {
+                        this.gameObject.GetComponent<HeroOne>().hb.plrHealth--;
+                    }
 
                     GetComponent<HeroOne>().hb.thisHeroIsAttacking = true;
                     GameManager.gm.plrIsAttacking = true;

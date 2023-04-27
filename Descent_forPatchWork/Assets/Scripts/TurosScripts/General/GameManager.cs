@@ -79,6 +79,10 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
+        //enemyHordStrenght = enemyHordStrenght / 5;
+
+        //Debug.Log(enemyHordStrenght);
+
         if(enemysInGame.Count <= 0 && battleIsOn && bossIsSpawned == false)
         {
             characterHolder = GameObject.Find("CharacterHolder");
