@@ -36,6 +36,22 @@ public class EnemySpawnerButton : MonoBehaviour, IPointerDownHandler, IPointerUp
                 }
             }
         }
+        if (GameManager.gm.lonerSelected)
+        {
+            if (Input.GetMouseButtonUp(0))
+            {
+                GameObject lonerInstance = Instantiate(mapsController.GetComponent<MapsController>().enemyBase[1], GameObject.Find("ExtraSpawnPoint").transform.position, Quaternion.identity);
+                lonerInstance.transform.SetParent(mapsController.transform.GetChild(GameManager.gm.currentMissionIndex).GetChild(2));
+                GameManager.gm.enemysInGame.Add(lonerInstance);
+
+                /*
+                if (lonerInstance.GetComponent<EnemyOne>().eB.enemyType == 3)
+                {
+                    GameManager.gm.enemyHordHealth += lonerInstance.GetComponent<EnemyOne>().eB.enemyHealth;
+                }
+                */
+            }
+        }
     }
 
     public void OnPointerDown(PointerEventData eventData)
@@ -51,13 +67,26 @@ public class EnemySpawnerButton : MonoBehaviour, IPointerDownHandler, IPointerUp
             {
                 if(bgImage.activeSelf == true)
                 {
-                    bgImage.SetActive(false);
+                    this.bgImage.SetActive(false);
                     GameManager.gm.villagerSelected = false;
                 }
                 else
                 {
-                    bgImage.SetActive(true);
+                    this.bgImage.SetActive(true);
                     GameManager.gm.villagerSelected = true;
+                }
+            }
+            if (this.gameObject.CompareTag("Loner"))
+            {
+                if (bgImage.activeSelf == true)
+                {
+                    this.bgImage.SetActive(false);
+                    GameManager.gm.lonerSelected = false;
+                }
+                else
+                {
+                    this.bgImage.SetActive(true);
+                    GameManager.gm.lonerSelected = true;
                 }
             }
         }

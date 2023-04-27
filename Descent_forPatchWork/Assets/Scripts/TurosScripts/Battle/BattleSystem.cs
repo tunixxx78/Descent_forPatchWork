@@ -70,6 +70,10 @@ public class BattleSystem : MonoBehaviour
                 {
                     SFXHolder.sH.sword.Play();
                 }
+                if (GameManager.gm.activeEnemy == 3)
+                {
+                    SFXHolder.sH.sword.Play();
+                }
 
                 this.gameObject.GetComponent<HeroOne>().hb.plrHealth -= (GameManager.gm.attackForce - this.gameObject.GetComponent<HeroOne>().hb.plrShield);
             }
