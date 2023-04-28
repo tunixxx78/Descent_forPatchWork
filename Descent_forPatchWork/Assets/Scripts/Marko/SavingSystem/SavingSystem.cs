@@ -218,7 +218,8 @@ public class SavingSystem : MonoBehaviour
             Debug.Log("LOADING SCENENAME: " + sData.currentSceneName);
             activeScene = sData.currentSceneName;
             activeSaveSlot = sData.saveSlot;
-            
+            //sets gameRound
+            GameManager.gm.round = sData.gameRound;
             //loop - load data for each hero,
             //from sData-class' heroes-array, and set it with SetData-method
             for (int i = 0; i < 4; i++)
