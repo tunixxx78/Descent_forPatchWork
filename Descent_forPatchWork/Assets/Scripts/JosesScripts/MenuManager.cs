@@ -24,8 +24,7 @@ public class MenuManager : MonoBehaviour
         {
             if (MenuManager.mG != this)
             {
-                Destroy(MenuManager.mG.gameObject);
-                MenuManager.mG = this;
+                Destroy(this);
             }
         }
 

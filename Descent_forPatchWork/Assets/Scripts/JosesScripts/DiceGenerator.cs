@@ -27,7 +27,7 @@ public class DiceGenerator : MonoBehaviour
         int roll = 0;
         for(int i = 0; i <= cycles; i++)
         {
-            roll = Random.Range(1, diceSize);
+            roll = Random.Range(0, diceSize);
             image.sprite = diceSprites[roll];
             yield return new WaitForSeconds(0.2f);
             i++;
