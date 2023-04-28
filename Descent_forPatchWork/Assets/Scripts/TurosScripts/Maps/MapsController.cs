@@ -127,7 +127,10 @@ public class MapsController : MonoBehaviour
             var heroInstance = Instantiate(heroBase[SavingSystem.savingSystem.selectedHeroes[i]], heroSpawnPoints[SavingSystem.savingSystem.selectedHeroes[i]].position, Quaternion.identity);
             heroInstance.GetComponent<HeroOne>().hb.plrIndex = SavingSystem.savingSystem.selectedHeroes[i];
 
-            if(GameManager.gm.round != 0)
+
+            // fix this!!!!! stats get issue!!!
+
+            if(GameManager.gm.round != 10)
             {
 
                 heroInstance.GetComponent<HeroOne>().hb.plrName = DataHolder.dataHolder.GetName(SavingSystem.savingSystem.selectedHeroes[i]);
