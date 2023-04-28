@@ -48,6 +48,10 @@ public class HeroButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandler,
                     {
                         this.gameObject.GetComponent<HeroOne>().hb.plrHealth--;
                     }
+                    if (this.gameObject.GetComponent<HeroOne>().hb.thisHeroIsGettingHealthOnActivation == true)
+                    {
+                        this.gameObject.GetComponent<HeroOne>().hb.plrHealth++;
+                    }
 
                     GetComponent<HeroOne>().hb.thisHeroIsAttacking = true;
                     GameManager.gm.plrIsAttacking = true;

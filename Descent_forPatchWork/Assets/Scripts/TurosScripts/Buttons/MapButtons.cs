@@ -264,6 +264,12 @@ public class MapButtons : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 
             GameObject.Find("Canvas").transform.GetChild(0).GetComponent<Image>().sprite = GameManager.gm.BGImages[0];
 
+            if(GameManager.gm.round == 2)
+            {
+                GameManager.gm.canSpawnEnemys = false;
+            }
+            else { GameManager.gm.canSpawnEnemys = true; }
+
         }
 
 
