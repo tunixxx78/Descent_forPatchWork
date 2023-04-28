@@ -89,7 +89,7 @@ public class SavingSystem : MonoBehaviour
     }
 
     //another way, gets arrays of attributes as parameters
-    public void SaveGame2(string[] hNames, float[] hHealths, float[] hStrengths, int[]heroLevels)
+    public void SaveGame2(string[] hNames, float[] hHealths, float[] hStrengths, int[]heroLevels, int round = 0)
     {
         for(int x = 0; x < 4; x++)
         {
@@ -104,6 +104,7 @@ public class SavingSystem : MonoBehaviour
         sData.currentSceneName = activeScene;
         sData.savedGroupName = groupName;
         sData.heroNumbers = selectedHeroes;
+        sData.gameRound = round;
         //loops each and saves to corresponding hero
         for (int i = 0; i < 4; i++)
         {
@@ -280,6 +281,7 @@ public class SavingSystem : MonoBehaviour
     class GameSavedData
     {
         public int saveSlot;
+        public int gameRound;
         public string savedGroupName;
         public string currentSceneName;
 
