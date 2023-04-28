@@ -19,7 +19,7 @@ public class MapsController : MonoBehaviour
 
     [SerializeField] Transform[] enemySpawnPoints;
     public GameObject[] enemyBase;
-
+    
     public GameObject mapsButton, enemyHordPanel, enemyTwoPanel;
     public Transform bossEnemySpawnPoint;
     int heroNumIndex;
@@ -86,12 +86,6 @@ public class MapsController : MonoBehaviour
             }
             
         }
-        /*
-        for(int j = amountOfPieces - (whatToHide + 1); j >= 0; j--)
-        {
-            areaMapChild.transform.GetChild(j).gameObject.SetActive(false);
-        }
-        */
     }
 
     public void SetRealBattleMap()
@@ -109,17 +103,14 @@ public class MapsController : MonoBehaviour
 
         battleMapChild.transform.GetChild(0).GetComponent<Image>().sprite = mapPiecesBattle[0];
 
-        /*
-        for (int i = 0; i < amountOfPieces; i++)
-        {
-            battleMapChild.transform.GetChild(i).GetComponent<Image>().sprite = mapPiecesBattle[i];
-        }
-        */
+        // for setting battleTitleIcon
+
+        battleMapChild.transform.GetChild(0).GetChild(0).GetComponent<Image>().sprite = (Sprite)Resources.Load($"BattleTittleImages/{GameManager.gm.round}");
 
 
         // for spawning heroes for fight
 
-        for(int i = 0; i < SavingSystem.savingSystem.selectedHeroes.Count; i++) //for (int i = 0; i < heroBase.Length; i++)
+        for (int i = 0; i < SavingSystem.savingSystem.selectedHeroes.Count; i++) //for (int i = 0; i < heroBase.Length; i++)
         {
 
             Debug.Log("PITÄISI TULLA HERO NRO: " + SavingSystem.savingSystem.selectedHeroes[i]);
@@ -128,9 +119,7 @@ public class MapsController : MonoBehaviour
             heroInstance.GetComponent<HeroOne>().hb.plrIndex = SavingSystem.savingSystem.selectedHeroes[i];
 
 
-            // fix this!!!!! stats get issue!!!
-
-            if(GameManager.gm.round != 10)
+            if(GameManager.gm.round != 0 || GameManager.gm.round == 0 && DataHolder.dataHolder.gameIsStarted)
             {
 
                 heroInstance.GetComponent<HeroOne>().hb.plrName = DataHolder.dataHolder.GetName(SavingSystem.savingSystem.selectedHeroes[i]);
@@ -204,30 +193,37 @@ public class MapsController : MonoBehaviour
 
         //for spawning enemys for fight
 
-        
-        for(int e = 0; e < enemyBase.Length; e++)
+        if (GameManager.gm.canSpawnEnemys)
         {
-            var enemyInstance = Instantiate(enemyBase[0], enemySpawnPoints[e].position, Quaternion.identity);
-            enemyInstance.transform.SetParent(characterHolder.transform);
-            enemyInstance.transform.position = enemySpawnPoints[e].position;
-            enemyInstance.transform.localScale = new Vector3(1, 1, 1);
-
-            // for adding enemytype 1 health to enemyHordePool
-
-            if(enemyInstance.GetComponent<EnemyOne>().eB.enemyType == 1)
+            for (int e = 0; e < enemyBase.Length; e++)
             {
-                GameManager.gm.enemyHordHealth += enemyInstance.GetComponent<EnemyOne>().eB.enemyHealth;
-                GameManager.gm.enemyHordStrenght += enemyInstance.GetComponent<EnemyOne>().eB.enemyStrength;
-            }
-            
-            //GameManager.gm.enemyHordStrenght += enemyInstance.GetComponent<EnemyOne>().eB.enemyStrength;
-            GameManager.gm.enemysInGame.Add(enemyInstance);
+                var enemyInstance = Instantiate(enemyBase[0], enemySpawnPoints[e].position, Quaternion.identity);
+                enemyInstance.transform.SetParent(characterHolder.transform);
+                enemyInstance.transform.position = enemySpawnPoints[e].position;
+                enemyInstance.transform.localScale = new Vector3(1, 1, 1);
 
-            
+                // for adding enemytype 1 health to enemyHordePool
+
+                if (enemyInstance.GetComponent<EnemyOne>().eB.enemyType == 1)
+                {
+                    GameManager.gm.enemyHordHealth += enemyInstance.GetComponent<EnemyOne>().eB.enemyHealth;
+                    GameManager.gm.enemyHordStrenght += enemyInstance.GetComponent<EnemyOne>().eB.enemyStrength;
+                }
+
+                //GameManager.gm.enemyHordStrenght += enemyInstance.GetComponent<EnemyOne>().eB.enemyStrength;
+                GameManager.gm.enemysInGame.Add(enemyInstance);
+
+
+            }
+
+            enemyHordPanel.SetActive(true);
         }
+        
+        
+
         GameObject.Find("/Canvas/MapPanel/TestMission/CardView").SetActive(true);
         GameObject.Find("/Canvas/MapPanel/TestMission/CardViewButton").SetActive(true);
-        enemyHordPanel.SetActive(true);
+        
         //enemyTwoPanel.SetActive(true);
         GameManager.gm.battleIsOn = true;
     }

@@ -7,6 +7,9 @@ public class DataHolder : MonoBehaviour
 {
     public static DataHolder dataHolder;
 
+    public int roundToSave;
+    public bool gameIsStarted = false;
+
     string wantedName;
     float wantedHealth;
     float wantedStrength;
