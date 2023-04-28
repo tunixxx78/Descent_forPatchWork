@@ -15,7 +15,7 @@ public class MapButtons : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 
     MapsController maps;
 
-    GameObject mapPanel;
+    GameObject mapPanel, missionIntroPanel;
 
     private void Awake()
     {
@@ -27,6 +27,8 @@ public class MapButtons : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
         mapPanel = GameObject.Find("MapPanel");
         mapAnimator = mapPanel.GetComponent<Animator>();
         maps = FindObjectOfType<MapsController>();
+
+        FindObjectOfType<VideoController2>().SetStartMissionClip(0);
 
     }
 
@@ -40,8 +42,9 @@ public class MapButtons : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 
             SFXHolder.sH.button.Play();
 
+            mapPanel.transform.GetChild(GameManager.gm.currentMissionIndex).GetChild(7).gameObject.SetActive(false);
+
             maps.mapsButton.SetActive(false);
-            //mapAnimator.SetTrigger(animationTrigger);
             mapAnimator.SetBool(animationTrigger, true);
             GameManager.gm.QuestLorePanel.SetActive(true);
 
