@@ -52,7 +52,14 @@ public class MapsController : MonoBehaviour
             worldBlocksAreChecked = true;
         }
 
-        FindObjectOfType<EnemySpawnerButton>().AddThisSpawnerToList();
+        // for adding enemy spawners to enemySpawnerList in gameManager
+
+        for(int j = 0; j < GameObject.Find("MapPanel").transform.GetChild(GameManager.gm.currentMissionIndex).GetChild(2).GetChild(14).transform.childCount; j++)
+        {
+            GameObject.Find("MapPanel").transform.GetChild(GameManager.gm.currentMissionIndex).GetChild(2).GetChild(14).GetChild(j).GetComponent<EnemySpawnerButton>().AddThisSpawnerToList();
+        }
+
+        //FindObjectOfType<EnemySpawnerButton>().AddThisSpawnerToList();
     }
 
 

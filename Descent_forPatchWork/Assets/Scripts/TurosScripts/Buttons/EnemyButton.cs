@@ -88,7 +88,37 @@ public class EnemyButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 
                     }
 
+                if (this.gameObject.GetComponent<EnemyOne>().eB.enemyType == 3)
+                {
+                    //GameObject enemyPanel = GameObject.Find("MapPanel").transform.GetChild(GameManager.gm.currentMissionIndex).GetChild(2).GetChild(10).gameObject;
+                    GameObject statsPanel = this.gameObject.transform.Find("EnemyStatsPanel").gameObject;
+
+                    if (statsPanel.activeSelf == false)
+                    {
+                        //enemyPanel.SetActive(true);
+                        statsPanel.SetActive(true);
+                        GameManager.gm.enemyCanAttack = true;
+                        GameManager.gm.attackForce = this.gameObject.GetComponent<EnemyOne>().eB.enemyStrength;
+
+                        GetComponent<EnemyOne>().eB.thisEnemyIsAttacking = true;
+                        GameManager.gm.enemyIsAttacking = true;
+                        GameManager.gm.activeEnemy = 2;
+                    }
+                    else
+                    {
+                        //enemyPanel.SetActive(false);
+                        statsPanel.SetActive(false);
+                        GameManager.gm.enemyCanAttack = false;
+                        GameManager.gm.attackForce = 0;
+
+                        GetComponent<EnemyOne>().eB.thisEnemyIsAttacking = false;
+                        GameManager.gm.enemyIsAttacking = false;
+                        GameManager.gm.activeEnemy = 0;
+                    }
+
                 }
+
+            }
             }
 
             

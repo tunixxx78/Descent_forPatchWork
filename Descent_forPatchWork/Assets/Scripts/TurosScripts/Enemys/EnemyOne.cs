@@ -19,15 +19,17 @@ public class EnemyOne : MonoBehaviour
         currentObject = this.gameObject;
 
         GameObject enemyStats = currentObject.transform.Find("EnemyStatsPanel").gameObject;
-        enemyStats.transform.GetChild(0).GetComponent<TMP_Text>().text = eB.enemyHealth.ToString();
-        enemyStats.transform.GetChild(1).GetComponent<TMP_Text>().text = eB.enemyStrength.ToString();
+        this.gameObject.transform.GetChild(1).GetComponent<TMP_Text>().text = eB.enemyHealth.ToString();
+        //enemyStats.transform.GetChild(0).GetComponent<TMP_Text>().text = eB.enemyHealth.ToString();
+        enemyStats.transform.GetChild(0).GetComponent<TMP_Text>().text = eB.enemyStrength.ToString();
         //enemyStats.transform.GetChild(2).GetComponent<TMP_Text>().text = eB.enemyLevel.ToString();
     }
     private void Update()
     {
         GameObject enemyStats = currentObject.transform.Find("EnemyStatsPanel").gameObject;
-        enemyStats.transform.GetChild(0).GetComponent<TMP_Text>().text = eB.enemyHealth.ToString();
-        enemyStats.transform.GetChild(1).GetComponent<TMP_Text>().text = eB.enemyStrength.ToString();
+        this.gameObject.transform.GetChild(1).GetComponent<TMP_Text>().text = eB.enemyHealth.ToString();
+        //enemyStats.transform.GetChild(0).GetComponent<TMP_Text>().text = eB.enemyHealth.ToString();
+        enemyStats.transform.GetChild(0).GetComponent<TMP_Text>().text = eB.enemyStrength.ToString();
         //enemyStats.transform.GetChild(2).GetComponent<TMP_Text>().text = eB.enemyLevel.ToString();
 
         if(eB.enemyType == 2)
@@ -54,7 +56,17 @@ public class EnemyOne : MonoBehaviour
                 GameManager.gm.enemyBossesInGame.Remove(this.gameObject);
                 Destroy(this.gameObject);
             }
-            
+
+            if (eB.enemyType == 3)
+            {
+                GameManager.gm.enemysInGame.Remove(this.gameObject);
+                //GameManager.gm.enemyHordHealth -= this.eB.enemyHealth;
+                //GameManager.gm.enemyHordStrenght -= this.eB.enemyStrength;
+                Destroy(this.gameObject);
+            }
+
+
+
         }
     }
     private void OnTriggerEnter2D(Collider2D collision)

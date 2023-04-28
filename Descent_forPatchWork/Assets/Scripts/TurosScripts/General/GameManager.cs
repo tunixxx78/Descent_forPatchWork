@@ -13,7 +13,7 @@ public class GameManager : MonoBehaviour
     public List<GameObject> enemyBossesInGame;
     public float enemyHordHealth, enemyHordStrenght;
 
-    public bool plrCanAttack, enemyCanAttack, battleIsOn, plrIsAttacking, enemyIsAttacking, villagerSelected, bossIsSpawned, mergeHorde, lootIsOn;
+    public bool plrCanAttack, enemyCanAttack, battleIsOn, plrIsAttacking, enemyIsAttacking, villagerSelected, lonerSelected, bossIsSpawned, mergeHorde, lootIsOn;
     public float attackForce = 1;
 
     public GameObject QuestLorePanel, currentMission;
@@ -157,25 +157,29 @@ public class GameManager : MonoBehaviour
 
     public void MergeEnemyHorde()
     {
-        mergeHorde = false;
-        enemyCanAttack = false;
-        enemyIsAttacking = false;
-
-        for(int i = 0; i < enemysInGame.Count; i++)
+        if (GameManager.gm.enemysInGame[GameManager.gm.activeEnemy].GetComponent<EnemyOne>().eB.enemyType == 1)
         {
-            enemysInGame[i].transform.GetChild(1).gameObject.SetActive(false);
+            mergeHorde = false;
+            enemyCanAttack = false;
+            enemyIsAttacking = false;
+
+            for (int i = 0; i < enemysInGame.Count; i++)
+            {
+                enemysInGame[i].transform.GetChild(1).gameObject.SetActive(false);
+            }
+
+            Debug.Log("GAMEMANAGER MERGE FUNCTIO SAAVUTETTU");
+
+            GameObject temp = GameObject.Find("TempHolder");
+            temp.transform.GetChild(0).GetComponent<EnemyOne>().eB.enemyHealth = temp.transform.GetChild(0).GetComponent<EnemyOne>().eB.enemyHealth + temp.transform.GetChild(1).GetComponent<EnemyOne>().eB.enemyHealth;
+            temp.transform.GetChild(0).GetComponent<Image>().sprite = temp.transform.GetChild(0).GetComponent<EnemyOne>().eB.enemyImages[1];
+
+            enemysInGame.Remove(temp.transform.GetChild(1).gameObject);
+            Destroy(temp.transform.GetChild(1).gameObject);
+
+            temp.transform.GetChild(0).gameObject.transform.SetParent(maps.gameObject.transform.GetChild(currentMissionIndex).GetChild(2));
         }
-
-        Debug.Log("GAMEMANAGER MERGE FUNCTIO SAAVUTETTU");
-
-        GameObject temp = GameObject.Find("TempHolder");
-        temp.transform.GetChild(0).GetComponent<EnemyOne>().eB.enemyHealth = temp.transform.GetChild(0).GetComponent<EnemyOne>().eB.enemyHealth + temp.transform.GetChild(1).GetComponent<EnemyOne>().eB.enemyHealth;
-        temp.transform.GetChild(0).GetComponent<Image>().sprite = temp.transform.GetChild(0).GetComponent<EnemyOne>().eB.enemyImages[1];
-
-        enemysInGame.Remove(temp.transform.GetChild(1).gameObject);
-        Destroy(temp.transform.GetChild(1).gameObject);
-
-        temp.transform.GetChild(0).gameObject.transform.SetParent(maps.gameObject.transform.GetChild(currentMissionIndex).GetChild(2));
+        
     }
 
     public void SetupForNextRound()
