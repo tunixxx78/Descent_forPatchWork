@@ -34,6 +34,11 @@ public class DiceGenerator : MonoBehaviour
         }
         diceResult = roll + 1;
         image.sprite = diceSprites[roll];
+
+        //Turo added conection to DiceFunctionalities
+        GetComponentInParent<DiceFunctionalityManager>().SetDiceEyeFunctionalities(diceResult);
+        GetComponentInParent<DiceFunctionalityManager>().SetDiceEyeCommand(diceResult);
+
         yield return null;
     }
 }
