@@ -33,6 +33,12 @@ public class Deck : MonoBehaviour
         Discard.Add(card);
         return card;
     }
+    public void DiscardToCards()
+    {
+        List<Card> tmpList = Cards.Concat(Discard).ToList();
+        Cards = tmpList;
+        Discard.Clear();
+    }
 
     // Cardtypes: "Skillcards", "FateCards", "BattleEvent".
     public void GetCards(string characterName, string cardType)
@@ -44,6 +50,10 @@ public class Deck : MonoBehaviour
     public List<Card> GetCardList()
     {
         return Cards;
+    }
+    public List<Card> GetDiscardList()
+    {
+        return Discard;
     }
     public void PlayCard(Card card)
     {
