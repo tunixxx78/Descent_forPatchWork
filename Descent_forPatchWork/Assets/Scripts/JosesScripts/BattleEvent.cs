@@ -6,30 +6,44 @@ using UnityEngine.UI;
 
 public class BattleEvent : MonoBehaviour
 {   
-    public List<Card> cards;
-    public Button drawButton;
-    private Image currentSprite;
+    private Deck deck;
+    private int index;
     [SerializeField] private GameObject spawnPoint;
 
     void Awake()
     {
-    
+        deck = gameObject.AddComponent<Deck>();
     }
 
     private void Start()
     {
-        drawButton.onClick.AddListener(DrawCard);
+        InitializeBattleEvent();
     }
 
     public void DrawCard()
     {
-        if(cards.Count != 0)
+        index = 1;
+        if (deck.GetCardList().Count > 0)
         {
-            Card card = cards[Random.Range(0, cards.Count)];
+            ShowCard(deck.DrawCard());
+        }
+    }
+    public void DrawPreviousCards()
+    {
+        if (deck.GetDiscardList().Count != 0 && deck.GetDiscardList().Count - index - 1 >= 0)
+        {
+            index++;
+            ShowCard(deck.GetDiscardList()[^index]);
+        }
+        
+    }
+
+    public void ShowCard(Card card) {
+        if (card != null)
+        {
             Image img = spawnPoint.GetComponent<Image>();
             img.sprite = card.sprite;
             img.color = new Color(img.color.r, img.color.g, img.color.b, 1f);
-            cards.Remove(card);
         }
         else
         {
@@ -38,4 +52,21 @@ public class BattleEvent : MonoBehaviour
         }
     }
 
+    public void Shuffle()
+    {
+        deck.DiscardToCards();
+        deck.ShuffleCards(deck.GetCardList());
+        Image img = spawnPoint.GetComponent<Image>();
+        img.color = new Color(img.color.r, img.color.g, img.color.b, 0f);
+    }
+
+    public void InitializeBattleEvent()
+    {
+        deck.GetCardList().Clear();
+        deck.GetDiscardList().Clear();
+        deck.GetCards("BattleEvent", "1"); //GameManager.gm.currentMissionIndex.ToString()
+        //Debug.Log(GameManager.gm.currentMissionIndex.ToString() + "CUrrent mission index");
+        Debug.Log(deck.GetCardList().Count + " Deck");
+        index = 1;
+    }
 }
