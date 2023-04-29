@@ -7,6 +7,9 @@ public class DataHolder : MonoBehaviour
 {
     public static DataHolder dataHolder;
 
+    public int roundToSave;
+    public bool gameIsStarted = false;
+
     string wantedName;
     float wantedHealth;
     float wantedStrength;
@@ -77,7 +80,7 @@ public class DataHolder : MonoBehaviour
     }
     
 
-    public void SetData(int plrIndex, string name, float health, float strength, int level)
+    public void SetData(int plrIndex, string name, float health, float strength, int level, int round)
     {
         if(plrIndex == 0)
         {
@@ -111,6 +114,8 @@ public class DataHolder : MonoBehaviour
             plrFourLevel = level;
         }
 
+        roundToSave = round;
+
 
     }
 
@@ -122,7 +127,7 @@ public class DataHolder : MonoBehaviour
         float[] strenghts = {plrOneStrength, plrTwoStrength, plrThreeStrength, plrFourStrength };
         int[] levels = {plrOneLevel, plrTwoLevel, plrThreeLevel, plrFourLevel };
 
-        SavingSystem.savingSystem.SaveGame2(names, healths, strenghts, levels);
+        SavingSystem.savingSystem.SaveGame2(names, healths, strenghts, levels, roundToSave);
 
     }
 

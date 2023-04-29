@@ -227,7 +227,8 @@ public class SavingSystem : MonoBehaviour
                 DataHolder.dataHolder.SetData(i, sData.savedHeroes[i].heroName,
                     sData.savedHeroes[i].maxHealth,
                     sData.savedHeroes[i].strength,
-                    sData.savedHeroes[i].level);
+                    sData.savedHeroes[i].level,
+                    sData.gameRound);
             }
 
             //NoItemLists yet..

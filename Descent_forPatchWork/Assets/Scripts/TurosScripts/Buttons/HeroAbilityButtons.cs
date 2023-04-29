@@ -215,7 +215,7 @@ public class HeroAbilityButtons : MonoBehaviour, IPointerDownHandler, IPointerUp
 
                 this.gameObject.GetComponent<Image>().sprite = this.icons[1];
                 GameManager.gm.heroesInGame[GameManager.gm.activePlayer].GetComponent<HeroOne>().hb.thisHeroIsTakingDamageOnActivation = true;
-
+                GetComponentInParent<StatsButton>().transform.GetChild(1).gameObject.SetActive(true);
             }
             else if (btnId == 6 && this.isClicked == false)
             {
@@ -224,6 +224,7 @@ public class HeroAbilityButtons : MonoBehaviour, IPointerDownHandler, IPointerUp
 
                 this.gameObject.GetComponent<Image>().sprite = this.icons[0];
                 GameManager.gm.heroesInGame[GameManager.gm.activePlayer].GetComponent<HeroOne>().hb.thisHeroIsTakingDamageOnActivation = false;
+                GetComponentInParent<StatsButton>().transform.GetChild(1).gameObject.SetActive(false);
             }
 
             if (btnId == 7 && this.isClicked == true)
@@ -233,7 +234,7 @@ public class HeroAbilityButtons : MonoBehaviour, IPointerDownHandler, IPointerUp
 
                 this.gameObject.GetComponent<Image>().sprite = this.icons[1];
                 GameManager.gm.heroesInGame[GameManager.gm.activePlayer].GetComponent<HeroOne>().hb.thisHeroIsTakingDamageOnActivation2 = true;
-
+                GetComponentInParent<StatsButton>().transform.GetChild(2).gameObject.SetActive(true);
             }
             else if (btnId == 7 && this.isClicked == false)
             {
@@ -242,6 +243,27 @@ public class HeroAbilityButtons : MonoBehaviour, IPointerDownHandler, IPointerUp
 
                 this.gameObject.GetComponent<Image>().sprite = this.icons[0];
                 GameManager.gm.heroesInGame[GameManager.gm.activePlayer].GetComponent<HeroOne>().hb.thisHeroIsTakingDamageOnActivation2 = false;
+                GetComponentInParent<StatsButton>().transform.GetChild(2).gameObject.SetActive(false);
+            }
+
+            if (btnId == 8 && this.isClicked == true)
+            {
+                this.isClicked = false;
+                SFXHolder.sH.button.Play();
+
+                this.gameObject.GetComponent<Image>().sprite = this.icons[1];
+                GameManager.gm.heroesInGame[GameManager.gm.activePlayer].GetComponent<HeroOne>().hb.thisHeroIsGettingHealthOnActivation = true;
+                GetComponentInParent<StatsButton>().transform.GetChild(0).gameObject.SetActive(true);
+
+            }
+            else if (btnId == 8 && this.isClicked == false)
+            {
+                this.isClicked = true;
+                SFXHolder.sH.button.Play();
+
+                this.gameObject.GetComponent<Image>().sprite = this.icons[0];
+                GameManager.gm.heroesInGame[GameManager.gm.activePlayer].GetComponent<HeroOne>().hb.thisHeroIsGettingHealthOnActivation = false;
+                GetComponentInParent<StatsButton>().transform.GetChild(0).gameObject.SetActive(false);
             }
 
         }

@@ -13,7 +13,7 @@ public class GameManager : MonoBehaviour
     public List<GameObject> enemyBossesInGame;
     public float enemyHordHealth, enemyHordStrenght;
 
-    public bool plrCanAttack, enemyCanAttack, battleIsOn, plrIsAttacking, enemyIsAttacking, villagerSelected, lonerSelected, bossIsSpawned, mergeHorde, lootIsOn;
+    public bool plrCanAttack, enemyCanAttack, battleIsOn, plrIsAttacking, enemyIsAttacking, villagerSelected, lonerSelected, bossIsSpawned, mergeHorde, lootIsOn, canSpawnEnemys, bossBossFight;
     public float attackForce = 1;
 
     public GameObject QuestLorePanel, currentMission;
@@ -65,6 +65,8 @@ public class GameManager : MonoBehaviour
         bossIsSpawned = false;
         mergeHorde = false;
         lootIsOn = false;
+        canSpawnEnemys = true;
+        bossBossFight = false;
 
         //for filling the QuestLorePanel information
 
@@ -83,64 +85,99 @@ public class GameManager : MonoBehaviour
 
         //Debug.Log(enemyHordStrenght);
 
-        if(enemysInGame.Count <= 0 && battleIsOn && bossIsSpawned == false)
+        if(bossBossFight == false)
         {
-            characterHolder = GameObject.Find("CharacterHolder");
-            characterHolder.SetActive(false);
-
-            BossInfoPanel.SetActive(true);
-
-            GameObject bossInstance = Instantiate(maps.enemyBase[2], maps.bossEnemySpawnPoint.position, Quaternion.identity);
-            bossInstance.transform.SetParent(maps.transform.GetChild(GameManager.gm.currentMissionIndex).GetChild(2).GetChild(16));
-            GameManager.gm.enemyBossesInGame.Add(bossInstance);
-            maps.enemyTwoPanel.SetActive(true);
-            bossIsSpawned = true;
-            
-        }
-        if(enemysInGame.Count <= 0 && enemyBossesInGame.Count <= 0 && battleIsOn)
-        {
-            Debug.Log("PELAAJA ON VOITTANUT TAISTELUN!");
-            battleIsOn = false;
-            bossIsSpawned = false;
-            currentAreaMissions--;
-
-            //test for showing next mission
-            if (currentAreaMissions <= 0)
+            if (enemysInGame.Count <= 0 && battleIsOn && bossIsSpawned == false)
             {
-                currentMissionInQuest++;
-                currentMission.GetComponent<Quest>().missions[currentMissionInQuest].SetActive(true);
+                //for setting bossFightTitleIcon
+
+                GameObject.Find("MapPanel").transform.GetChild(currentMissionIndex).GetChild(2).GetChild(0).GetChild(0).GetChild(0).GetComponent<Image>().sprite = (Sprite)Resources.Load($"BossTittleImages/{GameManager.gm.round}");
+                characterHolder = GameObject.Find("CharacterHolder");
+
+                if (GameManager.gm.canSpawnEnemys)
+                {
+
+                    characterHolder.SetActive(false);
+
+                    //BossInfoPanel.SetActive(true);
+
+                    maps.transform.GetChild(GameManager.gm.currentMissionIndex).GetChild(2).GetChild(18).GetChild(0).GetComponent<Image>().sprite = (Sprite)Resources.Load($"MissionInfo/Boss/{GameManager.gm.round}");
+                    maps.transform.GetChild(GameManager.gm.currentMissionIndex).GetChild(2).GetChild(18).gameObject.SetActive(true);
+                    maps.transform.GetChild(GameManager.gm.currentMissionIndex).GetChild(2).GetChild(18).GetChild(1).gameObject.SetActive(true);
+
+                    if(round == 0)
+                    {
+                        GameObject bossInstance = Instantiate(maps.enemyBase[2], maps.bossEnemySpawnPoint.position, Quaternion.identity);
+                        bossInstance.transform.SetParent(maps.transform.GetChild(GameManager.gm.currentMissionIndex).GetChild(2).GetChild(16));
+                        GameManager.gm.enemyBossesInGame.Add(bossInstance);
+                    }
+                    if(round == 1)
+                    {
+                        GameObject bossInstance = Instantiate(maps.enemyBase[5], maps.bossEnemySpawnPoint.position, Quaternion.identity);
+                        bossInstance.transform.SetParent(maps.transform.GetChild(GameManager.gm.currentMissionIndex).GetChild(2).GetChild(16));
+                        GameManager.gm.enemyBossesInGame.Add(bossInstance);
+                    }
+                    
+
+
+
+                    maps.enemyTwoPanel.SetActive(true);
+                    maps.enemyTwoPanel.GetComponent<Image>().sprite = maps.bossPanels[round];
+                    bossIsSpawned = true;
+                }
+
 
             }
-
-            GameObject.Find("MapPanel").transform.GetChild(currentMissionIndex).GetChild(2).GetChild(9).gameObject.SetActive(true);
-            enemyPanel.SetActive(false);
-            hordePanel.SetActive(false);
-
-            for (int s = 0; s < enemySpawnersIngame.Count; s++)
+            if (enemysInGame.Count <= 0 && enemyBossesInGame.Count <= 0 && battleIsOn)
             {
-                enemySpawnersIngame[s].gameObject.SetActive(false);
+                Debug.Log("PELAAJA ON VOITTANUT TAISTELUN!");
+                battleIsOn = false;
+                bossIsSpawned = false;
+                currentAreaMissions--;
+
+                //test for showing next mission
+                if (currentAreaMissions <= 0)
+                {
+                    currentMissionInQuest++;
+                    currentMission.GetComponent<Quest>().missions[currentMissionInQuest].SetActive(true);
+
+                }
+
+                GameObject.Find("MapPanel").transform.GetChild(currentMissionIndex).GetChild(2).GetChild(9).gameObject.SetActive(true);
+                enemyPanel.SetActive(false);
+                hordePanel.SetActive(false);
+
+                for (int s = 0; s < enemySpawnersIngame.Count; s++)
+                {
+                    enemySpawnersIngame[s].gameObject.SetActive(false);
+                }
+
+                // for instanciating lootObjects to map
+
+                for (int i = 0; i < lootSpawnPoints.Length; i++)
+                {
+                    GameObject lootInstance = Instantiate(lootObjects[i], lootSpawnPoints[i].position, Quaternion.identity);
+
+                    lootInstance.transform.SetParent(GameObject.Find("LootSpotHolder").transform);
+                    lootInstance.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
+                }
+
+                lootIsOn = true;
             }
 
-            // for instanciating lootObjects to map
-
-            for (int i = 0; i < lootSpawnPoints.Length; i++)
+            if (lootIsOn && GameObject.Find("LootSpotHolder").transform.childCount <= 0)
             {
-                GameObject lootInstance = Instantiate(lootObjects[i], lootSpawnPoints[i].position, Quaternion.identity);
-
-                lootInstance.transform.SetParent(GameObject.Find("LootSpotHolder").transform);
-                lootInstance.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
+                lootIsOn = false;
+                characterHolder.SetActive(false);
+                GameObject.Find("BattleResultPanel").transform.GetChild(6).gameObject.SetActive(true);
+                GameObject.Find("BattleResultPanel").transform.GetChild(6).GetChild(0).GetComponent<Image>().sprite = rewardImages[round];
             }
-
-            lootIsOn = true;
         }
-
-        if(lootIsOn && GameObject.Find("LootSpotHolder").transform.childCount <= 0)
+        else
         {
-            lootIsOn = false;
-            characterHolder.SetActive(false);
-            GameObject.Find("BattleResultPanel").transform.GetChild(6).gameObject.SetActive(true);
-            GameObject.Find("BattleResultPanel").transform.GetChild(6).GetChild(0).GetComponent<Image>().sprite = rewardImages[round];
+            Debug.Log("NYT PITÄISI OLLA SISÄLLÄ FIGHTISSA ALUEEN ISON BOSSIN KANSSA!");
         }
+        
 
         if(heroesInGame.Count <= 0 && battleIsOn)
         {
@@ -165,7 +202,7 @@ public class GameManager : MonoBehaviour
 
             for (int i = 0; i < enemysInGame.Count; i++)
             {
-                enemysInGame[i].transform.GetChild(1).gameObject.SetActive(false);
+                enemysInGame[i].transform.GetChild(5).gameObject.SetActive(false);
             }
 
             Debug.Log("GAMEMANAGER MERGE FUNCTIO SAAVUTETTU");

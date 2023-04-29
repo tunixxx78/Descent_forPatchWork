@@ -140,6 +140,8 @@ public class MapButtons : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 
         if (this.gameObject.CompareTag("BackMapButton"))
         {
+            GameManager.gm.round++;
+
             GameManager.gm.SetupForNextRound();
             SFXHolder.sH.button.Play();
 
@@ -157,7 +159,8 @@ public class MapButtons : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
                 DataHolder.dataHolder.SetData(GameManager.gm.heroesInGame[i].GetComponent<HeroOne>().hb.plrIndex, GameManager.gm.heroesInGame[i].GetComponent<HeroOne>().hb.plrName,
                 GameManager.gm.heroesInGame[i].GetComponent<HeroOne>().hb.plrHealth,
                 GameManager.gm.heroesInGame[i].GetComponent<HeroOne>().hb.plrStrength,
-                GameManager.gm.heroesInGame[i].GetComponent<HeroOne>().hb.plrLevel);
+                GameManager.gm.heroesInGame[i].GetComponent<HeroOne>().hb.plrLevel,
+                GameManager.gm.round);
 
                 
                 /*
@@ -229,7 +232,7 @@ public class MapButtons : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
             }
             */
 
-            GameManager.gm.round++;
+            
 
             // for seting up areaMap
 
@@ -264,6 +267,16 @@ public class MapButtons : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 
             GameObject.Find("Canvas").transform.GetChild(0).GetComponent<Image>().sprite = GameManager.gm.BGImages[0];
 
+            if(GameManager.gm.round == 2)
+            {
+                GameManager.gm.canSpawnEnemys = false;
+            }
+            else { GameManager.gm.canSpawnEnemys = true; }
+
+            maps.transform.GetChild(GameManager.gm.currentMissionIndex).GetChild(2).GetChild(18).GetChild(2).gameObject.SetActive(false);
+            maps.transform.GetChild(GameManager.gm.currentMissionIndex).GetChild(2).GetChild(18).gameObject.SetActive(false);
+            
+
         }
 
 
@@ -286,7 +299,8 @@ public class MapButtons : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
                 DataHolder.dataHolder.SetData(i, GameManager.gm.heroesInGame[i].GetComponent<HeroOne>().hb.plrName,
                 GameManager.gm.heroesInGame[i].GetComponent<HeroOne>().hb.plrHealth,
                 GameManager.gm.heroesInGame[i].GetComponent<HeroOne>().hb.plrStrength,
-                GameManager.gm.heroesInGame[i].GetComponent<HeroOne>().hb.plrLevel);
+                GameManager.gm.heroesInGame[i].GetComponent<HeroOne>().hb.plrLevel,
+                GameManager.gm.round);
 
 
                 
