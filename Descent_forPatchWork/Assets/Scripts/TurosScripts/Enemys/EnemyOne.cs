@@ -83,4 +83,13 @@ public class EnemyOne : MonoBehaviour
             
         }
     }
+    public void SetEnemyStrength()
+    {
+        eB.enemyStrength = (int)eB.enemyHealth / 5;
+
+        if(eB.enemyStrength < 1)
+        {
+            eB.enemyStrength = 1;
+        }
+    }
 }

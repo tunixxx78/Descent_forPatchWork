@@ -273,6 +273,10 @@ public class MapButtons : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
             }
             else { GameManager.gm.canSpawnEnemys = true; }
 
+            maps.transform.GetChild(GameManager.gm.currentMissionIndex).GetChild(2).GetChild(18).GetChild(2).gameObject.SetActive(false);
+            maps.transform.GetChild(GameManager.gm.currentMissionIndex).GetChild(2).GetChild(18).gameObject.SetActive(false);
+            
+
         }
 
 

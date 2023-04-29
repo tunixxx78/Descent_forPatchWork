@@ -19,6 +19,7 @@ public class BattleSystem : MonoBehaviour
             if (this.gameObject.GetComponent<EnemyOne>().eB.enemyHealth - GameManager.gm.attackForce >= 0)
             {
                 this.gameObject.GetComponent<EnemyOne>().eB.enemyHealth -= GameManager.gm.attackForce;
+                this.gameObject.GetComponent<EnemyOne>().SetEnemyStrength();
 
                 if (this.gameObject.GetComponent<EnemyOne>().eB.enemyType == 1)
                 {

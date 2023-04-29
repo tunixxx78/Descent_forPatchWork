@@ -1,0 +1,564 @@
+fileFormatVersion: 2
+guid: b1de37aa611374dafad97a54f7106d8f
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: WIZARD_S COTTAGE BOSS - THE BEAST_0
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 795
+        width: 1171
+        height: 242
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ade63054809d4644a9d1bc94e7c5f40
+      internalID: 2113468197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WIZARD_S COTTAGE BOSS - THE BEAST_1
+      rect:
+        serializedVersion: 2
+        x: 1381
+        y: 985
+        width: 74
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0420d7857cb004d7eb3a3867c048438b
+      internalID: -1166255315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WIZARD_S COTTAGE BOSS - THE BEAST_2
+      rect:
+        serializedVersion: 2
+        x: 1481
+        y: 909
+        width: 411
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 519b17ca7ac104d3bba740b42825dab7
+      internalID: 1785615171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WIZARD_S COTTAGE BOSS - THE BEAST_3
+      rect:
+        serializedVersion: 2
+        x: 1381
+        y: 806
+        width: 74
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13ebc9cb5fbb34fa6becbc490f91463d
+      internalID: -762232394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WIZARD_S COTTAGE BOSS - THE BEAST_4
+      rect:
+        serializedVersion: 2
+        x: 1481
+        y: 731
+        width: 411
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18eabd780a25848959c2ac3a3b68204e
+      internalID: 1709985695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WIZARD_S COTTAGE BOSS - THE BEAST_5
+      rect:
+        serializedVersion: 2
+        x: 1094
+        y: 760
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04cf77f0065814a369e5594a93744811
+      internalID: -1978811513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WIZARD_S COTTAGE BOSS - THE BEAST_6
+      rect:
+        serializedVersion: 2
+        x: 1111
+        y: 758
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f91f79492710b493e9652e4a9b1614bb
+      internalID: -1835187218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WIZARD_S COTTAGE BOSS - THE BEAST_7
+      rect:
+        serializedVersion: 2
+        x: 1172
+        y: 760
+        width: 44
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4fc4d953b5e34e69afe65bd839b5abc
+      internalID: -740117584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WIZARD_S COTTAGE BOSS - THE BEAST_8
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 460
+        width: 1171
+        height: 242
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05722d10850a641bbbdc62fca8f64407
+      internalID: -927782915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WIZARD_S COTTAGE BOSS - THE BEAST_9
+      rect:
+        serializedVersion: 2
+        x: 1381
+        y: 634
+        width: 74
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3914e18828c974a51a596c818a2caf12
+      internalID: -2024762312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WIZARD_S COTTAGE BOSS - THE BEAST_10
+      rect:
+        serializedVersion: 2
+        x: 1481
+        y: 559
+        width: 411
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d9a3a1a9907d4487924c9f9af2f30bc
+      internalID: -105960704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WIZARD_S COTTAGE BOSS - THE BEAST_11
+      rect:
+        serializedVersion: 2
+        x: 1379
+        y: 455
+        width: 74
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30fe99d1cd8a44d8f844a52f885967af
+      internalID: -613753096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WIZARD_S COTTAGE BOSS - THE BEAST_12
+      rect:
+        serializedVersion: 2
+        x: 1479
+        y: 380
+        width: 411
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18bdc12dbf24a42afb65d93a92a0334b
+      internalID: 196221284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WIZARD_S COTTAGE BOSS - THE BEAST_13
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 77
+        width: 291
+        height: 290
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57ddefe240ea048149d44e89cbc8df00
+      internalID: 376354717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WIZARD_S COTTAGE BOSS - THE BEAST_14
+      rect:
+        serializedVersion: 2
+        x: 659
+        y: 46
+        width: 362
+        height: 393
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 168c1b83df72441acb5e347a41c7d9aa
+      internalID: 1694746344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WIZARD_S COTTAGE BOSS - THE BEAST_15
+      rect:
+        serializedVersion: 2
+        x: 1375
+        y: 276
+        width: 73
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43a78388766dc4f8e93dac7d33efbb75
+      internalID: -1670459114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WIZARD_S COTTAGE BOSS - THE BEAST_16
+      rect:
+        serializedVersion: 2
+        x: 1479
+        y: 198
+        width: 411
+        height: 157
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41da64ef967a74d7a9de1d1134d6be43
+      internalID: -67117644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WIZARD_S COTTAGE BOSS - THE BEAST_17
+      rect:
+        serializedVersion: 2
+        x: 1380
+        y: 91
+        width: 74
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c9ff18a1525844899c82e40ab44a699
+      internalID: -1949760731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WIZARD_S COTTAGE BOSS - THE BEAST_18
+      rect:
+        serializedVersion: 2
+        x: 1481
+        y: 16
+        width: 411
+        height: 154
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c9f83505743b48bba1c590920d2013f
+      internalID: 1008628486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 3c6b84e2281934ece9a903ec6ad30362
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      WIZARD_S COTTAGE BOSS - THE BEAST_9: -2024762312
+      WIZARD_S COTTAGE BOSS - THE BEAST_7: -740117584
+      WIZARD_S COTTAGE BOSS - THE BEAST_2: 1785615171
+      WIZARD_S COTTAGE BOSS - THE BEAST_14: 1694746344
+      WIZARD_S COTTAGE BOSS - THE BEAST_15: -1670459114
+      WIZARD_S COTTAGE BOSS - THE BEAST_16: -67117644
+      WIZARD_S COTTAGE BOSS - THE BEAST_0: 2113468197
+      WIZARD_S COTTAGE BOSS - THE BEAST_1: -1166255315
+      WIZARD_S COTTAGE BOSS - THE BEAST_6: -1835187218
+      WIZARD_S COTTAGE BOSS - THE BEAST_4: 1709985695
+      WIZARD_S COTTAGE BOSS - THE BEAST_3: -762232394
+      WIZARD_S COTTAGE BOSS - THE BEAST_18: 1008628486
+      WIZARD_S COTTAGE BOSS - THE BEAST_12: 196221284
+      WIZARD_S COTTAGE BOSS - THE BEAST_11: -613753096
+      WIZARD_S COTTAGE BOSS - THE BEAST_8: -927782915
+      WIZARD_S COTTAGE BOSS - THE BEAST_5: -1978811513
+      WIZARD_S COTTAGE BOSS - THE BEAST_17: -1949760731
+      WIZARD_S COTTAGE BOSS - THE BEAST_10: -105960704
+      WIZARD_S COTTAGE BOSS - THE BEAST_13: 376354717
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

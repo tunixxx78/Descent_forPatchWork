@@ -5,12 +5,31 @@ using UnityEngine.UI;
 
 public class DiceFunctionalityManager : MonoBehaviour
 {
-    [SerializeField] Sprite[] diceEyeCommands;
+    [SerializeField] Sprite[] holder1;
+    [SerializeField] Sprite[] holder2;
+    [SerializeField] Sprite[] holder3;
+    [SerializeField] Sprite[] holder4;
     [SerializeField] Image diceEyeImages;
 
     public void SetDiceEyeCommand(int index)
     {
-        diceEyeImages.sprite = diceEyeCommands[index - 1];
+        if(GameManager.gm.round == 0)
+        {
+            diceEyeImages.sprite = holder1[index - 1];
+        }
+        if (GameManager.gm.round == 1)
+        {
+            diceEyeImages.sprite = holder2[index - 1];
+        }
+        if (GameManager.gm.round == 2)
+        {
+            diceEyeImages.sprite = holder3[index - 1];
+        }
+        if (GameManager.gm.round == 3)
+        {
+            diceEyeImages.sprite = holder4[index - 1];
+        }
+
     }
 
     public void SetDiceEyeFunctionalities(int index)

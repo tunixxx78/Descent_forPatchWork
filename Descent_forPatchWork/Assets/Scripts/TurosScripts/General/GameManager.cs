@@ -99,12 +99,30 @@ public class GameManager : MonoBehaviour
 
                     characterHolder.SetActive(false);
 
-                    BossInfoPanel.SetActive(true);
+                    //BossInfoPanel.SetActive(true);
 
-                    GameObject bossInstance = Instantiate(maps.enemyBase[2], maps.bossEnemySpawnPoint.position, Quaternion.identity);
-                    bossInstance.transform.SetParent(maps.transform.GetChild(GameManager.gm.currentMissionIndex).GetChild(2).GetChild(16));
-                    GameManager.gm.enemyBossesInGame.Add(bossInstance);
+                    maps.transform.GetChild(GameManager.gm.currentMissionIndex).GetChild(2).GetChild(18).GetChild(0).GetComponent<Image>().sprite = (Sprite)Resources.Load($"MissionInfo/Boss/{GameManager.gm.round}");
+                    maps.transform.GetChild(GameManager.gm.currentMissionIndex).GetChild(2).GetChild(18).gameObject.SetActive(true);
+                    maps.transform.GetChild(GameManager.gm.currentMissionIndex).GetChild(2).GetChild(18).GetChild(1).gameObject.SetActive(true);
+
+                    if(round == 0)
+                    {
+                        GameObject bossInstance = Instantiate(maps.enemyBase[2], maps.bossEnemySpawnPoint.position, Quaternion.identity);
+                        bossInstance.transform.SetParent(maps.transform.GetChild(GameManager.gm.currentMissionIndex).GetChild(2).GetChild(16));
+                        GameManager.gm.enemyBossesInGame.Add(bossInstance);
+                    }
+                    if(round == 1)
+                    {
+                        GameObject bossInstance = Instantiate(maps.enemyBase[5], maps.bossEnemySpawnPoint.position, Quaternion.identity);
+                        bossInstance.transform.SetParent(maps.transform.GetChild(GameManager.gm.currentMissionIndex).GetChild(2).GetChild(16));
+                        GameManager.gm.enemyBossesInGame.Add(bossInstance);
+                    }
+                    
+
+
+
                     maps.enemyTwoPanel.SetActive(true);
+                    maps.enemyTwoPanel.GetComponent<Image>().sprite = maps.bossPanels[round];
                     bossIsSpawned = true;
                 }
 

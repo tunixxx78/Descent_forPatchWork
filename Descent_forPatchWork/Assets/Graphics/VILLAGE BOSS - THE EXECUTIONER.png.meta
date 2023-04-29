@@ -1,0 +1,674 @@
+fileFormatVersion: 2
+guid: 623d4b536b9554fcd996687759f8468b
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: VILLAGE BOSS - THE EXECUTIONER_0
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 823
+        width: 1169
+        height: 241
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a14cb664124ec453daa368985dab15a9
+      internalID: -1408988825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VILLAGE BOSS - THE EXECUTIONER_1
+      rect:
+        serializedVersion: 2
+        x: 1368
+        y: 985
+        width: 74
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7d8ca4e7dc4041cb9fd6f981447309b
+      internalID: -497779082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VILLAGE BOSS - THE EXECUTIONER_2
+      rect:
+        serializedVersion: 2
+        x: 1482
+        y: 909
+        width: 403
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca7443d2bd74c419a87a317193abbe04
+      internalID: -250360892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VILLAGE BOSS - THE EXECUTIONER_3
+      rect:
+        serializedVersion: 2
+        x: 1475
+        y: 947
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae2d7edce57414bcca3b108cbdc9a6d8
+      internalID: -409822597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VILLAGE BOSS - THE EXECUTIONER_4
+      rect:
+        serializedVersion: 2
+        x: 1368
+        y: 806
+        width: 74
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39a5600fc8c9f4a6d8eece92b389ccf5
+      internalID: 1988050609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VILLAGE BOSS - THE EXECUTIONER_5
+      rect:
+        serializedVersion: 2
+        x: 1482
+        y: 731
+        width: 403
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 092cbe3a092424be4a0740df9b8298ce
+      internalID: -1077609555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VILLAGE BOSS - THE EXECUTIONER_6
+      rect:
+        serializedVersion: 2
+        x: 1169
+        y: 773
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b52c14670f5594e3c80c49b93d53b39b
+      internalID: -1180606160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VILLAGE BOSS - THE EXECUTIONER_7
+      rect:
+        serializedVersion: 2
+        x: 1186
+        y: 771
+        width: 31
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5af1a6be3783a4089932677455a5abac
+      internalID: -671045246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VILLAGE BOSS - THE EXECUTIONER_8
+      rect:
+        serializedVersion: 2
+        x: 1247
+        y: 773
+        width: 44
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f615b31316de4a01804f1c7f41fa6fa
+      internalID: 1808945148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VILLAGE BOSS - THE EXECUTIONER_9
+      rect:
+        serializedVersion: 2
+        x: 1475
+        y: 769
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4fde0d1784064fe4b5622dddbce9c9f
+      internalID: 660097426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VILLAGE BOSS - THE EXECUTIONER_10
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 470
+        width: 1169
+        height: 241
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77a998bc35dfc4dbba24110e89c06b89
+      internalID: -768158929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VILLAGE BOSS - THE EXECUTIONER_11
+      rect:
+        serializedVersion: 2
+        x: 1368
+        y: 634
+        width: 74
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1971562399164636b717f25dafeed79
+      internalID: -252775636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VILLAGE BOSS - THE EXECUTIONER_12
+      rect:
+        serializedVersion: 2
+        x: 1483
+        y: 560
+        width: 402
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76ed4cde4a8a24eb1844549ac97cc23c
+      internalID: 1790139638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VILLAGE BOSS - THE EXECUTIONER_13
+      rect:
+        serializedVersion: 2
+        x: 1475
+        y: 595
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6f2a21f059c843b9ad03bca73acaca2
+      internalID: 837316300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VILLAGE BOSS - THE EXECUTIONER_14
+      rect:
+        serializedVersion: 2
+        x: 1367
+        y: 455
+        width: 73
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d05d532af6d734cfe89a00ae29766b54
+      internalID: 1759202962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VILLAGE BOSS - THE EXECUTIONER_15
+      rect:
+        serializedVersion: 2
+        x: 1481
+        y: 380
+        width: 402
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da80cd2bcf3d84b4188af7638bb15b95
+      internalID: -1560456504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VILLAGE BOSS - THE EXECUTIONER_16
+      rect:
+        serializedVersion: 2
+        x: 1472
+        y: 419
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7c818779f90740b19f5eaeb2d664556
+      internalID: -543755064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VILLAGE BOSS - THE EXECUTIONER_17
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 68
+        width: 283
+        height: 282
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f08ba11467a0648e7a579be28ea0bbab
+      internalID: 553892982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VILLAGE BOSS - THE EXECUTIONER_18
+      rect:
+        serializedVersion: 2
+        x: 655
+        y: 46
+        width: 395
+        height: 352
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71e9f7c0c466040c7a379ce97e77b329
+      internalID: -469060597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VILLAGE BOSS - THE EXECUTIONER_19
+      rect:
+        serializedVersion: 2
+        x: 1368
+        y: 276
+        width: 74
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 951690ae7b1ea4dbea2d34144c058cd8
+      internalID: 750456464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VILLAGE BOSS - THE EXECUTIONER_20
+      rect:
+        serializedVersion: 2
+        x: 1472
+        y: 202
+        width: 411
+        height: 154
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8734160894fb04fe498a97d5394565fc
+      internalID: 959998054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VILLAGE BOSS - THE EXECUTIONER_21
+      rect:
+        serializedVersion: 2
+        x: 1367
+        y: 91
+        width: 74
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6d57b1a6c17346dc8bb159ba77bd3bb
+      internalID: 1339923862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VILLAGE BOSS - THE EXECUTIONER_22
+      rect:
+        serializedVersion: 2
+        x: 1482
+        y: 15
+        width: 404
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39af061eec1ff41b3992434545910fa8
+      internalID: -2111674582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VILLAGE BOSS - THE EXECUTIONER_23
+      rect:
+        serializedVersion: 2
+        x: 1475
+        y: 52
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dac7cb8a4f89e4267a1d67711bd3ac73
+      internalID: 1216804631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 3c6ec5c9699f241e2aed0a5dc6360899
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      VILLAGE BOSS - THE EXECUTIONER_1: -497779082
+      VILLAGE BOSS - THE EXECUTIONER_4: 1988050609
+      VILLAGE BOSS - THE EXECUTIONER_12: 1790139638
+      VILLAGE BOSS - THE EXECUTIONER_19: 750456464
+      VILLAGE BOSS - THE EXECUTIONER_22: -2111674582
+      VILLAGE BOSS - THE EXECUTIONER_13: 837316300
+      VILLAGE BOSS - THE EXECUTIONER_18: -469060597
+      VILLAGE BOSS - THE EXECUTIONER_0: -1408988825
+      VILLAGE BOSS - THE EXECUTIONER_7: -671045246
+      VILLAGE BOSS - THE EXECUTIONER_3: -409822597
+      VILLAGE BOSS - THE EXECUTIONER_5: -1077609555
+      VILLAGE BOSS - THE EXECUTIONER_15: -1560456504
+      VILLAGE BOSS - THE EXECUTIONER_20: 959998054
+      VILLAGE BOSS - THE EXECUTIONER_23: 1216804631
+      VILLAGE BOSS - THE EXECUTIONER_6: -1180606160
+      VILLAGE BOSS - THE EXECUTIONER_11: -252775636
+      VILLAGE BOSS - THE EXECUTIONER_21: 1339923862
+      VILLAGE BOSS - THE EXECUTIONER_10: -768158929
+      VILLAGE BOSS - THE EXECUTIONER_17: 553892982
+      VILLAGE BOSS - THE EXECUTIONER_9: 660097426
+      VILLAGE BOSS - THE EXECUTIONER_2: -250360892
+      VILLAGE BOSS - THE EXECUTIONER_16: -543755064
+      VILLAGE BOSS - THE EXECUTIONER_14: 1759202962
+      VILLAGE BOSS - THE EXECUTIONER_8: 1808945148
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -19,8 +19,12 @@ public class MapsController : MonoBehaviour
 
     [SerializeField] Transform[] enemySpawnPoints;
     public GameObject[] enemyBase;
-    
-    public GameObject mapsButton, enemyHordPanel, enemyTwoPanel;
+
+    public Sprite[] hordePanels;
+    public Sprite[] bossPanels;
+    public Sprite[] enemyTokens;
+
+    public GameObject mapsButton, enemyHordPanel, enemyTwoPanel, maps;
     public Transform bossEnemySpawnPoint;
     int heroNumIndex;
 
@@ -33,6 +37,7 @@ public class MapsController : MonoBehaviour
         enemyTwoPanel.SetActive(false);
         heroNumIndex = 0;
         bossEnemySpawnPoint = GameObject.Find("BossSpawnPoint").transform;
+        maps = GameObject.Find("MapPanel");
         
     }
 
@@ -90,6 +95,21 @@ public class MapsController : MonoBehaviour
 
     public void SetRealBattleMap()
     {
+        //for setting spawners buttons
+        maps.transform.GetChild(GameManager.gm.currentMissionIndex).GetChild(2).GetChild(14).GetChild(0).GetComponent<EnemySpawnerButton>().SetButtonImages();
+        maps.transform.GetChild(GameManager.gm.currentMissionIndex).GetChild(2).GetChild(14).GetChild(1).GetComponent<EnemySpawnerButton>().SetButtonImages();
+
+        //for setting right info window content
+        maps.transform.GetChild(GameManager.gm.currentMissionIndex).GetChild(2).GetChild(18).GetChild(0).GetComponent<Image>().sprite = (Sprite)Resources.Load($"MissionInfo/Start/{GameManager.gm.round}");
+        maps.transform.GetChild(GameManager.gm.currentMissionIndex).GetChild(2).GetChild(18).gameObject.SetActive(true);
+        maps.transform.GetChild(GameManager.gm.currentMissionIndex).GetChild(2).GetChild(18).GetChild(1).gameObject.SetActive(true);
+
+        //For hiding cardViewButton
+
+        maps.transform.GetChild(GameManager.gm.currentMissionIndex).GetChild(5).gameObject.SetActive(false);
+
+
+
         GameObject.Find("Canvas").transform.GetChild(0).GetComponent<Image>().sprite = GameManager.gm.BGImages[1];
 
         MusicHolder.mH.MusicOff(1);
@@ -195,34 +215,62 @@ public class MapsController : MonoBehaviour
 
         if (GameManager.gm.canSpawnEnemys)
         {
-            for (int e = 0; e < enemyBase.Length; e++)
+            if(GameManager.gm.round == 0)
             {
-                var enemyInstance = Instantiate(enemyBase[0], enemySpawnPoints[e].position, Quaternion.identity);
-                enemyInstance.transform.SetParent(characterHolder.transform);
-                enemyInstance.transform.position = enemySpawnPoints[e].position;
-                enemyInstance.transform.localScale = new Vector3(1, 1, 1);
-
-                // for adding enemytype 1 health to enemyHordePool
-
-                if (enemyInstance.GetComponent<EnemyOne>().eB.enemyType == 1)
+                for (int e = 0; e < 3; e++)
                 {
-                    GameManager.gm.enemyHordHealth += enemyInstance.GetComponent<EnemyOne>().eB.enemyHealth;
-                    GameManager.gm.enemyHordStrenght += enemyInstance.GetComponent<EnemyOne>().eB.enemyStrength;
+                    var enemyInstance = Instantiate(enemyBase[0], enemySpawnPoints[e].position, Quaternion.identity);
+                    enemyInstance.transform.SetParent(characterHolder.transform);
+                    enemyInstance.transform.position = enemySpawnPoints[e].position;
+                    enemyInstance.transform.localScale = new Vector3(1, 1, 1);
+
+                    // for adding enemytype 1 health to enemyHordePool
+
+                    if (enemyInstance.GetComponent<EnemyOne>().eB.enemyType == 1)
+                    {
+                        GameManager.gm.enemyHordHealth += enemyInstance.GetComponent<EnemyOne>().eB.enemyHealth;
+                        GameManager.gm.enemyHordStrenght += enemyInstance.GetComponent<EnemyOne>().eB.enemyStrength;
+                    }
+
+                    //GameManager.gm.enemyHordStrenght += enemyInstance.GetComponent<EnemyOne>().eB.enemyStrength;
+                    GameManager.gm.enemysInGame.Add(enemyInstance);
+
+
                 }
-
-                //GameManager.gm.enemyHordStrenght += enemyInstance.GetComponent<EnemyOne>().eB.enemyStrength;
-                GameManager.gm.enemysInGame.Add(enemyInstance);
-
-
             }
 
+            if(GameManager.gm.round == 1)
+            {
+                for (int e = 0; e < 3; e++)
+                {
+                    var enemyInstance = Instantiate(enemyBase[3], enemySpawnPoints[e].position, Quaternion.identity);
+                    enemyInstance.transform.SetParent(characterHolder.transform);
+                    enemyInstance.transform.position = enemySpawnPoints[e].position;
+                    enemyInstance.transform.localScale = new Vector3(1, 1, 1);
+
+                    // for adding enemytype 1 health to enemyHordePool
+
+                    if (enemyInstance.GetComponent<EnemyOne>().eB.enemyType == 1)
+                    {
+                        GameManager.gm.enemyHordHealth += enemyInstance.GetComponent<EnemyOne>().eB.enemyHealth;
+                        GameManager.gm.enemyHordStrenght += enemyInstance.GetComponent<EnemyOne>().eB.enemyStrength;
+                    }
+
+                    //GameManager.gm.enemyHordStrenght += enemyInstance.GetComponent<EnemyOne>().eB.enemyStrength;
+                    GameManager.gm.enemysInGame.Add(enemyInstance);
+
+
+                }
+            }
+
+            enemyHordPanel.GetComponent<Image>().sprite = hordePanels[GameManager.gm.round];
             enemyHordPanel.SetActive(true);
         }
         
         
 
         GameObject.Find("/Canvas/MapPanel/TestMission/CardView").SetActive(true);
-        GameObject.Find("/Canvas/MapPanel/TestMission/CardViewButton").SetActive(true);
+        //GameObject.Find("/Canvas/MapPanel/TestMission/CardViewButton").SetActive(true);
         
         //enemyTwoPanel.SetActive(true);
         GameManager.gm.battleIsOn = true;

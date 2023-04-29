@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class EnemySpawnerButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 {
@@ -26,30 +27,48 @@ public class EnemySpawnerButton : MonoBehaviour, IPointerDownHandler, IPointerUp
         {
             if (Input.GetMouseButtonUp(0))
             {
-                GameObject villagerInstance = Instantiate(mapsController.GetComponent<MapsController>().enemyBase[0], GameObject.Find("ExtraSpawnPoint").transform.position, Quaternion.identity);
-                villagerInstance.transform.SetParent(mapsController.transform.GetChild(GameManager.gm.currentMissionIndex).GetChild(2));
-                GameManager.gm.enemysInGame.Add(villagerInstance);
-
-                if (villagerInstance.GetComponent<EnemyOne>().eB.enemyType == 1)
+                if(GameManager.gm.round == 0)
                 {
-                    GameManager.gm.enemyHordHealth += villagerInstance.GetComponent<EnemyOne>().eB.enemyHealth;
+                    GameObject villagerInstance = Instantiate(mapsController.GetComponent<MapsController>().enemyBase[0], GameObject.Find("ExtraSpawnPoint").transform.position, Quaternion.identity);
+                    villagerInstance.transform.SetParent(mapsController.transform.GetChild(GameManager.gm.currentMissionIndex).GetChild(2));
+                    GameManager.gm.enemysInGame.Add(villagerInstance);
+
+                    if (villagerInstance.GetComponent<EnemyOne>().eB.enemyType == 1)
+                    {
+                        GameManager.gm.enemyHordHealth += villagerInstance.GetComponent<EnemyOne>().eB.enemyHealth;
+                    }
                 }
+                if(GameManager.gm.round == 1)
+                {
+                    GameObject wolfInstance = Instantiate(mapsController.GetComponent<MapsController>().enemyBase[3], GameObject.Find("ExtraSpawnPoint").transform.position, Quaternion.identity);
+                    wolfInstance.transform.SetParent(mapsController.transform.GetChild(GameManager.gm.currentMissionIndex).GetChild(2));
+                    GameManager.gm.enemysInGame.Add(wolfInstance);
+
+                    if (wolfInstance.GetComponent<EnemyOne>().eB.enemyType == 1)
+                    {
+                        GameManager.gm.enemyHordHealth += wolfInstance.GetComponent<EnemyOne>().eB.enemyHealth;
+                    }
+                }
+                
             }
         }
         if (GameManager.gm.lonerSelected)
         {
             if (Input.GetMouseButtonUp(0))
             {
-                GameObject lonerInstance = Instantiate(mapsController.GetComponent<MapsController>().enemyBase[1], GameObject.Find("ExtraSpawnPoint").transform.position, Quaternion.identity);
-                lonerInstance.transform.SetParent(mapsController.transform.GetChild(GameManager.gm.currentMissionIndex).GetChild(2));
-                GameManager.gm.enemysInGame.Add(lonerInstance);
-
-                /*
-                if (lonerInstance.GetComponent<EnemyOne>().eB.enemyType == 3)
+                if (GameManager.gm.round == 0)
                 {
-                    GameManager.gm.enemyHordHealth += lonerInstance.GetComponent<EnemyOne>().eB.enemyHealth;
+                    GameObject lonerInstance = Instantiate(mapsController.GetComponent<MapsController>().enemyBase[1], GameObject.Find("ExtraSpawnPoint").transform.position, Quaternion.identity);
+                    lonerInstance.transform.SetParent(mapsController.transform.GetChild(GameManager.gm.currentMissionIndex).GetChild(2));
+                    GameManager.gm.enemysInGame.Add(lonerInstance);
                 }
-                */
+                if(GameManager.gm.round == 1)
+                {
+                    GameObject lonerInstance = Instantiate(mapsController.GetComponent<MapsController>().enemyBase[4], GameObject.Find("ExtraSpawnPoint").transform.position, Quaternion.identity);
+                    lonerInstance.transform.SetParent(mapsController.transform.GetChild(GameManager.gm.currentMissionIndex).GetChild(2));
+                    GameManager.gm.enemysInGame.Add(lonerInstance);
+                }
+                
             }
         }
     }
@@ -95,6 +114,21 @@ public class EnemySpawnerButton : MonoBehaviour, IPointerDownHandler, IPointerUp
     public void AddThisSpawnerToList()
     {
         GameManager.gm.enemySpawnersIngame.Add(this.gameObject);
+    }
+
+    public void SetButtonImages()
+    {
+        if(GameManager.gm.round == 0)
+        {
+            GameObject.Find("MapPanel").transform.GetChild(GameManager.gm.currentMissionIndex).GetChild(2).GetChild(14).GetChild(0).GetComponent<Image>().sprite = FindObjectOfType<MapsController>().enemyTokens[0];
+            GameObject.Find("MapPanel").transform.GetChild(GameManager.gm.currentMissionIndex).GetChild(2).GetChild(14).GetChild(1).GetComponent<Image>().sprite = FindObjectOfType<MapsController>().enemyTokens[1];
+        }
+        if (GameManager.gm.round == 1)
+        {
+            GameObject.Find("MapPanel").transform.GetChild(GameManager.gm.currentMissionIndex).GetChild(2).GetChild(14).GetChild(0).GetComponent<Image>().sprite = FindObjectOfType<MapsController>().enemyTokens[3];
+            GameObject.Find("MapPanel").transform.GetChild(GameManager.gm.currentMissionIndex).GetChild(2).GetChild(14).GetChild(1).GetComponent<Image>().sprite = FindObjectOfType<MapsController>().enemyTokens[4];
+        }
+
     }
 
     
