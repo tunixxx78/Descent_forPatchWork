@@ -17,7 +17,7 @@ public class BattleEvent : MonoBehaviour
 
     private void Start()
     {
-        InitializeBattleEvent();
+ 
     }
 
     public void DrawCard()
@@ -64,8 +64,7 @@ public class BattleEvent : MonoBehaviour
     {
         deck.GetCardList().Clear();
         deck.GetDiscardList().Clear();
-        deck.GetCards("BattleEvent", "1"); //GameManager.gm.currentMissionIndex.ToString()
-        //Debug.Log(GameManager.gm.currentMissionIndex.ToString() + "CUrrent mission index");
+        deck.GetCards("BattleEvent", GameManager.gm.currentMissionIndex.ToString());
         Debug.Log(deck.GetCardList().Count + " Deck");
         index = 1;
     }

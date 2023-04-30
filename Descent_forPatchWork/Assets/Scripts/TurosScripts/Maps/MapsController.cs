@@ -266,9 +266,9 @@ public class MapsController : MonoBehaviour
             enemyHordPanel.GetComponent<Image>().sprite = hordePanels[GameManager.gm.round];
             enemyHordPanel.SetActive(true);
         }
-        
-        
 
+
+        GameObject.FindGameObjectWithTag("BattleEvent").GetComponent<BattleEvent>().InitializeBattleEvent();
         GameObject.Find("/Canvas/MapPanel/TestMission/CardView").SetActive(true);
         //GameObject.Find("/Canvas/MapPanel/TestMission/CardViewButton").SetActive(true);
         
