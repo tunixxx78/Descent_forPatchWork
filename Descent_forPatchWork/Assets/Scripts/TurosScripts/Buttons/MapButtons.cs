@@ -122,7 +122,8 @@ public class MapButtons : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 
         if (this.gameObject.CompareTag("AreaMapButton"))
         {
-            if(GameManager.gm.round != 3)
+            GameObject.FindGameObjectWithTag("BattleEvent").GetComponent<BattleEvent>().InitializeBattleEvent();
+            if (GameManager.gm.round != 3)
             {
                 if (isClosableButton)
                 {

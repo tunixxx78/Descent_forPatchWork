@@ -87,7 +87,7 @@ public class GameManager : MonoBehaviour
     private void Update()
     {
         //enemyHordStrenght = enemyHordStrenght / 5;
-
+        Debug.Log(round);
         //Debug.Log(enemyHordStrenght);
 
         if(bossBossFight == false)
@@ -307,7 +307,6 @@ public class GameManager : MonoBehaviour
     public void SetupForNextRound()
     {
         characterHolder.SetActive(true);
-
         for (int s = 0; s < enemySpawnersIngame.Count; s++)
         {
             enemySpawnersIngame[s].gameObject.SetActive(true);
