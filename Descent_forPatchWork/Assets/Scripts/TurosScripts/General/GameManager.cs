@@ -13,7 +13,7 @@ public class GameManager : MonoBehaviour
     public List<GameObject> enemyBossesInGame;
     public float enemyHordHealth, enemyHordStrenght;
 
-    public bool plrCanAttack, enemyCanAttack, battleIsOn, plrIsAttacking, enemyIsAttacking, villagerSelected, lonerSelected, bossIsSpawned, mergeHorde, lootIsOn, canSpawnEnemys, bossBossFight;
+    public bool plrCanAttack, enemyCanAttack, battleIsOn, plrIsAttacking, enemyIsAttacking, villagerSelected, lonerSelected, bossIsSpawned, mergeHorde, lootIsOn, canSpawnEnemys, bossBossFight, bossLoot, bossFightReward;
     public float attackForce = 1;
 
     public GameObject QuestLorePanel, currentMission;
@@ -33,9 +33,12 @@ public class GameManager : MonoBehaviour
     public GameObject enemyPanel;
     public GameObject BossInfoPanel;
 
-    [SerializeField] GameObject characterHolder;
+    public GameObject characterHolder;
 
     MapsController maps;
+
+
+    public int tempBossHealth = 10000;
 
     private void Awake()
     {
@@ -67,6 +70,8 @@ public class GameManager : MonoBehaviour
         lootIsOn = false;
         canSpawnEnemys = true;
         bossBossFight = false;
+        bossLoot = false;
+        bossFightReward = false;
 
         //for filling the QuestLorePanel information
 
@@ -87,71 +92,97 @@ public class GameManager : MonoBehaviour
 
         if(bossBossFight == false)
         {
-            if (enemysInGame.Count <= 0 && battleIsOn && bossIsSpawned == false)
+
+            //characterHolder = GameObject.Find("CharacterHolder");
+
+            if (round != 3)
             {
-                //for setting bossFightTitleIcon
-
-                GameObject.Find("MapPanel").transform.GetChild(currentMissionIndex).GetChild(2).GetChild(0).GetChild(0).GetChild(0).GetComponent<Image>().sprite = (Sprite)Resources.Load($"BossTittleImages/{GameManager.gm.round}");
-                characterHolder = GameObject.Find("CharacterHolder");
-
-                if (GameManager.gm.canSpawnEnemys)
+                if (enemysInGame.Count <= 0 && battleIsOn && bossIsSpawned == false)
                 {
+                    //for setting bossFightTitleIcon
 
+                    GameObject.Find("MapPanel").transform.GetChild(currentMissionIndex).GetChild(2).GetChild(0).GetChild(0).GetChild(0).GetComponent<Image>().sprite = (Sprite)Resources.Load($"BossTittleImages/{GameManager.gm.round}");
+                    characterHolder = GameObject.Find("CharacterHolder");
+
+                    if (GameManager.gm.canSpawnEnemys)
+                    {
+
+                        characterHolder.SetActive(false);
+
+                        //BossInfoPanel.SetActive(true);
+
+                        maps.transform.GetChild(GameManager.gm.currentMissionIndex).GetChild(2).GetChild(18).GetChild(0).GetComponent<Image>().sprite = (Sprite)Resources.Load($"MissionInfo/Boss/{GameManager.gm.round}");
+                        maps.transform.GetChild(GameManager.gm.currentMissionIndex).GetChild(2).GetChild(18).gameObject.SetActive(true);
+                        maps.transform.GetChild(GameManager.gm.currentMissionIndex).GetChild(2).GetChild(18).GetChild(1).gameObject.SetActive(true);
+
+                        if (round == 0)
+                        {
+                            GameObject bossInstance = Instantiate(maps.enemyBase[2], maps.bossEnemySpawnPoint.position, Quaternion.identity);
+                            bossInstance.transform.SetParent(maps.transform.GetChild(GameManager.gm.currentMissionIndex).GetChild(2).GetChild(16));
+                            GameManager.gm.enemyBossesInGame.Add(bossInstance);
+                        }
+                        if (round == 1)
+                        {
+                            GameObject bossInstance = Instantiate(maps.enemyBase[5], maps.bossEnemySpawnPoint.position, Quaternion.identity);
+                            bossInstance.transform.SetParent(maps.transform.GetChild(GameManager.gm.currentMissionIndex).GetChild(2).GetChild(16));
+                            GameManager.gm.enemyBossesInGame.Add(bossInstance);
+                        }
+
+                        maps.enemyTwoPanel.SetActive(true);
+                        maps.enemyTwoPanel.GetComponent<Image>().sprite = maps.bossPanels[round];
+                        bossIsSpawned = true;
+                    }
+
+
+                }
+                if (enemysInGame.Count <= 0 && enemyBossesInGame.Count <= 0 && battleIsOn)
+                {
+                    Debug.Log("PELAAJA ON VOITTANUT TAISTELUN!");
+                    battleIsOn = false;
+                    bossIsSpawned = false;
+                    currentAreaMissions--;
+
+                    //test for showing next mission
+                    if (currentAreaMissions <= 0)
+                    {
+                        currentMissionInQuest++;
+                        currentMission.GetComponent<Quest>().missions[currentMissionInQuest].SetActive(true);
+
+                    }
+
+                    GameObject.Find("MapPanel").transform.GetChild(currentMissionIndex).GetChild(2).GetChild(9).gameObject.SetActive(true);
+                    enemyPanel.SetActive(false);
+                    hordePanel.SetActive(false);
+
+                    for (int s = 0; s < enemySpawnersIngame.Count; s++)
+                    {
+                        enemySpawnersIngame[s].gameObject.SetActive(false);
+                    }
+
+                    // for instanciating lootObjects to map
+
+                    for (int i = 0; i < lootSpawnPoints.Length; i++)
+                    {
+                        GameObject lootInstance = Instantiate(lootObjects[i], lootSpawnPoints[i].position, Quaternion.identity);
+
+                        lootInstance.transform.SetParent(GameObject.Find("LootSpotHolder").transform);
+                        lootInstance.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
+                    }
+
+                    lootIsOn = true;
+                }
+
+                if (lootIsOn && GameObject.Find("LootSpotHolder").transform.childCount <= 0)
+                {
+                    lootIsOn = false;
                     characterHolder.SetActive(false);
-
-                    //BossInfoPanel.SetActive(true);
-
-                    maps.transform.GetChild(GameManager.gm.currentMissionIndex).GetChild(2).GetChild(18).GetChild(0).GetComponent<Image>().sprite = (Sprite)Resources.Load($"MissionInfo/Boss/{GameManager.gm.round}");
-                    maps.transform.GetChild(GameManager.gm.currentMissionIndex).GetChild(2).GetChild(18).gameObject.SetActive(true);
-                    maps.transform.GetChild(GameManager.gm.currentMissionIndex).GetChild(2).GetChild(18).GetChild(1).gameObject.SetActive(true);
-
-                    if(round == 0)
-                    {
-                        GameObject bossInstance = Instantiate(maps.enemyBase[2], maps.bossEnemySpawnPoint.position, Quaternion.identity);
-                        bossInstance.transform.SetParent(maps.transform.GetChild(GameManager.gm.currentMissionIndex).GetChild(2).GetChild(16));
-                        GameManager.gm.enemyBossesInGame.Add(bossInstance);
-                    }
-                    if(round == 1)
-                    {
-                        GameObject bossInstance = Instantiate(maps.enemyBase[5], maps.bossEnemySpawnPoint.position, Quaternion.identity);
-                        bossInstance.transform.SetParent(maps.transform.GetChild(GameManager.gm.currentMissionIndex).GetChild(2).GetChild(16));
-                        GameManager.gm.enemyBossesInGame.Add(bossInstance);
-                    }
-                    
-
-
-
-                    maps.enemyTwoPanel.SetActive(true);
-                    maps.enemyTwoPanel.GetComponent<Image>().sprite = maps.bossPanels[round];
-                    bossIsSpawned = true;
+                    GameObject.Find("BattleResultPanel").transform.GetChild(6).gameObject.SetActive(true);
+                    GameObject.Find("BattleResultPanel").transform.GetChild(6).GetChild(0).GetComponent<Image>().sprite = rewardImages[round];
                 }
-
-
             }
-            if (enemysInGame.Count <= 0 && enemyBossesInGame.Count <= 0 && battleIsOn)
+
+            if(round == 3 && bossLoot)
             {
-                Debug.Log("PELAAJA ON VOITTANUT TAISTELUN!");
-                battleIsOn = false;
-                bossIsSpawned = false;
-                currentAreaMissions--;
-
-                //test for showing next mission
-                if (currentAreaMissions <= 0)
-                {
-                    currentMissionInQuest++;
-                    currentMission.GetComponent<Quest>().missions[currentMissionInQuest].SetActive(true);
-
-                }
-
-                GameObject.Find("MapPanel").transform.GetChild(currentMissionIndex).GetChild(2).GetChild(9).gameObject.SetActive(true);
-                enemyPanel.SetActive(false);
-                hordePanel.SetActive(false);
-
-                for (int s = 0; s < enemySpawnersIngame.Count; s++)
-                {
-                    enemySpawnersIngame[s].gameObject.SetActive(false);
-                }
-
                 // for instanciating lootObjects to map
 
                 for (int i = 0; i < lootSpawnPoints.Length; i++)
@@ -162,16 +193,70 @@ public class GameManager : MonoBehaviour
                     lootInstance.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
                 }
 
+                bossLoot = false;
                 lootIsOn = true;
+
+                
+            }
+            if(round == 3)
+            {
+                
+
+                if (lootIsOn && GameObject.Find("LootSpotHolder").transform.childCount <= 0)
+                {
+                    Debug.Log("BOSS LOOT OVER");
+
+                    lootIsOn = false;
+                    characterHolder.SetActive(false);
+
+                    maps.transform.GetChild(GameManager.gm.currentMissionIndex).GetChild(2).GetChild(18).GetChild(0).GetComponent<Image>().sprite = (Sprite)Resources.Load($"MissionInfo/Boss/{GameManager.gm.round}");
+                    maps.transform.GetChild(GameManager.gm.currentMissionIndex).GetChild(2).GetChild(18).gameObject.SetActive(true);
+                    maps.transform.GetChild(GameManager.gm.currentMissionIndex).GetChild(2).GetChild(18).GetChild(1).gameObject.SetActive(true);
+
+                    GameObject bossInstance = Instantiate(maps.enemyBase[5], maps.bossEnemySpawnPoint.position, Quaternion.identity);
+                    bossInstance.transform.SetParent(maps.transform.GetChild(GameManager.gm.currentMissionIndex).GetChild(2).GetChild(16));
+                    GameManager.gm.enemyBossesInGame.Add(bossInstance);
+
+                    maps.enemyTwoPanel.SetActive(true);
+                    maps.enemyTwoPanel.GetComponent<Image>().sprite = maps.bossPanels[round - 1];
+                    bossIsSpawned = true;
+
+                    tempBossHealth = (int)bossInstance.GetComponent<EnemyOne>().eB.enemyHealth;
+
+                }
+
+                if(tempBossHealth <= 0)
+                {
+                    bossFightReward = true;
+                }
+
+                // need some other condition!
+                if(enemyBossesInGame.Count <= 0 && bossFightReward && battleIsOn)
+                {
+                    
+                    Debug.Log("TULEE LIIKAA KAMAA");
+                    maps.transform.GetChild(GameManager.gm.currentMissionIndex).GetChild(2).GetChild(18).GetChild(0).GetComponent<Image>().sprite = (Sprite)Resources.Load($"MissionInfo/End/{GameManager.gm.round}");
+                    maps.transform.GetChild(GameManager.gm.currentMissionIndex).GetChild(2).GetChild(18).gameObject.SetActive(true);
+                    maps.transform.GetChild(GameManager.gm.currentMissionIndex).GetChild(2).GetChild(18).GetChild(3).gameObject.SetActive(true);
+
+                    battleIsOn = false;
+                    bossFightReward = false;
+                    currentAreaMissions--;
+
+                    if (currentAreaMissions <= 0)
+                    {
+                        currentMissionInQuest++;
+                        currentMission.GetComponent<Quest>().missions[currentMissionInQuest].SetActive(true);
+
+                        //maps.transform.GetChild(GameManager.gm.currentMissionIndex).GetChild(2).GetChild(18).GetChild(3).gameObject.SetActive(false);
+                        //maps.transform.GetChild(GameManager.gm.currentMissionIndex).GetChild(2).GetChild(18).gameObject.SetActive(false);
+                        
+                    }
+
+                }
             }
 
-            if (lootIsOn && GameObject.Find("LootSpotHolder").transform.childCount <= 0)
-            {
-                lootIsOn = false;
-                characterHolder.SetActive(false);
-                GameObject.Find("BattleResultPanel").transform.GetChild(6).gameObject.SetActive(true);
-                GameObject.Find("BattleResultPanel").transform.GetChild(6).GetChild(0).GetComponent<Image>().sprite = rewardImages[round];
-            }
+            
         }
         else
         {
@@ -228,10 +313,15 @@ public class GameManager : MonoBehaviour
             enemySpawnersIngame[s].gameObject.SetActive(true);
         }
 
-        GameObject.Find("BattleResultPanel").transform.GetChild(6).GetChild(0).gameObject.SetActive(true);
-        GameObject.Find("BattleResultPanel").transform.GetChild(6).GetChild(1).gameObject.SetActive(false);
-        GameObject.Find("BattleResultPanel").transform.GetChild(6).gameObject.SetActive(false);
+        if(round != 3)
+        {
+            GameObject.Find("BattleResultPanel").transform.GetChild(6).GetChild(0).gameObject.SetActive(true);
+            GameObject.Find("BattleResultPanel").transform.GetChild(6).GetChild(1).gameObject.SetActive(false);
+            GameObject.Find("BattleResultPanel").transform.GetChild(6).gameObject.SetActive(false);
+        }
+        
 
 
     }
+
 }
