@@ -994,7 +994,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blockImages:
-  - {fileID: 573871797, guid: e208920a2345f4c3d9337451f39e4a82, type: 3}
+  - {fileID: 1311462842, guid: 50c10b6db2bf6424b8d6eb0ff41a4d78, type: 3}
   RealAreaMap: {fileID: 0}
 --- !u!1 &37680665
 GameObject:
@@ -16302,6 +16302,125 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 925400345}
   m_CullTransparentMesh: 1
+--- !u!1 &927482313
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 927482314}
+  - component: {fileID: 927482317}
+  - component: {fileID: 927482316}
+  - component: {fileID: 927482315}
+  m_Layer: 5
+  m_Name: BackToWorldMap
+  m_TagString: ExitMapButton
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &927482314
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 927482313}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 975513868}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -566, y: -436}
+  m_SizeDelta: {x: 396, y: 101}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &927482315
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 927482313}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 307b2b83d2478430d977691cdc0c9330, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 927482313}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 975513867}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  mapAnimator: {fileID: 0}
+  animationTrigger: BattleMapReveal_
+  isClosableButton: 0
+--- !u!114 &927482316
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 927482313}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: -475335175, guid: 03f04b2850e65480fa9c90f087bc91ff, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &927482317
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 927482313}
+  m_CullTransparentMesh: 1
 --- !u!1 &933390462
 GameObject:
   m_ObjectHideFlags: 0
@@ -16881,6 +17000,7 @@ RectTransform:
   - {fileID: 1168432456}
   - {fileID: 1595738590}
   - {fileID: 1120805884}
+  - {fileID: 927482314}
   m_Father: {fileID: 453954494}
   m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -24781,6 +24901,8 @@ MonoBehaviour:
   lootIsOn: 0
   canSpawnEnemys: 0
   bossBossFight: 0
+  bossLoot: 0
+  bossFightReward: 0
   attackForce: 1
   QuestLorePanel: {fileID: 0}
   currentMission: {fileID: 0}
@@ -24813,6 +24935,7 @@ MonoBehaviour:
   enemyPanel: {fileID: 0}
   BossInfoPanel: {fileID: 0}
   characterHolder: {fileID: 0}
+  tempBossHealth: 10000
 --- !u!4 &1466215018
 Transform:
   m_ObjectHideFlags: 0
