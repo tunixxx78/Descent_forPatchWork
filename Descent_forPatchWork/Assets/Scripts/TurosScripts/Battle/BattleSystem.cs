@@ -21,6 +21,10 @@ public class BattleSystem : MonoBehaviour
                 this.gameObject.GetComponent<EnemyOne>().eB.enemyHealth -= GameManager.gm.attackForce;
                 this.gameObject.GetComponent<EnemyOne>().SetEnemyStrength();
 
+                //for bossFight
+
+                GameManager.gm.tempBossHealth -= (int)GameManager.gm.attackForce;
+
                 if (this.gameObject.GetComponent<EnemyOne>().eB.enemyType == 1)
                 {
                     GameManager.gm.enemyHordHealth -= (GameManager.gm.attackForce - this.gameObject.GetComponent<EnemyOne>().eB.enemyShield);
