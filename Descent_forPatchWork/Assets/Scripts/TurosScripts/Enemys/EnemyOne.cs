@@ -56,15 +56,17 @@ public class EnemyOne : MonoBehaviour
             if(eB.enemyType == 2)
             {
                 GameManager.gm.enemyBossesInGame.Remove(this.gameObject);
+                GameManager.gm.tempBossHealth = 0;
                 Destroy(this.gameObject);
             }
 
             if (eB.enemyType == 3)
             {
                 GameManager.gm.enemysInGame.Remove(this.gameObject);
+                
                 //GameManager.gm.enemyHordHealth -= this.eB.enemyHealth;
                 //GameManager.gm.enemyHordStrenght -= this.eB.enemyStrength;
-                Destroy(this.gameObject);
+                Destroy(this.gameObject, 1);
             }
 
 

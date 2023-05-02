@@ -27,7 +27,7 @@ TagManager:
   - MainMenu
   - OnOff
   - Loner
-  - BattleEvent
+  - CLICKED
   layers:
   - Default
   - TransparentFX

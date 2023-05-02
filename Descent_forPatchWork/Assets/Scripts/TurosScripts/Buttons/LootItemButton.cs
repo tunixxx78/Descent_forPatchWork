@@ -40,6 +40,8 @@ public class LootItemButton : MonoBehaviour, IPointerDownHandler, IPointerUpHand
     {
         Debug.Log("BUTTON DOWN!");
 
+        
+
         int randItem = Random.Range(0, lootItems.Length);
 
         if (this.gameObject.CompareTag("LootItem"))
@@ -79,6 +81,8 @@ public class LootItemButton : MonoBehaviour, IPointerDownHandler, IPointerUpHand
             }
 
         }
+
+        gameObject.tag = "CLICKED";
     }
 
     public void OnPointerUp(PointerEventData eventData)

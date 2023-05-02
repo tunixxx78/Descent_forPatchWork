@@ -73,6 +73,8 @@ public class GameManager : MonoBehaviour
         bossLoot = false;
         bossFightReward = false;
 
+        
+
         //for filling the QuestLorePanel information
 
         QuestLorePanel = GameObject.Find("MapPanel").transform.GetChild(currentMissionInQuest).GetChild(3).gameObject;
@@ -115,6 +117,8 @@ public class GameManager : MonoBehaviour
                         maps.transform.GetChild(GameManager.gm.currentMissionIndex).GetChild(2).GetChild(18).gameObject.SetActive(true);
                         maps.transform.GetChild(GameManager.gm.currentMissionIndex).GetChild(2).GetChild(18).GetChild(1).gameObject.SetActive(true);
 
+                        maps.transform.GetChild(GameManager.gm.currentMissionIndex).GetChild(5).gameObject.SetActive(false);
+
                         if (round == 0)
                         {
                             GameObject bossInstance = Instantiate(maps.enemyBase[2], maps.bossEnemySpawnPoint.position, Quaternion.identity);
@@ -140,15 +144,9 @@ public class GameManager : MonoBehaviour
                     Debug.Log("PELAAJA ON VOITTANUT TAISTELUN!");
                     battleIsOn = false;
                     bossIsSpawned = false;
-                    currentAreaMissions--;
+                    //currentAreaMissions--;
 
-                    //test for showing next mission
-                    if (currentAreaMissions <= 0)
-                    {
-                        currentMissionInQuest++;
-                        currentMission.GetComponent<Quest>().missions[currentMissionInQuest].SetActive(true);
-
-                    }
+                    
 
                     GameObject.Find("MapPanel").transform.GetChild(currentMissionIndex).GetChild(2).GetChild(9).gameObject.SetActive(true);
                     enemyPanel.SetActive(false);
@@ -181,6 +179,8 @@ public class GameManager : MonoBehaviour
                 }
             }
 
+            //For first area boss fight
+
             if(round == 3 && bossLoot)
             {
                 // for instanciating lootObjects to map
@@ -204,6 +204,8 @@ public class GameManager : MonoBehaviour
 
                 if (lootIsOn && GameObject.Find("LootSpotHolder").transform.childCount <= 0)
                 {
+                    characterHolder = GameObject.Find("CharacterHolder");
+
                     Debug.Log("BOSS LOOT OVER");
 
                     lootIsOn = false;
@@ -213,7 +215,9 @@ public class GameManager : MonoBehaviour
                     maps.transform.GetChild(GameManager.gm.currentMissionIndex).GetChild(2).GetChild(18).gameObject.SetActive(true);
                     maps.transform.GetChild(GameManager.gm.currentMissionIndex).GetChild(2).GetChild(18).GetChild(1).gameObject.SetActive(true);
 
-                    GameObject bossInstance = Instantiate(maps.enemyBase[5], maps.bossEnemySpawnPoint.position, Quaternion.identity);
+                    maps.transform.GetChild(GameManager.gm.currentMissionIndex).GetChild(5).gameObject.SetActive(false);
+
+                    GameObject bossInstance = Instantiate(maps.enemyBase[6], maps.bossEnemySpawnPoint.position, Quaternion.identity);
                     bossInstance.transform.SetParent(maps.transform.GetChild(GameManager.gm.currentMissionIndex).GetChild(2).GetChild(16));
                     GameManager.gm.enemyBossesInGame.Add(bossInstance);
 
@@ -239,10 +243,13 @@ public class GameManager : MonoBehaviour
                     maps.transform.GetChild(GameManager.gm.currentMissionIndex).GetChild(2).GetChild(18).gameObject.SetActive(true);
                     maps.transform.GetChild(GameManager.gm.currentMissionIndex).GetChild(2).GetChild(18).GetChild(3).gameObject.SetActive(true);
 
+                    maps.transform.GetChild(GameManager.gm.currentMissionIndex).GetChild(5).gameObject.SetActive(false);
+
                     battleIsOn = false;
                     bossFightReward = false;
-                    currentAreaMissions--;
+                    //currentAreaMissions--;
 
+                    /*
                     if (currentAreaMissions <= 0)
                     {
                         currentMissionInQuest++;
@@ -252,7 +259,7 @@ public class GameManager : MonoBehaviour
                         //maps.transform.GetChild(GameManager.gm.currentMissionIndex).GetChild(2).GetChild(18).gameObject.SetActive(false);
                         
                     }
-
+                    */
                 }
             }
 
@@ -273,6 +280,15 @@ public class GameManager : MonoBehaviour
         if (mergeHorde)
         {
             MergeEnemyHorde();
+        }
+
+        //test for showing next mission
+        if (currentAreaMissions <= 0)
+        {
+            currentMissionInQuest++;
+            currentMission.GetComponent<Quest>().missions[currentMissionInQuest].SetActive(true);
+            currentAreaMissions = 4;
+
         }
 
     }
@@ -321,6 +337,10 @@ public class GameManager : MonoBehaviour
         
 
 
+    }
+    public void MissionDone()
+    {
+        currentAreaMissions--;
     }
 
 }
