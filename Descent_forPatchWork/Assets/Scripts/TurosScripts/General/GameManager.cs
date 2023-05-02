@@ -13,7 +13,7 @@ public class GameManager : MonoBehaviour
     public List<GameObject> enemyBossesInGame;
     public float enemyHordHealth, enemyHordStrenght;
 
-    public bool plrCanAttack, enemyCanAttack, battleIsOn, plrIsAttacking, enemyIsAttacking, villagerSelected, lonerSelected, bossIsSpawned, mergeHorde, lootIsOn, canSpawnEnemys, bossBossFight, bossLoot, bossFightReward;
+    public bool plrCanAttack, enemyCanAttack, battleIsOn, plrIsAttacking, enemyIsAttacking, villagerSelected, lonerSelected, bossIsSpawned, mergeHorde, lootIsOn, canSpawnEnemys, bossBossFight, bossLoot, bossFightReward, areaInfoLoaded;
     public float attackForce = 1;
 
     public GameObject QuestLorePanel, currentMission;
@@ -72,8 +72,9 @@ public class GameManager : MonoBehaviour
         bossBossFight = false;
         bossLoot = false;
         bossFightReward = false;
+        areaInfoLoaded = false;
 
-        
+        //currentMissionInQuest = 0;
 
         //for filling the QuestLorePanel information
 
@@ -247,6 +248,8 @@ public class GameManager : MonoBehaviour
 
                     battleIsOn = false;
                     bossFightReward = false;
+                    currentMissionInQuest++;
+                    currentMission.GetComponent<Quest>().missions[currentMissionInQuest].SetActive(true);
                     //currentAreaMissions--;
 
                     /*
@@ -263,7 +266,39 @@ public class GameManager : MonoBehaviour
                 }
             }
 
-            
+            //test for showing next mission
+            if (currentAreaMissions <= 0 && areaInfoLoaded)
+            {
+                Debug.Log("SITTEN PITÄISI NOSTELLA MISSIONINQUEST INDEXIÄ");
+                currentMissionInQuest++;
+                currentMission.GetComponent<Quest>().missions[currentMissionInQuest].SetActive(true);
+                currentAreaMissions = 4;
+                areaInfoLoaded = false;
+
+                //for saving plrData for this session.
+
+                for (int i = 0; i < GameManager.gm.heroesInGame.Count; i++)
+                {
+                    int currentRound = GameManager.gm.round;
+
+                    Debug.Log("TULOSTELLAAN MUUNNELTUA ROUND LUKUA JOKA ON: " + currentRound);
+                    Debug.Log("TULOSTELLAAN MUUNNELTUA areaMission LUKUA JOKA ON: " + currentAreaMissions);
+
+                    DataHolder.dataHolder.SetData(i, GameManager.gm.heroesInGame[i].GetComponent<HeroOne>().hb.plrName,
+                    GameManager.gm.heroesInGame[i].GetComponent<HeroOne>().hb.plrHealth,
+                    GameManager.gm.heroesInGame[i].GetComponent<HeroOne>().hb.plrStrength,
+                    GameManager.gm.heroesInGame[i].GetComponent<HeroOne>().hb.plrLevel,
+                    currentRound,
+                    GameManager.gm.currentAreaMissions);
+
+
+
+                    DataHolder.dataHolder.TakeCareOfSaving();
+                }
+
+            }
+
+
         }
         else
         {
@@ -283,11 +318,34 @@ public class GameManager : MonoBehaviour
         }
 
         //test for showing next mission
-        if (currentAreaMissions <= 0)
+        if (currentAreaMissions <= 0 && areaInfoLoaded)
         {
+            Debug.Log("SITTEN PITÄISI NOSTELLA MISSIONINQUEST INDEXIÄ");
             currentMissionInQuest++;
             currentMission.GetComponent<Quest>().missions[currentMissionInQuest].SetActive(true);
             currentAreaMissions = 4;
+            areaInfoLoaded = false;
+
+            //for saving plrData for this session.
+
+            for (int i = 0; i < GameManager.gm.heroesInGame.Count; i++)
+            {
+                int currentRound = GameManager.gm.round;
+
+                Debug.Log("TULOSTELLAAN MUUNNELTUA ROUND LUKUA JOKA ON: " + currentRound);
+                Debug.Log("TULOSTELLAAN MUUNNELTUA areaMission LUKUA JOKA ON: " + currentAreaMissions);
+
+                DataHolder.dataHolder.SetData(i, GameManager.gm.heroesInGame[i].GetComponent<HeroOne>().hb.plrName,
+                GameManager.gm.heroesInGame[i].GetComponent<HeroOne>().hb.plrHealth,
+                GameManager.gm.heroesInGame[i].GetComponent<HeroOne>().hb.plrStrength,
+                GameManager.gm.heroesInGame[i].GetComponent<HeroOne>().hb.plrLevel,
+                currentRound,
+                GameManager.gm.currentAreaMissions);
+
+
+
+                DataHolder.dataHolder.TakeCareOfSaving();
+            }
 
         }
 

@@ -239,7 +239,8 @@ public class MapsController : MonoBehaviour
                     //GameManager.gm.enemyHordStrenght += enemyInstance.GetComponent<EnemyOne>().eB.enemyStrength;
                     GameManager.gm.enemysInGame.Add(enemyInstance);
 
-
+                    enemyHordPanel.GetComponent<Image>().sprite = hordePanels[GameManager.gm.round];
+                    enemyHordPanel.SetActive(true);
                 }
             }
 
@@ -263,12 +264,12 @@ public class MapsController : MonoBehaviour
                     //GameManager.gm.enemyHordStrenght += enemyInstance.GetComponent<EnemyOne>().eB.enemyStrength;
                     GameManager.gm.enemysInGame.Add(enemyInstance);
 
-
+                    enemyHordPanel.GetComponent<Image>().sprite = hordePanels[GameManager.gm.round];
+                    enemyHordPanel.SetActive(true);
                 }
             }
 
-            enemyHordPanel.GetComponent<Image>().sprite = hordePanels[GameManager.gm.round];
-            enemyHordPanel.SetActive(true);
+            
         }
         
         
