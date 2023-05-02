@@ -355,7 +355,7 @@ public class MapButtons : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
                     currentRound,
                     GameManager.gm.currentAreaMissions);
 
-
+                    DataHolder.dataHolder.TakeCareOfSaving();
 
                     for (int j = 0; j < GameManager.gm.heroesInGame[i].GetComponent<HeroOne>().hbi.cardItems.Count - 1; j++)
                     {
@@ -431,9 +431,11 @@ public class MapButtons : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 
                 for (int i = 0; i < GameManager.gm.heroesInGame.Count; i++)
                 {
+                    GameManager.gm.currentAreaMissions = 4;
                     int currentRound = GameManager.gm.round + 1;
 
                     Debug.Log("TULOSTELLAAN MUUNNELTUA ROUND LUKUA JOKA ON: " + currentRound);
+                    Debug.Log("TULOSTELLAAN MUUNNELTUA areaMission LUKUA JOKA ON: " + GameManager.gm.currentAreaMissions);
 
                     DataHolder.dataHolder.SetData(i, GameManager.gm.heroesInGame[i].GetComponent<HeroOne>().hb.plrName,
                     GameManager.gm.heroesInGame[i].GetComponent<HeroOne>().hb.plrHealth,
@@ -442,6 +444,7 @@ public class MapButtons : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
                     currentRound,
                     GameManager.gm.currentAreaMissions);
 
+                    DataHolder.dataHolder.TakeCareOfSaving();
 
                     /*
                     for (int j = 0; j < GameManager.gm.heroesInGame[i].GetComponent<HeroOne>().hbi.cardItems.Count - 1; j++)
@@ -508,6 +511,10 @@ public class MapButtons : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
                 maps.transform.GetChild(GameManager.gm.currentMissionIndex).GetChild(2).GetChild(18).gameObject.SetActive(false);
 
                 mapPanel.transform.GetChild(GameManager.gm.currentMissionIndex).GetChild(7).gameObject.SetActive(true);
+
+                GameManager.gm.areaInfoLoaded = true;
+
+               
             }
 
             

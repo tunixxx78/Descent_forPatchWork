@@ -73,14 +73,20 @@ public class DataHolder : MonoBehaviour
 
         DontDestroyOnLoad(this.gameObject);
 
-        GameManager.gm.currentAreaMissions = currenAreaMissionIndex;
+        //GameManager.gm.currentAreaMissions = currenAreaMissionIndex;
     }
 
     private void Start()
     {
         //marko testing load-game method:
         SavingSystem.savingSystem.LoadGame();
+        //Invoke("GoOnInGame", 0.5f);
         //GameManager.gm.currentAreaMissions = currenAreaMissionIndex;
+    }
+
+    private void GoONInGame()
+    {
+        GameManager.gm.areaInfoLoaded = true;
     }
     
 
@@ -133,6 +139,8 @@ public class DataHolder : MonoBehaviour
         int[] levels = {plrOneLevel, plrTwoLevel, plrThreeLevel, plrFourLevel };
 
         SavingSystem.savingSystem.SaveGame2(names, healths, strenghts, levels, roundToSave, currenAreaMissionIndex);
+
+        Debug.Log(roundToSave + "JA" + currenAreaMissionIndex);
 
     }
 
