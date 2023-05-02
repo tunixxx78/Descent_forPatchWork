@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using System.Security.Cryptography;
 
 public class GameManager : MonoBehaviour
 {
@@ -118,6 +119,7 @@ public class GameManager : MonoBehaviour
                         maps.transform.GetChild(GameManager.gm.currentMissionIndex).GetChild(2).GetChild(18).GetChild(1).gameObject.SetActive(true);
 
                         maps.transform.GetChild(GameManager.gm.currentMissionIndex).GetChild(5).gameObject.SetActive(false);
+                        maps.transform.GetChild(GameManager.gm.currentMissionIndex).Find("BattleEvent").GetChild(0).gameObject.SetActive(false);
 
                         if (round == 0)
                         {
@@ -146,11 +148,12 @@ public class GameManager : MonoBehaviour
                     bossIsSpawned = false;
                     //currentAreaMissions--;
 
-                    
 
+      
                     GameObject.Find("MapPanel").transform.GetChild(currentMissionIndex).GetChild(2).GetChild(9).gameObject.SetActive(true);
                     enemyPanel.SetActive(false);
                     hordePanel.SetActive(false);
+                    maps.transform.GetChild(GameManager.gm.currentMissionIndex).Find("BattleEvent").GetChild(0).gameObject.SetActive(false);
 
                     for (int s = 0; s < enemySpawnersIngame.Count; s++)
                     {
@@ -216,6 +219,7 @@ public class GameManager : MonoBehaviour
                     maps.transform.GetChild(GameManager.gm.currentMissionIndex).GetChild(2).GetChild(18).GetChild(1).gameObject.SetActive(true);
 
                     maps.transform.GetChild(GameManager.gm.currentMissionIndex).GetChild(5).gameObject.SetActive(false);
+                    maps.transform.GetChild(GameManager.gm.currentMissionIndex).Find("BattleEvent").GetChild(0).gameObject.SetActive(false);
 
                     GameObject bossInstance = Instantiate(maps.enemyBase[6], maps.bossEnemySpawnPoint.position, Quaternion.identity);
                     bossInstance.transform.SetParent(maps.transform.GetChild(GameManager.gm.currentMissionIndex).GetChild(2).GetChild(16));
@@ -244,7 +248,7 @@ public class GameManager : MonoBehaviour
                     maps.transform.GetChild(GameManager.gm.currentMissionIndex).GetChild(2).GetChild(18).GetChild(3).gameObject.SetActive(true);
 
                     maps.transform.GetChild(GameManager.gm.currentMissionIndex).GetChild(5).gameObject.SetActive(false);
-
+                    maps.transform.GetChild(GameManager.gm.currentMissionIndex).Find("BattleEvent").GetChild(0).gameObject.SetActive(false);
                     battleIsOn = false;
                     bossFightReward = false;
                     //currentAreaMissions--;

@@ -513,15 +513,6 @@ public class MapButtons : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
             
         }
 
-        
-
-
-        if (this.gameObject.CompareTag("CardViewButton"))
-        {
-            GameObject cardView = this.gameObject.transform.parent.Find("CardView/Container").gameObject;
-            cardView.SetActive(!cardView.activeInHierarchy);
-        }
-
     }
 
     public void OnPointerUp(PointerEventData eventData)

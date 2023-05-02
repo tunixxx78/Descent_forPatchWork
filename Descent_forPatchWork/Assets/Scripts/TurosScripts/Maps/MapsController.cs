@@ -111,6 +111,7 @@ public class MapsController : MonoBehaviour
         //For hiding cardViewButton
 
         maps.transform.GetChild(GameManager.gm.currentMissionIndex).GetChild(5).gameObject.SetActive(false);
+        maps.transform.GetChild(GameManager.gm.currentMissionIndex).Find("BattleEvent").GetChild(0).gameObject.SetActive(false);
 
 
 
@@ -293,6 +294,7 @@ public class MapsController : MonoBehaviour
         //For hiding cardViewButton
 
         maps.transform.GetChild(GameManager.gm.currentMissionIndex).GetChild(5).gameObject.SetActive(false);
+        maps.transform.GetChild(GameManager.gm.currentMissionIndex).Find("BattleEvent").GetChild(0).gameObject.SetActive(false);
 
 
 

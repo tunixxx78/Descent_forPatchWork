@@ -64,7 +64,7 @@ public class BattleEvent : MonoBehaviour
     {
         deck.GetCardList().Clear();
         deck.GetDiscardList().Clear();
-        deck.GetCards("BattleEvent", GameManager.gm.currentMissionIndex.ToString());
+        deck.GetCards("BattleEvent", GameManager.gm.round.ToString());
         Image img = spawnPoint.GetComponent<Image>();
         img.color = new Color(img.color.r, img.color.g, img.color.b, 0f);
         index = 1;
