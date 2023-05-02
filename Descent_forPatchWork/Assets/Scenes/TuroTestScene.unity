@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.30692244, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -11239,6 +11239,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   roundToSave: 0
+  currenAreaMissionIndex: 4
   gameIsStarted: 0
   plrOneName: 
   plrOneHealth: 0
@@ -16569,7 +16570,19 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 1
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2132716476}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
         m_CallState: 2
   mapAnimator: {fileID: 0}
   animationTrigger: BattleMapReveal_
@@ -19358,6 +19371,18 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 2132716476}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
         m_CallState: 2
   mapAnimator: {fileID: 0}
   animationTrigger: BattleMapReveal_
@@ -25130,6 +25155,7 @@ MonoBehaviour:
   bossBossFight: 0
   bossLoot: 0
   bossFightReward: 0
+  areaInfoLoaded: 0
   attackForce: 1
   QuestLorePanel: {fileID: 0}
   currentMission: {fileID: 0}
@@ -25671,12 +25697,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1488543221}
   m_CullTransparentMesh: 1
---- !u!224 &1495445480 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 5582961039400828328, guid: 025e5889db9bae6408b017eaeea5bdc9,
-    type: 3}
-  m_PrefabInstance: {fileID: 2132716474}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1496359949
 GameObject:
   m_ObjectHideFlags: 0
@@ -26309,6 +26329,7 @@ RectTransform:
   - {fileID: 1107617834}
   - {fileID: 98504034}
   - {fileID: 2114942919}
+  - {fileID: 2132716475}
   m_Father: {fileID: 831303850}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -27182,6 +27203,18 @@ MonoBehaviour:
           m_BoolArgument: 1
         m_CallState: 2
       - m_Target: {fileID: 1107617833}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 2132716476}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
@@ -31230,7 +31263,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1895274336}
-  m_RootOrder: 7
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -32763,9 +32796,8 @@ RectTransform:
   - {fileID: 1513865794}
   - {fileID: 37680666}
   - {fileID: 1725081560}
-  - {fileID: 1495445480}
-  - {fileID: 182045216}
   - {fileID: 1798571228}
+  - {fileID: 182045216}
   m_Father: {fileID: 453954494}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -36831,8 +36863,53 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 1895274336}
+    m_TransformParent: {fileID: 1568438035}
     m_Modifications:
+    - target: {fileID: 3120315878994242743, guid: 025e5889db9bae6408b017eaeea5bdc9,
+        type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3120315879614960994, guid: 025e5889db9bae6408b017eaeea5bdc9,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3120315879614960994, guid: 025e5889db9bae6408b017eaeea5bdc9,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3120315879614960994, guid: 025e5889db9bae6408b017eaeea5bdc9,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3120315879614960994, guid: 025e5889db9bae6408b017eaeea5bdc9,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3120315879614960994, guid: 025e5889db9bae6408b017eaeea5bdc9,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 841
+      objectReference: {fileID: 0}
+    - target: {fileID: 3120315879614960994, guid: 025e5889db9bae6408b017eaeea5bdc9,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -388
+      objectReference: {fileID: 0}
+    - target: {fileID: 3120315880086403414, guid: 025e5889db9bae6408b017eaeea5bdc9,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 56.61698
+      objectReference: {fileID: 0}
+    - target: {fileID: 3120315880086403414, guid: 025e5889db9bae6408b017eaeea5bdc9,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 138.99995
+      objectReference: {fileID: 0}
     - target: {fileID: 5582961039400828328, guid: 025e5889db9bae6408b017eaeea5bdc9,
         type: 3}
       propertyPath: m_Pivot.x
@@ -36984,8 +37061,45 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: d29a3a99e05830c469e699ed6d845b93,
         type: 2}
+    - target: {fileID: 7365425803989069511, guid: 025e5889db9bae6408b017eaeea5bdc9,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -71.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7365425803989069511, guid: 025e5889db9bae6408b017eaeea5bdc9,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 137.99997
+      objectReference: {fileID: 0}
+    - target: {fileID: 7365425804761406730, guid: 025e5889db9bae6408b017eaeea5bdc9,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7365425804761406730, guid: 025e5889db9bae6408b017eaeea5bdc9,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 139
+      objectReference: {fileID: 0}
+    - target: {fileID: 7674719328162409530, guid: 025e5889db9bae6408b017eaeea5bdc9,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 025e5889db9bae6408b017eaeea5bdc9, type: 3}
+--- !u!224 &2132716475 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 3120315879614960994, guid: 025e5889db9bae6408b017eaeea5bdc9,
+    type: 3}
+  m_PrefabInstance: {fileID: 2132716474}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2132716476 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7674719328162409530, guid: 025e5889db9bae6408b017eaeea5bdc9,
+    type: 3}
+  m_PrefabInstance: {fileID: 2132716474}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2138399355
 GameObject:
   m_ObjectHideFlags: 0
