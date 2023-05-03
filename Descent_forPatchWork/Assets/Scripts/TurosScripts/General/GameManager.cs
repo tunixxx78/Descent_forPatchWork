@@ -106,7 +106,8 @@ public class GameManager : MonoBehaviour
                     //for setting bossFightTitleIcon
 
                     GameObject.Find("MapPanel").transform.GetChild(currentMissionIndex).GetChild(2).GetChild(0).GetChild(0).GetChild(0).GetComponent<Image>().sprite = (Sprite)Resources.Load($"BossTittleImages/{GameManager.gm.round}");
-                    characterHolder = GameObject.Find("CharacterHolder");
+                    characterHolder = GameObject.Find("MapPanel").transform.GetChild(currentMissionIndex).GetChild(2).GetChild(16).gameObject;
+                    //characterHolder = GameObject.Find("CharacterHolder");
 
                     if (GameManager.gm.canSpawnEnemys)
                     {
@@ -121,6 +122,8 @@ public class GameManager : MonoBehaviour
 
                         maps.transform.GetChild(GameManager.gm.currentMissionIndex).GetChild(5).gameObject.SetActive(false);
                         maps.transform.GetChild(GameManager.gm.currentMissionIndex).Find("BattleEvent").GetChild(0).gameObject.SetActive(false);
+
+                        //FindObjectOfType<DiceFunctionalityManagerBoss>().SetDiceEyeCommandBoss(1);
 
                         if (round == 0)
                         {
@@ -165,10 +168,32 @@ public class GameManager : MonoBehaviour
 
                     for (int i = 0; i < lootSpawnPoints.Length; i++)
                     {
-                        GameObject lootInstance = Instantiate(lootObjects[i], lootSpawnPoints[i].position, Quaternion.identity);
+                        if(round == 0)
+                        {
+                            GameObject lootInstance = Instantiate(lootObjects[i], lootSpawnPoints[i].position, Quaternion.identity);
 
-                        lootInstance.transform.SetParent(GameObject.Find("LootSpotHolder").transform);
-                        lootInstance.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
+                            lootInstance.transform.SetParent(GameObject.Find("LootSpotHolder").transform);
+                            lootInstance.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
+                        }
+                        if(round == 1)
+                        {
+                            int e = i + 4;
+
+                            GameObject lootInstance = Instantiate(lootObjects[e], lootSpawnPoints[i].position, Quaternion.identity);
+
+                            lootInstance.transform.SetParent(GameObject.Find("LootSpotHolder").transform);
+                            lootInstance.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
+                        }
+                        if (round == 2)
+                        {
+                            int e = i + 8;
+                            GameObject lootInstance = Instantiate(lootObjects[e], lootSpawnPoints[i].position, Quaternion.identity);
+
+                            lootInstance.transform.SetParent(GameObject.Find("LootSpotHolder").transform);
+                            lootInstance.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
+                        }
+                        
+
                     }
 
                     lootIsOn = true;
@@ -191,10 +216,20 @@ public class GameManager : MonoBehaviour
 
                 for (int i = 0; i < lootSpawnPoints.Length; i++)
                 {
+                    if (round == 3)
+                    {
+                        int e = i + 12;
+                        GameObject lootInstance = Instantiate(lootObjects[e], lootSpawnPoints[i].position, Quaternion.identity);
+
+                        lootInstance.transform.SetParent(GameObject.Find("LootSpotHolder").transform);
+                        lootInstance.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
+                    }
+                    /*
                     GameObject lootInstance = Instantiate(lootObjects[i], lootSpawnPoints[i].position, Quaternion.identity);
 
                     lootInstance.transform.SetParent(GameObject.Find("LootSpotHolder").transform);
                     lootInstance.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
+                    */
                 }
 
                 bossLoot = false;
@@ -293,7 +328,8 @@ public class GameManager : MonoBehaviour
                     GameManager.gm.heroesInGame[i].GetComponent<HeroOne>().hb.plrStrength,
                     GameManager.gm.heroesInGame[i].GetComponent<HeroOne>().hb.plrLevel,
                     currentRound,
-                    GameManager.gm.currentAreaMissions);
+                    GameManager.gm.currentAreaMissions,
+                    DataHolder.dataHolder.gameIsStarted);
 
 
 
@@ -344,7 +380,8 @@ public class GameManager : MonoBehaviour
                 GameManager.gm.heroesInGame[i].GetComponent<HeroOne>().hb.plrStrength,
                 GameManager.gm.heroesInGame[i].GetComponent<HeroOne>().hb.plrLevel,
                 currentRound,
-                GameManager.gm.currentAreaMissions);
+                GameManager.gm.currentAreaMissions,
+                DataHolder.dataHolder.gameIsStarted);
 
 
 

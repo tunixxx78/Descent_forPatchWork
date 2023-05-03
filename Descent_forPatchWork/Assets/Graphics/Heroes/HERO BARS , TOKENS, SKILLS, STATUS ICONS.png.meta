@@ -1,0 +1,1928 @@
+fileFormatVersion: 2
+guid: 39e1da4f1a41f42328115d3d452a5c87
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: HERO BARS , TOKENS, SKILLS, STATUS ICONS_0
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 835
+        width: 471
+        height: 229
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d89b6c8a0466744be88f2c7a800f16f3
+      internalID: 1845592471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HERO BARS , TOKENS, SKILLS, STATUS ICONS_1
+      rect:
+        serializedVersion: 2
+        x: 575
+        y: 835
+        width: 470
+        height: 228
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: defd10a214ddf4cfb95685ba61de182d
+      internalID: -903070591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HERO BARS , TOKENS, SKILLS, STATUS ICONS_2
+      rect:
+        serializedVersion: 2
+        x: 1092
+        y: 949
+        width: 127
+        height: 127
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91b494e8479cc44c295a391d140c41a7
+      internalID: 1143878114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HERO BARS , TOKENS, SKILLS, STATUS ICONS_3
+      rect:
+        serializedVersion: 2
+        x: 1248
+        y: 955
+        width: 119
+        height: 118
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0de5ca5e9365d493381d04bf8f028484
+      internalID: -647904922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HERO BARS , TOKENS, SKILLS, STATUS ICONS_4
+      rect:
+        serializedVersion: 2
+        x: 1408
+        y: 955
+        width: 119
+        height: 118
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 204c27e8722c14b769be5179a73cacec
+      internalID: -536549319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HERO BARS , TOKENS, SKILLS, STATUS ICONS_5
+      rect:
+        serializedVersion: 2
+        x: 1615
+        y: 1001
+        width: 76
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a38799b70c6654a9592f3b23c5bd5d81
+      internalID: 774400335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HERO BARS , TOKENS, SKILLS, STATUS ICONS_6
+      rect:
+        serializedVersion: 2
+        x: 1717
+        y: 1001
+        width: 76
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8f318dcc94f442c7afc447cfb086b96
+      internalID: -461136337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HERO BARS , TOKENS, SKILLS, STATUS ICONS_7
+      rect:
+        serializedVersion: 2
+        x: 1814
+        y: 1000
+        width: 76
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d27f9c3b56784f73a9468c8bded2822
+      internalID: 1224519158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HERO BARS , TOKENS, SKILLS, STATUS ICONS_8
+      rect:
+        serializedVersion: 2
+        x: 1095
+        y: 808
+        width: 122
+        height: 123
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ddab66bb03a7418d89993fd0c28d75f
+      internalID: -643509664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HERO BARS , TOKENS, SKILLS, STATUS ICONS_9
+      rect:
+        serializedVersion: 2
+        x: 1249
+        y: 806
+        width: 117
+        height: 117
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e2d96fef81374a7d9c71accd6581346
+      internalID: 1437180983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HERO BARS , TOKENS, SKILLS, STATUS ICONS_10
+      rect:
+        serializedVersion: 2
+        x: 1409
+        y: 806
+        width: 117
+        height: 117
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2760c1f9d52524f3f878b727c72a0709
+      internalID: 848136488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HERO BARS , TOKENS, SKILLS, STATUS ICONS_11
+      rect:
+        serializedVersion: 2
+        x: 1717
+        y: 914
+        width: 76
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4ffa2287c42e4947b96d890326120d1
+      internalID: -59132560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HERO BARS , TOKENS, SKILLS, STATUS ICONS_12
+      rect:
+        serializedVersion: 2
+        x: 1814
+        y: 914
+        width: 76
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 475ac28e373ff40b7becb98f038161ff
+      internalID: 1077213404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HERO BARS , TOKENS, SKILLS, STATUS ICONS_13
+      rect:
+        serializedVersion: 2
+        x: 1610
+        y: 821
+        width: 77
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 708c0450138ff4153aedad14e6bd2c72
+      internalID: -1871645277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HERO BARS , TOKENS, SKILLS, STATUS ICONS_14
+      rect:
+        serializedVersion: 2
+        x: 1714
+        y: 821
+        width: 82
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84be5c854170645dfb3cbf692a788284
+      internalID: -431113803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HERO BARS , TOKENS, SKILLS, STATUS ICONS_15
+      rect:
+        serializedVersion: 2
+        x: 1810
+        y: 820
+        width: 83
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8dd2da839a344ec5af0dea5759823d2
+      internalID: -917865796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HERO BARS , TOKENS, SKILLS, STATUS ICONS_16
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 556
+        width: 477
+        height: 237
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2160f853d110449fbf03f9df25dcdb3
+      internalID: 1682557740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HERO BARS , TOKENS, SKILLS, STATUS ICONS_17
+      rect:
+        serializedVersion: 2
+        x: 569
+        y: 555
+        width: 478
+        height: 238
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e157658d9c0a48a78163530571e9710
+      internalID: 1627416107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HERO BARS , TOKENS, SKILLS, STATUS ICONS_18
+      rect:
+        serializedVersion: 2
+        x: 1087
+        y: 657
+        width: 137
+        height: 137
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9b0ad60a7d274944aa8280ea7c25da0
+      internalID: 617030109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HERO BARS , TOKENS, SKILLS, STATUS ICONS_19
+      rect:
+        serializedVersion: 2
+        x: 1249
+        y: 660
+        width: 117
+        height: 117
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 353d9649bd5ed471d8b2eccf9da11c36
+      internalID: 1408122212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HERO BARS , TOKENS, SKILLS, STATUS ICONS_20
+      rect:
+        serializedVersion: 2
+        x: 1409
+        y: 660
+        width: 117
+        height: 117
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af025838b4ffd49e8aa4a3d6ca0cf844
+      internalID: 367046149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HERO BARS , TOKENS, SKILLS, STATUS ICONS_21
+      rect:
+        serializedVersion: 2
+        x: 1611
+        y: 729
+        width: 79
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61e74c00d70b54bbd803000fa148f098
+      internalID: -249669480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HERO BARS , TOKENS, SKILLS, STATUS ICONS_22
+      rect:
+        serializedVersion: 2
+        x: 1714
+        y: 728
+        width: 82
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 243d9eadd41734fdc8c220901a6671d4
+      internalID: 1512125914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HERO BARS , TOKENS, SKILLS, STATUS ICONS_23
+      rect:
+        serializedVersion: 2
+        x: 1810
+        y: 728
+        width: 83
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e65d6271c5e544fbb96e794128c42cc
+      internalID: 1998727577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HERO BARS , TOKENS, SKILLS, STATUS ICONS_24
+      rect:
+        serializedVersion: 2
+        x: 1093
+        y: 511
+        width: 127
+        height: 129
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4cf60183188e74906b419bd5263ad85d
+      internalID: 142600441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HERO BARS , TOKENS, SKILLS, STATUS ICONS_25
+      rect:
+        serializedVersion: 2
+        x: 1613
+        y: 636
+        width: 80
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b7b0eaab216846018c3cd0ff7e784c8
+      internalID: 1456683173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HERO BARS , TOKENS, SKILLS, STATUS ICONS_26
+      rect:
+        serializedVersion: 2
+        x: 1714
+        y: 636
+        width: 82
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2012d05955c97411ca329590817f2967
+      internalID: -970641669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HERO BARS , TOKENS, SKILLS, STATUS ICONS_27
+      rect:
+        serializedVersion: 2
+        x: 1809
+        y: 635
+        width: 84
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88303b5a7d2c34b04b8be278d8754474
+      internalID: -1079356074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HERO BARS , TOKENS, SKILLS, STATUS ICONS_28
+      rect:
+        serializedVersion: 2
+        x: 1247
+        y: 511
+        width: 121
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d75b461055714090aaabb36947baf75
+      internalID: -1514533987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HERO BARS , TOKENS, SKILLS, STATUS ICONS_29
+      rect:
+        serializedVersion: 2
+        x: 1407
+        y: 511
+        width: 121
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d16f11c59924c4b44b21ffb159113b39
+      internalID: -399676975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HERO BARS , TOKENS, SKILLS, STATUS ICONS_30
+      rect:
+        serializedVersion: 2
+        x: 1613
+        y: 544
+        width: 81
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d920c70c03cc43899b308a00d45ac04
+      internalID: -1587231188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HERO BARS , TOKENS, SKILLS, STATUS ICONS_31
+      rect:
+        serializedVersion: 2
+        x: 1714
+        y: 543
+        width: 82
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c167324d6f91a4cfcbf22fca5263217c
+      internalID: 1849348531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HERO BARS , TOKENS, SKILLS, STATUS ICONS_32
+      rect:
+        serializedVersion: 2
+        x: 1809
+        y: 543
+        width: 84
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a10c37541aab446caaaa894b722aa09
+      internalID: -804818157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HERO BARS , TOKENS, SKILLS, STATUS ICONS_33
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 284
+        width: 470
+        height: 234
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17560acdf25e34f18b6b11f745511dcf
+      internalID: -1917737858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HERO BARS , TOKENS, SKILLS, STATUS ICONS_34
+      rect:
+        serializedVersion: 2
+        x: 568
+        y: 283
+        width: 469
+        height: 235
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24dd946c3a19347a29ac35e3fd6bfa26
+      internalID: -756591852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HERO BARS , TOKENS, SKILLS, STATUS ICONS_35
+      rect:
+        serializedVersion: 2
+        x: 1715
+        y: 454
+        width: 79
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9879c555a2ffe40fe94383220a5c5b81
+      internalID: -1368261303
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HERO BARS , TOKENS, SKILLS, STATUS ICONS_36
+      rect:
+        serializedVersion: 2
+        x: 1812
+        y: 454
+        width: 78
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c7adc81e7d7446ce8852b86473485e2
+      internalID: 1839080215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HERO BARS , TOKENS, SKILLS, STATUS ICONS_37
+      rect:
+        serializedVersion: 2
+        x: 1159
+        y: 363
+        width: 66
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb55dd5693ca4419ab1f63d8dd7f57a4
+      internalID: 670009593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HERO BARS , TOKENS, SKILLS, STATUS ICONS_38
+      rect:
+        serializedVersion: 2
+        x: 1234
+        y: 364
+        width: 66
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9acbdf8ce780545d38a176922680eda8
+      internalID: -669534178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HERO BARS , TOKENS, SKILLS, STATUS ICONS_39
+      rect:
+        serializedVersion: 2
+        x: 1319
+        y: 363
+        width: 66
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88332ef2131024cd196e6e582a6dc722
+      internalID: -697511002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HERO BARS , TOKENS, SKILLS, STATUS ICONS_40
+      rect:
+        serializedVersion: 2
+        x: 1394
+        y: 364
+        width: 66
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09367f2934ee3449bbebd0aa99f41a48
+      internalID: -627149627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HERO BARS , TOKENS, SKILLS, STATUS ICONS_41
+      rect:
+        serializedVersion: 2
+        x: 1615
+        y: 364
+        width: 79
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a846ba5e3a814a708cdba80c4a3681e
+      internalID: -621014847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HERO BARS , TOKENS, SKILLS, STATUS ICONS_42
+      rect:
+        serializedVersion: 2
+        x: 1715
+        y: 364
+        width: 79
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 710b6cab24da040f38a5920f99f8a44f
+      internalID: 1843761991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HERO BARS , TOKENS, SKILLS, STATUS ICONS_43
+      rect:
+        serializedVersion: 2
+        x: 1812
+        y: 365
+        width: 78
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a5f05d2727ee425688365a9b37d9124
+      internalID: -2065083755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HERO BARS , TOKENS, SKILLS, STATUS ICONS_44
+      rect:
+        serializedVersion: 2
+        x: 1091
+        y: 249
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0c937a4d147b452e8d6e45f76f731fd
+      internalID: -1441187515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HERO BARS , TOKENS, SKILLS, STATUS ICONS_45
+      rect:
+        serializedVersion: 2
+        x: 1167
+        y: 249
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d32c2eba923e4f39bb4dc45b44bf6b8
+      internalID: -1861404033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HERO BARS , TOKENS, SKILLS, STATUS ICONS_46
+      rect:
+        serializedVersion: 2
+        x: 1246
+        y: 250
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 037cea4ee829c453baa563eaa7635cff
+      internalID: 1528453907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HERO BARS , TOKENS, SKILLS, STATUS ICONS_47
+      rect:
+        serializedVersion: 2
+        x: 1323
+        y: 249
+        width: 64
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77539e60f2b7242569c08200edb35d90
+      internalID: -1945273596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HERO BARS , TOKENS, SKILLS, STATUS ICONS_48
+      rect:
+        serializedVersion: 2
+        x: 1405
+        y: 247
+        width: 64
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c5cc85b9ac7a4d219df711604177211
+      internalID: -1982475647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HERO BARS , TOKENS, SKILLS, STATUS ICONS_49
+      rect:
+        serializedVersion: 2
+        x: 1485
+        y: 247
+        width: 65
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0c3a68f0fe1e448b923975a95bb3c48
+      internalID: -281550908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HERO BARS , TOKENS, SKILLS, STATUS ICONS_50
+      rect:
+        serializedVersion: 2
+        x: 1616
+        y: 275
+        width: 78
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f0ef92f0b32b4830a37dd9b846f450b
+      internalID: 972872501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HERO BARS , TOKENS, SKILLS, STATUS ICONS_51
+      rect:
+        serializedVersion: 2
+        x: 1715
+        y: 275
+        width: 79
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab1ebc8adad11463ab9d42279f1927c2
+      internalID: 269239084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HERO BARS , TOKENS, SKILLS, STATUS ICONS_52
+      rect:
+        serializedVersion: 2
+        x: 1812
+        y: 276
+        width: 78
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68f2983caf35e44328d70cdd59f00a3b
+      internalID: -1418955397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HERO BARS , TOKENS, SKILLS, STATUS ICONS_53
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 14
+        width: 473
+        height: 235
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25211c0eb7b5a40f186cb11872eb3316
+      internalID: -1605188021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HERO BARS , TOKENS, SKILLS, STATUS ICONS_54
+      rect:
+        serializedVersion: 2
+        x: 567
+        y: 13
+        width: 474
+        height: 236
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ba928af47fd24cac9b12f28289b2c2f
+      internalID: 1973429040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HERO BARS , TOKENS, SKILLS, STATUS ICONS_55
+      rect:
+        serializedVersion: 2
+        x: 1091
+        y: 178
+        width: 63
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c414dd29348944e85bb6dc2d46a969b8
+      internalID: 2084002698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HERO BARS , TOKENS, SKILLS, STATUS ICONS_56
+      rect:
+        serializedVersion: 2
+        x: 1167
+        y: 178
+        width: 63
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa01285d16106491c8452bbc06b51047
+      internalID: 1550695166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HERO BARS , TOKENS, SKILLS, STATUS ICONS_57
+      rect:
+        serializedVersion: 2
+        x: 1246
+        y: 177
+        width: 66
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62eb93d7acb0b49feafbd7efb327f14b
+      internalID: 98299913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HERO BARS , TOKENS, SKILLS, STATUS ICONS_58
+      rect:
+        serializedVersion: 2
+        x: 1323
+        y: 178
+        width: 64
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b2d67e6dbf38493c98b443dcabab3d8
+      internalID: 272072007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HERO BARS , TOKENS, SKILLS, STATUS ICONS_59
+      rect:
+        serializedVersion: 2
+        x: 1405
+        y: 179
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e51cbc6630d0048e1b600b0e2d3df0a8
+      internalID: 203633570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HERO BARS , TOKENS, SKILLS, STATUS ICONS_60
+      rect:
+        serializedVersion: 2
+        x: 1485
+        y: 179
+        width: 65
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b281ffebcd6fb4c368f3dec5383ae905
+      internalID: 38707870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HERO BARS , TOKENS, SKILLS, STATUS ICONS_61
+      rect:
+        serializedVersion: 2
+        x: 1715
+        y: 186
+        width: 79
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8355610080fbf4fbebd8d8a0213ba187
+      internalID: -263560892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HERO BARS , TOKENS, SKILLS, STATUS ICONS_62
+      rect:
+        serializedVersion: 2
+        x: 1812
+        y: 187
+        width: 78
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7606875a4752144bfa3609ac9f8128f4
+      internalID: -892607931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HERO BARS , TOKENS, SKILLS, STATUS ICONS_63
+      rect:
+        serializedVersion: 2
+        x: 1091
+        y: 109
+        width: 63
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e97979d986ba4eaa9d3894a71499f2b
+      internalID: 125828649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HERO BARS , TOKENS, SKILLS, STATUS ICONS_64
+      rect:
+        serializedVersion: 2
+        x: 1166
+        y: 107
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa086dc04b0ad45c89b2c766f1a00cbd
+      internalID: 1308712392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HERO BARS , TOKENS, SKILLS, STATUS ICONS_65
+      rect:
+        serializedVersion: 2
+        x: 1245
+        y: 107
+        width: 64
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c011cb89d01944498063988be35e261
+      internalID: 1552569882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HERO BARS , TOKENS, SKILLS, STATUS ICONS_66
+      rect:
+        serializedVersion: 2
+        x: 1323
+        y: 108
+        width: 64
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a7129a9dd2354924bc63a054ba96925
+      internalID: -461885065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HERO BARS , TOKENS, SKILLS, STATUS ICONS_67
+      rect:
+        serializedVersion: 2
+        x: 1405
+        y: 109
+        width: 64
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc3daa06aa64a473ba70ba5a645625ff
+      internalID: 447560215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HERO BARS , TOKENS, SKILLS, STATUS ICONS_68
+      rect:
+        serializedVersion: 2
+        x: 1485
+        y: 109
+        width: 65
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55de57d3ef697479da8b8778ea5acf27
+      internalID: 1637881688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HERO BARS , TOKENS, SKILLS, STATUS ICONS_69
+      rect:
+        serializedVersion: 2
+        x: 1610
+        y: 97
+        width: 78
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31608b00c10e44efa857818a4b91e077
+      internalID: -6524907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HERO BARS , TOKENS, SKILLS, STATUS ICONS_70
+      rect:
+        serializedVersion: 2
+        x: 1715
+        y: 96
+        width: 79
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2dff8435072054a189547e924dbaa9f2
+      internalID: -1187559210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HERO BARS , TOKENS, SKILLS, STATUS ICONS_71
+      rect:
+        serializedVersion: 2
+        x: 1812
+        y: 98
+        width: 78
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b70030528465142d987524592c1d4b1b
+      internalID: 1717454936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HERO BARS , TOKENS, SKILLS, STATUS ICONS_72
+      rect:
+        serializedVersion: 2
+        x: 1091
+        y: 35
+        width: 62
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca23c320fd7d6467892b363eaf0c2c7c
+      internalID: -52790551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HERO BARS , TOKENS, SKILLS, STATUS ICONS_73
+      rect:
+        serializedVersion: 2
+        x: 1167
+        y: 34
+        width: 66
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2127e69ce8cb24df6817032a466d3185
+      internalID: -831969010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HERO BARS , TOKENS, SKILLS, STATUS ICONS_74
+      rect:
+        serializedVersion: 2
+        x: 1245
+        y: 36
+        width: 64
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d53e5af1612b45379eedb67036b03c1
+      internalID: 1592363681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HERO BARS , TOKENS, SKILLS, STATUS ICONS_75
+      rect:
+        serializedVersion: 2
+        x: 1323
+        y: 37
+        width: 65
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3ab89d2941504167ad906ab113cbf8c
+      internalID: 2143149417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HERO BARS , TOKENS, SKILLS, STATUS ICONS_76
+      rect:
+        serializedVersion: 2
+        x: 1405
+        y: 38
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90bdbc5e5490146f9add0a75f664f4c4
+      internalID: 250642538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HERO BARS , TOKENS, SKILLS, STATUS ICONS_77
+      rect:
+        serializedVersion: 2
+        x: 1485
+        y: 38
+        width: 65
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23d99173a97e949babe2455d0bdc97dd
+      internalID: 109272786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HERO BARS , TOKENS, SKILLS, STATUS ICONS_78
+      rect:
+        serializedVersion: 2
+        x: 1610
+        y: 8
+        width: 77
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3502508c40db449a6afa2e091d3e288b
+      internalID: 2062457644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HERO BARS , TOKENS, SKILLS, STATUS ICONS_79
+      rect:
+        serializedVersion: 2
+        x: 1716
+        y: 7
+        width: 78
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa61984b9b0154bb9976fc3ce5970e4e
+      internalID: 1134856913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HERO BARS , TOKENS, SKILLS, STATUS ICONS_80
+      rect:
+        serializedVersion: 2
+        x: 1812
+        y: 10
+        width: 78
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8da8139f1a6384cb5be7085bb4fd8515
+      internalID: -135347781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 43c4062a54f4342e7a23824757e816d0
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      HERO BARS , TOKENS, SKILLS, STATUS ICONS_70: -1187559210
+      HERO BARS , TOKENS, SKILLS, STATUS ICONS_65: 1552569882
+      HERO BARS , TOKENS, SKILLS, STATUS ICONS_53: -1605188021
+      HERO BARS , TOKENS, SKILLS, STATUS ICONS_73: -831969010
+      HERO BARS , TOKENS, SKILLS, STATUS ICONS_30: -1587231188
+      HERO BARS , TOKENS, SKILLS, STATUS ICONS_57: 98299913
+      HERO BARS , TOKENS, SKILLS, STATUS ICONS_35: -1368261303
+      HERO BARS , TOKENS, SKILLS, STATUS ICONS_10: 848136488
+      HERO BARS , TOKENS, SKILLS, STATUS ICONS_15: -917865796
+      HERO BARS , TOKENS, SKILLS, STATUS ICONS_22: 1512125914
+      HERO BARS , TOKENS, SKILLS, STATUS ICONS_29: -399676975
+      HERO BARS , TOKENS, SKILLS, STATUS ICONS_43: -2065083755
+      HERO BARS , TOKENS, SKILLS, STATUS ICONS_16: 1682557740
+      HERO BARS , TOKENS, SKILLS, STATUS ICONS_11: -59132560
+      HERO BARS , TOKENS, SKILLS, STATUS ICONS_54: 1973429040
+      HERO BARS , TOKENS, SKILLS, STATUS ICONS_9: 1437180983
+      HERO BARS , TOKENS, SKILLS, STATUS ICONS_3: -647904922
+      HERO BARS , TOKENS, SKILLS, STATUS ICONS_31: 1849348531
+      HERO BARS , TOKENS, SKILLS, STATUS ICONS_68: 1637881688
+      HERO BARS , TOKENS, SKILLS, STATUS ICONS_17: 1627416107
+      HERO BARS , TOKENS, SKILLS, STATUS ICONS_72: -52790551
+      HERO BARS , TOKENS, SKILLS, STATUS ICONS_8: -643509664
+      HERO BARS , TOKENS, SKILLS, STATUS ICONS_20: 367046149
+      HERO BARS , TOKENS, SKILLS, STATUS ICONS_12: 1077213404
+      HERO BARS , TOKENS, SKILLS, STATUS ICONS_13: -1871645277
+      HERO BARS , TOKENS, SKILLS, STATUS ICONS_47: -1945273596
+      HERO BARS , TOKENS, SKILLS, STATUS ICONS_44: -1441187515
+      HERO BARS , TOKENS, SKILLS, STATUS ICONS_1: -903070591
+      HERO BARS , TOKENS, SKILLS, STATUS ICONS_75: 2143149417
+      HERO BARS , TOKENS, SKILLS, STATUS ICONS_19: 1408122212
+      HERO BARS , TOKENS, SKILLS, STATUS ICONS_49: -281550908
+      HERO BARS , TOKENS, SKILLS, STATUS ICONS_74: 1592363681
+      HERO BARS , TOKENS, SKILLS, STATUS ICONS_78: 2062457644
+      HERO BARS , TOKENS, SKILLS, STATUS ICONS_60: 38707870
+      HERO BARS , TOKENS, SKILLS, STATUS ICONS_59: 203633570
+      HERO BARS , TOKENS, SKILLS, STATUS ICONS_40: -627149627
+      HERO BARS , TOKENS, SKILLS, STATUS ICONS_45: -1861404033
+      HERO BARS , TOKENS, SKILLS, STATUS ICONS_5: 774400335
+      HERO BARS , TOKENS, SKILLS, STATUS ICONS_39: -697511002
+      HERO BARS , TOKENS, SKILLS, STATUS ICONS_58: 272072007
+      HERO BARS , TOKENS, SKILLS, STATUS ICONS_64: 1308712392
+      HERO BARS , TOKENS, SKILLS, STATUS ICONS_0: 1845592471
+      HERO BARS , TOKENS, SKILLS, STATUS ICONS_42: 1843761991
+      HERO BARS , TOKENS, SKILLS, STATUS ICONS_51: 269239084
+      HERO BARS , TOKENS, SKILLS, STATUS ICONS_71: 1717454936
+      HERO BARS , TOKENS, SKILLS, STATUS ICONS_66: -461885065
+      HERO BARS , TOKENS, SKILLS, STATUS ICONS_77: 109272786
+      HERO BARS , TOKENS, SKILLS, STATUS ICONS_28: -1514533987
+      HERO BARS , TOKENS, SKILLS, STATUS ICONS_80: -135347781
+      HERO BARS , TOKENS, SKILLS, STATUS ICONS_26: -970641669
+      HERO BARS , TOKENS, SKILLS, STATUS ICONS_62: -892607931
+      HERO BARS , TOKENS, SKILLS, STATUS ICONS_2: 1143878114
+      HERO BARS , TOKENS, SKILLS, STATUS ICONS_38: -669534178
+      HERO BARS , TOKENS, SKILLS, STATUS ICONS_50: 972872501
+      HERO BARS , TOKENS, SKILLS, STATUS ICONS_52: -1418955397
+      HERO BARS , TOKENS, SKILLS, STATUS ICONS_76: 250642538
+      HERO BARS , TOKENS, SKILLS, STATUS ICONS_7: 1224519158
+      HERO BARS , TOKENS, SKILLS, STATUS ICONS_61: -263560892
+      HERO BARS , TOKENS, SKILLS, STATUS ICONS_32: -804818157
+      HERO BARS , TOKENS, SKILLS, STATUS ICONS_33: -1917737858
+      HERO BARS , TOKENS, SKILLS, STATUS ICONS_69: -6524907
+      HERO BARS , TOKENS, SKILLS, STATUS ICONS_37: 670009593
+      HERO BARS , TOKENS, SKILLS, STATUS ICONS_41: -621014847
+      HERO BARS , TOKENS, SKILLS, STATUS ICONS_63: 125828649
+      HERO BARS , TOKENS, SKILLS, STATUS ICONS_46: 1528453907
+      HERO BARS , TOKENS, SKILLS, STATUS ICONS_4: -536549319
+      HERO BARS , TOKENS, SKILLS, STATUS ICONS_21: -249669480
+      HERO BARS , TOKENS, SKILLS, STATUS ICONS_18: 617030109
+      HERO BARS , TOKENS, SKILLS, STATUS ICONS_14: -431113803
+      HERO BARS , TOKENS, SKILLS, STATUS ICONS_6: -461136337
+      HERO BARS , TOKENS, SKILLS, STATUS ICONS_27: -1079356074
+      HERO BARS , TOKENS, SKILLS, STATUS ICONS_24: 142600441
+      HERO BARS , TOKENS, SKILLS, STATUS ICONS_36: 1839080215
+      HERO BARS , TOKENS, SKILLS, STATUS ICONS_34: -756591852
+      HERO BARS , TOKENS, SKILLS, STATUS ICONS_25: 1456683173
+      HERO BARS , TOKENS, SKILLS, STATUS ICONS_48: -1982475647
+      HERO BARS , TOKENS, SKILLS, STATUS ICONS_56: 1550695166
+      HERO BARS , TOKENS, SKILLS, STATUS ICONS_55: 2084002698
+      HERO BARS , TOKENS, SKILLS, STATUS ICONS_23: 1998727577
+      HERO BARS , TOKENS, SKILLS, STATUS ICONS_67: 447560215
+      HERO BARS , TOKENS, SKILLS, STATUS ICONS_79: 1134856913
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
