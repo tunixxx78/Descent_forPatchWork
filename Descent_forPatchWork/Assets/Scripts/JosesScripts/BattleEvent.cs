@@ -17,7 +17,7 @@ public class BattleEvent : MonoBehaviour
 
     private void Start()
     {
-        InitializeBattleEvent();
+ 
     }
 
     public void DrawCard()
@@ -64,9 +64,9 @@ public class BattleEvent : MonoBehaviour
     {
         deck.GetCardList().Clear();
         deck.GetDiscardList().Clear();
-        deck.GetCards("BattleEvent", "1"); //GameManager.gm.currentMissionIndex.ToString()
-        //Debug.Log(GameManager.gm.currentMissionIndex.ToString() + "CUrrent mission index");
-        Debug.Log(deck.GetCardList().Count + " Deck");
+        deck.GetCards("BattleEvent", GameManager.gm.round.ToString());
+        Image img = spawnPoint.GetComponent<Image>();
+        img.color = new Color(img.color.r, img.color.g, img.color.b, 0f);
         index = 1;
     }
 }

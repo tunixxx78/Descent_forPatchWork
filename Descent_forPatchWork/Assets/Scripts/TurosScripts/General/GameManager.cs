@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using System.Security.Cryptography;
 
 public class GameManager : MonoBehaviour
 {
@@ -13,7 +14,7 @@ public class GameManager : MonoBehaviour
     public List<GameObject> enemyBossesInGame;
     public float enemyHordHealth, enemyHordStrenght;
 
-    public bool plrCanAttack, enemyCanAttack, battleIsOn, plrIsAttacking, enemyIsAttacking, villagerSelected, lonerSelected, bossIsSpawned, mergeHorde, lootIsOn, canSpawnEnemys, bossBossFight, bossLoot, bossFightReward;
+    public bool plrCanAttack, enemyCanAttack, battleIsOn, plrIsAttacking, enemyIsAttacking, villagerSelected, lonerSelected, bossIsSpawned, mergeHorde, lootIsOn, canSpawnEnemys, bossBossFight, bossLoot, bossFightReward, areaInfoLoaded;
     public float attackForce = 1;
 
     public GameObject QuestLorePanel, currentMission;
@@ -72,6 +73,9 @@ public class GameManager : MonoBehaviour
         bossBossFight = false;
         bossLoot = false;
         bossFightReward = false;
+        areaInfoLoaded = false;
+
+        //currentMissionInQuest = 0;
 
         //for filling the QuestLorePanel information
 
@@ -87,7 +91,7 @@ public class GameManager : MonoBehaviour
     private void Update()
     {
         //enemyHordStrenght = enemyHordStrenght / 5;
-
+        Debug.Log(round);
         //Debug.Log(enemyHordStrenght);
 
         if(bossBossFight == false)
@@ -115,6 +119,9 @@ public class GameManager : MonoBehaviour
                         maps.transform.GetChild(GameManager.gm.currentMissionIndex).GetChild(2).GetChild(18).gameObject.SetActive(true);
                         maps.transform.GetChild(GameManager.gm.currentMissionIndex).GetChild(2).GetChild(18).GetChild(1).gameObject.SetActive(true);
 
+                        maps.transform.GetChild(GameManager.gm.currentMissionIndex).GetChild(5).gameObject.SetActive(false);
+                        maps.transform.GetChild(GameManager.gm.currentMissionIndex).Find("BattleEvent").GetChild(0).gameObject.SetActive(false);
+
                         if (round == 0)
                         {
                             GameObject bossInstance = Instantiate(maps.enemyBase[2], maps.bossEnemySpawnPoint.position, Quaternion.identity);
@@ -140,19 +147,14 @@ public class GameManager : MonoBehaviour
                     Debug.Log("PELAAJA ON VOITTANUT TAISTELUN!");
                     battleIsOn = false;
                     bossIsSpawned = false;
-                    currentAreaMissions--;
+                    //currentAreaMissions--;
 
-                    //test for showing next mission
-                    if (currentAreaMissions <= 0)
-                    {
-                        currentMissionInQuest++;
-                        currentMission.GetComponent<Quest>().missions[currentMissionInQuest].SetActive(true);
 
-                    }
-
+      
                     GameObject.Find("MapPanel").transform.GetChild(currentMissionIndex).GetChild(2).GetChild(9).gameObject.SetActive(true);
                     enemyPanel.SetActive(false);
                     hordePanel.SetActive(false);
+                    maps.transform.GetChild(GameManager.gm.currentMissionIndex).Find("BattleEvent").GetChild(0).gameObject.SetActive(false);
 
                     for (int s = 0; s < enemySpawnersIngame.Count; s++)
                     {
@@ -181,6 +183,8 @@ public class GameManager : MonoBehaviour
                 }
             }
 
+            //For first area boss fight
+
             if(round == 3 && bossLoot)
             {
                 // for instanciating lootObjects to map
@@ -204,6 +208,8 @@ public class GameManager : MonoBehaviour
 
                 if (lootIsOn && GameObject.Find("LootSpotHolder").transform.childCount <= 0)
                 {
+                    characterHolder = GameObject.Find("CharacterHolder");
+
                     Debug.Log("BOSS LOOT OVER");
 
                     lootIsOn = false;
@@ -213,7 +219,10 @@ public class GameManager : MonoBehaviour
                     maps.transform.GetChild(GameManager.gm.currentMissionIndex).GetChild(2).GetChild(18).gameObject.SetActive(true);
                     maps.transform.GetChild(GameManager.gm.currentMissionIndex).GetChild(2).GetChild(18).GetChild(1).gameObject.SetActive(true);
 
-                    GameObject bossInstance = Instantiate(maps.enemyBase[5], maps.bossEnemySpawnPoint.position, Quaternion.identity);
+                    maps.transform.GetChild(GameManager.gm.currentMissionIndex).GetChild(5).gameObject.SetActive(false);
+                    maps.transform.GetChild(GameManager.gm.currentMissionIndex).Find("BattleEvent").GetChild(0).gameObject.SetActive(false);
+
+                    GameObject bossInstance = Instantiate(maps.enemyBase[6], maps.bossEnemySpawnPoint.position, Quaternion.identity);
                     bossInstance.transform.SetParent(maps.transform.GetChild(GameManager.gm.currentMissionIndex).GetChild(2).GetChild(16));
                     GameManager.gm.enemyBossesInGame.Add(bossInstance);
 
@@ -239,10 +248,15 @@ public class GameManager : MonoBehaviour
                     maps.transform.GetChild(GameManager.gm.currentMissionIndex).GetChild(2).GetChild(18).gameObject.SetActive(true);
                     maps.transform.GetChild(GameManager.gm.currentMissionIndex).GetChild(2).GetChild(18).GetChild(3).gameObject.SetActive(true);
 
+                    maps.transform.GetChild(GameManager.gm.currentMissionIndex).GetChild(5).gameObject.SetActive(false);
+                    maps.transform.GetChild(GameManager.gm.currentMissionIndex).Find("BattleEvent").GetChild(0).gameObject.SetActive(false);
                     battleIsOn = false;
                     bossFightReward = false;
-                    currentAreaMissions--;
+                    currentMissionInQuest++;
+                    currentMission.GetComponent<Quest>().missions[currentMissionInQuest].SetActive(true);
+                    //currentAreaMissions--;
 
+                    /*
                     if (currentAreaMissions <= 0)
                     {
                         currentMissionInQuest++;
@@ -252,11 +266,43 @@ public class GameManager : MonoBehaviour
                         //maps.transform.GetChild(GameManager.gm.currentMissionIndex).GetChild(2).GetChild(18).gameObject.SetActive(false);
                         
                     }
-
+                    */
                 }
             }
 
-            
+            //test for showing next mission
+            if (currentAreaMissions <= 0 && areaInfoLoaded)
+            {
+                Debug.Log("SITTEN PITÄISI NOSTELLA MISSIONINQUEST INDEXIÄ");
+                currentMissionInQuest++;
+                currentMission.GetComponent<Quest>().missions[currentMissionInQuest].SetActive(true);
+                currentAreaMissions = 4;
+                areaInfoLoaded = false;
+
+                //for saving plrData for this session.
+
+                for (int i = 0; i < GameManager.gm.heroesInGame.Count; i++)
+                {
+                    int currentRound = GameManager.gm.round;
+
+                    Debug.Log("TULOSTELLAAN MUUNNELTUA ROUND LUKUA JOKA ON: " + currentRound);
+                    Debug.Log("TULOSTELLAAN MUUNNELTUA areaMission LUKUA JOKA ON: " + currentAreaMissions);
+
+                    DataHolder.dataHolder.SetData(i, GameManager.gm.heroesInGame[i].GetComponent<HeroOne>().hb.plrName,
+                    GameManager.gm.heroesInGame[i].GetComponent<HeroOne>().hb.plrHealth,
+                    GameManager.gm.heroesInGame[i].GetComponent<HeroOne>().hb.plrStrength,
+                    GameManager.gm.heroesInGame[i].GetComponent<HeroOne>().hb.plrLevel,
+                    currentRound,
+                    GameManager.gm.currentAreaMissions);
+
+
+
+                    DataHolder.dataHolder.TakeCareOfSaving();
+                }
+
+            }
+
+
         }
         else
         {
@@ -273,6 +319,38 @@ public class GameManager : MonoBehaviour
         if (mergeHorde)
         {
             MergeEnemyHorde();
+        }
+
+        //test for showing next mission
+        if (currentAreaMissions <= 0 && areaInfoLoaded)
+        {
+            Debug.Log("SITTEN PITÄISI NOSTELLA MISSIONINQUEST INDEXIÄ");
+            currentMissionInQuest++;
+            currentMission.GetComponent<Quest>().missions[currentMissionInQuest].SetActive(true);
+            currentAreaMissions = 4;
+            areaInfoLoaded = false;
+
+            //for saving plrData for this session.
+
+            for (int i = 0; i < GameManager.gm.heroesInGame.Count; i++)
+            {
+                int currentRound = GameManager.gm.round;
+
+                Debug.Log("TULOSTELLAAN MUUNNELTUA ROUND LUKUA JOKA ON: " + currentRound);
+                Debug.Log("TULOSTELLAAN MUUNNELTUA areaMission LUKUA JOKA ON: " + currentAreaMissions);
+
+                DataHolder.dataHolder.SetData(i, GameManager.gm.heroesInGame[i].GetComponent<HeroOne>().hb.plrName,
+                GameManager.gm.heroesInGame[i].GetComponent<HeroOne>().hb.plrHealth,
+                GameManager.gm.heroesInGame[i].GetComponent<HeroOne>().hb.plrStrength,
+                GameManager.gm.heroesInGame[i].GetComponent<HeroOne>().hb.plrLevel,
+                currentRound,
+                GameManager.gm.currentAreaMissions);
+
+
+
+                DataHolder.dataHolder.TakeCareOfSaving();
+            }
+
         }
 
     }
@@ -307,7 +385,6 @@ public class GameManager : MonoBehaviour
     public void SetupForNextRound()
     {
         characterHolder.SetActive(true);
-
         for (int s = 0; s < enemySpawnersIngame.Count; s++)
         {
             enemySpawnersIngame[s].gameObject.SetActive(true);
@@ -322,6 +399,10 @@ public class GameManager : MonoBehaviour
         
 
 
+    }
+    public void MissionDone()
+    {
+        currentAreaMissions--;
     }
 
 }

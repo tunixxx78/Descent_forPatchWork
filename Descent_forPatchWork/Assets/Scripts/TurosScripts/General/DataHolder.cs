@@ -8,6 +8,7 @@ public class DataHolder : MonoBehaviour
     public static DataHolder dataHolder;
 
     public int roundToSave;
+    public int currenAreaMissionIndex = 4;
     public bool gameIsStarted = false;
 
     string wantedName;
@@ -71,16 +72,25 @@ public class DataHolder : MonoBehaviour
         }
 
         DontDestroyOnLoad(this.gameObject);
+
+        //GameManager.gm.currentAreaMissions = currenAreaMissionIndex;
     }
 
     private void Start()
     {
         //marko testing load-game method:
         SavingSystem.savingSystem.LoadGame();
+        //Invoke("GoOnInGame", 0.5f);
+        //GameManager.gm.currentAreaMissions = currenAreaMissionIndex;
+    }
+
+    private void GoONInGame()
+    {
+        GameManager.gm.areaInfoLoaded = true;
     }
     
 
-    public void SetData(int plrIndex, string name, float health, float strength, int level, int round)
+    public void SetData(int plrIndex, string name, float health, float strength, int level, int round, int areaMissionIndex)
     {
         if(plrIndex == 0)
         {
@@ -115,6 +125,7 @@ public class DataHolder : MonoBehaviour
         }
 
         roundToSave = round;
+        currenAreaMissionIndex = areaMissionIndex;
 
 
     }
@@ -127,7 +138,9 @@ public class DataHolder : MonoBehaviour
         float[] strenghts = {plrOneStrength, plrTwoStrength, plrThreeStrength, plrFourStrength };
         int[] levels = {plrOneLevel, plrTwoLevel, plrThreeLevel, plrFourLevel };
 
-        SavingSystem.savingSystem.SaveGame2(names, healths, strenghts, levels, roundToSave);
+        SavingSystem.savingSystem.SaveGame2(names, healths, strenghts, levels, roundToSave, currenAreaMissionIndex);
+
+        Debug.Log(roundToSave + "JA" + currenAreaMissionIndex);
 
     }
 

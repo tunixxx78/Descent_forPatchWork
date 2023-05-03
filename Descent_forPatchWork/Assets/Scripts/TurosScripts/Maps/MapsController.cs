@@ -111,6 +111,7 @@ public class MapsController : MonoBehaviour
         //For hiding cardViewButton
 
         maps.transform.GetChild(GameManager.gm.currentMissionIndex).GetChild(5).gameObject.SetActive(false);
+        maps.transform.GetChild(GameManager.gm.currentMissionIndex).Find("BattleEvent").GetChild(0).gameObject.SetActive(false);
 
 
 
@@ -239,7 +240,8 @@ public class MapsController : MonoBehaviour
                     //GameManager.gm.enemyHordStrenght += enemyInstance.GetComponent<EnemyOne>().eB.enemyStrength;
                     GameManager.gm.enemysInGame.Add(enemyInstance);
 
-
+                    enemyHordPanel.GetComponent<Image>().sprite = hordePanels[GameManager.gm.round];
+                    enemyHordPanel.SetActive(true);
                 }
             }
 
@@ -263,15 +265,14 @@ public class MapsController : MonoBehaviour
                     //GameManager.gm.enemyHordStrenght += enemyInstance.GetComponent<EnemyOne>().eB.enemyStrength;
                     GameManager.gm.enemysInGame.Add(enemyInstance);
 
-
+                    enemyHordPanel.GetComponent<Image>().sprite = hordePanels[GameManager.gm.round];
+                    enemyHordPanel.SetActive(true);
                 }
             }
 
-            enemyHordPanel.GetComponent<Image>().sprite = hordePanels[GameManager.gm.round];
-            enemyHordPanel.SetActive(true);
+            
         }
-        
-        
+
 
         GameObject.Find("/Canvas/MapPanel/TestMission/CardView").SetActive(true);
         //GameObject.Find("/Canvas/MapPanel/TestMission/CardViewButton").SetActive(true);
@@ -294,6 +295,7 @@ public class MapsController : MonoBehaviour
         //For hiding cardViewButton
 
         maps.transform.GetChild(GameManager.gm.currentMissionIndex).GetChild(5).gameObject.SetActive(false);
+        maps.transform.GetChild(GameManager.gm.currentMissionIndex).Find("BattleEvent").GetChild(0).gameObject.SetActive(false);
 
 
 

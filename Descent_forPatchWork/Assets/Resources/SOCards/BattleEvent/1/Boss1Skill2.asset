@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 36e0664a0d1237c439428d37f72931df, type: 3}
-  m_Name: BattleEvent1C 3
+  m_Name: Boss1Skill2
   m_EditorClassIdentifier: 
-  sprite: {fileID: 1455414304, guid: e979d228718d04c94ab01410bfcf75fa, type: 3}
-  cardType: 
-  cardId: 
+  sprite: {fileID: 1166740706, guid: e979d228718d04c94ab01410bfcf75fa, type: 3}
+  cardType: Skillcard
+  cardId: TeroS2

@@ -39,6 +39,7 @@ public class MapButtons : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
         if (this.gameObject.CompareTag("Map"))
         {
             SavingSystem.savingSystem.LoadGame();
+            GameManager.gm.currentAreaMissions = DataHolder.dataHolder.currenAreaMissionIndex;
 
             SFXHolder.sH.button.Play();
 
@@ -67,7 +68,7 @@ public class MapButtons : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
         {
             SFXHolder.sH.button.Play();
 
-            GameManager.gm.currentAreaMissions = this.gameObject.GetComponent<BlockInformation>().blockImages.Length;
+            //GameManager.gm.currentAreaMissions = this.gameObject.GetComponent<BlockInformation>().blockImages.Length;
             GameObject.Find("AreaMapPanel").transform.GetChild(0).GetComponent<Image>().sprite = this.gameObject.GetComponent<BlockInformation>().RealAreaMap; 
 
             //mapAnimator.SetTrigger(animationTrigger);
@@ -122,7 +123,8 @@ public class MapButtons : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 
         if (this.gameObject.CompareTag("AreaMapButton"))
         {
-            if(GameManager.gm.round != 3)
+            GameObject.FindGameObjectWithTag("BattleEvent").GetComponent<BattleEvent>().InitializeBattleEvent();
+            if (GameManager.gm.round != 3)
             {
                 if (isClosableButton)
                 {
@@ -171,6 +173,7 @@ public class MapButtons : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
         {
 
             GameManager.gm.round++;
+            GameManager.gm.currentAreaMissions--;
 
             GameManager.gm.SetupForNextRound();
             SFXHolder.sH.button.Play();
@@ -190,7 +193,8 @@ public class MapButtons : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
                 GameManager.gm.heroesInGame[i].GetComponent<HeroOne>().hb.plrHealth,
                 GameManager.gm.heroesInGame[i].GetComponent<HeroOne>().hb.plrStrength,
                 GameManager.gm.heroesInGame[i].GetComponent<HeroOne>().hb.plrLevel,
-                GameManager.gm.round);
+                GameManager.gm.round,
+                GameManager.gm.currentAreaMissions);
 
                 
                 /*
@@ -321,7 +325,10 @@ public class MapButtons : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
         if (this.gameObject.CompareTag("ExitMapButton"))
         {
 
-            if(GameManager.gm.round != 3)
+            GameManager.gm.currentAreaMissions--;
+            
+
+            if (GameManager.gm.round != 3)
             {
                 SFXHolder.sH.button.Play();
 
@@ -337,13 +344,18 @@ public class MapButtons : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 
                 for (int i = 0; i < GameManager.gm.heroesInGame.Count; i++)
                 {
+                    int currentRound = GameManager.gm.round + 1;
+
+                    Debug.Log("TULOSTELLAAN MUUNNELTUA ROUND LUKUA JOKA ON: " + currentRound);
+
                     DataHolder.dataHolder.SetData(i, GameManager.gm.heroesInGame[i].GetComponent<HeroOne>().hb.plrName,
                     GameManager.gm.heroesInGame[i].GetComponent<HeroOne>().hb.plrHealth,
                     GameManager.gm.heroesInGame[i].GetComponent<HeroOne>().hb.plrStrength,
                     GameManager.gm.heroesInGame[i].GetComponent<HeroOne>().hb.plrLevel,
-                    GameManager.gm.round);
+                    currentRound,
+                    GameManager.gm.currentAreaMissions);
 
-
+                    DataHolder.dataHolder.TakeCareOfSaving();
 
                     for (int j = 0; j < GameManager.gm.heroesInGame[i].GetComponent<HeroOne>().hbi.cardItems.Count - 1; j++)
                     {
@@ -419,12 +431,20 @@ public class MapButtons : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 
                 for (int i = 0; i < GameManager.gm.heroesInGame.Count; i++)
                 {
+                    GameManager.gm.currentAreaMissions = 4;
+                    int currentRound = GameManager.gm.round + 1;
+
+                    Debug.Log("TULOSTELLAAN MUUNNELTUA ROUND LUKUA JOKA ON: " + currentRound);
+                    Debug.Log("TULOSTELLAAN MUUNNELTUA areaMission LUKUA JOKA ON: " + GameManager.gm.currentAreaMissions);
+
                     DataHolder.dataHolder.SetData(i, GameManager.gm.heroesInGame[i].GetComponent<HeroOne>().hb.plrName,
                     GameManager.gm.heroesInGame[i].GetComponent<HeroOne>().hb.plrHealth,
                     GameManager.gm.heroesInGame[i].GetComponent<HeroOne>().hb.plrStrength,
                     GameManager.gm.heroesInGame[i].GetComponent<HeroOne>().hb.plrLevel,
-                    GameManager.gm.round);
+                    currentRound,
+                    GameManager.gm.currentAreaMissions);
 
+                    DataHolder.dataHolder.TakeCareOfSaving();
 
                     /*
                     for (int j = 0; j < GameManager.gm.heroesInGame[i].GetComponent<HeroOne>().hbi.cardItems.Count - 1; j++)
@@ -441,10 +461,10 @@ public class MapButtons : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 
                 }
 
-                for (int i = 0; i < GameManager.gm.heroesInGame.Count; i++)
+                for (int k = 0; k < GameManager.gm.heroesInGame.Count; k++)
                 {
-                    GameManager.gm.heroesInGame[i].GetComponent<HeroOne>().hb.thisHeroIsAttacking = false;
-                    Destroy(GameManager.gm.heroesInGame[i]);
+                    GameManager.gm.heroesInGame[k].GetComponent<HeroOne>().hb.thisHeroIsAttacking = false;
+                    Destroy(GameManager.gm.heroesInGame[k]);
                 }
 
                 GameManager.gm.plrIsAttacking = false;
@@ -469,9 +489,9 @@ public class MapButtons : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 
                 GameObject PlrStats = GameObject.Find("PlayerPanels");
 
-                for (int i = 0; i < PlrStats.transform.childCount; i++)
+                for (int l = 0; l < PlrStats.transform.childCount; l++)
                 {
-                    PlrStats.transform.GetChild(i).gameObject.SetActive(false);
+                    PlrStats.transform.GetChild(l).gameObject.SetActive(false);
                 }
 
 
@@ -479,9 +499,9 @@ public class MapButtons : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 
                 //for clearing lootListing in hierarchy
 
-                for (int i = mapPanel.transform.GetChild(GameManager.gm.currentMissionIndex).GetChild(2).GetChild(9).GetChild(5).childCount; i > 0; i--)
+                for (int m = mapPanel.transform.GetChild(GameManager.gm.currentMissionIndex).GetChild(2).GetChild(9).GetChild(5).childCount; m > 0; m--)
                 {
-                    Destroy(mapPanel.transform.GetChild(GameManager.gm.currentMissionIndex).GetChild(2).GetChild(9).GetChild(5).GetChild(i - 1).gameObject);
+                    Destroy(mapPanel.transform.GetChild(GameManager.gm.currentMissionIndex).GetChild(2).GetChild(9).GetChild(5).GetChild(m - 1).gameObject);
                 }
 
                 GameManager.gm.tempBossHealth = 10000;
@@ -491,16 +511,13 @@ public class MapButtons : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
                 maps.transform.GetChild(GameManager.gm.currentMissionIndex).GetChild(2).GetChild(18).gameObject.SetActive(false);
 
                 mapPanel.transform.GetChild(GameManager.gm.currentMissionIndex).GetChild(7).gameObject.SetActive(true);
+
+                GameManager.gm.areaInfoLoaded = true;
+
+               
             }
-        }
 
-        
-
-
-        if (this.gameObject.CompareTag("CardViewButton"))
-        {
-            GameObject cardView = this.gameObject.transform.parent.Find("CardView/Container").gameObject;
-            cardView.SetActive(!cardView.activeInHierarchy);
+            
         }
 
     }
