@@ -898,7 +898,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hb:
     plrName: DARNA
-    plrHealth: 10
+    plrHealth: 18
     plrStrength: 1
     plrLevel: 1
     plrShield: 3

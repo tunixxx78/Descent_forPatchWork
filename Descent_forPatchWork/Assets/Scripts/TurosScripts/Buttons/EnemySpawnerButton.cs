@@ -8,6 +8,7 @@ using UnityEngine.UI;
 public class EnemySpawnerButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 {
     [SerializeField] GameObject bgImage, mapsController;
+    bool canSpawn = false;
 
     public UnityEvent buttonClick;
 
@@ -25,6 +26,8 @@ public class EnemySpawnerButton : MonoBehaviour, IPointerDownHandler, IPointerUp
     {
         if (GameManager.gm.villagerSelected)
         {
+            //canSpawn = false;
+            
             if (Input.GetMouseButtonUp(0))
             {
                 if(GameManager.gm.round == 0)
@@ -54,6 +57,8 @@ public class EnemySpawnerButton : MonoBehaviour, IPointerDownHandler, IPointerUp
         }
         if (GameManager.gm.lonerSelected)
         {
+            //canSpawn = false;
+
             if (Input.GetMouseButtonUp(0))
             {
                 if (GameManager.gm.round == 0)
@@ -88,11 +93,13 @@ public class EnemySpawnerButton : MonoBehaviour, IPointerDownHandler, IPointerUp
                 {
                     this.bgImage.SetActive(false);
                     GameManager.gm.villagerSelected = false;
+                    //canSpawn = true;
                 }
                 else
                 {
                     this.bgImage.SetActive(true);
                     GameManager.gm.villagerSelected = true;
+                    //canSpawn = true;
                 }
             }
             if (this.gameObject.CompareTag("Loner"))
@@ -101,11 +108,13 @@ public class EnemySpawnerButton : MonoBehaviour, IPointerDownHandler, IPointerUp
                 {
                     this.bgImage.SetActive(false);
                     GameManager.gm.lonerSelected = false;
+                    //canSpawn = true;
                 }
                 else
                 {
                     this.bgImage.SetActive(true);
                     GameManager.gm.lonerSelected = true;
+                    //canSpawn = true;
                 }
             }
         }

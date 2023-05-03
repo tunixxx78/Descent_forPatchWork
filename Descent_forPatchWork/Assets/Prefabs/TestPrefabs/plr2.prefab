@@ -718,7 +718,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hb:
     plrName: MAREEN
-    plrHealth: 20
+    plrHealth: 8
     plrStrength: 1
     plrLevel: 1
     plrShield: 0

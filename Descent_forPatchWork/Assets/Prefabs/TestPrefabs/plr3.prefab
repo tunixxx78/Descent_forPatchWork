@@ -898,7 +898,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hb:
     plrName: VALEK
-    plrHealth: 10
+    plrHealth: 12
     plrStrength: 2
     plrLevel: 1
     plrShield: 2

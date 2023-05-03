@@ -216,29 +216,57 @@ public class MapsController : MonoBehaviour
             heroNumIndex++;
         }
 
+        DataHolder.dataHolder.gameIsStarted = true;
+
         //for spawning enemys for fight
 
         if (GameManager.gm.canSpawnEnemys)
         {
             if(GameManager.gm.round == 0)
             {
-                for (int e = 0; e < 3; e++)
+                for (int e = 0; e < enemySpawnPoints.Length; e++)
                 {
-                    var enemyInstance = Instantiate(enemyBase[0], enemySpawnPoints[e].position, Quaternion.identity);
-                    enemyInstance.transform.SetParent(characterHolder.transform);
-                    enemyInstance.transform.position = enemySpawnPoints[e].position;
-                    enemyInstance.transform.localScale = new Vector3(1, 1, 1);
+                    Debug.Log("e:n arvo on: " + e);
 
-                    // for adding enemytype 1 health to enemyHordePool
-
-                    if (enemyInstance.GetComponent<EnemyOne>().eB.enemyType == 1)
+                    if (e == 0 || e == 1 || e == 4)
                     {
-                        GameManager.gm.enemyHordHealth += enemyInstance.GetComponent<EnemyOne>().eB.enemyHealth;
-                        GameManager.gm.enemyHordStrenght += enemyInstance.GetComponent<EnemyOne>().eB.enemyStrength;
-                    }
+                        var enemyInstance = Instantiate(enemyBase[0], enemySpawnPoints[e].position, Quaternion.identity);
+                        enemyInstance.transform.SetParent(characterHolder.transform);
+                        enemyInstance.transform.position = enemySpawnPoints[e].position;
+                        enemyInstance.transform.localScale = new Vector3(1, 1, 1);
 
-                    //GameManager.gm.enemyHordStrenght += enemyInstance.GetComponent<EnemyOne>().eB.enemyStrength;
-                    GameManager.gm.enemysInGame.Add(enemyInstance);
+                        // for adding enemytype 1 health to enemyHordePool
+
+                        if (enemyInstance.GetComponent<EnemyOne>().eB.enemyType == 1)
+                        {
+                            GameManager.gm.enemyHordHealth += enemyInstance.GetComponent<EnemyOne>().eB.enemyHealth;
+                            GameManager.gm.enemyHordStrenght += enemyInstance.GetComponent<EnemyOne>().eB.enemyStrength;
+                        }
+
+                        //GameManager.gm.enemyHordStrenght += enemyInstance.GetComponent<EnemyOne>().eB.enemyStrength;
+                        GameManager.gm.enemysInGame.Add(enemyInstance);
+                    }
+                    if(e == 2|| e == 3)
+                    {
+                        var enemyInstance = Instantiate(enemyBase[1], enemySpawnPoints[e].position, Quaternion.identity);
+                        enemyInstance.transform.SetParent(characterHolder.transform);
+                        enemyInstance.transform.position = enemySpawnPoints[e].position;
+                        enemyInstance.transform.localScale = new Vector3(1, 1, 1);
+
+                        // for adding enemytype 1 health to enemyHordePool
+
+                        if (enemyInstance.GetComponent<EnemyOne>().eB.enemyType == 1)
+                        {
+                            GameManager.gm.enemyHordHealth += enemyInstance.GetComponent<EnemyOne>().eB.enemyHealth;
+                            GameManager.gm.enemyHordStrenght += enemyInstance.GetComponent<EnemyOne>().eB.enemyStrength;
+                        }
+
+                        //GameManager.gm.enemyHordStrenght += enemyInstance.GetComponent<EnemyOne>().eB.enemyStrength;
+                        GameManager.gm.enemysInGame.Add(enemyInstance);
+                    }
+                    
+
+                    
 
                     enemyHordPanel.GetComponent<Image>().sprite = hordePanels[GameManager.gm.round];
                     enemyHordPanel.SetActive(true);
@@ -247,8 +275,47 @@ public class MapsController : MonoBehaviour
 
             if(GameManager.gm.round == 1)
             {
-                for (int e = 0; e < 3; e++)
+                for (int e = 0; e < enemySpawnPoints.Length; e++)
                 {
+                    Debug.Log("e:n arvo on: " + e);
+
+                    if (e == 0 || e == 1 || e == 4)
+                    {
+                        var enemyInstance = Instantiate(enemyBase[3], enemySpawnPoints[e].position, Quaternion.identity);
+                        enemyInstance.transform.SetParent(characterHolder.transform);
+                        enemyInstance.transform.position = enemySpawnPoints[e].position;
+                        enemyInstance.transform.localScale = new Vector3(1, 1, 1);
+
+                        // for adding enemytype 1 health to enemyHordePool
+
+                        if (enemyInstance.GetComponent<EnemyOne>().eB.enemyType == 1)
+                        {
+                            GameManager.gm.enemyHordHealth += enemyInstance.GetComponent<EnemyOne>().eB.enemyHealth;
+                            GameManager.gm.enemyHordStrenght += enemyInstance.GetComponent<EnemyOne>().eB.enemyStrength;
+                        }
+
+                        //GameManager.gm.enemyHordStrenght += enemyInstance.GetComponent<EnemyOne>().eB.enemyStrength;
+                        GameManager.gm.enemysInGame.Add(enemyInstance);
+                    }
+                    if (e == 2 || e == 3)
+                    {
+                        var enemyInstance = Instantiate(enemyBase[4], enemySpawnPoints[e].position, Quaternion.identity);
+                        enemyInstance.transform.SetParent(characterHolder.transform);
+                        enemyInstance.transform.position = enemySpawnPoints[e].position;
+                        enemyInstance.transform.localScale = new Vector3(1, 1, 1);
+
+                        // for adding enemytype 1 health to enemyHordePool
+
+                        if (enemyInstance.GetComponent<EnemyOne>().eB.enemyType == 1)
+                        {
+                            GameManager.gm.enemyHordHealth += enemyInstance.GetComponent<EnemyOne>().eB.enemyHealth;
+                            GameManager.gm.enemyHordStrenght += enemyInstance.GetComponent<EnemyOne>().eB.enemyStrength;
+                        }
+
+                        //GameManager.gm.enemyHordStrenght += enemyInstance.GetComponent<EnemyOne>().eB.enemyStrength;
+                        GameManager.gm.enemysInGame.Add(enemyInstance);
+                    }
+                    /*
                     var enemyInstance = Instantiate(enemyBase[3], enemySpawnPoints[e].position, Quaternion.identity);
                     enemyInstance.transform.SetParent(characterHolder.transform);
                     enemyInstance.transform.position = enemySpawnPoints[e].position;
@@ -264,7 +331,7 @@ public class MapsController : MonoBehaviour
 
                     //GameManager.gm.enemyHordStrenght += enemyInstance.GetComponent<EnemyOne>().eB.enemyStrength;
                     GameManager.gm.enemysInGame.Add(enemyInstance);
-
+                    */
                     enemyHordPanel.GetComponent<Image>().sprite = hordePanels[GameManager.gm.round];
                     enemyHordPanel.SetActive(true);
                 }

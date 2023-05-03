@@ -753,7 +753,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3252441913637837379}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
@@ -904,10 +904,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   eB:
     EnemyName: Executioner
-    enemyStrength: 4
-    enemyHealth: 10
+    enemyStrength: 5
+    enemyHealth: 30
     enemyLevel: 1
-    enemyShield: 1
+    enemyShield: 3
     enemyMove: 1
     enemyType: 2
     enemyImages:
@@ -929,6 +929,9 @@ MonoBehaviour:
   buttonClick:
     m_PersistentCalls:
       m_Calls: []
+  enemyImages:
+  - {fileID: 553892982, guid: 623d4b536b9554fcd996687759f8468b, type: 3}
+  - {fileID: -469060597, guid: 623d4b536b9554fcd996687759f8468b, type: 3}
 --- !u!114 &5873477731377735261
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1417,7 +1420,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &3160910814427330290
 RectTransform:
   m_ObjectHideFlags: 0

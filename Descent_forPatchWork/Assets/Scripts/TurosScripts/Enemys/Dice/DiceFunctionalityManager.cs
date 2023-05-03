@@ -38,14 +38,15 @@ public class DiceFunctionalityManager : MonoBehaviour
 
         if(GameManager.gm.round == 0 || GameManager.gm.round == 1)
         {
-            if(index == 2)
+            if(index == 3)
             {
                 for(int i = 0; i < GameManager.gm.enemysInGame.Count; i++)
                 {
-                    GameManager.gm.enemysInGame[i].GetComponent<EnemyOne>().eB.enemyHealth--;
-                    GameManager.gm.enemyHordHealth--;
+                    GameManager.gm.enemysInGame[i].GetComponent<EnemyOne>().eB.enemyShield++;
+                    
                 }
             }
+            /*
             if (index == 4)
             {
                 for (int i = 0; i < GameManager.gm.enemysInGame.Count; i++)
@@ -54,7 +55,8 @@ public class DiceFunctionalityManager : MonoBehaviour
                     GameManager.gm.enemyHordHealth++;
                 }
             }
-            if (index == 6)
+            */
+            if (index == 5)
             {
                 for (int i = 0; i < GameManager.gm.enemysInGame.Count; i++)
                 {

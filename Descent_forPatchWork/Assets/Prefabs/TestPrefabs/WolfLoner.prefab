@@ -402,7 +402,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 52.1677, y: 29.6738}
+  m_AnchoredPosition: {x: 58.9, y: 20.4}
   m_SizeDelta: {x: 118.5242, y: 117.4742}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2382800539774577131
@@ -540,7 +540,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 57.4, y: -16.3}
+  m_AnchoredPosition: {x: 65.9, y: -25.3}
   m_SizeDelta: {x: 42.4722, y: 44.867}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1650474340576598504
@@ -675,7 +675,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 57.7, y: -16.9}
+  m_AnchoredPosition: {x: 66.2, y: -25.4}
   m_SizeDelta: {x: 64, y: 64}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1866915864707064611
@@ -905,7 +905,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3252441913637837379}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
@@ -977,7 +977,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 190.03831, y: 140.38313}
-  m_SizeDelta: {x: 183, y: 143}
+  m_SizeDelta: {x: 199, y: 201}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3252441914114803585
 CanvasRenderer:
@@ -1057,11 +1057,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   eB:
     EnemyName: LONER
-    enemyStrength: 2
-    enemyHealth: 10
+    enemyStrength: 1
+    enemyHealth: 5
     enemyLevel: 1
-    enemyShield: 0
-    enemyMove: 0
+    enemyShield: 1
+    enemyMove: 2
     enemyType: 3
     enemyImages:
     - {fileID: -314864456, guid: 0568efca4f3b1420b94b516ddab195d9, type: 3}
@@ -1083,6 +1083,9 @@ MonoBehaviour:
   buttonClick:
     m_PersistentCalls:
       m_Calls: []
+  enemyImages:
+  - {fileID: -314864456, guid: 0568efca4f3b1420b94b516ddab195d9, type: 3}
+  - {fileID: 1137707782, guid: 0568efca4f3b1420b94b516ddab195d9, type: 3}
 --- !u!114 &5873477731377735261
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1440,7 +1443,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &3160910814427330290
 RectTransform:
   m_ObjectHideFlags: 0

@@ -11,4 +11,8 @@ public class VideoController2 : MonoBehaviour
     {
         GetComponent<VideoPlayer>().clip = missionStartClips[clipIndex];
     }
+    public void SetAreaChangeClip(int clipIndex)
+    {
+        GetComponent<VideoPlayer>().clip = missionStartClips[clipIndex];
+    }
 }

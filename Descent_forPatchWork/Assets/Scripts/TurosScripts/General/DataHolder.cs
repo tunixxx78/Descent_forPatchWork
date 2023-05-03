@@ -17,26 +17,26 @@ public class DataHolder : MonoBehaviour
     int wantedLevel;
 
     public string plrOneName = "";
-    public float plrOneHealth = 0;
-    public float plrOneStrength = 0;
+    public float plrOneHealth = 18;
+    public float plrOneStrength = 1;
     public int plrOneLevel = 0;
     //public int plrOneIndex;
 
     public string plrTwoName = "";
-    public float plrTwoHealth = 0;
-    public float plrTwoStrength = 0;
+    public float plrTwoHealth = 8;
+    public float plrTwoStrength = 1;
     public int plrTwoLevel = 0;
     //public int plrOneIndex;
 
     public string plrThreeName = "";
-    public float plrThreeHealth = 0;
-    public float plrThreeStrength = 0;
+    public float plrThreeHealth = 12;
+    public float plrThreeStrength = 2;
     public int plrThreeLevel = 0;
     //public int plrOneIndex;
 
     public string plrFourName = "";
-    public float plrFourHealth = 0;
-    public float plrFourStrength = 0;
+    public float plrFourHealth = 10;
+    public float plrFourStrength = 2;
     public int plrFourLevel = 0;
     //public int plrOneIndex;
 
@@ -92,7 +92,10 @@ public class DataHolder : MonoBehaviour
 
     public void SetData(int plrIndex, string name, float health, float strength, int level, int round, int areaMissionIndex, bool hasStarted)
     {
-        if(plrIndex == 0)
+
+        
+
+        if (plrIndex == 0)
         {
             plrOneName = name;
             plrOneHealth = health;

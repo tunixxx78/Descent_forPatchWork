@@ -67,7 +67,7 @@ public class MapButtons : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
                 Destroy(GameObject.Find("QuestLorePanel").transform.GetChild(5).GetChild(0).GetChild(i).gameObject);
             }
 
-            DataHolder.dataHolder.gameIsStarted = true;
+            
         }
 
         if (this.gameObject.CompareTag("WorldMapButton"))
@@ -324,8 +324,8 @@ public class MapButtons : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 
             maps.transform.GetChild(GameManager.gm.currentMissionIndex).GetChild(2).GetChild(18).GetChild(2).gameObject.SetActive(false);
             maps.transform.GetChild(GameManager.gm.currentMissionIndex).GetChild(2).GetChild(18).gameObject.SetActive(false);
-            
 
+            GameManager.gm.tempBossHealth = 10000;
         }
 
 
@@ -419,6 +419,7 @@ public class MapButtons : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
                 {
                     Destroy(mapPanel.transform.GetChild(GameManager.gm.currentMissionIndex).GetChild(2).GetChild(9).GetChild(5).GetChild(i - 1).gameObject);
                 }
+                GameManager.gm.tempBossHealth = 10000;
             }
 
             
@@ -519,6 +520,9 @@ public class MapButtons : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
                 maps.transform.GetChild(GameManager.gm.currentMissionIndex).GetChild(2).GetChild(18).GetChild(3).gameObject.SetActive(false);
                 maps.transform.GetChild(GameManager.gm.currentMissionIndex).GetChild(2).GetChild(18).gameObject.SetActive(false);
 
+                //for changing questLoreVideo and showing it to player
+
+                FindObjectOfType<VideoController2>().SetAreaChangeClip(1);
                 mapPanel.transform.GetChild(GameManager.gm.currentMissionIndex).GetChild(7).gameObject.SetActive(true);
 
                 GameManager.gm.areaInfoLoaded = true;

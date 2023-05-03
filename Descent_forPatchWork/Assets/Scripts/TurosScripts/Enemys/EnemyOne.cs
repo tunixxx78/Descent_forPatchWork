@@ -66,7 +66,7 @@ public class EnemyOne : MonoBehaviour
                 
                 //GameManager.gm.enemyHordHealth -= this.eB.enemyHealth;
                 //GameManager.gm.enemyHordStrenght -= this.eB.enemyStrength;
-                Destroy(this.gameObject, 1);
+                Destroy(this.gameObject);
             }
 
 
@@ -87,11 +87,15 @@ public class EnemyOne : MonoBehaviour
     }
     public void SetEnemyStrength()
     {
-        eB.enemyStrength = (int)eB.enemyHealth / 5;
-
-        if(eB.enemyStrength < 1)
+        if(eB.enemyType != 2)
         {
-            eB.enemyStrength = 1;
+            eB.enemyStrength = (int)eB.enemyHealth / 5;
+
+            if (eB.enemyStrength < 1)
+            {
+                eB.enemyStrength = 1;
+            }
         }
+        
     }
 }

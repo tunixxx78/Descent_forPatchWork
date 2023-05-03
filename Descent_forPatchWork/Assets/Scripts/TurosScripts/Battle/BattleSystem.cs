@@ -15,24 +15,34 @@ public class BattleSystem : MonoBehaviour
         {
             SFXHolder.sH.sword.Play();
 
-            Debug.Log("HIIRTÄ PAINETTU");
-            if (this.gameObject.GetComponent<EnemyOne>().eB.enemyHealth - GameManager.gm.attackForce >= 0)
+            float tempAttackForce = 0;
+
+
+            if(GameManager.gm.attackForce - this.gameObject.GetComponent<EnemyOne>().eB.enemyShield > 0)
             {
-                this.gameObject.GetComponent<EnemyOne>().eB.enemyHealth -= GameManager.gm.attackForce;
+                tempAttackForce = GameManager.gm.attackForce - this.gameObject.GetComponent<EnemyOne>().eB.enemyShield;
+            }
+
+            Debug.Log("TempForce: " + tempAttackForce);
+
+            Debug.Log("HIIRTÄ PAINETTU");
+            if (this.gameObject.GetComponent<EnemyOne>().eB.enemyHealth - tempAttackForce >= 0)
+            {
+                this.gameObject.GetComponent<EnemyOne>().eB.enemyHealth -= tempAttackForce;
                 this.gameObject.GetComponent<EnemyOne>().SetEnemyStrength();
 
                 //for bossFight
 
-                GameManager.gm.tempBossHealth -= (int)GameManager.gm.attackForce;
+                GameManager.gm.tempBossHealth -= (int)tempAttackForce;
 
                 if (this.gameObject.GetComponent<EnemyOne>().eB.enemyType == 1)
                 {
                     GameManager.gm.enemyHordHealth -= (GameManager.gm.attackForce - this.gameObject.GetComponent<EnemyOne>().eB.enemyShield);
                 }
             }
-            else if(this.gameObject.GetComponent<EnemyOne>().eB.enemyHealth - GameManager.gm.attackForce < 0)
+            else if(this.gameObject.GetComponent<EnemyOne>().eB.enemyHealth - tempAttackForce < 0)
             {
-                tempHealth = GameManager.gm.attackForce - (GameManager.gm.attackForce - this.gameObject.GetComponent<EnemyOne>().eB.enemyHealth);
+                tempHealth = GameManager.gm.attackForce - (tempAttackForce - this.gameObject.GetComponent<EnemyOne>().eB.enemyHealth);
                 this.gameObject.GetComponent<EnemyOne>().eB.enemyHealth = 0;
 
                 if (this.gameObject.GetComponent<EnemyOne>().eB.enemyType == 1)

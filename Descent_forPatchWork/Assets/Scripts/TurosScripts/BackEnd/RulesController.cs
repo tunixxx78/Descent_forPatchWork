@@ -9,6 +9,7 @@ public class RulesController : MonoBehaviour
     public TMP_Text contentText, extraText;
     [SerializeField] int idnum = 2;
     [SerializeField] Animator rulesAnimator;
+    [SerializeField] GameObject bgPanel;
 
     public void SearchFieldHasChanged(string idNumber)
     {
@@ -17,6 +18,7 @@ public class RulesController : MonoBehaviour
 
     public void DatabaseCall()
     {
+        bgPanel.SetActive(true);
         //StartCoroutine(GetRequest("http://localhost/PatchDatabase/?unityget="));
 
         //Add here ServerAdres!
@@ -68,5 +70,6 @@ public class RulesController : MonoBehaviour
     public void HideRulesPanel()
     {
         rulesAnimator.SetTrigger("RulesHide");
+        bgPanel.SetActive(false);
     }
 }

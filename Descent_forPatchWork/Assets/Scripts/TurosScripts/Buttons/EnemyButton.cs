@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class EnemyButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, IPointerEnterHandler, IPointerExitHandler
 {
     public UnityEvent buttonClick;
+    [SerializeField] Sprite[] enemyImages;
 
     private void Awake()
     {
@@ -46,6 +48,8 @@ public class EnemyButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
                             GetComponent<EnemyOne>().eB.thisEnemyIsAttacking = true;
                             GameManager.gm.enemyIsAttacking = true;
                             GameManager.gm.activeEnemy = 1;
+                            this.gameObject.GetComponent<Image>().sprite = enemyImages[1];
+                        
                     }
                         else
                         {
@@ -56,6 +60,8 @@ public class EnemyButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
                             GetComponent<EnemyOne>().eB.thisEnemyIsAttacking = false;
                             GameManager.gm.enemyIsAttacking = false;
                             GameManager.gm.activeEnemy = 0;
+                            this.gameObject.GetComponent<Image>().sprite = enemyImages[0];
+                        
                     }
                     }
                     if (this.gameObject.GetComponent<EnemyOne>().eB.enemyType == 2)
@@ -73,6 +79,8 @@ public class EnemyButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
                             GetComponent<EnemyOne>().eB.thisEnemyIsAttacking = true;
                             GameManager.gm.enemyIsAttacking = true;
                             GameManager.gm.activeEnemy = 2;
+                            this.gameObject.GetComponent<Image>().sprite = enemyImages[1];
+                        
                     }   
                         else
                         {
@@ -84,6 +92,8 @@ public class EnemyButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
                             GetComponent<EnemyOne>().eB.thisEnemyIsAttacking = false;
                             GameManager.gm.enemyIsAttacking = false;
                             GameManager.gm.activeEnemy = 0;
+                            this.gameObject.GetComponent<Image>().sprite = enemyImages[0];
+                        
                     }
 
                     }
@@ -103,6 +113,8 @@ public class EnemyButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
                         GetComponent<EnemyOne>().eB.thisEnemyIsAttacking = true;
                         GameManager.gm.enemyIsAttacking = true;
                         GameManager.gm.activeEnemy = 2;
+                        this.gameObject.GetComponent<Image>().sprite = enemyImages[1];
+                        
                     }
                     else
                     {
@@ -114,6 +126,8 @@ public class EnemyButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
                         GetComponent<EnemyOne>().eB.thisEnemyIsAttacking = false;
                         GameManager.gm.enemyIsAttacking = false;
                         GameManager.gm.activeEnemy = 0;
+                        this.gameObject.GetComponent<Image>().sprite = enemyImages[0];
+                        
                     }
 
                 }
