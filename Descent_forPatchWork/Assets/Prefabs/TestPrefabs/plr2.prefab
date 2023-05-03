@@ -610,7 +610,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 870536197, guid: 49e55bbe0578d4058a6750c549cf0da4, type: 3}
+  m_Sprite: {fileID: -685609264, guid: c37c9936495fc43ebb350db9268c4987, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -721,13 +721,16 @@ MonoBehaviour:
     plrHealth: 20
     plrStrength: 1
     plrLevel: 1
-    plrShield: 2
+    plrShield: 0
     plrActionPoints: 4
     plrIndex: 0
-    plrMove: 2
+    plrMove: 1
     heroImages:
-    - {fileID: -1865252928, guid: 977916ec4dddf45e3b87a8187ad7aa19, type: 3}
+    - {fileID: -1819436824, guid: c37c9936495fc43ebb350db9268c4987, type: 3}
     thisHeroIsAttacking: 0
+    thisHeroIsTakingDamageOnActivation: 0
+    thisHeroIsTakingDamageOnActivation2: 0
+    thisHeroIsGettingHealthOnActivation: 0
   hbi:
     weaponItems: []
     cardItems: []
@@ -843,6 +846,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a0769d6d3d0c44338632a9206041557, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tempHealth: 3
 --- !u!1 &3393598370662304811
 GameObject:
   m_ObjectHideFlags: 0

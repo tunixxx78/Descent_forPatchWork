@@ -279,6 +279,12 @@ public class MapsController : MonoBehaviour
         
         //enemyTwoPanel.SetActive(true);
         GameManager.gm.battleIsOn = true;
+
+        if(GameManager.gm.round != 2)
+        {
+            FindObjectOfType<DiceFunctionalityManager>().SetDiceEyeCommand(1);
+        }
+        
     }
 
     public void SetBossFightScene()

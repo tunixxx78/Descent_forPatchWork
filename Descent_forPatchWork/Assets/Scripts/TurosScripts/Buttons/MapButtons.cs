@@ -38,8 +38,12 @@ public class MapButtons : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 
         if (this.gameObject.CompareTag("Map"))
         {
-            SavingSystem.savingSystem.LoadGame();
-            GameManager.gm.currentAreaMissions = DataHolder.dataHolder.currenAreaMissionIndex;
+            if (DataHolder.dataHolder.gameIsStarted)
+            {
+                SavingSystem.savingSystem.LoadGame();
+                GameManager.gm.currentAreaMissions = DataHolder.dataHolder.currenAreaMissionIndex;
+            }
+            
 
             SFXHolder.sH.button.Play();
 
@@ -62,6 +66,8 @@ public class MapButtons : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
             {
                 Destroy(GameObject.Find("QuestLorePanel").transform.GetChild(5).GetChild(0).GetChild(i).gameObject);
             }
+
+            DataHolder.dataHolder.gameIsStarted = true;
         }
 
         if (this.gameObject.CompareTag("WorldMapButton"))
@@ -194,7 +200,8 @@ public class MapButtons : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
                 GameManager.gm.heroesInGame[i].GetComponent<HeroOne>().hb.plrStrength,
                 GameManager.gm.heroesInGame[i].GetComponent<HeroOne>().hb.plrLevel,
                 GameManager.gm.round,
-                GameManager.gm.currentAreaMissions);
+                GameManager.gm.currentAreaMissions,
+                DataHolder.dataHolder.gameIsStarted);
 
                 
                 /*
@@ -353,7 +360,8 @@ public class MapButtons : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
                     GameManager.gm.heroesInGame[i].GetComponent<HeroOne>().hb.plrStrength,
                     GameManager.gm.heroesInGame[i].GetComponent<HeroOne>().hb.plrLevel,
                     currentRound,
-                    GameManager.gm.currentAreaMissions);
+                    GameManager.gm.currentAreaMissions,
+                    DataHolder.dataHolder.gameIsStarted);
 
                     DataHolder.dataHolder.TakeCareOfSaving();
 
@@ -442,7 +450,8 @@ public class MapButtons : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
                     GameManager.gm.heroesInGame[i].GetComponent<HeroOne>().hb.plrStrength,
                     GameManager.gm.heroesInGame[i].GetComponent<HeroOne>().hb.plrLevel,
                     currentRound,
-                    GameManager.gm.currentAreaMissions);
+                    GameManager.gm.currentAreaMissions,
+                    DataHolder.dataHolder.gameIsStarted);
 
                     DataHolder.dataHolder.TakeCareOfSaving();
 
@@ -518,6 +527,12 @@ public class MapButtons : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
             }
 
             
+        }
+
+        if (this.gameObject.CompareTag("CardViewButton"))
+        {
+            GameObject cardView = this.gameObject.transform.parent.Find("CardView/Container").gameObject;
+            cardView.SetActive(!cardView.activeInHierarchy);
         }
 
     }

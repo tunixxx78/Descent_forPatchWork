@@ -213,13 +213,13 @@ public class StatsButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 
         if (this.gameObject.CompareTag("OnOff"))
         {
-            if(this.gameObject.transform.GetChild(3).gameObject.activeSelf == true)
+            if(this.gameObject.transform.GetChild(5).gameObject.activeSelf == true)
             {
-                this.gameObject.transform.GetChild(3).gameObject.SetActive(false);
+                this.gameObject.transform.GetChild(5).gameObject.SetActive(false);
             }
             else
             {
-                this.gameObject.transform.GetChild(3).gameObject.SetActive(true);
+                this.gameObject.transform.GetChild(5).gameObject.SetActive(true);
             }
             
         }
