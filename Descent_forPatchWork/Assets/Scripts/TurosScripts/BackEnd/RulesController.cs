@@ -71,5 +71,6 @@ public class RulesController : MonoBehaviour
     {
         rulesAnimator.SetTrigger("RulesHide");
         bgPanel.SetActive(false);
+        GameObject.Find("Canvas").transform.GetChild(5).GetChild(5).gameObject.SetActive(false);
     }
 }

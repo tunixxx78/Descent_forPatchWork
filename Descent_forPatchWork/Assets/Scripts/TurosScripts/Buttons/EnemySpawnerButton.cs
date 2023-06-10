@@ -30,7 +30,9 @@ public class EnemySpawnerButton : MonoBehaviour, IPointerDownHandler, IPointerUp
             
             if (Input.GetMouseButtonUp(0))
             {
-                if(GameManager.gm.round == 0)
+                SFXHolder.sH.button.Play();
+
+                if (GameManager.gm.round == 0)
                 {
                     GameObject villagerInstance = Instantiate(mapsController.GetComponent<MapsController>().enemyBase[0], GameObject.Find("ExtraSpawnPoint").transform.position, Quaternion.identity);
                     villagerInstance.transform.SetParent(mapsController.transform.GetChild(GameManager.gm.currentMissionIndex).GetChild(2));
@@ -58,6 +60,8 @@ public class EnemySpawnerButton : MonoBehaviour, IPointerDownHandler, IPointerUp
         if (GameManager.gm.lonerSelected)
         {
             //canSpawn = false;
+
+            SFXHolder.sH.button.Play();
 
             if (Input.GetMouseButtonUp(0))
             {

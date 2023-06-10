@@ -929,7 +929,9 @@ MonoBehaviour:
   buttonClick:
     m_PersistentCalls:
       m_Calls: []
-  enemyImages: []
+  enemyImages:
+  - {fileID: 376354717, guid: b1de37aa611374dafad97a54f7106d8f, type: 3}
+  - {fileID: 1694746344, guid: b1de37aa611374dafad97a54f7106d8f, type: 3}
 --- !u!114 &5873477731377735261
 MonoBehaviour:
   m_ObjectHideFlags: 0

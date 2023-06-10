@@ -213,7 +213,10 @@ public class StatsButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 
         if (this.gameObject.CompareTag("OnOff"))
         {
-            if(this.gameObject.transform.GetChild(5).gameObject.activeSelf == true)
+
+            SFXHolder.sH.button.Play();
+
+            if (this.gameObject.transform.GetChild(5).gameObject.activeSelf == true)
             {
                 this.gameObject.transform.GetChild(5).gameObject.SetActive(false);
             }

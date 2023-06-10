@@ -1,0 +1,229 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!213 &21300000
+Sprite:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: ENEMY ATTACK BUTTON_0
+  m_Rect:
+    serializedVersion: 2
+    x: 98
+    y: 98
+    width: 103
+    height: 104
+  m_Offset: {x: 0, y: 0}
+  m_Border: {x: 0, y: 0, z: 0, w: 0}
+  m_PixelsToUnits: 100
+  m_Pivot: {x: 0.5, y: 0.5}
+  m_Extrude: 1
+  m_IsPolygon: 0
+  m_AtlasName: 
+  m_PackingTag: 
+  m_RenderDataKey:
+    1e14de64872f447e8a4cbb146773ac5d: -1279987901
+  m_AtlasTags: []
+  m_SpriteAtlas: {fileID: 0}
+  m_RD:
+    serializedVersion: 3
+    texture: {fileID: 2800000, guid: 1e14de64872f447e8a4cbb146773ac5d, type: 3}
+    alphaTexture: {fileID: 0}
+    secondaryTextures: []
+    m_SubMeshes:
+    - serializedVersion: 2
+      firstByte: 0
+      indexCount: 21
+      topology: 0
+      baseVertex: 0
+      firstVertex: 0
+      vertexCount: 9
+      localAABB:
+        m_Center: {x: 0, y: 0, z: 0}
+        m_Extent: {x: 0, y: 0, z: 0}
+    m_IndexBuffer: 080007000500060005000700000005000600040005000000030004000000010003000000020001000000
+    m_VertexData:
+      serializedVersion: 3
+      m_VertexCount: 9
+      m_Channels:
+      - stream: 0
+        offset: 0
+        format: 0
+        dimension: 3
+      - stream: 0
+        offset: 0
+        format: 0
+        dimension: 0
+      - stream: 0
+        offset: 0
+        format: 0
+        dimension: 0
+      - stream: 0
+        offset: 0
+        format: 0
+        dimension: 0
+      - stream: 1
+        offset: 0
+        format: 0
+        dimension: 2
+      - stream: 0
+        offset: 0
+        format: 0
+        dimension: 0
+      - stream: 0
+        offset: 0
+        format: 0
+        dimension: 0
+      - stream: 0
+        offset: 0
+        format: 0
+        dimension: 0
+      - stream: 0
+        offset: 0
+        format: 0
+        dimension: 0
+      - stream: 0
+        offset: 0
+        format: 0
+        dimension: 0
+      - stream: 0
+        offset: 0
+        format: 0
+        dimension: 0
+      - stream: 0
+        offset: 0
+        format: 0
+        dimension: 0
+      - stream: 0
+        offset: 0
+        format: 0
+        dimension: 0
+      - stream: 0
+        offset: 0
+        format: 0
+        dimension: 0
+      m_DataSize: 184
+      _typelessdata: b81ec53eb81e053f000000000ad7033f000080be000000000ad7033fe17a943e0000000014ae473eb81e05bf00000000c3f528beb81e05bf00000000cdcc8cbe6666e6be0000000048e1babeb81e053f000000000ad703bf5c8f423e000000000ad703bf7b142ebe00000000000000003a6d203f935f2c3f1f852b3f5555d53e1f852b3f26bf183f9d36103fda40a73e96fce23eda40a73e9d36d03e3333b33e74dac03e935f2c3fda40a73e9d36103fda40a73e96fce23e
+    m_Bindpose: []
+    textureRect:
+      serializedVersion: 2
+      x: 98
+      y: 98
+      width: 103
+      height: 104
+    textureRectOffset: {x: 0, y: 0}
+    atlasRectOffset: {x: -1, y: -1}
+    settingsRaw: 64
+    uvTransform: {x: 100, y: 149.5, z: 100, w: 150}
+    downscaleMultiplier: 1
+  m_AtlasRD:
+    serializedVersion: 3
+    texture: {fileID: 2800000, guid: 1e14de64872f447e8a4cbb146773ac5d, type: 3}
+    alphaTexture: {fileID: 0}
+    secondaryTextures: []
+    m_SubMeshes:
+    - serializedVersion: 2
+      firstByte: 0
+      indexCount: 21
+      topology: 0
+      baseVertex: 0
+      firstVertex: 0
+      vertexCount: 9
+      localAABB:
+        m_Center: {x: 0, y: 0, z: 0}
+        m_Extent: {x: 0, y: 0, z: 0}
+    m_IndexBuffer: 080007000500060005000700000005000600040005000000030004000000010003000000020001000000
+    m_VertexData:
+      serializedVersion: 3
+      m_VertexCount: 9
+      m_Channels:
+      - stream: 0
+        offset: 0
+        format: 0
+        dimension: 3
+      - stream: 0
+        offset: 0
+        format: 0
+        dimension: 0
+      - stream: 0
+        offset: 0
+        format: 0
+        dimension: 0
+      - stream: 0
+        offset: 0
+        format: 0
+        dimension: 0
+      - stream: 1
+        offset: 0
+        format: 0
+        dimension: 2
+      - stream: 0
+        offset: 0
+        format: 0
+        dimension: 0
+      - stream: 0
+        offset: 0
+        format: 0
+        dimension: 0
+      - stream: 0
+        offset: 0
+        format: 0
+        dimension: 0
+      - stream: 0
+        offset: 0
+        format: 0
+        dimension: 0
+      - stream: 0
+        offset: 0
+        format: 0
+        dimension: 0
+      - stream: 0
+        offset: 0
+        format: 0
+        dimension: 0
+      - stream: 0
+        offset: 0
+        format: 0
+        dimension: 0
+      - stream: 0
+        offset: 0
+        format: 0
+        dimension: 0
+      - stream: 0
+        offset: 0
+        format: 0
+        dimension: 0
+      m_DataSize: 184
+      _typelessdata: b81ec53eb81e053f000000000ad7033f000080be000000000ad7033fe17a943e0000000014ae473eb81e05bf00000000c3f528beb81e05bf00000000cdcc8cbe6666e6be0000000048e1babeb81e053f000000000ad703bf5c8f423e000000000ad703bf7b142ebe00000000000000003a6d203f935f2c3f1f852b3f5555d53e1f852b3f26bf183f9d36103fda40a73e96fce23eda40a73e9d36d03e3333b33e74dac03e935f2c3fda40a73e9d36103fda40a73e96fce23e
+    m_Bindpose: []
+    textureRect:
+      serializedVersion: 2
+      x: 98
+      y: 98
+      width: 103
+      height: 104
+    textureRectOffset: {x: 0, y: 0}
+    atlasRectOffset: {x: -1, y: -1}
+    settingsRaw: 64
+    uvTransform: {x: 100, y: 149.5, z: 100, w: 150}
+    downscaleMultiplier: 1
+  m_PhysicsShape:
+  - - {x: 0.36499998, y: 0.31}
+    - {x: 0.265, y: 0.39}
+    - {x: 0.195, y: 0.44}
+    - {x: 0.015, y: 0.51}
+    - {x: -0.055, y: 0.51}
+    - {x: -0.275, y: 0.38}
+    - {x: -0.375, y: 0.28}
+    - {x: -0.505, y: 0.089999996}
+    - {x: -0.505, y: -0.06}
+    - {x: -0.385, y: -0.31}
+    - {x: -0.255, y: -0.39999998}
+    - {x: -0.035, y: -0.51}
+    - {x: 0.015, y: -0.51}
+    - {x: 0.295, y: -0.38}
+    - {x: 0.405, y: -0.25}
+    - {x: 0.515, y: -0.01}
+    - {x: 0.515, y: 0.03}
+  m_Bones: []
+  m_SpriteID: e87887fd9665a4de3aed682637552ec0

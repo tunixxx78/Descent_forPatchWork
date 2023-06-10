@@ -38,6 +38,7 @@ public class MapButtons : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 
         if (this.gameObject.CompareTag("Map"))
         {
+
             if (DataHolder.dataHolder.gameIsStarted)
             {
                 SavingSystem.savingSystem.LoadGame();
@@ -129,6 +130,8 @@ public class MapButtons : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 
         if (this.gameObject.CompareTag("AreaMapButton"))
         {
+           
+
             GameObject.FindGameObjectWithTag("BattleEvent").GetComponent<BattleEvent>().InitializeBattleEvent();
             if (GameManager.gm.round != 3)
             {
